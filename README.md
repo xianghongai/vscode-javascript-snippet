@@ -1,6 +1,6 @@
 # JavaScript Snippets (Visual Studio Code)
 
-Download this extension from the [Visual Studio Code Marketplace]()
+Download this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-javascript-snippet)
 
 ## Snippets
 
