@@ -17,7 +17,7 @@
         "type": "git",
         "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^0.12.x"
     },
