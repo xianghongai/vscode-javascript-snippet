@@ -1,0 +1,19 @@
+{
+  "use strict":                           { "prefix": "us",       "body": [ "'use strict';" ],                                 "description": "use strict\n" },
+  "const":                                { "prefix": "c",        "body": [ "const ${1:name} = ${2:value};" ],                 "description": "const assignment\n" },
+  "const awaited":                        { "prefix": "caw",      "body": [ "const ${1:name} = await ${2:value};" ],           "description": "const assignment awaited\n" },
+  "const yielded":                        { "prefix": "cy",       "body": [ "const ${1:name} = yield ${2:value};" ],           "description": "const assignment yielded\n" },
+  "const destructing object":             { "prefix": "cde",      "body": [ "const {${2}} = ${1};" ],                      "description": "const assignment destructuring\n" },
+  "const destructing array":              { "prefix": "cdea",     "body": [ "const [${2}] = ${1};" ],                      "description": "const assignment destructuring\n" },
+  "let":                                  { "prefix": "l",        "body": [ "let ${1:name} = ${2:value};" ],                   "description": "let assignment\n" },
+  "let awaited":                          { "prefix": "law",      "body": [ "let ${1:name} = await ${2:value};" ],             "description": "let assignment awaited\n" },
+  "let yielded":                          { "prefix": "ly",       "body": [ "let ${1:name} = yield ${2:value};" ],             "description": "let assignment yielded\n" },
+  "let destructing object":               { "prefix": "lde",      "body": [ "let {${2}} = ${1};" ],                        "description": "let assignment destructuring\n" },
+  "let destructing array":                { "prefix": "ldea",     "body": [ "let [${2}] = ${1};" ],                        "description": "let assignment destructuring\n" },
+  "var":                                  { "prefix": "v",        "body": [ "var ${1:name} = ${2:value};" ],                   "description": "var assignment\n" },
+  "var destructing object":               { "prefix": "vde",      "body": [ "var {${2}} = ${1};" ],                        "description": "var destructuring assignment\n" },
+  "var destructing array":                { "prefix": "vdea",     "body": [ "var [${2}] = ${1};" ],                        "description": "var destructuring assignment\n" },
+  "destructuring Array":                  { "prefix": "dar",      "body": [ "const [${2:propertyName}] = ${1:arrayToDestruct};" ],            "description": "Creates and assigns a local variable using array destructuring\n" },
+  "destructuring Object":                 { "prefix": "dob",      "body": [ "const {${2:propertyName}} = ${1:objectToDestruct};" ],           "description": "Creates and assigns a local variable using object destructuring\n" },
+  "destructuring parameter":              { "prefix": "dp",       "body": [ "{${0}}: ${1:parameter}" ],                                       "description": "destructuring parameter\n" }
+}

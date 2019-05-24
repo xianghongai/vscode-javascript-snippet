@@ -1,0 +1,10 @@
+{
+  "test suite: describe":                 { "prefix": "desc",     "body": [ "describe('${1:description}', function () {\n\t${2}\n})" ],               "description": "test suite: describe\n" },
+  "test suite: context":                  { "prefix": "cont",     "body": [ "context('${1:description}', ${2:callback});${0}" ],                      "description": "test suite: context\n" },
+  "test suite: it synchronous":           { "prefix": "it",       "body": [ "it('${1:description}', () => {\n\t${2}\n})" ],                           "description": "test suite: it synchronous\n" },
+  "test suite: it asynchronous":          { "prefix": "ita",      "body": [ "it('${1:description}', async (done) => {\n\t${2}\n\tdone();\n});${0}" ], "description": "test suite: it asynchronous\n" },
+  "test suite: afterEach":                { "prefix": "afe",      "body": [ "afterEach(function () {\n\t${1}\n})" ],                                  "description": "test suite: afterEach\n" },
+  "test suite: beforeEach":               { "prefix": "bfe",      "body": [ "beforeEach(function () {\n\t${1}\n})" ],                                 "description": "test suite: beforeEach\n" },
+  "test suite: after":                    { "prefix": "aft",      "body": [ "after(function () {\n\t${1}\n})" ],                                      "description": "test suite: after\n" },
+  "test suite: before":                   { "prefix": "bf",       "body": [ "before(function () {\n\t${1}\n})" ],                                     "description": "test suite: before\n" }
+}

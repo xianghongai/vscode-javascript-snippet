@@ -1,0 +1,10 @@
+{
+  "async named function":                 { "prefix": "asfn",     "body": [ "async function ${1:name} (${2:params}) {\n\t${3}\n}" ],             "description": "async named function\n" },
+  "async anonymous function":             { "prefix": "asfna",    "body": [ "async function (${1:params}) {\n\t${2}\n}" ],                       "description": "async anonymous function\n" },
+  "async arrow function":                 { "prefix": "asaf",     "body": [ "async (${1:params}) => {\n\t${2}\n}" ],                             "description": "async arrow function\n" },
+  "async generator function":             { "prefix": "asgf",     "body": [ "async function* (${1:params}) {\n\t${2}\n}" ],                      "description": "async generator function\n" },
+  "async named generator function":       { "prefix": "asgfn",    "body": [ "async function* ${1:name} (${2:params}) {\n\t${3}\n}" ],            "description": "async named generator function\n" },
+  "await":                                { "prefix": "aw",       "body": [ "await ${1}" ],                                                      "description": "await\n" },
+  "await Promise.all.map":                { "prefix": "awpm",     "body": [ "await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))" ], "description": "await Promise.all.map\n" },
+  "await Promise.all":                    { "prefix": "awpa",     "body": [ "await Promise.all(${1:value})" ],                                   "description": "await Promise.all\n" }
+}

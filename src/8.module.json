@@ -1,0 +1,18 @@
+{
+  "import":                               { "prefix": "im",       "body": [ "import ${2:moduleName} from '${1:module}';" ],                      "description": "Imports entire module statement\n" },
+  "import module as":                     { "prefix": "imas",     "body": [ "import { ${2:originalName} as ${3:alias} } from '${1:module}';" ],  "description": "Import module as\n" },
+  "import module all as":                 { "prefix": "imall",    "body": [ "import * as ${2:alias} from '${1:module}';" ],                      "description": "Import module all as\n" },
+  "import module destructuring":          { "prefix": "imd",      "body": [ "import { ${2:export} } from '${1:module}';" ],                      "description": "Imports only a portion of the module\n" },
+  "import without module name":           { "prefix": "imn",      "body": [ "import '${1:module}';" ],                                           "description": "Imports entire module without module name\n" },
+
+  "export":                               { "prefix": "ex",       "body": [ "export ${1};" ],                                                    "description": "export\n" },
+  "export const":                         { "prefix": "eco",      "body": [ "export const ${1:name} = ${2:value};" ],                            "description": "export const\n" },
+  "export as":                            { "prefix": "eas",      "body": [ "export ${1} as ${2};" ],                                            "description": "export as\n" },
+  "export from":                          { "prefix": "ef",       "body": [ "export ${1:default} from ${2:otherModule};" ],                      "description": "export from\n" },
+  "export default":                       { "prefix": "ed",       "body": [ "export default ${1};" ],                                            "description": "export default\n" },
+  "export class":                         { "prefix": "ecl",      "body": [ "export default class ${1:className} {\n\t${2}\n};\n" ],             "description": "export class\n" },
+  "export class extends":                 { "prefix": "ece",      "body": [ "export default class ${1:className} extends ${2:baseClassName} {\n\t${3}\n};\n" ], "description": "export class extends\n" },
+  "export default arrow function":        { "prefix": "edaf",     "body": [ "export default (${1:params}) => {\n\t${2}\n};\n" ],                 "description": "export default arrow function\n" },
+  "export default function":              { "prefix": "edfn",     "body": [ "export default function ${1:name} (${2:params}) {\n\t${3}\n}" ],    "description": "export default function\n" },
+  "export named arrow function":          { "prefix": "eaf",      "body": [ "export const ${1:name} = (${2:params}) => {\n\t$3\n};\n" ],        "description": "export named arrow function\n" }
+}

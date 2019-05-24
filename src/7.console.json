@@ -1,0 +1,17 @@
+{
+  "console.dir":                          { "prefix": "cd",       "body": [ "console.dir($1);" ],                              "description": "console.dir\n" },
+  "console.error":                        { "prefix": "ce",       "body": [ "console.error($1);" ],                            "description": "console.error\n" },
+  "console.error labeled":                { "prefix": "celb",     "body": [ "console.error('${1}', ${1});" ],                  "description": "console.error labeled\n" },
+  "console.info":                         { "prefix": "ci",       "body": [ "console.info($1);" ],                             "description": "console.info\n" },
+  "console.log":                          { "prefix": "clg",      "body": [ "console.log($1);" ],                              "description": "console.log\n" },
+  "console.log labeled":                  { "prefix": "clgl",     "body": [ "console.log('${1}', ${1});" ],                    "description": "console.log labeled\n" },
+  "console.warn":                         { "prefix": "cw",       "body": [ "console.warn($1);" ],                             "description": "console.warn\n" },
+  "console.warn labeled":                 { "prefix": "cwl",      "body": [ "console.warn('${1}', ${1});" ],                   "description": "console.warn labeled\n" },
+  "console.assert":                       { "prefix": "ca",       "body": [ "console.assert(${1:expression}, ${2:object});" ], "description": "console.assert\n" },
+  "console.clear":                        { "prefix": "cc",       "body": [ "console.clear();" ],                              "description": "console.clear\n" },
+  "console.count":                        { "prefix": "cco",      "body": [ "console.count(${1:label});" ],                    "description": "console.count\n" },
+  "console.group":                        { "prefix": "cg",       "body": [ "console.group(\"${1:label}\");" ],                "description": "console.group\n" },
+  "console.groupEnd":                     { "prefix": "cge",      "body": [ "console.groupEnd();" ],                           "description": "console.groupEnd\n" },
+  "console.table":                        { "prefix": "ct",       "body": [ "console.table(${1:object});" ],                   "description": "console.table\n" },
+  "console.trace":                        { "prefix": "ctr",      "body": [ "console.trace(${1:object});" ],                   "description": "console.trace\n" }
+}

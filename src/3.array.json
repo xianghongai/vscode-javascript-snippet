@@ -1,0 +1,23 @@
+{
+  "Array.isArray()":                      { "prefix": "isa",      "body": [ "Array.isArray(${1:source})" ],                                   "description": "Array.isArray()\n" },
+  "Array.from(arrayLike)":                { "prefix": "arfr",     "body": [ "Array.from(${1:arrayLike})" ],                                   "description": "Array.from(arrayLike)\n" },
+  "Array.from(arrayLike, mapFn)":         { "prefix": "arfr",     "body": [ "Array.from(${1:arrayLike}, (${2:item}) => {\n\t${3}\n})" ],       "description": "Array.from(arrayLike, mapFn)\n" },
+  "Array.of(elementN)":                   { "prefix": "arof",     "body": [ "Array.of(${1:elementN})" ],                                      "description": "Array.of(elementN)\n" },
+  "array.concat":                         { "prefix": "arc",      "body": [ "${1:iterable}.concat(${2:item})" ],                              "description": "array.concat\n" },
+  "array.copyWithin":                     { "prefix": "arcw",     "body": [ "${1:iterable}.copyWithin(${2:target}, ${3:start}, ${4:end})" ],  "description": "array.copyWithin\n" },
+  "array.fill":                           { "prefix": "arfill",   "body": [ "${1:iterable}.fill(${2:value}, ${3:start}, ${4:end})" ],         "description": "array.fill\n" },
+  "array.every":                          { "prefix": "are",      "body": [ "${1:iterable}.every((${2:item}) => {\n\t${3}\n})" ],    "description": "array.every\n" },
+  "array.filter":                         { "prefix": "arf",      "body": [ "${1:iterable}.filter((${2:item}) => {\n\t${3}\n})" ],   "description": "array.filter\n" },
+  "array.find":                           { "prefix": "arfd",     "body": [ "${1:iterable}.find((${2:item}) => {\n\t${3}\n})" ],     "description": "array.find\n" },
+  "array.findIndex":                      { "prefix": "arfdi",    "body": [ "${1:iterable}.findIndex((${2:item}) => {\n\t${3}\n})" ],"description": "array.findIndex\n" },
+  "array.flat(depth)":                    { "prefix": "arflat",   "body": [ "${1:iterable}.flat()" ],                                "description": "array.flat(depth), return a new array\n" },
+  "array.flatMap(callback)":              { "prefix": "arflatMap","body": [ "${1:iterable}.flatMap((${2:item}) => ${3:item})" ],                          "description": "array.flatMap(), \nnew_array = arr.flatMap(function callback(currentValue[, index[, array]]) { \n\t//return element for new_array; \n}[, thisArg])\nreturn a new array\n" },
+  "array.some":                           { "prefix": "ars",      "body": [ "${1:iterable}.some((${2:item}) => {\n\t${3}\n})" ],     "description": "array.some\n" },
+  "array.map":                            { "prefix": "map",      "body": [ "${1:iterable}.map((${2:item}) => {\n\t${3}\n})" ],      "description": "array.map\n" },
+  "array.forEach(function(item)":         { "prefix": "fe",       "body": [ "${1:iterable}.forEach(function(${2:item}) {\n\t${3}\n});" ],             "description": "array.forEach(function(item)\n" },
+  "array.forEach(function(item, index)":  { "prefix": "fe",       "body": [ "${1:iterable}.forEach(function(${2:item}, ${3:index}) {\n\t${4}\n});" ], "description": "array.forEach(function(item, index)\n" },
+  "array.forEach(arrow function(item))":  { "prefix": "fea",      "body": [ "${1:iterable}.forEach((${2:item}) => {\n\t${3}\n});" ],                  "description": "array.forEach(arrow function(item))\n" },
+  "array.forEach(arrow function(item, index))":  { "prefix": "fea",      "body": [ "${1:iterable}.forEach((${2:item}, ${3:index}) => {\n\t${4}\n});" ],      "description": "array.forEach(arrow function(item, index))\n" },
+  "array.reduce":                         { "prefix": "arr",      "body": [ "${1:iterable}.reduce((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${3}\n})" ], "description": "array.reduce\n" },
+  "sequence of 0..n":                     { "prefix": "seq",      "body": [ "[...Array(${1:length}).keys()]${2}" ],                                   "description": "sequence of 0..n\n" }
+}

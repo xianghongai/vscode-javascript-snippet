@@ -1,0 +1,11 @@
+{
+  "new Promise":                          { "prefix": "p",        "body": [ "new Promise((resolve, reject) => {\n\t${1}\n})" ],                  "description": "Promise\n" },
+  "Promise.all":                          { "prefix": "pa",       "body": [ "Promise.all(${1:value})" ],                                         "description": "Promise.all\n" },
+  "Promise.catch":                        { "prefix": "pc",       "body": [ "${1:promise}.catch(error => {\n\t${2}\n})" ],                       "description": "Promise.catch\n" },
+  "Promise.finally":                      { "prefix": "pfin",     "body": [ "${1:promise}.finally(${2})${3}" ],                                  "description": "Promise.finally\n" },
+  "Promise.reject":                       { "prefix": "prj",      "body": [ "Promise.reject(${1:value})" ],                                      "description": "Promise.reject\n" },
+  "Promise.resolve":                      { "prefix": "prs",      "body": [ "Promise.resolve(${1:value})" ],                                     "description": "Promise.resolve\n" },
+  "Promise.then":                         { "prefix": "pt",       "body": [ "${1:promise}.then((${2:value}) => {\n\t${3}\n})" ],                 "description": "Promise.then\n" },
+  "Promise.then.catch":                   { "prefix": "ptc",      "body": [ "${1:promise}.then((${2:value}) => {\n\t${3}\n}).catch((${4:err}) => {\n\t${5}\n});" ], "description": "Promise.then.catch\n" },
+  "return promise":                       { "prefix": "rp",       "body": [ "return new Promise((resolve, reject) => {\n\t${1}\n})" ],           "description": "return a new Promise\n" }
+}

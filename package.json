@@ -1,59 +1,69 @@
 {
-    "name": "vscode-javascript-snippet",
-    "publisher": "NicholasHsiang",
-    "displayName": "JavaScript Code Snippet",
-    "description": "Code snippets for JavaScript in ES3/5/6+ syntax",
-    "icon": "art/icon3.png",
-    "galleryBanner": {
-        "color": "#ffffff",
-        "theme": "dark"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/xianghongai/vscode-javascript-snippet/issues"
-    },
-    "homepage": "https://github.com/xianghongai/vscode-javascript-snippet/",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
-    },
-    "version": "0.0.3",
-    "engines": {
-        "vscode": "^0.12.x"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "keywords": [
-        "Javascript",
-        "Typescript"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "javascriptreact",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "typescriptreact",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "vue",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/javascript.json"
-            }
-        ]
-    }
+  "name": "vscode-javascript-snippet",
+  "publisher": "NicholasHsiang",
+  "displayName": "JavaScript Code Snippet",
+  "description": "Code snippets for JavaScript in ES3/5/6+ syntax",
+  "icon": "art/icon3.png",
+  "version": "0.0.3",
+  "galleryBanner": {
+    "color": "#ffffff",
+    "theme": "dark"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xianghongai/vscode-javascript-snippet/issues"
+  },
+  "homepage": "https://github.com/xianghongai/vscode-javascript-snippet/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
+  },
+  "engines": {
+    "vscode": "^0.12.x"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "JavaScript",
+    "ES6 Snippets",
+    "ES6+ Snippets",
+    "Javascript Snippets",
+    "JS Snippets",
+    "ECMAScript Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/javascript.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node merge.js"
+  },
+  "devDependencies": {
+    "glob": "^7.1.4"
+  }
 }

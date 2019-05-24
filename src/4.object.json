@@ -1,0 +1,9 @@
+{
+  "object literal":                       { "prefix": "ol",       "body": [ "{ ${1}: ${2}, }${3}" ],                                          "description": "object literal\n" },
+  "key/value pair":                       { "prefix": "kv",       "body": [ "${1}: ${2}," ],                                                  "description": "key/value pair\n" },
+  "Object.assign":                        { "prefix": "oa",       "body": [ "Object.assign(${1:target}, ${2:source})" ],                      "description": "Object.assign\n" },
+  "Object.create":                        { "prefix": "oc",       "body": [ "Object.create(${1:obj})" ],                                      "description": "Object.create\n" },
+  "Object.defineProperty":                { "prefix": "od",       "body": [ "Object.defineProperty(${1:dest}, '${2:prop}', {\n\t${3}\n})" ],  "description": "Object.defineProperty\n" },
+  "Object.getOwnPropertyDescriptor":      { "prefix": "og",       "body": [ "Object.getOwnPropertyDescriptor(${1:obj}, '${2:prop}')" ],       "description": "Object.getOwnPropertyDescriptor\n" },
+  "Object.keys":                          { "prefix": "ok",       "body": [ "Object.keys(${1:obj})" ],                                        "description": "Object.keys\n" }
+}
