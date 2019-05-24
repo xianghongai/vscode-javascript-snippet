@@ -4,7 +4,7 @@
   "displayName": "JavaScript Code Snippet",
   "description": "Code snippets for JavaScript in ES3/5/6+ syntax",
   "icon": "art/icon3.png",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "galleryBanner": {
     "color": "#ffffff",
     "theme": "dark"
@@ -61,7 +61,7 @@
     ]
   },
   "scripts": {
-    "build": "node merge.js"
+    "build": "node merge.js && vsce package"
   },
   "devDependencies": {
     "glob": "^7.1.4"
