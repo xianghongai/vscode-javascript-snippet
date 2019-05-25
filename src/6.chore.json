@@ -1,28 +1,23 @@
 {
-  "typeof":                               { "prefix": "to",       "body": [ "typeof ${1:object} === '${2:undefined}'" ],                      "description": "typeof\n" },
-  "instanceof":                           { "prefix": "io",       "body": [ "${1:object} instanceof '${2:constructor}'" ],                    "description": "instanceof\n" },
-
-  "setTimeout":                           { "prefix": "st",       "body": [ "setTimeout(function() {\n\t${2}\n}, ${1:delay});" ],     "description": "setTimeout\n" },
-  "setTimeOut, arrow function":           { "prefix": "sta",      "body": [ "setTimeout(() => {\n\t${2}\n}, ${1:delay});" ],          "description": "setTimeOut with arrow function\n" },
-  "setInterval":                          { "prefix": "si",       "body": [ "setInterval(function() {\n\t${2}\n}, ${1:interval});" ], "description": "setInterval\n" },
-  "setInterval, arrow function":          { "prefix": "sia",      "body": [ "setInterval(() => {\n\t${2}\n}, ${1:interval});" ],      "description": "setInterval with arrow function\n" },
-  "JSON.parse()":                         { "prefix": "jp",       "body": [ "JSON.parse(${1:obj});" ],     "description": "JSON.parse()\n" },
-  "JSON.stringify()":                     { "prefix": "js",       "body": [ "JSON.stringify(${1:obj});" ], "description": "JSON.stringify()\n" },
-
-  "try/catch":                            { "prefix": "tc",       "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n}" ],                        "description": "try/catch\n" },
-  "try/catch/finally":                    { "prefix": "tcf",      "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n} finally {\n\t\n}" ],       "description": "try/catch/finally\n" },
-  "try/finally":                          { "prefix": "tf",       "body": [ "try {\n\t${1}\n} finally {\n\t\n}" ],                                 "description": "try/finally\n" },
-  "throw new Error":                      { "prefix": "tne",      "body": [ "throw new ${1:error}" ],                                              "description": "throw new Error\n" },
-
-  "return":                               { "prefix": "r",        "body": [ "return ${1};" ],                                  "description": "return\n" },
-  "return null":                          { "prefix": "rn",       "body": [ "return null;" ],                                  "description": "return null\n" },
-  "return this":                          { "prefix": "rt",       "body": [ "return this;" ],                                  "description": "return this\n" },
-  "return new object":                    { "prefix": "ro",       "body": [ "return {\n\t${0}\n};" ],                          "description": "return new object\n" },
-
-  "ternary operator":                     { "prefix": "ternary",  "body": [ "${1} ? ${2} : ${3};" ],                           "description": "ternary operator\n" },
-
-  "alert":                                { "prefix": "al",       "body": [ "alert('${1:msg}');" ],                            "description": "window.alert\n" },
-  "confirm":                              { "prefix": "conf",     "body": [ "confirm('${1:msg}');" ],                          "description": "window.confirm\n" },
-  "prompt":                               { "prefix": "pm",       "body": [ "prompt('${1:msg}');" ],                           "description": "window.prompt\n" },
-  "debugger":                             { "prefix": "de",       "body": [ "debugger;" ],                                     "description": "debugger\n" }
+  "typeof":                      { "prefix": "to",       "body": [ "typeof ${1:object} === '${2:undefined}'" ],                      "description": "typeof\n" },
+  "instanceof":                  { "prefix": "io",       "body": [ "${1:object} instanceof '${2:constructor}'" ],                    "description": "instanceof\n" },
+  "setTimeout":                  { "prefix": "st",       "body": [ "setTimeout(function() {\n\t${2}\n}, ${1:delay});" ],             "description": "setTimeout\n" },
+  "setTimeOut, arrow function":  { "prefix": "sta",      "body": [ "setTimeout(() => {\n\t${2}\n}, ${1:delay});" ],                  "description": "setTimeOut with arrow function\n" },
+  "setInterval":                 { "prefix": "si",       "body": [ "setInterval(function() {\n\t${2}\n}, ${1:interval});" ],         "description": "setInterval\n" },
+  "setInterval, arrow function": { "prefix": "sia",      "body": [ "setInterval(() => {\n\t${2}\n}, ${1:interval});" ],              "description": "setInterval with arrow function\n" },
+  "JSON.parse()":                { "prefix": "jp",       "body": [ "JSON.parse(${1:obj});" ],                                        "description": "JSON.parse()\n" },
+  "JSON.stringify()":            { "prefix": "js",       "body": [ "JSON.stringify(${1:obj});" ],                                    "description": "JSON.stringify()\n" },
+  "try/catch":                   { "prefix": "tc",       "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n}" ],                   "description": "try/catch\n" },
+  "try/catch/finally":           { "prefix": "tcf",      "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n} finally {\n\t\n}" ],  "description": "try/catch/finally\n" },
+  "try/finally":                 { "prefix": "tf",       "body": [ "try {\n\t${1}\n} finally {\n\t\n}" ],                            "description": "try/finally\n" },
+  "throw new Error":             { "prefix": "tne",      "body": [ "throw new ${1:error}" ],                                         "description": "throw new Error\n" },
+  "return":                      { "prefix": "r",        "body": [ "return ${1};" ],                                                 "description": "return\n" },
+  "return null":                 { "prefix": "rn",       "body": [ "return null;" ],                                                 "description": "return null\n" },
+  "return this":                 { "prefix": "rt",       "body": [ "return this;" ],                                                 "description": "return this\n" },
+  "return new object":           { "prefix": "ro",       "body": [ "return {\n\t${0}\n};" ],                                         "description": "return new object\n" },
+  "ternary operator":            { "prefix": "ternary",  "body": [ "${1} ? ${2} : ${3};" ],                                          "description": "ternary operator\n" },
+  "alert":                       { "prefix": "al",       "body": [ "alert('${1:msg}');" ],                                           "description": "window.alert\n" },
+  "confirm":                     { "prefix": "conf",     "body": [ "confirm('${1:msg}');" ],                                         "description": "window.confirm\n" },
+  "prompt":                      { "prefix": "pm",       "body": [ "prompt('${1:msg}');" ],                                          "description": "window.prompt\n" },
+  "debugger":                    { "prefix": "de",       "body": [ "debugger;" ],                                                    "description": "debugger\n" }
 }

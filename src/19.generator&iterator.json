@@ -1,0 +1,5 @@
+{
+  "generator function":  { "prefix": "gf",  "body": [ "function* ${1:name}(${2:params}) {\n\t${3:yield} ;\n}\n" ],  "description": "Creates generator function\n" },
+  "yield":               { "prefix": "y",   "body": [ "yield ${1:expression};" ],                                   "description": "The yield keyword is used to pause and resume a generator function (function* or legacy generator function).\n" },
+  "yield*":              { "prefix": "yg",  "body": [ "yield* ${1:expression};" ],                                  "description": "The yield* expression is used to delegate to another generator or iterable object." }
+}
