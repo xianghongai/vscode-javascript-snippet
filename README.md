@@ -4,7 +4,18 @@ Code snippets for JavaScript in ES3/5/6+ syntax;
 
 Download this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-javascript-snippet).
 
+## Supported languages (file extensions)
+
+- JavaScript (`.js`)
+- TypeScript (`.ts`)
+- JavaScript React (`.jsx`)
+- TypeScript React (`.tsx`)
+- Html (`.html`)
+- Vue (`.vue`)
+
 ## Snippets
+
+Note: All the snippets include the final semicolon `;`
 
 ### declarations
 
