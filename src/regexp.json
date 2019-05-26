@@ -1,0 +1,6 @@
+{
+  "RegExp(pattern[, flags])":  { "prefix":"re",   "body": ["let ${1:regex1} = RegExp('${2:pattern}');"],                                                 "description": "RegExp(pattern[, flags])" },
+  "/pattern/flags":            { "prefix":"rep",  "body": ["let ${1:regex1} = /${2:pattern}/;"],                                                         "description": "/pattern/flags" },
+  "regexObj.exec(str)":        { "prefix":"ree",  "body": ["let ${1:regex1} = RegExp('${2:pattern}');\nlet ${3:result} = ${1:regex1}.exec(${4:str});"],  "description": "regexObj.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**." },
+  "regexObj.test(str)":        { "prefix":"ret",  "body": ["let ${1:regex1} = RegExp('${2:pattern}');\nlet ${3:result} = ${1:regex1}.test(${4:str});"],  "description": "regexObj.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**." }
+}
