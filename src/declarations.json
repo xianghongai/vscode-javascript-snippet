@@ -1,5 +1,5 @@
 {
-  "use strict":                { "prefix": "us",    "body": [ "'use strict';" ],                                       "description": "use strict\n" },
+  "use strict":                { "prefix": "usm",    "body": [ "'use strict';" ],                                      "description": "use strict mode\n" },
   "const":                     { "prefix": "c",     "body": [ "const ${1:name} = ${2:value};" ],                       "description": "const assignment\n" },
   "const awaited":             { "prefix": "caw",   "body": [ "const ${1:name} = await ${2:value};" ],                 "description": "const assignment awaited\n" },
   "const yielded":             { "prefix": "cy",    "body": [ "const ${1:name} = yield ${2:value};" ],                 "description": "const assignment yielded\n" },

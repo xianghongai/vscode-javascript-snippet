@@ -21,7 +21,7 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix | Body                        | Description                          |
 |:-------|-----------------------------|--------------------------------------|
-| `us`   | `'use strict';`             |                                      |
+| `usm`   | `'use strict';`            | **u**se **s**trict **m**ode          |
 | `c`    | `const name = value;`       |                                      |
 | `caw`  | `const name = await value;` | **c**onst **aw**aited                |
 | `cy`   | `const name = yield value;` |                                      |
