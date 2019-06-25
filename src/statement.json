@@ -3,7 +3,7 @@
   "if/else":                       { "prefix": "ife",  "body": [ "if (${1:condition}) {\n\t${2}\n} else {\n\t${3}\n}" ],                               "description": "if/else statement \n" },
   "else if":                       { "prefix": "ei",   "body": [ "else if (${1:condition}) {\n\t${2}\n}" ],                                            "description": "else if statement \n" },
   "else":                          { "prefix": "el",   "body": [ "else {\n\t${1}\n}" ],                                                                "description": "else statement \n" },
-  "switch":                        { "prefix": "swi",  "body": [ "switch (${1}) {\n\tcase ${2} :\n\t\t${3}\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}" ],  "description": "switch statement\n" },
+  "switch":                        { "prefix": "swi",  "body": [ "switch (${1}) {\n\tcase ${2}:\n\t\t${3}\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}" ],  "description": "switch statement\n" },
   "case":                          { "prefix": "cas",  "body": [ "case ${1} :\n\t${2}\n\t\tbreak;" ],                                                  "description": "switch's case statement \n" },
 
   "for-in":                        { "prefix": "fin",  "body": [ "for (let ${1:key} in ${2:object}) {\n\tif (${2:object}.hasOwnProperty(${1:key})) {\n\t\t${3}\n\t}\n}" ],  "description": "Iterating over property values of iterable objects\n" },
