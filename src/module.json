@@ -8,7 +8,7 @@
   "export renaming":                      { "prefix": "exas",   "body": [ "export {${1:variable} as ${2:name}};" ],                            "description": "*renaming exports as\n" },
   "export let":                           { "prefix": "exl",    "body": [ "export let ${1:name} = ${2:value};" ],                              "description": "*exporting individual features(let)\n" },
   "export const":                         { "prefix": "exc",    "body": [ "export const ${1:name} = ${2:value};" ],                            "description": "exporting individual features(const)\n" },
-  "export function":                      { "prefix": "exfn",   "body": [ "export function ${1:name} (){\n\t${2};\n}" ],                       "description": "exporting individual features(function)\n" },
+  "export function":                      { "prefix": "exfn",   "body": [ "export function ${1:name} (){\n\t${2}\n}" ],                       "description": "exporting individual features(function)\n" },
   "export named arrow function":          { "prefix": "exafn",  "body": [ "export const ${1:name} = (${2:params}) => {\n\t$3\n};" ],           "description": "export named arrow function\n" },
   "export default":                       { "prefix": "exd",    "body": [ "export default ${1:expression};" ],                                 "description": "*export default\n" },
   "export as default":                    { "prefix": "exdas",  "body": [ "export {${1:name} as default};" ],                                  "description": "export as default\n" },
