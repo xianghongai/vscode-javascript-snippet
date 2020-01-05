@@ -1,8 +1,8 @@
 {
-  "addEventListener":                     { "prefix": "ael",   "body": [ "${1:document}.addEventListener('${2:event}', function (e) {\n\t${3}\n});\n" ],  "description": "addEventListener\n" },
-  "addEventListener arrow function":      { "prefix": "aela",  "body": [ "${1:document}.addEventListener('${2:event}', ${3:ev} => {\n\t${4}\n});\n" ],    "description": "addEventListener, arrow function\n" },
-  "removeEventListener":                  { "prefix": "rel",   "body": [ "${1:document}.removeEventListener('${2:event}', ${3:listener});\n" ],           "description": "removeEventListener\n" },
-  "event cancel default and propagation": { "prefix": "evc",   "body": [ "event.preventDefault();\nevent.stopPropagation();\nreturn false;" ],            "description": "ev.preventDefault(); ev.stopPropagation()\n" },
-  "event preventDefault":                 { "prefix": "epd",   "body": [ "event.preventDefault();" ],                                                     "description": "event preventDefault\n" },
-  "event stopPropagation":                { "prefix": "esp",   "body": [ "event.stopPropagation();" ],                                                    "description": "event stopPropagation\n" }
+  "addEventListener":                     { "prefix": "ael",   "body": [ "${1:document}.addEventListener('${2:type}', function (event) {\n\t${3}\n});\n" ],  "description": "addEventListener\n" },
+  "addEventListener arrow function":      { "prefix": "aela",  "body": [ "${1:document}.addEventListener('${2:type}', ${3:event} => {\n\t${4}\n});\n" ],     "description": "addEventListener, arrow function\n" },
+  "removeEventListener":                  { "prefix": "rel",   "body": [ "${1:document}.removeEventListener('${2:type}', ${3:listener});\n" ],               "description": "removeEventListener\n" },
+  "event cancel default and propagation": { "prefix": "eps",   "body": [ "event.preventDefault();\nevent.stopPropagation();\nreturn false;" ],                "description": "event.preventDefault(); event.stopPropagation()\n" },
+  "event preventDefault":                 { "prefix": "epd",   "body": [ "event.preventDefault();" ],                                                         "description": "event preventDefault\n" },
+  "event stopPropagation":                { "prefix": "esp",   "body": [ "event.stopPropagation();" ],                                                        "description": "event stopPropagation\n" }
 }

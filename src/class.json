@@ -1,13 +1,13 @@
 {
-  "class":                  { "prefix": "cl",       "body": [ "class ${1:name} {\n\tconstructor (${2:params}) {\n\t\t${3}\n\t}\n}" ],                "description": "class\n" },
+  "class":                  { "prefix": "cl",       "body": [ "class ${1:name} {\n\tconstructor (${2:params}) {\n\t\t${3}\n\t}\n\n\t}" ],                "description": "class\n" },
   "class extends":          { "prefix": "cle",      "body": [ "class ${1:className} extends ${2:baseClassName} {\n\tconstructor (${3:params}) {\n\t\tsuper();\n\t\t${4}\n\t}\n}" ], "description": "class extends\n" },
-  "class static":           { "prefix": "cls",      "body": [ "static ${1:create}(${2:params}) {\n\treturn new ${3:PersonClass}(${2:params});\n}" ], "description": "class static\n" },
-  "class constructor":      { "prefix": "cons",     "body": [ "constructor(${1:params}) {\n\t\t${2}\n\t}" ],                                         "description": "class constructor\n" },
-  "get property":           { "prefix": "gp",       "body": [ "get ${1:propertyName} () {\n\treturn this.${2};\n}" ],                                "description": "getter\n" },
-  "set property":           { "prefix": "sp",       "body": [ "set ${1:propertyName} (${2:value}) {\n\t${3}\n}" ],                                   "description": "setter\n" },
-  "getter and setter":      { "prefix": "gs",       "body": [ "get ${0:property} () {\n\t${1}\n}\n\nset ${2:property} (${3:value}) {\n\t${4}\n}" ],  "description": "getter and setter\n" },
+  "class static":           { "prefix": "stat",     "body": [ "static ${1:methodName}(${2:params}) {\n\treturn ${3};\n}" ],                              "description": "class static\n" },
+  "class constructor":      { "prefix": "cons",     "body": [ "constructor(${1:params}) {\n\t${2}\n}" ],                                             "description": "class constructor\n" },
+  "get property":           { "prefix": "get",      "body": [ "get ${1:propertyName} () {\n\treturn this.${2:element};\n}" ],                        "description": "getter\n" },
+  "set property":           { "prefix": "set",      "body": [ "set ${1:propertyName} (${2:value}) {\n\tthis.${3:element} = ${2};\n}" ],              "description": "setter\n" },
+  "getter and setter":      { "prefix": "gs",       "body": [ "get ${1:propertyName} () {\n\treturn this.${2:element};\n}\n\nset ${1} (${3:value}) {\n\tthis.${2:element} = ${3};\n}" ],  "description": "getter and setter\n" },
   "method":                 { "prefix": "m",        "body": [ "${1:method} (${2:params}) {\n\t${3}\n}" ],                                            "description": "method\n" },
-  "async method":           { "prefix": "asm",       "body": [ "async ${1:method}(${2:params}) {\n\t${3}\n}" ],                                      "description": "async method\n" },
-  "prototype constructor":  { "prefix": "proc",     "body": [ "var ${1:Constructor} = function(${2:params}) {\n\t${3}\n};" ],                        "description": "prototypal constructor\n" },
-  "prototype method":       { "prefix": "prom",     "body": [ "${1:Constructor}.prototype.${2:method} = function (${3:params}) {\n\t${4}\n};" ],     "description": "prototype method\n" }
+  "async method":           { "prefix": "asm",      "body": [ "async ${1:method}(${2:params}) {\n\t${3}\n}" ],                                       "description": "async method\n" },
+  "prototype constructor":  { "prefix": "protoc",     "body": [ "var ${1:Constructor} = function(${2:params}) {\n\t${3}\n};" ],                        "description": "prototypal constructor\n" },
+  "prototype method":       { "prefix": "protom",     "body": [ "${1:Constructor}.prototype.${2:method} = function (${3:params}) {\n\t${4}\n};" ],     "description": "prototype method\n" }
 }

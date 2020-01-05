@@ -8,6 +8,7 @@
   "createElement":            { "prefix": "cel",      "body": [ "${1:document}.createElement(${2:elem});" ],               "description": "createElement\n" },
   "getAttribute":             { "prefix": "ga",       "body": [ "${1:document}.getAttribute('${2:attr}');" ],              "description": "getAttribute\n" },
   "setAttribute":             { "prefix": "sa",       "body": [ "${1:document}.setAttribute('${2:attr}', ${3:value});" ],  "description": "setAttribute\n" },
+  "hasAttribute":             { "prefix": "ha",       "body": [ "${1:document}.hasAttribute('${2:attr}')" ],               "description": "hasAttribute\n" },
   "removeAttribute":          { "prefix": "ra",       "body": [ "${1:document}.removeAttribute('${2:attr}');" ],           "description": "removeAttribute\n" },
   "appendChild":              { "prefix": "ac",       "body": [ "${1:document}.appendChild(${2:elem});" ],                 "description": "appendChild\n" },
   "removeChild":              { "prefix": "rc",       "body": [ "${1:document}.removeChild(${2:elem});" ],                 "description": "removeChild\n" },

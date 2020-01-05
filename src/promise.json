@@ -1,10 +1,10 @@
 {
-  "new Promise":         { "prefix": "p",     "body": [ "let ${1:promise} = new Promise((resolve, reject) => {\n\t${2}\n});\n\n${1:promise}.then(${3:result} => {\n\t${4}\n}).catch(${5:error} => {\n\t${6}\n});\n" ],                  "description": "Promise\n" },
+  "new Promise":         { "prefix": "p",     "body": [ "const ${1:promise} = new Promise((resolve, reject) => {\n\t${2}\n});\n\n${1:promise}.then(${3:result} => {\n\t${4}\n}).catch(${5:error} => {\n\t${6}\n});\n" ],                  "description": "Promise\n" },
   "Promise.all":         { "prefix": "pa",    "body": [ "Promise.all([${1:value}]);\n" ],                           "description": "Promise.all\n" },
   "Promise.reject":      { "prefix": "prj",   "body": [ "Promise.reject(${1:value});\n" ],                          "description": "Promise.reject\n" },
-  "resolve":             { "prefix": "rs",    "body": [ "resolve(${1:value});\n" ],                                 "description": "resolve()\n" },
-  "reject":              { "prefix": "rj",    "body": [ "reject(${1:err});\n" ],                                    "description": "reject()\n" },
   "Promise.resolve":     { "prefix": "prs",   "body": [ "Promise.resolve(${1:value});\n" ],                         "description": "Promise.resolve\n" },
+  "reject":              { "prefix": "rj",    "body": [ "reject(${1:err});\n" ],                                    "description": "reject()\n" },
+  "resolve":             { "prefix": "rs",    "body": [ "resolve(${1:value});\n" ],                                 "description": "resolve()\n" },
   "Promise.catch":       { "prefix": "pc",    "body": [ "${1:promise}.catch(error => {\n\t${2}\n});\n" ],           "description": "promise.catch\n" },
   "Promise.finally":     { "prefix": "pf",    "body": [ "${1:promise}.finally(() => {\n\t${2}\n});\n" ],            "description": "promise.finally\n" },
   "Promise.then":        { "prefix": "pt",    "body": [ "${1:promise}.then(${2:result} => {\n\t${3}\n})" ],         "description": "promise.then\n" },

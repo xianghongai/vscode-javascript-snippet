@@ -5,7 +5,7 @@
   "async generator function anonymous":  { "prefix": "asgfna",  "body": [ "async function* (${1:params}) {\n\t${2}\n}\n" ],                      "description": "async generator function anonymous\n" },
   "async arrow function":                { "prefix": "asaf",    "body": [ "async (${1:params}) => {\n\t${2}\n}\n" ],                             "description": "async arrow function\n" },
   "await":                               { "prefix": "aw",      "body": [ "await ${1:promise}" ],                                                "description": "await\n" },
-  "await(const)":                        { "prefix": "caw",     "body": [ "const ${1:result} = await ${2:promise};" ],                           "description": "await(const)\n" },
+  "await(const)":                        { "prefix": "awc",     "body": [ "const ${1:result} = await ${2:promise};" ],                           "description": "await(const)\n" },
   "await Promise.all":                   { "prefix": "awpa",    "body": [ "await Promise.all(${1:value})\n" ],                                   "description": "await Promise.all\n" },
   "await Promise.all.map":               { "prefix": "awpam",   "body": [ "await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n" ], "description": "await Promise.all.map\n" }
 }
