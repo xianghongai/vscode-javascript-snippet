@@ -400,6 +400,16 @@ Note: All the snippets include the final semicolon `;`
 | `proxy.function`      |      | Function Proxies with the `apply` and `construct` Traps       |
 | `proxy.revocable`     |      | **Revocable** Proxies                                         |
 
+### Math
+
+| Prefix | Body            | Description            |
+| :----- | --------------- | ---------------------- |
+| `mr`   | `Math.random()` |
+| `mro`  | `Math.round()`  | 20.49 → 20, 20.5 → 21  |
+| `mc`   | `Math.ceil()`   | 7.004 → 8, -7.004 → -7 |
+| `mf`   | `Math.floor()`  | 5.95 → 5, -5.05 → -6   |
+| `mtr`  | `Math.trunc()`  | 5.05 → 5, -0.123 → -0  |
+
 ### Dom
 
 | Prefix | Body                                            | Description                    |
