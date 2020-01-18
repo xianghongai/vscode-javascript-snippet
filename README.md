@@ -20,7 +20,7 @@ Note: All the snippets include the final semicolon `;`
 ### declarations
 
 | Prefix | Body                        | Description                          |
-|:-------|-----------------------------|--------------------------------------|
+| :----- | --------------------------- | ------------------------------------ |
 | `usm`  | `'use strict';`             | **u**se **s**trict **m**ode          |
 | `c`    | `const name = value;`       |                                      |
 | `caw`  | `const name = await value;` | **c**onst **aw**aited                |
@@ -37,30 +37,27 @@ Note: All the snippets include the final semicolon `;`
 | `vda`  | `var [] = ;`                |                                      |
 | `dp`   | `{}: parameter`             | **d**estructuring **p**arameter      |
 
-
 ### statement
 
 | Prefix            | Body                                                                              | Description                            |
-|:------------------|-----------------------------------------------------------------------------------|----------------------------------------|
+| :---------------- | --------------------------------------------------------------------------------- | -------------------------------------- |
 | `if`              | `if (condition) { }`                                                              |                                        |
 | `ife`             | `if (condition) { } else { }`                                                     |                                        |
 | `ei`              | `else if (condition) { }`                                                         |                                        |
 | `el`              | `else { }`                                                                        |                                        |
-| `swi`             | `switch () { case :    break; default:  break;}`                                  |                                        |
-| `cas`             | `case  :   break;`                                                                |                                        |
-| `fin`             | `for (const key in object) { if (object.hasOwnProperty(key)) {   }}`              | **f**or-**in**                         |
+| `swi`             | `switch () { case : break; default: break;}`                                      |                                        |
+| `cas`             | `case : break;`                                                                   |                                        |
+| `fin`             | `for (const key in object) { if (object.hasOwnProperty(key)) { }}`                | **f**or-**in**                         |
 | `fof`             | `for (const item of object) { }`                                                  | **f**or-**of**                         |
 | `fl`, `fo`, `for` | `for (const index = 0, length = iterable.length; index < length; index += 1) { }` |                                        |
 | `flr`, `forr`     | `for (const length = iterable.length - 1; length >= 0; length -= 1) { }`          | **f**or **l**oop iterable(**r**everse) |
 | `wh`              | `while (condition) { }`                                                           |                                        |
 | `whi`             | `let iterableIndex = array.lengthwhile (iterableIndexIndex--) { }`                |                                        |
 
-
-
 ### function
 
 | Prefix    | Body                                                                                             | Description                                   |
-|:----------|--------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| :-------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
 | `fn`      | `function name (params) { }`                                                                     | **f**u**n**ction                              |
 | `fna`     | `function (params) { }`                                                                          | **f**u**n**ction **a**nonymous                |
 | `vfn`     | `var name = function (params) { }`                                                               |                                               |
@@ -77,95 +74,92 @@ Note: All the snippets include the final semicolon `;`
 | `caf`     | `const name = (params) => { }`                                                                   |                                               |
 | `iif`     | `;((params) => { })()`                                                                           |                                               |
 | `iife`    | `;(function (params) { })()`                                                                     |                                               |
-| `nt`      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} |                                               |
-
-
+| `nt`      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} | **n**ew.**t**argetf                           |
 
 ### array
 
-| Prefix      | Body                                                              | Description                                      |
-|:------------|-------------------------------------------------------------------|--------------------------------------------------|
-| `arl`       | `iterable.length;`                                                |                                                  |
-| `isa`       | `Array.isArray(value)`                                            |                                                  |
-| `arfr`      | `Array.from(arrayLike);`                                          |                                                  |
-| `arfr`      | `Array.from(arrayLike, (item) => { });`                           |                                                  |
-| `arof`      | `Array.of(elementN);`                                             |                                                  |
-| `arc`       | `iterable.concat(valueN);`                                        | **ar**ray.**c**oncat                             |
-| `arcw`      | `iterable.copyWithin(target, start, end);`                        | **ar**ray.**c**opy**W**ithin                     |
-| `are`       | `iterable.entries();`                                             | **ar**ray.**e**ntries                            |
-| `arev`      | `iterable.every((element) => { });`                               | **ar**ray.**ev**ery                              |
-| `arfill`    | `iterable.fill(value, start, end);`                               |                                                  |
-| `arf`       | `iterable.filter((element) => { });`                              |                                                  |
-| `arfi`      | `iterable.find((element) => { });`                                |                                                  |
-| `arfin`     | `iterable.findIndex((element) => { })`                            |                                                  |
-| `arflat`    | `iterable.flat();`                                                |                                                  |
-| `arflatMap` | `iterable.flatMap((value) => value);`                             |                                                  |
-| `fea`       | `iterable.forEach((currentValue) => { });`                        | **f**or**E**ach callback with **a**rrow function |
-| `feai`      | `iterable.forEach((currentValue, index) => { });`                 |                                                  |
-| `fe`        | `iterable.forEach(function(currentValue) { });`                   |                                                  |
-| `fei`       | `iterable.forEach(function(currentValue, index) { });`            |                                                  |
-| `ari`       | `iterable.includes(valueToFind)`                                  |                                                  |
-| `ario`      | `iterable.indexOf(searchElement)`                                 |                                                  |
-| `arj`       | `iterable.join(separator);`                                       |                                                  |
-| `ark`       | `iterable.keys();`                                                |                                                  |
-| `arlio`     | `iterable.lastIndexOf(searchElement)`                             |                                                  |
-| `map`       | `iterable.map((currentValue) => { });`                            |                                                  |
-| `arp`       | `iterable.pop();`                                                 |                                                  |
-| `arj`       | `iterable.push(elementN);`                                        |                                                  |
-| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`     |                                                  |
+| Prefix      | Body                                                                | Description                                      |
+| :---------- | ------------------------------------------------------------------- | ------------------------------------------------ |
+| `ar`        | `const arr = [];`                                                   |                                                  |
+| `arl`       | `iterable.length;`                                                  |                                                  |
+| `isa`       | `Array.isArray(value)`                                              |                                                  |
+| `arfr`      | `Array.from(arrayLike);`                                            |                                                  |
+| `arfr`      | `Array.from(arrayLike, (item) => { });`                             |                                                  |
+| `arof`      | `Array.of(elementN);`                                               |                                                  |
+| `arc`       | `iterable.concat(valueN);`                                          | **ar**ray.**c**oncat                             |
+| `arcw`      | `iterable.copyWithin(target, start, end);`                          | **ar**ray.**c**opy**W**ithin                     |
+| `are`       | `iterable.entries();`                                               | **ar**ray.**e**ntries                            |
+| `arev`      | `iterable.every((element) => { });`                                 | **ar**ray.**ev**ery                              |
+| `arfill`    | `iterable.fill(value, start, end);`                                 |                                                  |
+| `arf`       | `iterable.filter((element) => { });`                                |                                                  |
+| `arfi`      | `iterable.find((element) => { });`                                  |                                                  |
+| `arfin`     | `iterable.findIndex((element) => { })`                              |                                                  |
+| `arflat`    | `iterable.flat();`                                                  |                                                  |
+| `arflatMap` | `iterable.flatMap((value) => value);`                               |                                                  |
+| `fea`       | `iterable.forEach((currentValue) => { });`                          | **f**or**E**ach callback with **a**rrow function |
+| `feai`      | `iterable.forEach((currentValue, index) => { });`                   |                                                  |
+| `fe`        | `iterable.forEach(function(currentValue) { });`                     |                                                  |
+| `fei`       | `iterable.forEach(function(currentValue, index) { });`              |                                                  |
+| `ari`       | `iterable.includes(valueToFind)`                                    |                                                  |
+| `ario`      | `iterable.indexOf(searchElement)`                                   |                                                  |
+| `arj`       | `iterable.join(separator);`                                         |                                                  |
+| `ark`       | `iterable.keys();`                                                  |                                                  |
+| `arlio`     | `iterable.lastIndexOf(searchElement)`                               |                                                  |
+| `map`       | `iterable.map((currentValue) => { });`                              |                                                  |
+| `arp`       | `iterable.pop();`                                                   |                                                  |
+| `arj`       | `iterable.push(elementN);`                                          |                                                  |
+| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`       |                                                  |
 | `arrr`      | `iterable.reduce​Right((accumulator, currentValue) => { return });` |                                                  |
-| `arre`      | `iterable.reverse();`                                             |                                                  |
-| `ars`       | `iterable.shift();`                                               |                                                  |
-| `arsl`      | `iterable.slice(begin, end);`                                     |                                                  |
-| `arso`      | `iterable.some((element) => { });`                                |                                                  |
-| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                      |                                                  |
-| `arsp`      | `iterable.splice(start, deleteCount, item);`                      |                                                  |
-| `aru`       | `iterable.unshift(elementN);`                                     |                                                  |
-| `arv`       | `iterable.values();`                                              |                                                  |
-| `arsi`      | `iterable[Symbol.iterator]();`                                    |                                                  |
-| `seq`       | `[...Array(length).keys()]`                                       |                                                  |
-
+| `arre`      | `iterable.reverse();`                                               |                                                  |
+| `ars`       | `iterable.shift();`                                                 |                                                  |
+| `arsl`      | `iterable.slice(begin, end);`                                       |                                                  |
+| `arso`      | `iterable.some((element) => { });`                                  |                                                  |
+| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                        |                                                  |
+| `arsp`      | `iterable.splice(start, deleteCount, item);`                        |                                                  |
+| `aru`       | `iterable.unshift(elementN);`                                       |                                                  |
+| `arv`       | `iterable.values();`                                                |                                                  |
+| `arsi`      | `iterable[Symbol.iterator]();`                                      |                                                  |
+| `seq`       | `[...Array(length).keys()]`                                         |                                                  |
 
 ### object
 
-| Prefix   | Body                                                                                                                                                                                                                                                                                   | Description                                                 |
-|:---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| `ol`     | `{ key: value }`                                                                                                                                                                                                                                                                       |                                                             |
-| `kv`     | `key: value,`                                                                                                                                                                                                                                                                          |                                                             |
-| `oa`     | `Object.assign(target, source);`                                                                                                                                                                                                                                                       |                                                             |
-| `oc`     | `Object.create(obj);`                                                                                                                                                                                                                                                                  |                                                             |
-| `odp`    | `Object.defineProperty(dest, 'propertyName', { value: undefined, configurable: false, enumerable: false, writable: ${10:false}})`                                                                                                                                                      | **O**bject.**d**efine**P**roperty(data descriptors)         |
-| `odpa`   | `Object.defineProperty(dest, 'propertyName', { get() {  return value; }, set(newValue) {  value = newValue; }, enumerable: false, configurable: false})`                                                                                                                               | **O**bject.**d**efine**P**roperty(**a**ccessor descriptors) |
-| `odps`   | `Object.defineProperties(dest, { propertyName: {  configurable: false,  enumerable: false  value: undefined,  writable: false }, propertyName: {  get() {   return value;  },  set(newValue) {   ${10:value} = newValue;  }  enumerable: ${11:false},  configurable: ${12:false} }});` | **O**bject.**d**efine**P**ropertie**s**                     |
-| `oe`     | `Object.entries(obj);`                                                                                                                                                                                                                                                                 |                                                             |
-| `of`     | `Object.freeze(obj);`                                                                                                                                                                                                                                                                  |                                                             |
-| `ofe`    | `Object.fromEntries(iterable);`                                                                                                                                                                                                                                                        |                                                             |
-| `ogopd`  | `Object.getOwnPropertyDescriptor(obj, 'propertyName');`                                                                                                                                                                                                                                | **O**bject.**g**et**O**wn**P**roperty**D**escriptor         |
-| `ogopds` | `Object.getOwnPropertyDescriptors(obj);`                                                                                                                                                                                                                                               | **O**bject.**g**et**O**wn**P**roperty**D**escriptor**s**    |
-| `ogopn`  | `Object.getOwnPropertyNames(obj);`                                                                                                                                                                                                                                                     | **O**bject.**g**et**O**wn**P**roperty**N**ames              |
-| `ogops`  | `Object.getOwnPropertySymbols(obj);`                                                                                                                                                                                                                                                   | **O**bject.**g**et**O**wn**P**roperty**S**ymbols            |
-| `ogpo`   | `Object.getPrototypeOf(obj);`                                                                                                                                                                                                                                                          | **O**bject.**g**et**P**rototype**O**f                       |
-| `oi`     | `Object.is(value1, value2);`                                                                                                                                                                                                                                                           |                                                             |
-| `oie`    | `Object.isExtensible(obj)`                                                                                                                                                                                                                                                             |                                                             |
-| `oif`    | `Object.isFrozen(obj)`                                                                                                                                                                                                                                                                 |                                                             |
-| `ois`    | `Object.isSealed(obj)`                                                                                                                                                                                                                                                                 |                                                             |
-| `ok`     | `Object.keys(obj);`                                                                                                                                                                                                                                                                    |                                                             |
-| `ope`    | `Object.preventExtensions(obj);`                                                                                                                                                                                                                                                       |                                                             |
-| `os`     | `Object.seal(obj);`                                                                                                                                                                                                                                                                    |                                                             |
-| `ospo`   | `Object.setPrototypeOf(obj, prototype);`                                                                                                                                                                                                                                               | **O**bject.**s**et**P**rototype**O**f                       |
-| `ov`     | `Object.values(obj);`                                                                                                                                                                                                                                                                  |                                                             |
-| `hop`    | `obj.hasOwnProperty(propertyName)`                                                                                                                                                                                                                                                     | **h**as**O**wn**P**roperty                                  |
-| `ipo`    | `prototypeObj.isPrototypeOf(object)`                                                                                                                                                                                                                                                   | **i**s**P**rototype**O**f                                   |
-| `pie`    | `obj.propertyIsEnumerable(propertyName)`                                                                                                                                                                                                                                               | **p**roperty**I**s**E**numerable                            |
-| `tls`    | `objects.toLocaleString();`                                                                                                                                                                                                                                                            | **t**o**L**ocale**S**tring                                  |
-| `ts`     | `objects.toString();`                                                                                                                                                                                                                                                                  | **t**o**S**tring                                            |
-| `vo`     | `objects.valueOf();`                                                                                                                                                                                                                                                                   | **v**alue**O**f                                             |
-
+| Prefix   | Body                                                                                                                                                                                                                                                   | Description                                                 |
+| :------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+| `ol`     | `{ key: value }`                                                                                                                                                                                                                                       |                                                             |
+| `kv`     | `key: value,`                                                                                                                                                                                                                                          |                                                             |
+| `oa`     | `Object.assign(target, source);`                                                                                                                                                                                                                       |                                                             |
+| `oc`     | `Object.create(obj);`                                                                                                                                                                                                                                  |                                                             |
+| `odp`    | `Object.defineProperty(dest, 'propertyName', { value: undefined, configurable: false, enumerable: false, writable: false})`                                                                                                                            | **O**bject.**d**efine**P**roperty(data descriptors)         |
+| `odpa`   | `Object.defineProperty(dest, 'propertyName', { get() { return value; }, set(newValue) { value = newValue; }, enumerable: false, configurable: false})`                                                                                                 | **O**bject.**d**efine**P**roperty(**a**ccessor descriptors) |
+| `odps`   | `Object.defineProperties(dest, { propertyName: { configurable: false, enumerable: false value: undefined, writable: false }, propertyName: { get() { return value; }, set(newValue) { value = newValue; } enumerable: false, configurable: false }});` | **O**bject.**d**efine**P**ropertie**s**                     |
+| `oe`     | `Object.entries(obj);`                                                                                                                                                                                                                                 |                                                             |
+| `of`     | `Object.freeze(obj);`                                                                                                                                                                                                                                  |                                                             |
+| `ofe`    | `Object.fromEntries(iterable);`                                                                                                                                                                                                                        |                                                             |
+| `ogopd`  | `Object.getOwnPropertyDescriptor(obj, 'propertyName');`                                                                                                                                                                                                | **O**bject.**g**et**O**wn**P**roperty**D**escriptor         |
+| `ogopds` | `Object.getOwnPropertyDescriptors(obj);`                                                                                                                                                                                                               | **O**bject.**g**et**O**wn**P**roperty**D**escriptor**s**    |
+| `ogopn`  | `Object.getOwnPropertyNames(obj);`                                                                                                                                                                                                                     | **O**bject.**g**et**O**wn**P**roperty**N**ames              |
+| `ogops`  | `Object.getOwnPropertySymbols(obj);`                                                                                                                                                                                                                   | **O**bject.**g**et**O**wn**P**roperty**S**ymbols            |
+| `ogpo`   | `Object.getPrototypeOf(obj);`                                                                                                                                                                                                                          | **O**bject.**g**et**P**rototype**O**f                       |
+| `oi`     | `Object.is(value1, value2);`                                                                                                                                                                                                                           |                                                             |
+| `oie`    | `Object.isExtensible(obj)`                                                                                                                                                                                                                             |                                                             |
+| `oif`    | `Object.isFrozen(obj)`                                                                                                                                                                                                                                 |                                                             |
+| `ois`    | `Object.isSealed(obj)`                                                                                                                                                                                                                                 |                                                             |
+| `ok`     | `Object.keys(obj);`                                                                                                                                                                                                                                    |                                                             |
+| `ope`    | `Object.preventExtensions(obj);`                                                                                                                                                                                                                       |                                                             |
+| `os`     | `Object.seal(obj);`                                                                                                                                                                                                                                    |                                                             |
+| `ospo`   | `Object.setPrototypeOf(obj, prototype);`                                                                                                                                                                                                               | **O**bject.**s**et**P**rototype**O**f                       |
+| `ov`     | `Object.values(obj);`                                                                                                                                                                                                                                  |                                                             |
+| `hop`    | `obj.hasOwnProperty(propertyName)`                                                                                                                                                                                                                     | **h**as**O**wn**P**roperty                                  |
+| `ipo`    | `prototypeObj.isPrototypeOf(object)`                                                                                                                                                                                                                   | **i**s**P**rototype**O**f                                   |
+| `pie`    | `obj.propertyIsEnumerable(propertyName)`                                                                                                                                                                                                               | **p**roperty**I**s**E**numerable                            |
+| `tls`    | `objects.toLocaleString();`                                                                                                                                                                                                                            | **t**o**L**ocale**S**tring                                  |
+| `ts`     | `objects.toString();`                                                                                                                                                                                                                                  | **t**o**S**tring                                            |
+| `vo`     | `objects.valueOf();`                                                                                                                                                                                                                                   | **v**alue**O**f                                             |
 
 ### String
 
 | Prefix  | Body                                     | Description                         |
-|:--------|------------------------------------------|-------------------------------------|
+| :------ | ---------------------------------------- | ----------------------------------- |
 | `sfcc`  | `String.fromCharCode(numN)`              | **S**tring.**f**rom**C**har**C**ode |
 | `sfcp`  | `String.fromCodePoint(numN)`             |                                     |
 | `sr`    | <code>String.raw`templateString`</code>  |                                     |
@@ -199,75 +193,70 @@ Note: All the snippets include the final semicolon `;`
 | `sts`   | `str.trimStart() //trimLeft()`           |                                     |
 | `ssi`   | `str[Symbol.iterator]`                   |                                     |
 
-
 ### Number
 
-| Prefix  | Body                        |
-|:--------|-----------------------------|
-| `ne`    | `Number.EPSILON`            |
-| `nmasi` | `Number​.MAX_SAFE_INTEGER`    |
-| `nmav`  | `Number.MAX_VALUE`          |
-| `nmisi` | `Number​.MIN_SAFE_INTEGER`    |
-| `nmav`  | `Number​.MIN_VALUE`           |
-| `nni`   | `Number​.NEGATIVE_INFINITY`   |
-| `nn`    | `Number​.NaN`                 |
-| `npi`   | `Number​.POSITIVE_INFINITY`   |
-| `nif`   | `Number​.isFinite(value)`     |
-| `nii`   | `Number​.isInteger(value)`    |
-| `nin`   | `Number​.isNaN(value)`        |
+| Prefix  | Body                            |
+| :------ | ------------------------------- |
+| `ne`    | `Number.EPSILON`                |
+| `nmasi` | `Number​.MAX_SAFE_INTEGER`      |
+| `nmav`  | `Number.MAX_VALUE`              |
+| `nmisi` | `Number​.MIN_SAFE_INTEGER`      |
+| `nmav`  | `Number​.MIN_VALUE`             |
+| `nni`   | `Number​.NEGATIVE_INFINITY`     |
+| `nn`    | `Number​.NaN`                   |
+| `npi`   | `Number​.POSITIVE_INFINITY`     |
+| `nif`   | `Number​.isFinite(value)`       |
+| `nii`   | `Number​.isInteger(value)`      |
+| `nin`   | `Number​.isNaN(value)`          |
 | `nisi`  | `Number​.isSafe​Integer(value)` |
 | `npf`   | `Number​.parse​Float(string)`   |
-| `npi`   | `Number​.parseInt(string)`    |
-| `nte`   | `number.toExponential()`    |
-| `ntf`   | `number.toFixed()`          |
-| `ntp`   | `number.toPrecision()`      |
-
+| `npi`   | `Number​.parseInt(string)`      |
+| `nte`   | `number.toExponential()`        |
+| `ntf`   | `number.toFixed()`              |
+| `ntp`   | `number.toPrecision()`          |
 
 ### Regexp
 
 | Prefix | Body                                                          | Description                |
-|:-------|---------------------------------------------------------------|----------------------------|
+| :----- | ------------------------------------------------------------- | -------------------------- |
 | `re`   | `let regex = RegExp('pattern');`                              | **R**eg**E**xp             |
 | `rep`  | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern |
 | `ree`  | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
 | `ret`  | `let regex = RegExp('pattern');let result = regex.test(str);` |                            |
 
-
 ### chore
 
-| Prefix      | Body                                     | Description                                 |
-|:------------|------------------------------------------|---------------------------------------------|
-| `to`        | `typeof object === 'undefined'`          | **t**ype**o**f                              |
-| `io`        | `object instanceof 'constructor'`        | **i**nstance**o**f                          |
-| `st`        | `setTimeout(function() { }, delay);`     | **s**et**T**imeout                          |
-| `sta`       | `setTimeout(() => { }, delay);`          | **s**et**T**imeout with **a**rrow function  |
-| `si`        | `setInterval(function() { }, interval);` | **s**et**I**nterval                         |
-| `sia`       | `setInterval(() => { }, interval);`      | **s**et**I**nterval with **a**rrow function |
-| `jp`        | `JSON.parse(obj);`                       |                                             |
-| `js`        | `JSON.stringify(obj);`                   |                                             |
-| `tc`        | `try { } catch (err) { }`                |                                             |
-| `tcf`       | `try { } catch (err) { } finally { }`    |                                             |
-| `tf`        | `try { } finally { }`                    |                                             |
-| `tne`, `er` | `throw new Error('message')`             |                                             |
-| `r`         | `return ;`                               |                                             |
-| `rn`        | `return null;`                           |                                             |
-| `rt`        | `return this;`                           |                                             |
-| `ro`        | `return { };`                            |                                             |
-| `ternary`   | ` ?  : ;`                                |                                             |
-| `al`        | `alert('msg');`                          |                                             |
-| `conf`      | `confirm('msg');`                        |                                             |
-| `pm`        | `prompt('msg');`                         |                                             |
-| `de`        | `debugger;`                              |                                             |
-| `eu`        | `encodeURI(URI)`                         | **e**ncode**U**RI                           |
-| `du`        | `decodeURI(encodedURI)`                  | **d**ecode**U**RI                           |
-| `euc`       | `encodeURIComponent(str)`                | **e**ncode**U**RI**C**omponent              |
-| `duc`       | `decodeURIComponent(encodedURI)`         | **d**ecode**U**RI**C**omponent              |
-
+| Prefix    | Body                                     | Description                                 |
+| :-------- | ---------------------------------------- | ------------------------------------------- |
+| `to`      | `typeof object === 'undefined'`          | **t**ype**o**f                              |
+| `io`      | `object instanceof 'constructor'`        | **i**nstance**o**f                          |
+| `st`      | `setTimeout(function() { }, delay);`     | **s**et**T**imeout                          |
+| `sta`     | `setTimeout(() => { }, delay);`          | **s**et**T**imeout with **a**rrow function  |
+| `si`      | `setInterval(function() { }, interval);` | **s**et**I**nterval                         |
+| `sia`     | `setInterval(() => { }, interval);`      | **s**et**I**nterval with **a**rrow function |
+| `jp`      | `JSON.parse(obj);`                       |                                             |
+| `js`      | `JSON.stringify(obj);`                   |                                             |
+| `tc`      | `try { } catch (err) { }`                |                                             |
+| `tcf`     | `try { } catch (err) { } finally { }`    |                                             |
+| `tf`      | `try { } finally { }`                    |                                             |
+| `r`       | `return ;`                               |                                             |
+| `rn`      | `return null;`                           |                                             |
+| `rt`      | `return this;`                           |                                             |
+| `ro`      | `return { };`                            |                                             |
+| `ternary` | `? : ;`                                  |                                             |
+| `al`      | `alert('msg');`                          |                                             |
+| `conf`    | `confirm('msg');`                        |                                             |
+| `pm`      | `prompt('msg');`                         |                                             |
+| `de`      | `debugger;`                              |                                             |
+| `eu`      | `encodeURI(URI)`                         | **e**ncode**U**RI                           |
+| `du`      | `decodeURI(encodedURI)`                  | **d**ecode**U**RI                           |
+| `euc`     | `encodeURIComponent(str)`                | **e**ncode**U**RI**C**omponent              |
+| `duc`     | `decodeURIComponent(encodedURI)`         | **d**ecode**U**RI**C**omponent              |
 
 ### module
 
 | Prefix   | Body                                                                                         | Description                                 |
-|:---------|----------------------------------------------------------------------------------------------|---------------------------------------------|
+| :------- | -------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | `im`     | `import { moduleName } from 'module';`                                                       | **im**port                                  |
 | `imd`    | `import moduleName from 'module';`                                                           | **im**port **d**efault export               |
 | `imas`   | `import { originalName as alias } from 'module';`                                            | **im**port **as** renamed exports           |
@@ -288,15 +277,14 @@ Note: All the snippets include the final semicolon `;`
 | `exfr`   | `export {default} from otherModule;`                                                         | **ex**port **fr**om                         |
 | `exallo` | `export * from otherModule;`                                                                 | **ex**port **all** from **o**ther module    |
 
-
 ### class
 
 | Prefix   | Body                                                                                              | Description                   |
-|:---------|---------------------------------------------------------------------------------------------------|-------------------------------|
+| :------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
 | `cl`     | `class name { constructor (params) { } }`                                                         | **cl**ass                     |
 | `cle`    | `class className extends baseClassName { constructor (params) { super(); } }`                     | **cl**ass **e**xtends         |
 | `cls`    | `static create(params) { return new PersonClass(params);}`                                        | **cl**ass **s**tatic          |
-| `cons`   | `constructor(params) {   }`                                                                       | class **cons**tructor         |
+| `cons`   | `constructor(params) { }`                                                                         | class **cons**tructor         |
 | `get`    | `get propertyName () { return this.element; }`                                                    | **g**et **p**ropertyName      |
 | `set`    | `set propertyName (value) { this.element = value; }`                                              | **s**et **p**ropertyName      |
 | `gs`     | `get propertyName () { return this.element; } set propertyName (value) { this.element = value; }` | **g**etter and **s**etter     |
@@ -305,11 +293,10 @@ Note: All the snippets include the final semicolon `;`
 | `protoc` | `var Constructor = function(params) { };`                                                         | **pro**totype **c**onstructor |
 | `protom` | `Constructor.prototype.method = function (params) { };`                                           | **pro**totype **m**ethod      |
 
-
 ### Promise
 
 | Prefix | Body                                                                                                     | Description                                      |
-|:-------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| :----- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | `p`    | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **p**romise                                  |
 | `pa`   | `Promise.all([value]);`                                                                                  | **P**romise.**a**ll                              |
 | `prj`  | `Promise.reject(value);`                                                                                 | **P**romise.**r**e**j**ect                       |
@@ -323,20 +310,18 @@ Note: All the snippets include the final semicolon `;`
 | `ptcf` | `promise.then(result => { }).catch(error => { }).finally(() => { });`                                    | **p**romise.**t**hen().**c**atch().**f**inally() |
 | `rp`   | `return new Promise((resolve, reject) => { })`                                                           |                                                  |
 
-
 ### Generator Iterator
 
 | Prefix | Body                                | Description                |
-|:-------|-------------------------------------|----------------------------|
+| :----- | ----------------------------------- | -------------------------- |
 | `gf`   | `function* name(params) { yield ;}` | **g**enerator **f**unction |
 | `y`    | `yield expression;`                 |                            |
 | `yg`   | `yield* expression;`                |                            |
 
-
 ### Async
 
 | Prefix   | Body                                                                                                       | Description                                            |
-|:---------|------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| :------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | `asfn`   | `async function name (params) { const result = await promise; return result;}name().then(result => {$6});` | **as**ync **f**unction **n**amed                       |
 | `asfna`  | `async function (params) { }`                                                                              | **as**ync **f**u**n**ction **a**nonymous               |
 | `asgfn`  | `async function* name (params) { }`                                                                        | **as**ync **g**enerator **f**unction **n**amed         |
@@ -347,11 +332,44 @@ Note: All the snippets include the final semicolon `;`
 | `awpa`   | `await Promise.all(value)`                                                                                 |                                                        |
 | `awpam`  | `await Promise.all(array.map((value) => { }))`                                                             |                                                        |
 
+### Symbol
+
+| Prefix | Body                       | Description |
+| :----- | -------------------------- | ----------- |
+| lsy    | `let symObj = Symbol();`   |
+| csy    | `const symObj = Symbol();` |
+| symf   | `Symbol.for('key');`       |
+| symk   | `Symbol.keyFor('symObj');` |
+
+### Maps & Sets
+
+| Prefix      | Body                                     | Description |
+| :---------- | ---------------------------------------- | ----------- |
+| `lm`        | `let resourceMap = new Map();`           |
+| `ls`        | `let resourceSet = new Set();`           |
+| `lwm`       | `let resourceWeakMap = new WeakMap();`   |
+| `lws`       | `let resourceWeakSet = new WeakSet();`   |
+| `cm`, `ma`  | `const resourceMap = new Map();`         |
+| `cs`, `se`  | `const resourceSet = new Set();`         |
+| `cwm`, `wm` | `const resourceWeakMap = new WeakMap();` |
+| `cws`, `ws` | `const resourceWeakSet = new WeakSet();` |
+
+### Error
+
+| Prefix | Body                                            | Description |
+| :----- | ----------------------------------------------- | ----------- |
+| `tn`   | `throw new throw new Error('message')`          |
+| `tne`  | `throw new throw new EvalError('message')`      |
+| `tnr`  | `throw new throw new RangeError('message')`     |
+| `tnre` | `throw new throw new ReferenceError('message')` |
+| `tns`  | `throw new throw new SyntaxError('message')`    |
+| `tnt`  | `throw new throw new TypeError('message')`      |
+| `tnu`  | `throw new throw new URIError('message')`       |
 
 ### Event
 
 | Prefix | Body                                                           | Description                                          |
-|:-------|----------------------------------------------------------------|------------------------------------------------------|
+| :----- | -------------------------------------------------------------- | ---------------------------------------------------- |
 | `ael`  | `document.addEventListener('type', function (event) { });`     | **a**dd**E**vent**L**istener                         |
 | `aela` | `document.addEventListener('type', event => { });`             | **a**dd**E**vent**L**istener **a**rrow function      |
 | `rel`  | `document.removeEventListener('event', listener);`             | **r**emove**E**vent**L**istener                      |
@@ -359,76 +377,96 @@ Note: All the snippets include the final semicolon `;`
 | `epd`  | `event.preventDefault();`                                      | **e**vent **p**revent**D**efault                     |
 | `esp`  | `event.stopPropagation();`                                     | **e**vent **s**top**P**ropagation                    |
 
+### AJAX
+
+| Prefix           | Body | Description                |
+| :--------------- | ---- | -------------------------- |
+| `xhr`            |      | **X**ML**H**ttp**R**equest |
+| `fetch`          |      | fetch                      |
+| `fetchget`,`fg`  |      | fetch get                  |
+| `fetchpost`,`fp` |      | fetch post                 |
+
+### Proxy & Reflection
+
+| Prefix                | Body | Description                                                   |
+| :-------------------- | ---- | ------------------------------------------------------------- |
+| `proxy.set`           |      | Validating Properties Using the `set` Trap                    |
+| `proxy.get`           |      | Object Shape Validation Using the `get` Trap                  |
+| `proxy.has`           |      | Hiding Property Existence Using the `has` Trap                |
+| `proxy.delete`        |      | Preventing Property Deletion with the **delete**Property Trap |
+| `proxy.prototype`     |      | **Prototype** Proxy Traps                                     |
+| `proxy.extensibility` |      | Object **Extensibility** Traps                                |
+| `proxy.property`      |      | **Property** Descriptor Traps                                 |
+| `proxy.ownKeys`       |      | The `ownKeys` Trap                                            |
+| `proxy.function`      |      | Function Proxies with the `apply` and `construct` Traps       |
+| `proxy.revocable`     |      | **Revocable** Proxies                                         |
 
 ### Dom
 
-| Prefix | Body                                        | Description                    |
-|:-------|---------------------------------------------|--------------------------------|
-| `gi`   | `document.getElementById('id');`            | **g**etElementBy**I**d         |
-| `gc`   | `document.getElementsByClassName('class');` | **g**etElementsBy**C**lassName |
-| `gt`   | `document.getElementsByTagName('tag');`     | **g**etElementsBy**T**agName   |
-| `qs`   | `document.querySelector('selector');`       | **q**uery**S**elector          |
-| `qsa`  | `document.querySelectorAll('selector');`    | **q**uery**S**elector**A**ll   |
-| `cdf`  | `document.createDocumentFragment();$2`      |                                |
-| `cel`  | `document.createElement(elem);`             |                                |
-| `ga`   | `document.getAttribute('attr');`            |                                |
-| `sa`   | `document.setAttribute('attr', value);`     |                                |
-| `ha`   | `document.hasAttribute('attr');`            |                                |
-| `ra`   | `document.removeAttribute('attr');`         |                                |
-| `ac`   | `document.appendChild(elem);`               |                                |
-| `rc`   | `document.removeChild(elem);`               |                                |
-| `ih`   | `document.innerHTML = 'elem';`              |                                |
-| `tco`  | `document.textContent = 'content';`         |                                |
-| `cla`  | `document.classList.add('class');`          | **c**lass**L**ist.**a**dd      |
-| `clc`  | `document.classList.contains('class');`     |                                |
-| `clr`  | `document.classList.remove('class');`       |                                |
-| `clt`  | `document.classList.toggle('class');`       |                                |
-
+| Prefix | Body                                            | Description                    |
+| :----- | ----------------------------------------------- | ------------------------------ |
+| `gi`   | `document.getElementById('id');`                | **g**etElementBy**I**d         |
+| `gc`   | `document.getElementsByClassName('className');` | **g**etElementsBy**C**lassName |
+| `gt`   | `document.getElementsByTagName('tagName');`     | **g**etElementsBy**T**agName   |
+| `qs`   | `document.querySelector('selector');`           | **q**uery**S**elector          |
+| `qsa`  | `document.querySelectorAll('selector');`        | **q**uery**S**elector**A**ll   |
+| `cdf`  | `document.createDocumentFragment();`            |                                |
+| `cel`  | `document.createElement(elem);`                 |                                |
+| `ga`   | `document.getAttribute('attr');`                |                                |
+| `sa`   | `document.setAttribute('attr', value);`         |                                |
+| `ha`   | `document.hasAttribute('attr');`                |                                |
+| `ra`   | `document.removeAttribute('attr');`             |                                |
+| `ac`   | `document.appendChild(elem);`                   |                                |
+| `rc`   | `document.removeChild(elem);`                   |                                |
+| `ih`   | `document.innerHTML = 'elem';`                  |                                |
+| `tco`  | `document.textContent = 'content';`             |                                |
+| `cla`  | `document.classList.add('className');`          | **c**lass**L**ist.**a**dd      |
+| `clc`  | `document.classList.contains('className');`     |                                |
+| `clr`  | `document.classList.remove('className');`       |                                |
+| `clt`  | `document.classList.toggle('className');`       |                                |
 
 ### console
 
 | Prefix | Body                                  | Description             |
-|:-------|---------------------------------------|-------------------------|
-| `cd`   | `console.dir($1);`                    | **c**onsole.**d**ir     |
-| `ce`   | `console.error($1);`                  |                         |
-| `celb` | `console.error('', );`                |                         |
-| `ci`   | `console.info($1);`                   |                         |
-| `clg`  | `console.log($1);`                    | **c**onsole.**l**o**g** |
+| :----- | ------------------------------------- | ----------------------- |
+| `cd`   | `console.dir();`                      | **c**onsole.**d**ir     |
+| `ce`   | `console.error();`                    |                         |
+| `celb` | `console.error('labele', );`          |                         |
+| `ci`   | `console.info();`                     |                         |
+| `clg`  | `console.log();`                      | **c**onsole.**l**o**g** |
 | `clgl` | `console.log('', );`                  |                         |
-| `cw`   | `console.warn($1);`                   |                         |
+| `cw`   | `console.warn();`                     |                         |
 | `cwl`  | `console.warn('', );`                 |                         |
 | `ca`   | `console.assert(expression, object);` |                         |
 | `cc`   | `console.clear();`                    |                         |
 | `cco`  | `console.count(label);`               |                         |
-| `cg`   | `console.group(\"label\");`           |                         |
+| `cg`   | `console.group('label');`             |                         |
 | `cge`  | `console.groupEnd();`                 |                         |
 | `ct`   | `console.table(object);`              |                         |
 | `ctr`  | `console.trace(object);`              |                         |
 
-
 ### CommonJS/Node.js
 
 | Prefix | Body                                                           | Description |
-|:-------|----------------------------------------------------------------|-------------|
+| :----- | -------------------------------------------------------------- | ----------- |
 | `ec`   | `class name { constructor (params) { }} module.exports = name` |             |
 | `em`   | `exports.member = value`                                       |             |
 | `me`   | `module.exports = name`                                        |             |
 | `rq`   | `require('module')`                                            |             |
 | `crq`  | `const module = require('module');`                            |             |
 
-
 ### BDD Testing (Mocha, Jasmine, etc.)
 
-| Prefix | Body                                              |
-|:-------|---------------------------------------------------|
-| `desc` | `describe('description', function () { })`        |
-| `cont` | `context('description', callback);`               |
-| `it`   | `it('description', () => { })`                    |
-| `ita`  | `it('description', async (done) => {  done();});` |
-| `afe`  | `afterEach(function () { })`                      |
-| `bfe`  | `beforeEach(function () { })`                     |
-| `aft`  | `after(function () { })`                          |
-| `bf`   | `before(function () { })`                         |
+| Prefix | Body                                             |
+| :----- | ------------------------------------------------ |
+| `desc` | `describe('description', function () { })`       |
+| `cont` | `context('description', callback);`              |
+| `it`   | `it('description', () => { })`                   |
+| `ita`  | `it('description', async (done) => { done();});` |
+| `afe`  | `afterEach(function () { })`                     |
+| `bfe`  | `beforeEach(function () { })`                    |
+| `aft`  | `after(function () { })`                         |
+| `bf`   | `before(function () { })`                        |
 
 ## License
 
@@ -436,8 +474,16 @@ MIT License
 
 ---
 
-TODO: `Set`, `Map`, `Symbol`, `Proxy`, `Reflection`, `Math`, `DOM`, `BOM`, `Error`
+TODO: `Math`, `DOM`, `BOM`
 
 ---
 
-`${1:placeholder}` → `placeholder`: `(\$\{\d+)(:?)([a-zA-Z0-9]*)(\}{1})` → `$3`
+`placeholder` → `placeholder`: `(\$\{\d+)(:?)([a-zA-Z0-9]*)(\}{1})` → `$3`
+
+```
+^\n  → \\n\n
+\s{2} → \\t
+" → '
+(^) → "
+($) → ",
+```

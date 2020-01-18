@@ -1,6 +1,6 @@
 {
   "typeof":                      { "prefix": "to",       "body": [ "typeof ${1:object} === '${2:undefined}'" ],                      "description": "typeof\n" },
-  "instanceof":                  { "prefix": "io",       "body": [ "${1:object} instanceof '${2:constructor}'" ],                    "description": "instanceof\n" },
+  "instanceof":                  { "prefix": "io",       "body": [ "${1:object} instanceof ${2:Constructor}" ],                    "description": "instanceof\n" },
   "setTimeout":                  { "prefix": "st",       "body": [ "setTimeout(function() {\n\t${2}\n}, ${1:delay});" ],             "description": "setTimeout\n" },
   "setTimeOut, arrow function":  { "prefix": "sta",      "body": [ "setTimeout(() => {\n\t${2}\n}, ${1:delay});" ],                  "description": "setTimeOut with arrow function\n" },
   "setInterval":                 { "prefix": "si",       "body": [ "setInterval(function() {\n\t${2}\n}, ${1:interval});" ],         "description": "setInterval\n" },
@@ -10,7 +10,6 @@
   "try/catch":                   { "prefix": "tc",       "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n}" ],                   "description": "try/catch\n" },
   "try/catch/finally":           { "prefix": "tcf",      "body": [ "try {\n\t${1}\n} catch (${2:err}) {\n\t\n} finally {\n\t\n}" ],  "description": "try/catch/finally\n" },
   "try/finally":                 { "prefix": "tf",       "body": [ "try {\n\t${1}\n} finally {\n\t\n}" ],                            "description": "try/finally\n" },
-  "throw new Error":             { "prefix": ["tne", "er"],      "body": [ "throw new Error('${1:message}')" ],                      "description": "throw new Error('message')\n" },
   "return":                      { "prefix": "r",        "body": [ "return ${1};" ],                                                 "description": "return\n" },
   "return null":                 { "prefix": "rn",       "body": [ "return null;" ],                                                 "description": "return null\n" },
   "return this":                 { "prefix": "rt",       "body": [ "return this;" ],                                                 "description": "return this\n" },
