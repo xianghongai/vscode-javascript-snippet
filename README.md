@@ -19,23 +19,19 @@ Note: All the snippets include the final semicolon `;`
 
 ### declarations
 
-| Prefix | Body                        | Description                          |
-| :----- | --------------------------- | ------------------------------------ |
-| `usm`  | `'use strict';`             | **u**se **s**trict **m**ode          |
-| `c`    | `const name = value;`       |                                      |
-| `caw`  | `const name = await value;` | **c**onst **aw**aited                |
-| `cy`   | `const name = yield value;` |                                      |
-| `cdo`  | `const {} = ;`              | **c**onst **d**estructing **o**bject |
-| `cda`  | `const [] = ;`              | **c**onst **d**estructing **a**rray  |
-| `l`    | `let name = value;`         |                                      |
-| `law`  | `let name = await value;`   |                                      |
-| `ly`   | `let name = yield value;`   |                                      |
-| `ldo`  | `let {} = ;`                |                                      |
-| `lda`  | `let [] = ;`                |                                      |
-| `v`    | `var name = value;`         |                                      |
-| `vdo`  | `var {} = ;`                |                                      |
-| `vda`  | `var [] = ;`                |                                      |
-| `dp`   | `{}: parameter`             | **d**estructuring **p**arameter      |
+| Prefix | Body                  | Description                          |
+| :----- | --------------------- | ------------------------------------ |
+| `usm`  | `'use strict';`       | **u**se **s**trict **m**ode          |
+| `c`    | `const name = value;` |                                      |
+| `cdo`  | `const {} = ;`        | **c**onst **d**estructing **o**bject |
+| `cda`  | `const [] = ;`        | **c**onst **d**estructing **a**rray  |
+| `l`    | `let name = value;`   |                                      |
+| `ldo`  | `let {} = ;`          |                                      |
+| `lda`  | `let [] = ;`          |                                      |
+| `v`    | `var name = value;`   |                                      |
+| `vdo`  | `var {} = ;`          |                                      |
+| `vda`  | `var [] = ;`          |                                      |
+| `dp`   | `{}: parameter`       | **d**estructuring **p**arameter      |
 
 ### statement
 
@@ -74,7 +70,7 @@ Note: All the snippets include the final semicolon `;`
 | `caf`     | `const name = (params) => { }`                                                                   |                                               |
 | `iif`     | `;((params) => { })()`                                                                           |                                               |
 | `iife`    | `;(function (params) { })()`                                                                     |                                               |
-| `nt`      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} | **n**ew.**t**argetf                           |
+| `nt`      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} | **n**ew.**t**arget                            |
 
 ### array
 
@@ -314,6 +310,8 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix | Body                                | Description                |
 | :----- | ----------------------------------- | -------------------------- |
+| `cy`   | `const name = yield value;`         |                            |
+| `ly`   | `let name = yield value;`           |                            |
 | `gf`   | `function* name(params) { yield ;}` | **g**enerator **f**unction |
 | `y`    | `yield expression;`                 |                            |
 | `yg`   | `yield* expression;`                |                            |
@@ -322,13 +320,14 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix   | Body                                                                                                       | Description                                            |
 | :------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `caw`    | `const result = await promise;`                                                                            | **c**onst **aw**aited                                  |
+| `law`    | `let result = await promise;`                                                                              |                                                        |
 | `asfn`   | `async function name (params) { const result = await promise; return result;}name().then(result => {$6});` | **as**ync **f**unction **n**amed                       |
 | `asfna`  | `async function (params) { }`                                                                              | **as**ync **f**u**n**ction **a**nonymous               |
 | `asgfn`  | `async function* name (params) { }`                                                                        | **as**ync **g**enerator **f**unction **n**amed         |
 | `asgfna` | `async function* (params) { }`                                                                             | **as**ync **g**enerator **f**u**n**ction **a**nonymous |
 | `asaf`   | `async (params) => { }`                                                                                    | **as**ync **a**rrow **f**unction                       |
-| `aw`     | `await promiseObj`                                                                                         |                                                        |
-| `caw`    | `const result = await promiseObj;`                                                                         |                                                        |
+| `aw`     | `await promise`                                                                                            |                                                        |
 | `awpa`   | `await Promise.all(value)`                                                                                 |                                                        |
 | `awpam`  | `await Promise.all(array.map((value) => { }))`                                                             |                                                        |
 
@@ -356,15 +355,15 @@ Note: All the snippets include the final semicolon `;`
 
 ### Error
 
-| Prefix | Body                                            | Description |
-| :----- | ----------------------------------------------- | ----------- |
-| `tn`   | `throw new throw new Error('message')`          |
-| `tne`  | `throw new throw new EvalError('message')`      |
-| `tnr`  | `throw new throw new RangeError('message')`     |
-| `tnre` | `throw new throw new ReferenceError('message')` |
-| `tns`  | `throw new throw new SyntaxError('message')`    |
-| `tnt`  | `throw new throw new TypeError('message')`      |
-| `tnu`  | `throw new throw new URIError('message')`       |
+| Prefix | Body                                  | Description |
+| :----- | ------------------------------------- | ----------- |
+| `tn`   | `throw new Error('message')`          |
+| `tne`  | `throw new EvalError('message')`      |
+| `tnr`  | `throw new RangeError('message')`     |
+| `tnre` | `throw new ReferenceError('message')` |
+| `tns`  | `throw new SyntaxError('message')`    |
+| `tnt`  | `throw new TypeError('message')`      |
+| `tnu`  | `throw new URIError('message')`       |
 
 ### Event
 
