@@ -483,7 +483,7 @@ MIT License
 
 ---
 
-TODO: `Math`, `DOM`, `BOM`
+TODO: `DOM`, `BOM`
 
 ---
 

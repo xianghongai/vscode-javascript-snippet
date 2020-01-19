@@ -1,0 +1,30 @@
+{
+  "localStorage.setItem('key', 'value');": {
+    "prefix": "lss",
+    "body": [
+      "localStorage.setItem('${1:key}', '${2:value}');"
+    ],
+    "description": "localStorage.setItem('key', 'value');\n"
+  },
+  "localStorage.getItem('key');": {
+    "prefix": "lsg",
+    "body": [
+      "localStorage.getItem('${1:key}');"
+    ],
+    "description": "localStorage.getItem('key');\n"
+  },
+  "localStorage.removeItem('key');": {
+    "prefix": "lsr",
+    "body": [
+      "localStorage.removeItem('${1:key}');"
+    ],
+    "description": "localStorage.removeItem('key');\n"
+  },
+  "localStorage.clear();": {
+    "prefix": "lsc",
+    "body": [
+      "localStorage.clear();"
+    ],
+    "description": "localStorage.clear();\n"
+  }
+}
