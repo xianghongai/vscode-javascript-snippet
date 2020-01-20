@@ -4,6 +4,33 @@ Code snippets for JavaScript in ES3/5/6+ syntax;
 
 Download this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-javascript-snippet).
 
+- Declarations
+- Statement
+- Function
+- Array
+- Object
+- String
+- Number
+- Regexp
+- chore
+- Module
+- Class
+- Promise
+- Generator Iterator
+- Async
+- Symbol
+- Maps & Sets
+- Error
+- Event
+- AJAX
+- Proxy & Reflection
+- Math
+- DOM
+- BOM
+- Console
+- CommonJS/Node.js
+- BDD Testing (Mocha, Jasmine, etc.)
+
 ## Supported languages (file extensions)
 
 - JavaScript (`.js`)
@@ -17,7 +44,7 @@ Download this extension from the [Visual Studio Code Marketplace](https://market
 
 Note: All the snippets include the final semicolon `;`
 
-### declarations
+### Declarations
 
 | Prefix | Body                  | Description                          |
 | :----- | --------------------- | ------------------------------------ |
@@ -33,7 +60,7 @@ Note: All the snippets include the final semicolon `;`
 | `vda`  | `var [] = ;`          |                                      |
 | `dp`   | `{}: parameter`       | **d**estructuring **p**arameter      |
 
-### statement
+### Statement
 
 | Prefix            | Body                                                                              | Description                            |
 | :---------------- | --------------------------------------------------------------------------------- | -------------------------------------- |
@@ -50,7 +77,7 @@ Note: All the snippets include the final semicolon `;`
 | `wh`              | `while (condition) { }`                                                           |                                        |
 | `whi`             | `let iterableIndex = array.lengthwhile (iterableIndexIndex--) { }`                |                                        |
 
-### function
+### Function
 
 | Prefix    | Body                                                                                             | Description                                   |
 | :-------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
@@ -72,7 +99,7 @@ Note: All the snippets include the final semicolon `;`
 | `iife`    | `;(function (params) { })()`                                                                     |                                               |
 | `nt`      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} | **n**ew.**t**arget                            |
 
-### array
+### Array
 
 | Prefix      | Body                                                                | Description                                      |
 | :---------- | ------------------------------------------------------------------- | ------------------------------------------------ |
@@ -117,7 +144,7 @@ Note: All the snippets include the final semicolon `;`
 | `arsi`      | `iterable[Symbol.iterator]();`                                      |                                                  |
 | `seq`       | `[...Array(length).keys()]`                                         |                                                  |
 
-### object
+### Object
 
 | Prefix   | Body                                                                                                                                                                                                                                                   | Description                                                 |
 | :------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
@@ -220,36 +247,29 @@ Note: All the snippets include the final semicolon `;`
 | `ree`  | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
 | `ret`  | `let regex = RegExp('pattern');let result = regex.test(str);` |                            |
 
-### chore
+### Chore
 
-| Prefix    | Body                                     | Description                                 |
-| :-------- | ---------------------------------------- | ------------------------------------------- |
-| `to`      | `typeof object === 'undefined'`          | **t**ype**o**f                              |
-| `io`      | `object instanceof 'constructor'`        | **i**nstance**o**f                          |
-| `st`      | `setTimeout(function() { }, delay);`     | **s**et**T**imeout                          |
-| `sta`     | `setTimeout(() => { }, delay);`          | **s**et**T**imeout with **a**rrow function  |
-| `si`      | `setInterval(function() { }, interval);` | **s**et**I**nterval                         |
-| `sia`     | `setInterval(() => { }, interval);`      | **s**et**I**nterval with **a**rrow function |
-| `jp`      | `JSON.parse(obj);`                       |                                             |
-| `js`      | `JSON.stringify(obj);`                   |                                             |
-| `tc`      | `try { } catch (err) { }`                |                                             |
-| `tcf`     | `try { } catch (err) { } finally { }`    |                                             |
-| `tf`      | `try { } finally { }`                    |                                             |
-| `r`       | `return ;`                               |                                             |
-| `rn`      | `return null;`                           |                                             |
-| `rt`      | `return this;`                           |                                             |
-| `ro`      | `return { };`                            |                                             |
-| `ternary` | `? : ;`                                  |                                             |
-| `al`      | `alert('msg');`                          |                                             |
-| `conf`    | `confirm('msg');`                        |                                             |
-| `pm`      | `prompt('msg');`                         |                                             |
-| `de`      | `debugger;`                              |                                             |
-| `eu`      | `encodeURI(URI)`                         | **e**ncode**U**RI                           |
-| `du`      | `decodeURI(encodedURI)`                  | **d**ecode**U**RI                           |
-| `euc`     | `encodeURIComponent(str)`                | **e**ncode**U**RI**C**omponent              |
-| `duc`     | `decodeURIComponent(encodedURI)`         | **d**ecode**U**RI**C**omponent              |
+| Prefix    | Body                                  | Description                    |
+| :-------- | ------------------------------------- | ------------------------------ |
+| `to`      | `typeof object === 'undefined'`       | **t**ype**o**f                 |
+| `io`      | `object instanceof 'constructor'`     | **i**nstance**o**f             |
+| `jp`      | `JSON.parse(obj);`                    |                                |
+| `js`      | `JSON.stringify(obj);`                |                                |
+| `tc`      | `try { } catch (err) { }`             |                                |
+| `tcf`     | `try { } catch (err) { } finally { }` |                                |
+| `tf`      | `try { } finally { }`                 |                                |
+| `r`       | `return ;`                            |                                |
+| `rn`      | `return null;`                        |                                |
+| `rt`      | `return this;`                        |                                |
+| `ro`      | `return { };`                         |                                |
+| `ternary` | `? : ;`                               |                                |
+| `de`      | `debugger;`                           |                                |
+| `eu`      | `encodeURI(URI)`                      | **e**ncode**U**RI              |
+| `du`      | `decodeURI(encodedURI)`               | **d**ecode**U**RI              |
+| `euc`     | `encodeURIComponent(str)`             | **e**ncode**U**RI**C**omponent |
+| `duc`     | `decodeURIComponent(encodedURI)`      | **d**ecode**U**RI**C**omponent |
 
-### module
+### Module
 
 | Prefix   | Body                                                                                         | Description                                 |
 | :------- | -------------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -262,8 +282,8 @@ Note: All the snippets include the final semicolon `;`
 | `exas`   | `export {variable as name};`                                                                 | **ex**port **as** renaming                  |
 | `exl`    | `export let name = value;`                                                                   |                                             |
 | `exc`    | `export const name = value;`                                                                 |                                             |
-| `exfn`   | `export function name (){ ;}`                                                                |                                             |
-| `exafn`  | `export const name = (params) => { $3};`                                                     | **ex**port named **a**rrow **f**u**n**ction |
+| `exfn`   | `export function name (){ }`                                                                 |                                             |
+| `exafn`  | `export const name = (params) => { };`                                                       | **ex**port named **a**rrow **f**u**n**ction |
 | `exd`    | `export default expression;`                                                                 | **ex**port **d**efault                      |
 | `exdas`  | `export {name as default};`                                                                  |                                             |
 | `exdc`   | `export default class className { constructor (params) { } }`                                |                                             |
@@ -273,7 +293,7 @@ Note: All the snippets include the final semicolon `;`
 | `exfr`   | `export {default} from otherModule;`                                                         | **ex**port **fr**om                         |
 | `exallo` | `export * from otherModule;`                                                                 | **ex**port **all** from **o**ther module    |
 
-### class
+### Class
 
 | Prefix   | Body                                                                                              | Description                   |
 | :------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
@@ -318,18 +338,18 @@ Note: All the snippets include the final semicolon `;`
 
 ### Async
 
-| Prefix   | Body                                                                                                       | Description                                            |
-| :------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `caw`    | `const result = await promise;`                                                                            | **c**onst **aw**aited                                  |
-| `law`    | `let result = await promise;`                                                                              |                                                        |
-| `asfn`   | `async function name (params) { const result = await promise; return result;}name().then(result => {$6});` | **as**ync **f**unction **n**amed                       |
-| `asfna`  | `async function (params) { }`                                                                              | **as**ync **f**u**n**ction **a**nonymous               |
-| `asgfn`  | `async function* name (params) { }`                                                                        | **as**ync **g**enerator **f**unction **n**amed         |
-| `asgfna` | `async function* (params) { }`                                                                             | **as**ync **g**enerator **f**u**n**ction **a**nonymous |
-| `asaf`   | `async (params) => { }`                                                                                    | **as**ync **a**rrow **f**unction                       |
-| `aw`     | `await promise`                                                                                            |                                                        |
-| `awpa`   | `await Promise.all(value)`                                                                                 |                                                        |
-| `awpam`  | `await Promise.all(array.map((value) => { }))`                                                             |                                                        |
+| Prefix   | Body                                                                                                      | Description                                            |
+| :------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `caw`    | `const result = await promise;`                                                                           | **c**onst **aw**aited                                  |
+| `law`    | `let result = await promise;`                                                                             |                                                        |
+| `asfn`   | `async function name (params) { const result = await promise; return result;}name().then(result => { });` | **as**ync **f**unction **n**amed                       |
+| `asfna`  | `async function (params) { }`                                                                             | **as**ync **f**u**n**ction **a**nonymous               |
+| `asgfn`  | `async function* name (params) { }`                                                                       | **as**ync **g**enerator **f**unction **n**amed         |
+| `asgfna` | `async function* (params) { }`                                                                            | **as**ync **g**enerator **f**u**n**ction **a**nonymous |
+| `asaf`   | `async (params) => { }`                                                                                   | **as**ync **a**rrow **f**unction                       |
+| `aw`     | `await promise`                                                                                           |                                                        |
+| `awpa`   | `await Promise.all(value)`                                                                                |                                                        |
+| `awpam`  | `await Promise.all(array.map((value) => { }))`                                                            |                                                        |
 
 ### Symbol
 
@@ -367,16 +387,21 @@ Note: All the snippets include the final semicolon `;`
 
 ### Event
 
-| Prefix | Body                                                           | Description                                          |
-| :----- | -------------------------------------------------------------- | ---------------------------------------------------- |
-| `ael`  | `document.addEventListener('type', function (event) { });`     | **a**dd**E**vent**L**istener                         |
-| `aela` | `document.addEventListener('type', event => { });`             | **a**dd**E**vent**L**istener **a**rrow function      |
-| `rel`  | `document.removeEventListener('event', listener);`             | **r**emove**E**vent**L**istener                      |
-| `eps`  | `event.preventDefault();event.stopPropagation();return false;` | **e**vent **p**reventDefault and **s**topPropagation |
-| `epd`  | `event.preventDefault();`                                      | **e**vent **p**revent**D**efault                     |
-| `esp`  | `event.stopPropagation();`                                     | **e**vent **s**top**P**ropagation                    |
+| Prefix    | Body                                                           | Description                                          |
+| :-------- | -------------------------------------------------------------- | ---------------------------------------------------- |
+| `ael`     | `document.addEventListener('type', event => { });`             | **a**dd**E**vent**L**istener **a**rrow function      |
+| `aelfn`   | `document.addEventListener('type', function (event) { });`     | **a**dd**E**vent**L**istener                         |
+| `rel`     | `document.removeEventListener('event', listener);`             | **r**emove**E**vent**L**istener                      |
+| `eps`     | `event.preventDefault();event.stopPropagation();return false;` | **e**vent **p**reventDefault and **s**topPropagation |
+| `epd`     | `event.preventDefault();`                                      | **e**vent **p**revent**D**efault                     |
+| `esp`     | `event.stopPropagation();`                                     | **e**vent **s**top**P**ropagation                    |
+| `dev`     | `const cancelled = !target.dispatchEvent(event);`              |
+| `click`   | `document.addEventListener('click', () => { });`               |
+| `keydown` | `document.addEventListener('keydown', event => { });`          |
+| `load`    | `window.addEventListener('load', () => { });`                  |
+| `ready`   | `window.addEventListener('DOMContentLoaded', () => { });`      |
 
-### AJAX
+### Ajax
 
 | Prefix           | Body | Description                |
 | :--------------- | ---- | -------------------------- |
@@ -412,29 +437,114 @@ Note: All the snippets include the final semicolon `;`
 
 ### Dom
 
-| Prefix | Body                                            | Description                    |
-| :----- | ----------------------------------------------- | ------------------------------ |
-| `gi`   | `document.getElementById('id');`                | **g**etElementBy**I**d         |
-| `gc`   | `document.getElementsByClassName('className');` | **g**etElementsBy**C**lassName |
-| `gt`   | `document.getElementsByTagName('tagName');`     | **g**etElementsBy**T**agName   |
-| `qs`   | `document.querySelector('selector');`           | **q**uery**S**elector          |
-| `qsa`  | `document.querySelectorAll('selector');`        | **q**uery**S**elector**A**ll   |
-| `cdf`  | `document.createDocumentFragment();`            |                                |
-| `cel`  | `document.createElement(elem);`                 |                                |
-| `ga`   | `document.getAttribute('attr');`                |                                |
-| `sa`   | `document.setAttribute('attr', value);`         |                                |
-| `ha`   | `document.hasAttribute('attr');`                |                                |
-| `ra`   | `document.removeAttribute('attr');`             |                                |
-| `ac`   | `document.appendChild(elem);`                   |                                |
-| `rc`   | `document.removeChild(elem);`                   |                                |
-| `ih`   | `document.innerHTML = 'elem';`                  |                                |
-| `tco`  | `document.textContent = 'content';`             |                                |
-| `cla`  | `document.classList.add('className');`          | **c**lass**L**ist.**a**dd      |
-| `clc`  | `document.classList.contains('className');`     |                                |
-| `clr`  | `document.classList.remove('className');`       |                                |
-| `clt`  | `document.classList.toggle('className');`       |                                |
+| Prefix                   | Body                                                                | Description                           |
+| :----------------------- | ------------------------------------------------------------------- | ------------------------------------- |
+| `cdf`                    | `document.createDocumentFragment();`                                |
+| `cel`                    | `document.createElement(elem);`                                     | **c**reate**El**ement                 |
+| `ctn`                    | `document.createTextNode(data);`                                    |
+| `gi`                     | `document.getElementById('id');`                                    | **g**etElementBy**I**d                |
+| `gc`                     | `document.getElementsByClassName('className');`                     | **g**etElementsBy**C**lassName        |
+| `gt`                     | `document.getElementsByTagName('tagName');`                         | **g**etElementsBy**T**agName          |
+| `qs`                     | `document.querySelector('selector');`                               | **q**uery**S**elector                 |
+| `qsa`                    | `document.querySelectorAll('selector');`                            | **q**uery**S**elector**A**ll          |
+| `cn`                     | `const nodeList = node.childNodes;`                                 | **c**hild**N**odes                    |
+| `pe`                     | `const parentElement = node.parentElement;`                         | **p**arent**E**lement                 |
+| `pn`                     | `const parentNode = node.parentNode;`                               | **p**arent**N**ode                    |
+| `fc`                     | `const childNode = node.firstChild;`                                | **f**irst**C**hild                    |
+| `lc`                     | `const childNode = node.lastChild;`                                 | **l**ast**C**hild                     |
+| `ns`                     | `const nextNode = node.nextSibling;`                                | **n**ext**S**ibling                   |
+| `ps`                     | `const previousNode = node.previousSibling;`                        | **p**revious**S**ibling               |
+| `tco`                    | `element.textContent = 'content';`                                  | **t**ext**Co**ntent                   |
+| `ib`                     | `node.insertBefore(newNode, referenceNode);`                        | **i**nsert**B**efore                  |
+| `ac`                     | `node.appendChild(element);`                                        | **a**ppend**C**hild                   |
+| `cn`                     | `const newClone = node.cloneNode(true);`                            | **c**lone**N**ode                     |
+| `cdp`                    | `const compareMask = node.compareDocumentPosition(otherNode);`      | **c**ompare**D**ocument**P**osition   |
+| `con`                    | `node.contains(otherNode);`                                         | **c**ontains                          |
+| `rmc`                    | `node.removeChild(child);`                                          | **r**e**m**ove**C**hild               |
+| `rpc`                    | `parentNode.replaceChild(newChild, oldChild);`                      | **r**e**p**lace**C**hild              |
+| `hcn`                    | `node.hasChildNodes()`                                              | **h**as**C**hild**N**odes             |
+| `pes`                    | `const prevNode = NonDocumentTypeChildNode.previousElementSibling;` | **p**revious**E**lement**S**ibling    |
+| `nes`                    | `const nextNode = NonDocumentTypeChildNode.nextElementSibling;`     | **n**ext**E**lement**S**ibling        |
+| `fec`                    | `const element = parentNode.firstElementChild;`                     | **f**irst**E**lement**C**hild         |
+| `lec`                    | `const element = parentNode.lastElementChild;`                      | **l**ast**E**lement**C**hild          |
+| `cec`                    | `const count = parentNode.childElementCount;`                       | **c**hild**E**lement**C**ount         |
+| `children`               | `const children = parentNode.children;`                             |
+| `append`                 | `parentNode.append(Nodes/DOMStrings);`                              |
+| `prepend`                | `parentNode.prepend(Nodes/DOMStrings);`                             |
+| `before`                 | `ChildNode.before(Nodes/DOMStrings);`                               |
+| `after`                  | `ChildNode.after(Nodes/DOMStrings);`                                |
+| `remove`                 | `ChildNode.remove();`                                               |
+| `rw`, `replaceWith`      | `ChildNode.replaceWith(Node/DOMString);`                            |
+| `gcr`                    | `const rectCollection = element.getClientRects();`                  | **g**et**C**lient**R**ects            |
+| `gbcr`, `rect`           | `const domRect = element.getBoundingClientRect();`                  | **g**et**B**ounding**C**lient**R**ect |
+| `closest`                | `const closestElement = targetElement.closest('selector');`         |
+| `sa`                     | `element.setAttribute('attrName', 'value');`                        |
+| `ga`                     | `const attribute = element.getAttribute('attrName');`               |
+| `ha`                     | `element.hasAttribute('attrName')`                                  |
+| `ra`                     | `element.removeAttribute('attrName');`                              |
+| `ta`                     | `element.toggleAttribute('attrName');`                              |
+| `matches`                | `element.matches('selectorString')`                                 |
+| `ih`                     | `element.innerHTML = 'DOMString';`                                  |
+| `oh`                     | `element.outerHTML = 'DOMString';`                                  |
+| `it`                     | `element.innerText = 'renderText';`                                 |
+| `cla`                    | `element.classList.add('className');`                               | **c**lass**L**ist.**a**dd             |
+| `clc`                    | `element.classList.contains('className');`                          |
+| `clr`                    | `element.classList.remove('className');`                            |
+| `clt`                    | `element.classList.toggle('className');`                            |
+| `before`, `iah.before`   | `element.insertAdjacentHTML('beforebegin', 'DOMString');`           |
+| `after`, `iah.after`     | `element.insertAdjacentHTML('afterend', 'DOMString');`              |
+| `prepend`, `iah.prepend` | `element.insertAdjacentHTML('afterbegin', 'DOMString');`            |
+| `append`, `iah.append`   | `element.insertAdjacentHTML('beforeend', 'DOMString');`             |
+| `before`, `iae.before`   | `element.insertAdjacentElement('beforebegin', element);`            |
+| `after`, `iae.after`     | `element.insertAdjacentElement('afterend', element);`               |
+| `prepend`, `iae.prepend` | `element.insertAdjacentElement('afterbegin', element);`             |
+| `append`, `iae.append`   | `element.insertAdjacentElement('beforeend', element);`              |
+| `before`, `iat.before`   | `element.insertAdjacentText('beforebegin', value);`                 |
+| `after`, `iat.after`     | `element.insertAdjacentText('afterend', value);`                    |
+| `prepend`, `iat.prepend` | `element.insertAdjacentText('afterbegin', value);`                  |
+| `append`, `iat.append`   | `element.insertAdjacentText('beforeend', value);`                   |
+| `scrollTo`               | `element.scrollTo({left, top, behavior: 'smooth'});`                |
+| `scrollIntoView`         | `element.scrollIntoView();`                                         |
+| `scl`                    | `element.scrollLeft;`                                               |
+| `sct`                    | `element.scrollTop;`                                                |
+| `dcw`                    | `${1:document.documentElement}.clientWidth`                         |
+| `dch`                    | `${1:document.documentElement}.clientHeight`                        |
+| `dow`                    | `${1:document.documentElement}.offsetWidth`                         |
+| `doh`                    | `${1:document.documentElement}.offsetHeight`                        |
+| `dsw`                    | `${1:document.documentElement}.scrollWidth`                         |
+| `dsh`                    | `${1:document.documentElement}.scrollHeight`                        |
 
-### console
+### Bom
+
+| Prefix | Body                                                                                     | Description                              |
+| :----- | ---------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `wa`   | `window.alert('msg');`                                                                   |
+| `wc`   | `window.confirm('msg');`                                                                 |
+| `wp`   | `window.prompt('title', 'defaultText');`                                                 |
+| `st`   | `const timeout = window.setTimeout(() => { }, delay); window.clearTimeout(timeout);`     | **s**et**T**imeout                       |
+| `stfn` | `var timeout = window.setTimeout(function() { }, delay); window.clearTimeout(timeout);`  |
+| `si`   | `const timer = window.setInterval(() => { }, interval); window.clearInterval(timer);`    | **s**et**I**nterval                      |
+| `sifn` | `var timer = window.setInterval(function() { }, interval); window.clearInterval(timer);` |
+| `lss`  | `localStorage.setItem('key', 'value');`                                                  | **l**ocal**S**torage.**s**etItem         |
+| `lsg`  | `localStorage.getItem('key');`                                                           |
+| `lsr`  | `localStorage.removeItem('key');`                                                        |
+| `lsc`  | `localStorage.clear();`                                                                  |
+| `wsaw` | `window.screen.availWidth`                                                               | **w**indow.**s**creen.**a**vail**W**idth |
+| `wsah` | `window.screen.availHeight`                                                              |
+| `wsw`  | `window.screen.width`                                                                    |
+| `wsh`  | `window.screen.height`                                                                   |
+| `wlh`  | `window.location.href`                                                                   |
+| `wlhn` | `window.location.hostname`                                                               |
+| `wlp`  | `window.location.pathname`                                                               |
+| `wlpr` | `window.location.protocol`                                                               |
+| `wls`  | `window.location.assign(url)`                                                            |
+| `whb`  | `window.history.back();`                                                                 |
+| `whf`  | `window.history.forward();`                                                              |
+| `wnl`  | `window.navigator.language`                                                              |
+| `wnls` | `window.navigator.languages`                                                             |
+| `wnu`  | `window.navigator.userAgent`                                                             |
+
+### Console
 
 | Prefix | Body                                  | Description             |
 | :----- | ------------------------------------- | ----------------------- |
@@ -454,7 +564,7 @@ Note: All the snippets include the final semicolon `;`
 | `ct`   | `console.table(object);`              |                         |
 | `ctr`  | `console.trace(object);`              |                         |
 
-### CommonJS/Node.js
+### Common Js/Node.js
 
 | Prefix | Body                                                           | Description |
 | :----- | -------------------------------------------------------------- | ----------- |
@@ -464,7 +574,7 @@ Note: All the snippets include the final semicolon `;`
 | `rq`   | `require('module')`                                            |             |
 | `crq`  | `const module = require('module');`                            |             |
 
-### BDD Testing (Mocha, Jasmine, etc.)
+### Bdd Testing (Mocha, Jasmine, etc.)
 
 | Prefix | Body                                             |
 | :----- | ------------------------------------------------ |
@@ -480,10 +590,6 @@ Note: All the snippets include the final semicolon `;`
 ## License
 
 MIT License
-
----
-
-TODO: `DOM`, `BOM`
 
 ---
 

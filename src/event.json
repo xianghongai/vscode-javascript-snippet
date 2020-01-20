@@ -1,86 +1,12 @@
 {
-  "addEventListener": {
-    "prefix": "ael",
-    "body": [
-      "${1:document}.addEventListener('${2:type}', ${3:listener});\n"
-    ],
-    "description": "addEventListener\n"
-  },
-  "addEventListener arrow function": {
-    "prefix": "aela",
-    "body": [
-      "${1:document}.addEventListener('${2:type}', ${3:event} => {\n\t${4}\n});\n"
-    ],
-    "description": "addEventListener, arrow function\n"
-  },
-  "dispatchEvent": {
-    "prefix": "dev",
-    "body": [
-      "const ${3:cancelled} = !${1:target}.dispatchEvent(${2:event});\n"
-    ],
-    "description": "Dispatches an Event at the specified EventTarget\n"
-  },
-  "event cancel default and propagation": {
-    "prefix": "eps",
-    "body": [
-      "event.preventDefault();\nevent.stopPropagation();\nreturn false;"
-    ],
-    "description": "event.preventDefault(); event.stopPropagation()\n"
-  },
-  "event preventDefault": {
-    "prefix": "epd",
-    "body": [
-      "event.preventDefault();"
-    ],
-    "description": "event preventDefault\n"
-  },
-  "event stopPropagation": {
-    "prefix": "esp",
-    "body": [
-      "event.stopPropagation();"
-    ],
-    "description": "event stopPropagation\n"
-  },
-  "click": {
-    "prefix": "click",
-    "body": [
-      "document.addEventListener('click', () => {",
-      "\t${1}",
-      "});",
-      ""
-    ],
-    "description": "click"
-  },
-  "keydown": {
-    "prefix": "keydown",
-    "body": [
-      "document.addEventListener('keydown', event => {",
-      "\tif (event.ctrlKey && event.which === 72) {",
-      "\t\t${1}",
-      "\t}",
-      "});",
-      ""
-    ],
-    "description": "keydown \n"
-  },
-  "load": {
-    "prefix": "load",
-    "body": [
-      "window.addEventListener('load', () => {",
-      "\t${1}",
-      "});",
-      ""
-    ],
-    "description": "page is fully loaded \n should be used only to detect a fully-loaded page. \n"
-  },
-  "ready": {
-    "prefix": "ready",
-    "body": [
-      "window.addEventListener('DOMContentLoaded', () => {",
-      "\t${1}",
-      "});",
-      ""
-    ],
-    "description": "DOM fully loaded and parsed. \n The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. \n"
-  }
+  "addEventListener":                      { "prefix": "ael",     "body": [ "${1:document}.addEventListener('${2:type}', ${3:listener});\n" ],                                                                 "description": "addEventListener\n" },
+  "addEventListener arrow function":       { "prefix": "aela",    "body": [ "${1:document}.addEventListener('${2:type}', ${3:event} => {\n\t${4}\n});\n" ],                                                    "description": "addEventListener, arrow function\n" },
+  "dispatchEvent":                         { "prefix": "dev",     "body": [ "const ${3:cancelled} = !${1:target}.dispatchEvent(${2:event});\n" ],                                                              "description": "Dispatches an Event at the specified EventTarget\n" },
+  "event cancel default and propagation":  { "prefix": "eps",     "body": [ "event.preventDefault();\nevent.stopPropagation();\nreturn false;" ],                                                              "description": "event.preventDefault(); event.stopPropagation()\n" },
+  "event preventDefault":                  { "prefix": "epd",     "body": [ "event.preventDefault();" ],                                                                                                       "description": "event preventDefault\n" },
+  "event stopPropagation":                 { "prefix": "esp",     "body": [ "event.stopPropagation();" ],                                                                                                      "description": "event stopPropagation\n" },
+  "click":                                 { "prefix": "click",   "body": [ "document.addEventListener('click', () => {", "\t${1}", "});", "" ],                                                               "description": "click" },
+  "keydown":                               { "prefix": "keydown", "body": [ "document.addEventListener('keydown', event => {", "\tif (event.ctrlKey && event.which === 72) {", "\t\t${1}", "\t}", "});", "" ], "description": "keydown \n" },
+  "load":                                  { "prefix": "load",    "body": [ "window.addEventListener('load', () => {", "\t${1}", "});", "" ],                                                                  "description": "page is fully loaded \n should be used only to detect a fully-loaded page. \n" },
+  "ready":                                 { "prefix": "ready",   "body": [ "window.addEventListener('DOMContentLoaded', () => {", "\t${1}", "});", "" ],                                                      "description": "DOM fully loaded and parsed. \n The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. \n" }
 }
