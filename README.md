@@ -558,12 +558,12 @@ Note: All the snippets include the final semicolon `;`
 |:-------|---------------------------------------|-------------------------|
 | `cd`   | `console.dir();`                      | **c**onsole.**d**ir     |
 | `ce`   | `console.error();`                    |                         |
-| `celb` | `console.error('labele', );`          |                         |
+| `celb` | `console.error('foo: %o', foo);`      |                         |
 | `ci`   | `console.info();`                     |                         |
 | `clg`  | `console.log();`                      | **c**onsole.**l**o**g** |
-| `clgl` | `console.log('', );`                  |                         |
+| `clgl` | `console.log('foo: %o', foo);`        |                         |
 | `cw`   | `console.warn();`                     |                         |
-| `cwl`  | `console.warn('', );`                 |                         |
+| `cwl`  | `console.warn('foo: %o', foo);`       |                         |
 | `ca`   | `console.assert(expression, object);` |                         |
 | `cc`   | `console.clear();`                    |                         |
 | `cco`  | `console.count(label);`               |                         |
