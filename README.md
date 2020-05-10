@@ -47,7 +47,7 @@ Note: All the snippets include the final semicolon `;`
 ### Declarations
 
 | Prefix | Body                  | Description                          |
-| :----- | --------------------- | ------------------------------------ |
+|:-------|-----------------------|--------------------------------------|
 | `usm`  | `'use strict';`       | **u**se **s**trict **m**ode          |
 | `c`    | `const name = value;` |                                      |
 | `cdo`  | `const {} = ;`        | **c**onst **d**estructing **o**bject |
@@ -63,7 +63,7 @@ Note: All the snippets include the final semicolon `;`
 ### Statement
 
 | Prefix            | Body                                                                              | Description                            |
-| :---------------- | --------------------------------------------------------------------------------- | -------------------------------------- |
+|:------------------|-----------------------------------------------------------------------------------|----------------------------------------|
 | `if`              | `if (condition) { }`                                                              |                                        |
 | `ife`             | `if (condition) { } else { }`                                                     |                                        |
 | `ei`              | `else if (condition) { }`                                                         |                                        |
@@ -80,7 +80,7 @@ Note: All the snippets include the final semicolon `;`
 ### Function
 
 | Prefix    | Body                                                                                             | Description                                   |
-| :-------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
+|:----------|--------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | `fn`      | `function name (params) { }`                                                                     | **f**u**n**ction                              |
 | `fna`     | `function (params) { }`                                                                          | **f**u**n**ction **a**nonymous                |
 | `vfn`     | `var name = function (params) { }`                                                               |                                               |
@@ -101,53 +101,53 @@ Note: All the snippets include the final semicolon `;`
 
 ### Array
 
-| Prefix      | Body                                                                | Description                                      |
-| :---------- | ------------------------------------------------------------------- | ------------------------------------------------ |
-| `ar`        | `const arr = [];`                                                   |                                                  |
-| `arl`       | `iterable.length;`                                                  |                                                  |
-| `isa`       | `Array.isArray(value)`                                              |                                                  |
-| `arfr`      | `Array.from(arrayLike);`                                            |                                                  |
-| `arfr`      | `Array.from(arrayLike, (item) => { });`                             |                                                  |
-| `arof`      | `Array.of(elementN);`                                               |                                                  |
-| `arc`       | `iterable.concat(valueN);`                                          | **ar**ray.**c**oncat                             |
-| `arcw`      | `iterable.copyWithin(target, start, end);`                          | **ar**ray.**c**opy**W**ithin                     |
-| `are`       | `iterable.entries();`                                               | **ar**ray.**e**ntries                            |
-| `arev`      | `iterable.every((element) => { });`                                 | **ar**ray.**ev**ery                              |
-| `arfill`    | `iterable.fill(value, start, end);`                                 |                                                  |
-| `arf`       | `iterable.filter((element) => { });`                                |                                                  |
-| `arfi`      | `iterable.find((element) => { });`                                  |                                                  |
-| `arfin`     | `iterable.findIndex((element) => { })`                              |                                                  |
-| `arflat`    | `iterable.flat();`                                                  |                                                  |
-| `arflatMap` | `iterable.flatMap((value) => value);`                               |                                                  |
-| `fea`       | `iterable.forEach((currentValue) => { });`                          | **f**or**E**ach callback with **a**rrow function |
-| `feai`      | `iterable.forEach((currentValue, index) => { });`                   |                                                  |
-| `fe`        | `iterable.forEach(function(currentValue) { });`                     |                                                  |
-| `fei`       | `iterable.forEach(function(currentValue, index) { });`              |                                                  |
-| `ari`       | `iterable.includes(valueToFind)`                                    |                                                  |
-| `ario`      | `iterable.indexOf(searchElement)`                                   |                                                  |
-| `arj`       | `iterable.join(separator);`                                         |                                                  |
-| `ark`       | `iterable.keys();`                                                  |                                                  |
-| `arlio`     | `iterable.lastIndexOf(searchElement)`                               |                                                  |
-| `map`       | `iterable.map((currentValue) => { });`                              |                                                  |
-| `arp`       | `iterable.pop();`                                                   |                                                  |
-| `arj`       | `iterable.push(elementN);`                                          |                                                  |
-| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`       |                                                  |
+| Prefix      | Body                                                              | Description                                      |
+|:------------|-------------------------------------------------------------------|--------------------------------------------------|
+| `ar`        | `const arr = [];`                                                 |                                                  |
+| `arl`       | `iterable.length;`                                                |                                                  |
+| `isa`       | `Array.isArray(value)`                                            |                                                  |
+| `arfr`      | `Array.from(arrayLike);`                                          |                                                  |
+| `arfr`      | `Array.from(arrayLike, (item) => { });`                           |                                                  |
+| `arof`      | `Array.of(elementN);`                                             |                                                  |
+| `arc`       | `iterable.concat(valueN);`                                        | **ar**ray.**c**oncat                             |
+| `arcw`      | `iterable.copyWithin(target, start, end);`                        | **ar**ray.**c**opy**W**ithin                     |
+| `are`       | `iterable.entries();`                                             | **ar**ray.**e**ntries                            |
+| `arev`      | `iterable.every((element) => { });`                               | **ar**ray.**ev**ery                              |
+| `arfill`    | `iterable.fill(value, start, end);`                               |                                                  |
+| `arf`       | `iterable.filter((element) => { });`                              |                                                  |
+| `arfi`      | `iterable.find((element) => { });`                                |                                                  |
+| `arfin`     | `iterable.findIndex((element) => { })`                            |                                                  |
+| `arflat`    | `iterable.flat();`                                                |                                                  |
+| `arflatMap` | `iterable.flatMap((value) => value);`                             |                                                  |
+| `fea`       | `iterable.forEach((currentValue) => { });`                        | **f**or**E**ach callback with **a**rrow function |
+| `feai`      | `iterable.forEach((currentValue, index) => { });`                 |                                                  |
+| `fe`        | `iterable.forEach(function(currentValue) { });`                   |                                                  |
+| `fei`       | `iterable.forEach(function(currentValue, index) { });`            |                                                  |
+| `ari`       | `iterable.includes(valueToFind)`                                  |                                                  |
+| `ario`      | `iterable.indexOf(searchElement)`                                 |                                                  |
+| `arj`       | `iterable.join(separator);`                                       |                                                  |
+| `ark`       | `iterable.keys();`                                                |                                                  |
+| `arlio`     | `iterable.lastIndexOf(searchElement)`                             |                                                  |
+| `map`       | `iterable.map((currentValue) => { });`                            |                                                  |
+| `arp`       | `iterable.pop();`                                                 |                                                  |
+| `arj`       | `iterable.push(elementN);`                                        |                                                  |
+| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`     |                                                  |
 | `arrr`      | `iterable.reduce​Right((accumulator, currentValue) => { return });` |                                                  |
-| `arre`      | `iterable.reverse();`                                               |                                                  |
-| `ars`       | `iterable.shift();`                                                 |                                                  |
-| `arsl`      | `iterable.slice(begin, end);`                                       |                                                  |
-| `arso`      | `iterable.some((element) => { });`                                  |                                                  |
-| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                        |                                                  |
-| `arsp`      | `iterable.splice(start, deleteCount, item);`                        |                                                  |
-| `aru`       | `iterable.unshift(elementN);`                                       |                                                  |
-| `arv`       | `iterable.values();`                                                |                                                  |
-| `arsi`      | `iterable[Symbol.iterator]();`                                      |                                                  |
-| `seq`       | `[...Array(length).keys()]`                                         |                                                  |
+| `arre`      | `iterable.reverse();`                                             |                                                  |
+| `ars`       | `iterable.shift();`                                               |                                                  |
+| `arsl`      | `iterable.slice(begin, end);`                                     |                                                  |
+| `arso`      | `iterable.some((element) => { });`                                |                                                  |
+| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                      |                                                  |
+| `arsp`      | `iterable.splice(start, deleteCount, item);`                      |                                                  |
+| `aru`       | `iterable.unshift(elementN);`                                     |                                                  |
+| `arv`       | `iterable.values();`                                              |                                                  |
+| `arsi`      | `iterable[Symbol.iterator]();`                                    |                                                  |
+| `seq`       | `[...Array(length).keys()]`                                       |                                                  |
 
 ### Object
 
 | Prefix   | Body                                                                                                                                                                                                                                                   | Description                                                 |
-| :------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- |
+|:---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | `ol`     | `{ key: value }`                                                                                                                                                                                                                                       |                                                             |
 | `kv`     | `key: value,`                                                                                                                                                                                                                                          |                                                             |
 | `oa`     | `Object.assign(target, source);`                                                                                                                                                                                                                       |                                                             |
@@ -182,7 +182,7 @@ Note: All the snippets include the final semicolon `;`
 ### String
 
 | Prefix  | Body                                     | Description                         |
-| :------ | ---------------------------------------- | ----------------------------------- |
+|:--------|------------------------------------------|-------------------------------------|
 | `sfcc`  | `String.fromCharCode(numN)`              | **S**tring.**f**rom**C**har**C**ode |
 | `sfcp`  | `String.fromCodePoint(numN)`             |                                     |
 | `sr`    | <code>String.raw`templateString`</code>  |                                     |
@@ -218,30 +218,30 @@ Note: All the snippets include the final semicolon `;`
 
 ### Number
 
-| Prefix  | Body                            |
-| :------ | ------------------------------- |
-| `ne`    | `Number.EPSILON`                |
-| `nmasi` | `Number​.MAX_SAFE_INTEGER`      |
-| `nmav`  | `Number.MAX_VALUE`              |
-| `nmisi` | `Number​.MIN_SAFE_INTEGER`      |
-| `nmav`  | `Number​.MIN_VALUE`             |
-| `nni`   | `Number​.NEGATIVE_INFINITY`     |
-| `nn`    | `Number​.NaN`                   |
-| `npi`   | `Number​.POSITIVE_INFINITY`     |
-| `nif`   | `Number​.isFinite(value)`       |
-| `nii`   | `Number​.isInteger(value)`      |
-| `nin`   | `Number​.isNaN(value)`          |
+| Prefix  | Body                        |
+|:--------|-----------------------------|
+| `ne`    | `Number.EPSILON`            |
+| `nmasi` | `Number​.MAX_SAFE_INTEGER`    |
+| `nmav`  | `Number.MAX_VALUE`          |
+| `nmisi` | `Number​.MIN_SAFE_INTEGER`    |
+| `nmav`  | `Number​.MIN_VALUE`           |
+| `nni`   | `Number​.NEGATIVE_INFINITY`   |
+| `nn`    | `Number​.NaN`                 |
+| `npi`   | `Number​.POSITIVE_INFINITY`   |
+| `nif`   | `Number​.isFinite(value)`     |
+| `nii`   | `Number​.isInteger(value)`    |
+| `nin`   | `Number​.isNaN(value)`        |
 | `nisi`  | `Number​.isSafe​Integer(value)` |
 | `npf`   | `Number​.parse​Float(string)`   |
-| `npi`   | `Number​.parseInt(string)`      |
-| `nte`   | `number.toExponential()`        |
-| `ntf`   | `number.toFixed()`              |
-| `ntp`   | `number.toPrecision()`          |
+| `npi`   | `Number​.parseInt(string)`    |
+| `nte`   | `number.toExponential()`    |
+| `ntf`   | `number.toFixed()`          |
+| `ntp`   | `number.toPrecision()`      |
 
 ### Regexp
 
 | Prefix | Body                                                          | Description                |
-| :----- | ------------------------------------------------------------- | -------------------------- |
+|:-------|---------------------------------------------------------------|----------------------------|
 | `re`   | `let regex = RegExp('pattern');`                              | **R**eg**E**xp             |
 | `rep`  | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern |
 | `ree`  | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
@@ -250,7 +250,7 @@ Note: All the snippets include the final semicolon `;`
 ### Chore
 
 | Prefix    | Body                                  | Description                    |
-| :-------- | ------------------------------------- | ------------------------------ |
+|:----------|---------------------------------------|--------------------------------|
 | `to`      | `typeof object === 'undefined'`       | **t**ype**o**f                 |
 | `io`      | `object instanceof 'constructor'`     | **i**nstance**o**f             |
 | `jp`      | `JSON.parse(obj);`                    |                                |
@@ -272,7 +272,7 @@ Note: All the snippets include the final semicolon `;`
 ### Module
 
 | Prefix   | Body                                                                                         | Description                                 |
-| :------- | -------------------------------------------------------------------------------------------- | ------------------------------------------- |
+|:---------|----------------------------------------------------------------------------------------------|---------------------------------------------|
 | `im`     | `import { moduleName } from 'module';`                                                       | **im**port                                  |
 | `imd`    | `import moduleName from 'module';`                                                           | **im**port **d**efault export               |
 | `imas`   | `import { originalName as alias } from 'module';`                                            | **im**port **as** renamed exports           |
@@ -296,7 +296,7 @@ Note: All the snippets include the final semicolon `;`
 ### Class
 
 | Prefix   | Body                                                                                              | Description                   |
-| :------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
+|:---------|---------------------------------------------------------------------------------------------------|-------------------------------|
 | `cl`     | `class name { constructor (params) { } }`                                                         | **cl**ass                     |
 | `cle`    | `class className extends baseClassName { constructor (params) { super(); } }`                     | **cl**ass **e**xtends         |
 | `cls`    | `static create(params) { return new PersonClass(params);}`                                        | **cl**ass **s**tatic          |
@@ -312,7 +312,7 @@ Note: All the snippets include the final semicolon `;`
 ### Promise
 
 | Prefix | Body                                                                                                     | Description                                      |
-| :----- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+|:-------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | `p`    | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **p**romise                                  |
 | `pa`   | `Promise.all([value]);`                                                                                  | **P**romise.**a**ll                              |
 | `prj`  | `Promise.reject(value);`                                                                                 | **P**romise.**r**e**j**ect                       |
@@ -329,7 +329,7 @@ Note: All the snippets include the final semicolon `;`
 ### Generator Iterator
 
 | Prefix | Body                                | Description                |
-| :----- | ----------------------------------- | -------------------------- |
+|:-------|-------------------------------------|----------------------------|
 | `cy`   | `const name = yield value;`         |                            |
 | `ly`   | `let name = yield value;`           |                            |
 | `gf`   | `function* name(params) { yield ;}` | **g**enerator **f**unction |
@@ -339,7 +339,7 @@ Note: All the snippets include the final semicolon `;`
 ### Async
 
 | Prefix   | Body                                                                                                      | Description                                            |
-| :------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+|:---------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | `caw`    | `const result = await promise;`                                                                           | **c**onst **aw**aited                                  |
 | `law`    | `let result = await promise;`                                                                             |                                                        |
 | `asfn`   | `async function name (params) { const result = await promise; return result;}name().then(result => { });` | **as**ync **f**unction **n**amed                       |
@@ -354,57 +354,57 @@ Note: All the snippets include the final semicolon `;`
 ### Symbol
 
 | Prefix | Body                       | Description |
-| :----- | -------------------------- | ----------- |
-| lsy    | `let symObj = Symbol();`   |
-| csy    | `const symObj = Symbol();` |
-| symf   | `Symbol.for('key');`       |
-| symk   | `Symbol.keyFor('symObj');` |
+|:-------|----------------------------|-------------|
+| lsy    | `let symObj = Symbol();`   |             |
+| csy    | `const symObj = Symbol();` |             |
+| symf   | `Symbol.for('key');`       |             |
+| symk   | `Symbol.keyFor('symObj');` |             |
 
 ### Maps & Sets
 
 | Prefix      | Body                                     | Description |
-| :---------- | ---------------------------------------- | ----------- |
-| `lm`        | `let resourceMap = new Map();`           |
-| `ls`        | `let resourceSet = new Set();`           |
-| `lwm`       | `let resourceWeakMap = new WeakMap();`   |
-| `lws`       | `let resourceWeakSet = new WeakSet();`   |
-| `cm`, `ma`  | `const resourceMap = new Map();`         |
-| `cs`, `se`  | `const resourceSet = new Set();`         |
-| `cwm`, `wm` | `const resourceWeakMap = new WeakMap();` |
-| `cws`, `ws` | `const resourceWeakSet = new WeakSet();` |
+|:------------|------------------------------------------|-------------|
+| `lm`        | `let resourceMap = new Map();`           |             |
+| `ls`        | `let resourceSet = new Set();`           |             |
+| `lwm`       | `let resourceWeakMap = new WeakMap();`   |             |
+| `lws`       | `let resourceWeakSet = new WeakSet();`   |             |
+| `cm`, `ma`  | `const resourceMap = new Map();`         |             |
+| `cs`, `se`  | `const resourceSet = new Set();`         |             |
+| `cwm`, `wm` | `const resourceWeakMap = new WeakMap();` |             |
+| `cws`, `ws` | `const resourceWeakSet = new WeakSet();` |             |
 
 ### Error
 
 | Prefix | Body                                  | Description |
-| :----- | ------------------------------------- | ----------- |
-| `tn`   | `throw new Error('message')`          |
-| `tne`  | `throw new EvalError('message')`      |
-| `tnr`  | `throw new RangeError('message')`     |
-| `tnre` | `throw new ReferenceError('message')` |
-| `tns`  | `throw new SyntaxError('message')`    |
-| `tnt`  | `throw new TypeError('message')`      |
-| `tnu`  | `throw new URIError('message')`       |
+|:-------|---------------------------------------|-------------|
+| `tn`   | `throw new Error('message')`          |             |
+| `tne`  | `throw new EvalError('message')`      |             |
+| `tnr`  | `throw new RangeError('message')`     |             |
+| `tnre` | `throw new ReferenceError('message')` |             |
+| `tns`  | `throw new SyntaxError('message')`    |             |
+| `tnt`  | `throw new TypeError('message')`      |             |
+| `tnu`  | `throw new URIError('message')`       |             |
 
 ### Event
 
 | Prefix    | Body                                                           | Description                                          |
-| :-------- | -------------------------------------------------------------- | ---------------------------------------------------- |
+|:----------|----------------------------------------------------------------|------------------------------------------------------|
 | `ael`     | `document.addEventListener('type', event => { });`             | **a**dd**E**vent**L**istener **a**rrow function      |
 | `aelfn`   | `document.addEventListener('type', function (event) { });`     | **a**dd**E**vent**L**istener                         |
 | `rel`     | `document.removeEventListener('event', listener);`             | **r**emove**E**vent**L**istener                      |
 | `eps`     | `event.preventDefault();event.stopPropagation();return false;` | **e**vent **p**reventDefault and **s**topPropagation |
 | `epd`     | `event.preventDefault();`                                      | **e**vent **p**revent**D**efault                     |
 | `esp`     | `event.stopPropagation();`                                     | **e**vent **s**top**P**ropagation                    |
-| `dev`     | `const cancelled = !target.dispatchEvent(event);`              |
-| `click`   | `document.addEventListener('click', () => { });`               |
-| `keydown` | `document.addEventListener('keydown', event => { });`          |
-| `load`    | `window.addEventListener('load', () => { });`                  |
-| `ready`   | `window.addEventListener('DOMContentLoaded', () => { });`      |
+| `dev`     | `const cancelled = !target.dispatchEvent(event);`              |                                                      |
+| `click`   | `document.addEventListener('click', () => { });`               |                                                      |
+| `keydown` | `document.addEventListener('keydown', event => { });`          |                                                      |
+| `load`    | `window.addEventListener('load', () => { });`                  |                                                      |
+| `ready`   | `window.addEventListener('DOMContentLoaded', () => { });`      |                                                      |
 
 ### Ajax
 
 | Prefix           | Body | Description                |
-| :--------------- | ---- | -------------------------- |
+|:-----------------|------|----------------------------|
 | `xhr`            |      | **X**ML**H**ttp**R**equest |
 | `fetch`          |      | fetch                      |
 | `fetchget`,`fg`  |      | fetch get                  |
@@ -413,7 +413,7 @@ Note: All the snippets include the final semicolon `;`
 ### Proxy & Reflection
 
 | Prefix                | Body | Description                                                   |
-| :-------------------- | ---- | ------------------------------------------------------------- |
+|:----------------------|------|---------------------------------------------------------------|
 | `proxy.set`           |      | Validating Properties Using the `set` Trap                    |
 | `proxy.get`           |      | Object Shape Validation Using the `get` Trap                  |
 | `proxy.has`           |      | Hiding Property Existence Using the `has` Trap                |
@@ -428,126 +428,134 @@ Note: All the snippets include the final semicolon `;`
 ### Math
 
 | Prefix | Body            | Description            |
-| :----- | --------------- | ---------------------- |
-| `mr`   | `Math.random()` |
+|:-------|-----------------|------------------------|
+| `mr`   | `Math.random()` |                        |
 | `mro`  | `Math.round()`  | 20.49 → 20, 20.5 → 21  |
 | `mc`   | `Math.ceil()`   | 7.004 → 8, -7.004 → -7 |
 | `mf`   | `Math.floor()`  | 5.95 → 5, -5.05 → -6   |
 | `mtr`  | `Math.trunc()`  | 5.05 → 5, -0.123 → -0  |
 
 ### Dom
+| Prefix                        | Body                                                                |
+|:------------------------------|---------------------------------------------------------------------|
+| `dom.createDocumentFragment`  | `document.createDocumentFragment();`                                |
+| `dom.createElement`           | `document.createElement(elem);`                                     |
+| `dom.createTextNode`          | `document.createTextNode(data);`                                    |
+| `dom.getElementById`          | `document.getElementById('id');`                                    |
+| `dom.getElementsByClassName`  | `document.getElementsByClassName('className');`                     |
+| `dom.getElementsByTagName`    | `document.getElementsByTagName('tagName');`                         |
+| `dom.querySelector`           | `document.querySelector('selector');`                               |
+| `dom.querySelectorAll`        | `document.querySelectorAll('selector');`                            |
+| `dom.childNodes`              | `const nodeList = node.childNodes;`                                 |
+| `dom.parentElement`           | `const parentElement = node.parentElement;`                         |
+| `dom.parentNode`              | `const parentNode = node.parentNode;`                               |
+| `dom.firstChild`              | `const childNode = node.firstChild;`                                |
+| `dom.lastChild`               | `const childNode = node.lastChild;`                                 |
+| `dom.previousSibling`         | `const previousNode = node.previousSibling;`                        |
+| `dom.nextSibling`             | `const nextNode = node.nextSibling;`                                |
+| `dom.textContent`             | `element.textContent = 'content';`                                  |
+| `dom.previousElementSibling`  | `const prevNode = NonDocumentTypeChildNode.previousElementSibling;` |
+| `dom.nextElementSibling`      | `const nextNode = NonDocumentTypeChildNode.nextElementSibling;`     |
+| `dom.closest`                 | `const closestElement = targetElement.closest('selectorString');`   |
+| `dom.insertBefore`            | `node.insertBefore(newNode, referenceNode);`                        |
+| `dom.appendChild`             | `node.appendChild(element);`                                        |
+| `dom.cloneNode`               | `const newClone = node.cloneNode(true);`                            |
+| `dom.getRootNode`             | `const root = node.getRootNode(true);`                              |
+| `dom.compareDocumentPosition` | `const compareMask = node.compareDocumentPosition(otherNode);`      |
+| `dom.contains`                | `node.contains(otherNode);`                                         |
+| `dom.removeChild`             | `node.removeChild(child);`                                          |
+| `dom.replaceChild`            | `parentNode.replaceChild(newChild, oldChild);`                      |
+| `dom.hasChildNodes`           | `node.hasChildNodes()`                                              |
+| `dom.firstElementChild`       | `const element = parentNode.firstElementChild;`                     |
+| `dom.lastElementChild`        | `const element = parentNode.lastElementChild;`                      |
+| `dom.childElementCount`       | `const count = parentNode.childElementCount;`                       |
+| `dom.children`                | `const children = parentNode.children;`                             |
+| `dom.append`                  | `parentNode.append(Nodes/DOMStrings);`                              |
+| `dom.prepend`                 | `parentNode.prepend(Nodes/DOMStrings);`                             |
+| `dom.before`                  | `childNode.before(Nodes/DOMStrings);`                               |
+| `dom.after`                   | `childNode.after(Nodes/DOMStrings);`                                |
+| `dom.remove`                  | `childNode.remove();`                                               |
+| `dom.replaceWith`             | `childNode.replaceWith(Node/DOMString);`                            |
+| `dom.before.html`             | `element.insertAdjacentHTML('beforebegin', 'DOMString');`           |
+| `dom.after.html`              | `element.insertAdjacentHTML('afterend', 'DOMString');`              |
+| `dom.prepend.html`            | `element.insertAdjacentHTML('afterbegin', 'DOMString');`            |
+| `dom.append.html`             | `element.insertAdjacentHTML('beforeend', 'DOMString');`             |
+| `dom.before.element`          | `element.insertAdjacentElement('beforebegin', element);`            |
+| `dom.after.element`           | `element.insertAdjacentElement('afterend', element);`               |
+| `dom.prepend.element`         | `element.insertAdjacentElement('afterbegin', element);`             |
+| `dom.append.element`          | `element.insertAdjacentElement('beforeend', element);`              |
+| `dom.before.text`             | `element.insertAdjacentText('beforebegin', value);`                 |
+| `dom.after.text`              | `element.insertAdjacentText('afterend', value);`                    |
+| `dom.prepend.text`            | `element.insertAdjacentText('afterbegin', value);`                  |
+| `dom.append.text`             | `element.insertAdjacentText('beforeend', value);`                   |
+| `dom.getClientRects`          | `const rectCollection = element.getClientRects();`                  |
+| `dom.getBoundingClientRect`   | `const domRect = element.getBoundingClientRect();`                  |
+| `dom.setAttribute`            | `element.setAttribute('attrName', 'value');`                        |
+| `dom.getAttribute`            | `const attribute = element.getAttribute('attrName');`               |
+| `dom.hasAttribute`            | `element.hasAttribute('attrName')`                                  |
+| `dom.removeAttribute`         | `element.removeAttribute('attrName');`                              |
+| `dom.toggleAttribute`         | `element.toggleAttribute('attrName');`                              |
+| `dom.matches`                 | `element.matches('selectorString')`                                 |
+| `dom.innerHTML`               | `element.innerHTML = 'DOMString';`                                  |
+| `dom.outerHTML`               | `element.outerHTML = 'DOMString';`                                  |
+| `dom.innerText`               | `element.innerText = 'renderText';`                                 |
+| `dom.classList.add`           | `element.classList.add('className');`                               |
+| `dom.classList.contains`      | `element.classList.contains('className');`                          |
+| `dom.classList.remove`        | `element.classList.remove('className');`                            |
+| `dom.classList.toggle`        | `element.classList.toggle('className');`                            |
+| `dom.scroll`                  | `element.scroll({top, left, behavior: 'smooth'});`                  |
+| `dom.scrollBy`                | `element.scrollBy({top, left, behavior: 'smooth'});`                |
+| `dom.scrollTo`                | `element.scrollTo({top, left, behavior: 'smooth'});`                |
+| `dom.scrollIntoView`          | `element.scrollIntoView({behavior: 'smooth'});`                     |
+| `dom.clientWidth`             | `element.clientWidth`                                               |
+| `dom.clientHeight`            | `element.clientHeight`                                              |
+| `dom.clientLeft`              | `element.clientLeft`                                                |
+| `dom.clientTop`               | `element.clientTop`                                                 |
+| `dom.scrollWidth`             | `element.scrollWidth`                                               |
+| `dom.scrollHeight`            | `element.scrollHeight`                                              |
+| `dom.scrollLeft`              | `element.scrollLeft`                                                |
+| `dom.scrollTop`               | `element.scrollTop`                                                 |
+| `dom.offsetWidth`             | `HTMLElement.offsetWidth`                                           |
+| `dom.offsetHeight`            | `HTMLElement.offsetHeight`                                          |
+| `dom.offsetTop`               | `HTMLElement.offsetTop`                                             |
+| `dom.offsetLeft`              | `HTMLElement.offsetLeft`                                            |
+| `dom.offsetParent`            | `HTMLElement.offsetParent`                                          |
 
-| Prefix                   | Body                                                                | Description                           |
-| :----------------------- | ------------------------------------------------------------------- | ------------------------------------- |
-| `cdf`                    | `document.createDocumentFragment();`                                |
-| `cel`                    | `document.createElement(elem);`                                     | **c**reate**El**ement                 |
-| `ctn`                    | `document.createTextNode(data);`                                    |
-| `gi`                     | `document.getElementById('id');`                                    | **g**etElementBy**I**d                |
-| `gc`                     | `document.getElementsByClassName('className');`                     | **g**etElementsBy**C**lassName        |
-| `gt`                     | `document.getElementsByTagName('tagName');`                         | **g**etElementsBy**T**agName          |
-| `qs`                     | `document.querySelector('selector');`                               | **q**uery**S**elector                 |
-| `qsa`                    | `document.querySelectorAll('selector');`                            | **q**uery**S**elector**A**ll          |
-| `cn`                     | `const nodeList = node.childNodes;`                                 | **c**hild**N**odes                    |
-| `pe`                     | `const parentElement = node.parentElement;`                         | **p**arent**E**lement                 |
-| `pn`                     | `const parentNode = node.parentNode;`                               | **p**arent**N**ode                    |
-| `fc`                     | `const childNode = node.firstChild;`                                | **f**irst**C**hild                    |
-| `lc`                     | `const childNode = node.lastChild;`                                 | **l**ast**C**hild                     |
-| `ns`                     | `const nextNode = node.nextSibling;`                                | **n**ext**S**ibling                   |
-| `ps`                     | `const previousNode = node.previousSibling;`                        | **p**revious**S**ibling               |
-| `tco`                    | `element.textContent = 'content';`                                  | **t**ext**Co**ntent                   |
-| `ib`                     | `node.insertBefore(newNode, referenceNode);`                        | **i**nsert**B**efore                  |
-| `ac`                     | `node.appendChild(element);`                                        | **a**ppend**C**hild                   |
-| `cn`                     | `const newClone = node.cloneNode(true);`                            | **c**lone**N**ode                     |
-| `cdp`                    | `const compareMask = node.compareDocumentPosition(otherNode);`      | **c**ompare**D**ocument**P**osition   |
-| `con`                    | `node.contains(otherNode);`                                         | **c**ontains                          |
-| `rmc`                    | `node.removeChild(child);`                                          | **r**e**m**ove**C**hild               |
-| `rpc`                    | `parentNode.replaceChild(newChild, oldChild);`                      | **r**e**p**lace**C**hild              |
-| `hcn`                    | `node.hasChildNodes()`                                              | **h**as**C**hild**N**odes             |
-| `pes`                    | `const prevNode = NonDocumentTypeChildNode.previousElementSibling;` | **p**revious**E**lement**S**ibling    |
-| `nes`                    | `const nextNode = NonDocumentTypeChildNode.nextElementSibling;`     | **n**ext**E**lement**S**ibling        |
-| `fec`                    | `const element = parentNode.firstElementChild;`                     | **f**irst**E**lement**C**hild         |
-| `lec`                    | `const element = parentNode.lastElementChild;`                      | **l**ast**E**lement**C**hild          |
-| `cec`                    | `const count = parentNode.childElementCount;`                       | **c**hild**E**lement**C**ount         |
-| `children`               | `const children = parentNode.children;`                             |
-| `append`                 | `parentNode.append(Nodes/DOMStrings);`                              |
-| `prepend`                | `parentNode.prepend(Nodes/DOMStrings);`                             |
-| `before`                 | `ChildNode.before(Nodes/DOMStrings);`                               |
-| `after`                  | `ChildNode.after(Nodes/DOMStrings);`                                |
-| `remove`                 | `ChildNode.remove();`                                               |
-| `rw`, `replaceWith`      | `ChildNode.replaceWith(Node/DOMString);`                            |
-| `gcr`                    | `const rectCollection = element.getClientRects();`                  | **g**et**C**lient**R**ects            |
-| `gbcr`, `rect`           | `const domRect = element.getBoundingClientRect();`                  | **g**et**B**ounding**C**lient**R**ect |
-| `closest`                | `const closestElement = targetElement.closest('selector');`         |
-| `sa`                     | `element.setAttribute('attrName', 'value');`                        |
-| `ga`                     | `const attribute = element.getAttribute('attrName');`               |
-| `ha`                     | `element.hasAttribute('attrName')`                                  |
-| `ra`                     | `element.removeAttribute('attrName');`                              |
-| `ta`                     | `element.toggleAttribute('attrName');`                              |
-| `matches`                | `element.matches('selectorString')`                                 |
-| `ih`                     | `element.innerHTML = 'DOMString';`                                  |
-| `oh`                     | `element.outerHTML = 'DOMString';`                                  |
-| `it`                     | `element.innerText = 'renderText';`                                 |
-| `cla`                    | `element.classList.add('className');`                               | **c**lass**L**ist.**a**dd             |
-| `clc`                    | `element.classList.contains('className');`                          |
-| `clr`                    | `element.classList.remove('className');`                            |
-| `clt`                    | `element.classList.toggle('className');`                            |
-| `before`, `iah.before`   | `element.insertAdjacentHTML('beforebegin', 'DOMString');`           |
-| `after`, `iah.after`     | `element.insertAdjacentHTML('afterend', 'DOMString');`              |
-| `prepend`, `iah.prepend` | `element.insertAdjacentHTML('afterbegin', 'DOMString');`            |
-| `append`, `iah.append`   | `element.insertAdjacentHTML('beforeend', 'DOMString');`             |
-| `before`, `iae.before`   | `element.insertAdjacentElement('beforebegin', element);`            |
-| `after`, `iae.after`     | `element.insertAdjacentElement('afterend', element);`               |
-| `prepend`, `iae.prepend` | `element.insertAdjacentElement('afterbegin', element);`             |
-| `append`, `iae.append`   | `element.insertAdjacentElement('beforeend', element);`              |
-| `before`, `iat.before`   | `element.insertAdjacentText('beforebegin', value);`                 |
-| `after`, `iat.after`     | `element.insertAdjacentText('afterend', value);`                    |
-| `prepend`, `iat.prepend` | `element.insertAdjacentText('afterbegin', value);`                  |
-| `append`, `iat.append`   | `element.insertAdjacentText('beforeend', value);`                   |
-| `scrollTo`               | `element.scrollTo({left, top, behavior: 'smooth'});`                |
-| `scrollIntoView`         | `element.scrollIntoView();`                                         |
-| `scl`                    | `element.scrollLeft;`                                               |
-| `sct`                    | `element.scrollTop;`                                                |
-| `dcw`                    | `${1:document.documentElement}.clientWidth`                         |
-| `dch`                    | `${1:document.documentElement}.clientHeight`                        |
-| `dow`                    | `${1:document.documentElement}.offsetWidth`                         |
-| `doh`                    | `${1:document.documentElement}.offsetHeight`                        |
-| `dsw`                    | `${1:document.documentElement}.scrollWidth`                         |
-| `dsh`                    | `${1:document.documentElement}.scrollHeight`                        |
 
 ### Bom
 
 | Prefix | Body                                                                                     | Description                              |
-| :----- | ---------------------------------------------------------------------------------------- | ---------------------------------------- |
-| `wa`   | `window.alert('msg');`                                                                   |
-| `wc`   | `window.confirm('msg');`                                                                 |
-| `wp`   | `window.prompt('title', 'defaultText');`                                                 |
+|:-------|------------------------------------------------------------------------------------------|------------------------------------------|
+| `wa`   | `window.alert('msg');`                                                                   |                                          |
+| `wc`   | `window.confirm('msg');`                                                                 |                                          |
+| `wp`   | `window.prompt('title', 'defaultText');`                                                 |                                          |
 | `st`   | `const timeout = window.setTimeout(() => { }, delay); window.clearTimeout(timeout);`     | **s**et**T**imeout                       |
-| `stfn` | `var timeout = window.setTimeout(function() { }, delay); window.clearTimeout(timeout);`  |
+| `stfn` | `var timeout = window.setTimeout(function() { }, delay); window.clearTimeout(timeout);`  |                                          |
 | `si`   | `const timer = window.setInterval(() => { }, interval); window.clearInterval(timer);`    | **s**et**I**nterval                      |
-| `sifn` | `var timer = window.setInterval(function() { }, interval); window.clearInterval(timer);` |
+| `sifn` | `var timer = window.setInterval(function() { }, interval); window.clearInterval(timer);` |                                          |
 | `lss`  | `localStorage.setItem('key', 'value');`                                                  | **l**ocal**S**torage.**s**etItem         |
-| `lsg`  | `localStorage.getItem('key');`                                                           |
-| `lsr`  | `localStorage.removeItem('key');`                                                        |
-| `lsc`  | `localStorage.clear();`                                                                  |
+| `lsg`  | `localStorage.getItem('key');`                                                           |                                          |
+| `lsr`  | `localStorage.removeItem('key');`                                                        |                                          |
+| `lsc`  | `localStorage.clear();`                                                                  |                                          |
 | `wsaw` | `window.screen.availWidth`                                                               | **w**indow.**s**creen.**a**vail**W**idth |
-| `wsah` | `window.screen.availHeight`                                                              |
-| `wsw`  | `window.screen.width`                                                                    |
-| `wsh`  | `window.screen.height`                                                                   |
-| `wlh`  | `window.location.href`                                                                   |
-| `wlhn` | `window.location.hostname`                                                               |
-| `wlp`  | `window.location.pathname`                                                               |
-| `wlpr` | `window.location.protocol`                                                               |
-| `wls`  | `window.location.assign(url)`                                                            |
-| `whb`  | `window.history.back();`                                                                 |
-| `whf`  | `window.history.forward();`                                                              |
-| `wnl`  | `window.navigator.language`                                                              |
-| `wnls` | `window.navigator.languages`                                                             |
-| `wnu`  | `window.navigator.userAgent`                                                             |
+| `wsah` | `window.screen.availHeight`                                                              |                                          |
+| `wsw`  | `window.screen.width`                                                                    |                                          |
+| `wsh`  | `window.screen.height`                                                                   |                                          |
+| `wlh`  | `window.location.href`                                                                   |                                          |
+| `wlhn` | `window.location.hostname`                                                               |                                          |
+| `wlp`  | `window.location.pathname`                                                               |                                          |
+| `wlpr` | `window.location.protocol`                                                               |                                          |
+| `wls`  | `window.location.assign(url)`                                                            |                                          |
+| `whb`  | `window.history.back();`                                                                 |                                          |
+| `whf`  | `window.history.forward();`                                                              |                                          |
+| `wnl`  | `window.navigator.language`                                                              |                                          |
+| `wnls` | `window.navigator.languages`                                                             |                                          |
+| `wnu`  | `window.navigator.userAgent`                                                             |                                          |
 
 ### Console
 
 | Prefix | Body                                  | Description             |
-| :----- | ------------------------------------- | ----------------------- |
+|:-------|---------------------------------------|-------------------------|
 | `cd`   | `console.dir();`                      | **c**onsole.**d**ir     |
 | `ce`   | `console.error();`                    |                         |
 | `celb` | `console.error('labele', );`          |                         |
@@ -567,7 +575,7 @@ Note: All the snippets include the final semicolon `;`
 ### Common Js/Node.js
 
 | Prefix | Body                                                           | Description |
-| :----- | -------------------------------------------------------------- | ----------- |
+|:-------|----------------------------------------------------------------|-------------|
 | `ec`   | `class name { constructor (params) { }} module.exports = name` |             |
 | `em`   | `exports.member = value`                                       |             |
 | `me`   | `module.exports = name`                                        |             |
@@ -577,7 +585,7 @@ Note: All the snippets include the final semicolon `;`
 ### Bdd Testing (Mocha, Jasmine, etc.)
 
 | Prefix | Body                                             |
-| :----- | ------------------------------------------------ |
+|:-------|--------------------------------------------------|
 | `desc` | `describe('description', function () { })`       |
 | `cont` | `context('description', callback);`              |
 | `it`   | `it('description', () => { })`                   |
