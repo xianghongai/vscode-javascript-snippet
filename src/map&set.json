@@ -1,0 +1,10 @@
+{
+  "let Map":       { "prefix": "lm",             "body": [ "let ${1:resource}Map = new Map();" ],            "description": "let assignment Map" },
+  "let Set":       { "prefix": "ls",             "body": [ "let ${1:resource}Set = new Set();" ],            "description": "let assignment Set" },
+  "let WeakMap":   { "prefix": "lwm",            "body": [ "let ${1:resource}WeakMap = new WeakMap();" ],    "description": "let assignment WeakMap" },
+  "let WeakSet":   { "prefix": "lws",            "body": [ "let ${1:resource}WeakSet = new WeakSet();" ],    "description": "let assignment WeakSet" },
+  "const Map":     { "prefix": [ "cm", "ma" ],   "body": [ "const ${1:resource}Map = new Map();" ],          "description": "const assignment Map" },
+  "const Set":     { "prefix": [ "cs", "se" ],   "body": [ "const ${1:resource}Set = new Set();" ],          "description": "const assignment Set" },
+  "const WeakMap": { "prefix": [ "cwm", "wm" ],  "body": [ "const ${1:resource}WeakMap = new WeakMap();" ],  "description": "const assignment WeakMap" },
+  "const WeakSet": { "prefix": [ "cws", "ws" ],  "body": [ "const ${1:resource}WeakSet = new WeakSet();" ],  "description": "const assignment WeakSet" }
+}

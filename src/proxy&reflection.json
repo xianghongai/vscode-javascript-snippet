@@ -1,0 +1,163 @@
+{
+  "proxy set": {
+    "prefix": "proxy.set",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tset(trapTarget, key, value, receiver) {",
+      "\t\t// Overrides the Behavior Of Writing to a property",
+      "\t\t// if (!trapTarget.hasOwnProperty(key)) {\t}",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.set(trapTarget, key, value, receiver);",
+      "\t}",
+      "});"
+    ],
+    "description": "Validating Properties Using the set Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#validating-properties-using-the-set-trap"
+  },
+  "proxy get": {
+    "prefix": "proxy.get",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tget(trapTarget, key, receiver) {",
+      "\t\t// Overrides the Behavior Of Reading a property value",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.get(trapTarget, key, receiver);",
+      "\t}",
+      "});"
+    ],
+    "description": "Object Shape Validation Using the get Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-shape-validation-using-the-get-trap"
+  },
+  "proxy has": {
+    "prefix": "proxy.has",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\thas(trapTarget, key) {",
+      "\t\t// Overrides the Behavior Of The 'in' operator",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.has(trapTarget, key);",
+      "\t}",
+      "});"
+    ],
+    "description": "Hiding Property Existence Using the has Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#hiding-property-existence-using-the-has-trap"
+  },
+  "proxy delete": {
+    "prefix": "proxy.delete",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tdeleteProperty(trapTarget, key) {",
+      "\t\t// Overrides the Behavior Of The 'delete' operator",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.deleteProperty(trapTarget, key);",
+      "\t}",
+      "});"
+    ],
+    "description": "Preventing Property Deletion with the deleteProperty Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#preventing-property-deletion-with-the-deleteproperty-trap"
+  },
+  "proxy prototype": {
+    "prefix": "proxy.prototype",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tgetPrototypeOf(trapTarget) {",
+      "\t\t// Overrides the Behavior Of 'Object.getPrototypeOf()'",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.getPrototypeOf(trapTarget);",
+      "\t},",
+      "\t\tsetPrototypeOf(trapTarget, proto) {",
+      "\t\t// Overrides the Behavior Of 'Object.setPrototypeOf()'",
+      "\t\t${3}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.setPrototypeOf(trapTarget, proto);",
+      "\t}",
+      "});"
+    ],
+    "description": "Prototype Proxy Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#prototype-proxy-traps"
+  },
+  "proxy object extensibility": {
+    "prefix": "proxy.extensibility",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tisExtensible(trapTarget) {",
+      "\t\t// Overrides the Behavior Of 'Object.isExtensible()'",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.isExtensible(trapTarget);",
+      "\t},",
+      "\tpreventExtensions(trapTarget) {",
+      "\t\t// Overrides the Behavior Of 'Object.preventExtensions()'",
+      "\t\t${3}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.preventExtensions(trapTarget);",
+      "\t}",
+      "});"
+    ],
+    "description": "Object Extensibility Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-extensibility-traps"
+  },
+  "proxy object property descriptor ": {
+    "prefix": "proxy.property",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tdefineProperty(trapTarget, key, descriptor) {",
+      "\t\t// Overrides the Behavior Of 'Object.defineProperty()'",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.defineProperty(trapTarget, key, descriptor);",
+      "\t},",
+      "\tgetOwnPropertyDescriptor(trapTarget, key) {",
+      "\t\t// Overrides the Behavior Of 'Object.getOwnPropertyDescriptor()'",
+      "\t\t${3}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.getOwnPropertyDescriptor(trapTarget, key);",
+      "\t}",
+      "});"
+    ],
+    "description": "Property Descriptor Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#property-descriptor-traps"
+  },
+  "proxy ownKeys": {
+    "prefix": "proxy.ownKeys",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\townKeys(trapTarget) {",
+      "\t\t// Overrides the Behavior Of",
+      "\t\t// - 'Object.keys'",
+      "\t\t// - 'Object.getOwnPropertyNames()'",
+      "\t\t// - 'Object.getOwnPropertySymbols()'",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.ownKeys(trapTarget);",
+      "\t}",
+      "});"
+    ],
+    "description": "The ownKeys Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#the-ownkeys-trap"
+  },
+  "proxy function": {
+    "prefix": "proxy.function",
+    "body": [
+      "const proxy = new Proxy(${1:target}, {",
+      "\tapplay(trapTarget, thisArg, argumentsList) {",
+      "\t\t// Overrides the Behavior Of Calling a function",
+      "\t\t${2}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.applay(trapTarget, thisArg, argumentsList);",
+      "\t},",
+      "\tconstruct(trapTarget, argumentsList) {",
+      "\t\t// Overrides the Behavior Of Calling a function with new",
+      "\t\t${3}",
+      "\t\t// Default Behavior",
+      "\t\treturn Reflect.construct(trapTarget, argumentsList);",
+      "\t}",
+      "});"
+    ],
+    "description": "Function Proxies with the apply and construct Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#function-proxies-with-the-apply-and-construct-traps"
+  },
+  "Revocable Proxies": {
+    "prefix": "proxy.revocable",
+    "body": [
+      "const { proxy, revoke } = Proxy.revocable(${1:target}, {})"
+    ],
+    "description": "Revocable Proxies\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#revocable-proxies"
+  }
+}

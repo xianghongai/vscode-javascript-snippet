@@ -1,0 +1,6 @@
+{
+  "let Symbol":       { "prefix": "lsy",             "body": ["let ${1:symObj} = Symbol();"],       "description": "let assignment Symbol" },
+  "const Symbol":     { "prefix": ["csy", "sym"],    "body": ["const ${1:symObj} = Symbol();"],     "description": "const assignment Symbol" },
+  "Symbol.for":       { "prefix": "symf",            "body": ["Symbol.for('${1:key}');"],           "description": "The `Symbol.for(key)` method searches for existing symbols in a runtime-wide symbol registry with the given key and returns it if found. Otherwise a new symbol gets created in the global symbol registry with this key." },
+  "Symbol.keyFor":    { "prefix": "symk",            "body": ["Symbol.keyFor('${1:symObj}');"],     "description": "The `Symbol.keyFor(sym)` method retrieves a shared symbol key from the global symbol registry for the given symbol." }
+}

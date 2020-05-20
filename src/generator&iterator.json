@@ -1,4 +1,6 @@
 {
+  "const yielded":       { "prefix": "cy",  "body": [ "const ${1:name} = yield ${2:value};" ],                    "description": "const assignment yielded\n" },
+  "let yielded":         { "prefix": "ly",  "body": [ "let ${1:name} = yield ${2:value};" ],                        "description": "let assignment yielded\n" },
   "generator function":  { "prefix": "gf",  "body": [ "function* ${1:name}(${2:params}) {\n\t${3:yield} ;\n}\n" ],  "description": "Creates generator function\n" },
   "yield":               { "prefix": "y",   "body": [ "yield ${1:expression};" ],                                   "description": "The yield keyword is used to pause and resume a generator function (function* or legacy generator function).\n" },
   "yield*":              { "prefix": "yg",  "body": [ "yield* ${1:expression};" ],                                  "description": "The yield* expression is used to delegate to another generator or iterable object." }

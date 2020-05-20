@@ -1,11 +1,12 @@
 {
+  "const awaited":                       { "prefix": "caw",     "body": [ "const ${1:result} = await ${2:promise};" ],                           "description": "const assignment awaited\n" },
+  "let awaited":                         { "prefix": "law",     "body": [ "let ${1:result} = await ${2:promise};" ],                             "description": "let assignment awaited\n" },
   "async function named":                { "prefix": "asfn",    "body": [ "async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n\n${1:name}().then(${5:result} => {$6});\n" ],  "description": "async function named\n" },
   "async function anonymous":            { "prefix": "asfna",   "body": [ "async function (${1:params}) {\n\t${2}\n}\n" ],                       "description": "async function anonymous\n" },
   "async generator function named":      { "prefix": "asgfn",   "body": [ "async function* ${1:name} (${2:params}) {\n\t${3}\n}\n" ],            "description": "async generator function named\n" },
   "async generator function anonymous":  { "prefix": "asgfna",  "body": [ "async function* (${1:params}) {\n\t${2}\n}\n" ],                      "description": "async generator function anonymous\n" },
   "async arrow function":                { "prefix": "asaf",    "body": [ "async (${1:params}) => {\n\t${2}\n}\n" ],                             "description": "async arrow function\n" },
   "await":                               { "prefix": "aw",      "body": [ "await ${1:promise}" ],                                                "description": "await\n" },
-  "await(const)":                        { "prefix": "awc",     "body": [ "const ${1:result} = await ${2:promise};" ],                           "description": "await(const)\n" },
   "await Promise.all":                   { "prefix": "awpa",    "body": [ "await Promise.all(${1:value})\n" ],                                   "description": "await Promise.all\n" },
   "await Promise.all.map":               { "prefix": "awpam",   "body": [ "await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n" ], "description": "await Promise.all.map\n" }
 }
