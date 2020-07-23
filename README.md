@@ -610,3 +610,7 @@ MIT License
 (^) → "
 ($) → ",
 ```
+
+**Donate**
+
+![xianghongai@gmail.com](https://raw.githubusercontent.com/caringrun/assets/master/donate.png)
