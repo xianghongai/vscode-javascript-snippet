@@ -132,7 +132,7 @@ Note: All the snippets include the final semicolon `;`
 | `arp`       | `iterable.pop();`                                                 |                                                  |
 | `arj`       | `iterable.push(elementN);`                                        |                                                  |
 | `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`     |                                                  |
-| `arrr`      | `iterable.reduce​Right((accumulator, currentValue) => { return });` |                                                  |
+| `arrr`      | `iterable.reduceRight((accumulator, currentValue) => { return });` |                                                  |
 | `arre`      | `iterable.reverse();`                                             |                                                  |
 | `ars`       | `iterable.shift();`                                               |                                                  |
 | `arsl`      | `iterable.slice(begin, end);`                                     |                                                  |
@@ -221,19 +221,19 @@ Note: All the snippets include the final semicolon `;`
 | Prefix  | Body                        |
 |:--------|-----------------------------|
 | `ne`    | `Number.EPSILON`            |
-| `nmasi` | `Number​.MAX_SAFE_INTEGER`    |
+| `nmasi` | `Number.MAX_SAFE_INTEGER`    |
 | `nmav`  | `Number.MAX_VALUE`          |
-| `nmisi` | `Number​.MIN_SAFE_INTEGER`    |
-| `nmav`  | `Number​.MIN_VALUE`           |
-| `nni`   | `Number​.NEGATIVE_INFINITY`   |
-| `nn`    | `Number​.NaN`                 |
-| `npi`   | `Number​.POSITIVE_INFINITY`   |
-| `nif`   | `Number​.isFinite(value)`     |
-| `nii`   | `Number​.isInteger(value)`    |
-| `nin`   | `Number​.isNaN(value)`        |
-| `nisi`  | `Number​.isSafe​Integer(value)` |
-| `npf`   | `Number​.parse​Float(string)`   |
-| `npi`   | `Number​.parseInt(string)`    |
+| `nmisi` | `Number.MIN_SAFE_INTEGER`    |
+| `nmav`  | `Number.MIN_VALUE`           |
+| `nni`   | `Number.NEGATIVE_INFINITY`   |
+| `nn`    | `Number.NaN`                 |
+| `npi`   | `Number.POSITIVE_INFINITY`   |
+| `nif`   | `Number.isFinite(value)`     |
+| `nii`   | `Number.isInteger(value)`    |
+| `nin`   | `Number.isNaN(value)`        |
+| `nisi`  | `Number.isSafeInteger(value)` |
+| `npf`   | `Number.parseFloat(string)`   |
+| `npi`   | `Number.parseInt(string)`    |
 | `nte`   | `number.toExponential()`    |
 | `ntf`   | `number.toFixed()`          |
 | `ntp`   | `number.toPrecision()`      |
