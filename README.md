@@ -101,48 +101,48 @@ Note: All the snippets include the final semicolon `;`
 
 ### Array
 
-| Prefix      | Body                                                              | Description                                      |
-|:------------|-------------------------------------------------------------------|--------------------------------------------------|
-| `ar`        | `const arr = [];`                                                 |                                                  |
-| `arl`       | `iterable.length;`                                                |                                                  |
-| `isa`       | `Array.isArray(value)`                                            |                                                  |
-| `arfr`      | `Array.from(arrayLike);`                                          |                                                  |
-| `arfr`      | `Array.from(arrayLike, (item) => { });`                           |                                                  |
-| `arof`      | `Array.of(elementN);`                                             |                                                  |
-| `arc`       | `iterable.concat(valueN);`                                        | **ar**ray.**c**oncat                             |
-| `arcw`      | `iterable.copyWithin(target, start, end);`                        | **ar**ray.**c**opy**W**ithin                     |
-| `are`       | `iterable.entries();`                                             | **ar**ray.**e**ntries                            |
-| `arev`      | `iterable.every((element) => { });`                               | **ar**ray.**ev**ery                              |
-| `arfill`    | `iterable.fill(value, start, end);`                               |                                                  |
-| `arf`       | `iterable.filter((element) => { });`                              |                                                  |
-| `arfi`      | `iterable.find((element) => { });`                                |                                                  |
-| `arfin`     | `iterable.findIndex((element) => { })`                            |                                                  |
-| `arflat`    | `iterable.flat();`                                                |                                                  |
-| `arflatMap` | `iterable.flatMap((value) => value);`                             |                                                  |
-| `fea`       | `iterable.forEach((currentValue) => { });`                        | **f**or**E**ach callback with **a**rrow function |
-| `feai`      | `iterable.forEach((currentValue, index) => { });`                 |                                                  |
-| `fe`        | `iterable.forEach(function(currentValue) { });`                   |                                                  |
-| `fei`       | `iterable.forEach(function(currentValue, index) { });`            |                                                  |
-| `ari`       | `iterable.includes(valueToFind)`                                  |                                                  |
-| `ario`      | `iterable.indexOf(searchElement)`                                 |                                                  |
-| `arj`       | `iterable.join(separator);`                                       |                                                  |
-| `ark`       | `iterable.keys();`                                                |                                                  |
-| `arlio`     | `iterable.lastIndexOf(searchElement)`                             |                                                  |
-| `map`       | `iterable.map((currentValue) => { });`                            |                                                  |
-| `arp`       | `iterable.pop();`                                                 |                                                  |
-| `arj`       | `iterable.push(elementN);`                                        |                                                  |
-| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`     |                                                  |
+| Prefix      | Body                                                               | Description                                      |
+|:------------|--------------------------------------------------------------------|--------------------------------------------------|
+| `ar`        | `const arr = [];`                                                  |                                                  |
+| `arl`       | `iterable.length;`                                                 |                                                  |
+| `isa`       | `Array.isArray(value)`                                             |                                                  |
+| `arfr`      | `Array.from(arrayLike);`                                           |                                                  |
+| `arfr`      | `Array.from(arrayLike, (item) => { });`                            |                                                  |
+| `arof`      | `Array.of(elementN);`                                              |                                                  |
+| `arc`       | `iterable.concat(valueN);`                                         | **ar**ray.**c**oncat                             |
+| `arcw`      | `iterable.copyWithin(target, start, end);`                         | **ar**ray.**c**opy**W**ithin                     |
+| `are`       | `iterable.entries();`                                              | **ar**ray.**e**ntries                            |
+| `arev`      | `iterable.every((element) => { });`                                | **ar**ray.**ev**ery                              |
+| `arfill`    | `iterable.fill(value, start, end);`                                |                                                  |
+| `arf`       | `iterable.filter((element) => { });`                               |                                                  |
+| `arfi`      | `iterable.find((element) => { });`                                 |                                                  |
+| `arfin`     | `iterable.findIndex((element) => { })`                             |                                                  |
+| `arflat`    | `iterable.flat();`                                                 |                                                  |
+| `arflatMap` | `iterable.flatMap((value) => value);`                              |                                                  |
+| `fea`       | `iterable.forEach((currentValue) => { });`                         | **f**or**E**ach callback with **a**rrow function |
+| `feai`      | `iterable.forEach((currentValue, index) => { });`                  |                                                  |
+| `fe`        | `iterable.forEach(function(currentValue) { });`                    |                                                  |
+| `fei`       | `iterable.forEach(function(currentValue, index) { });`             |                                                  |
+| `ari`       | `iterable.includes(valueToFind)`                                   |                                                  |
+| `ario`      | `iterable.indexOf(searchElement)`                                  |                                                  |
+| `arj`       | `iterable.join(separator);`                                        |                                                  |
+| `ark`       | `iterable.keys();`                                                 |                                                  |
+| `arlio`     | `iterable.lastIndexOf(searchElement)`                              |                                                  |
+| `map`       | `iterable.map((currentValue) => { });`                             |                                                  |
+| `arp`       | `iterable.pop();`                                                  |                                                  |
+| `arj`       | `iterable.push(elementN);`                                         |                                                  |
+| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`      |                                                  |
 | `arrr`      | `iterable.reduceRight((accumulator, currentValue) => { return });` |                                                  |
-| `arre`      | `iterable.reverse();`                                             |                                                  |
-| `ars`       | `iterable.shift();`                                               |                                                  |
-| `arsl`      | `iterable.slice(begin, end);`                                     |                                                  |
-| `arso`      | `iterable.some((element) => { });`                                |                                                  |
-| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                      |                                                  |
-| `arsp`      | `iterable.splice(start, deleteCount, item);`                      |                                                  |
-| `aru`       | `iterable.unshift(elementN);`                                     |                                                  |
-| `arv`       | `iterable.values();`                                              |                                                  |
-| `arsi`      | `iterable[Symbol.iterator]();`                                    |                                                  |
-| `seq`       | `[...Array(length).keys()]`                                       |                                                  |
+| `arre`      | `iterable.reverse();`                                              |                                                  |
+| `ars`       | `iterable.shift();`                                                |                                                  |
+| `arsl`      | `iterable.slice(begin, end);`                                      |                                                  |
+| `arso`      | `iterable.some((element) => { });`                                 |                                                  |
+| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                       |                                                  |
+| `arsp`      | `iterable.splice(start, deleteCount, item);`                       |                                                  |
+| `aru`       | `iterable.unshift(elementN);`                                      |                                                  |
+| `arv`       | `iterable.values();`                                               |                                                  |
+| `arsi`      | `iterable[Symbol.iterator]();`                                     |                                                  |
+| `seq`       | `[...Array(length).keys()]`                                        |                                                  |
 
 ### Object
 
@@ -218,25 +218,25 @@ Note: All the snippets include the final semicolon `;`
 
 ### Number
 
-| Prefix  | Body                        |
-|:--------|-----------------------------|
-| `ne`    | `Number.EPSILON`            |
-| `nmasi` | `Number.MAX_SAFE_INTEGER`    |
-| `nmav`  | `Number.MAX_VALUE`          |
-| `nmisi` | `Number.MIN_SAFE_INTEGER`    |
-| `nmav`  | `Number.MIN_VALUE`           |
-| `nni`   | `Number.NEGATIVE_INFINITY`   |
-| `nn`    | `Number.NaN`                 |
-| `npi`   | `Number.POSITIVE_INFINITY`   |
-| `nif`   | `Number.isFinite(value)`     |
-| `nii`   | `Number.isInteger(value)`    |
-| `nin`   | `Number.isNaN(value)`        |
+| Prefix  | Body                          |
+|:--------|-------------------------------|
+| `ne`    | `Number.EPSILON`              |
+| `nmasi` | `Number.MAX_SAFE_INTEGER`     |
+| `nmav`  | `Number.MAX_VALUE`            |
+| `nmisi` | `Number.MIN_SAFE_INTEGER`     |
+| `nmav`  | `Number.MIN_VALUE`            |
+| `nni`   | `Number.NEGATIVE_INFINITY`    |
+| `nn`    | `Number.NaN`                  |
+| `npi`   | `Number.POSITIVE_INFINITY`    |
+| `nif`   | `Number.isFinite(value)`      |
+| `nii`   | `Number.isInteger(value)`     |
+| `nin`   | `Number.isNaN(value)`         |
 | `nisi`  | `Number.isSafeInteger(value)` |
 | `npf`   | `Number.parseFloat(string)`   |
-| `npi`   | `Number.parseInt(string)`    |
-| `nte`   | `number.toExponential()`    |
-| `ntf`   | `number.toFixed()`          |
-| `ntp`   | `number.toPrecision()`      |
+| `npi`   | `Number.parseInt(string)`     |
+| `nte`   | `number.toExponential()`      |
+| `ntf`   | `number.toFixed()`            |
+| `ntp`   | `number.toPrecision()`        |
 
 ### Regexp
 
@@ -314,7 +314,10 @@ Note: All the snippets include the final semicolon `;`
 | Prefix | Body                                                                                                     | Description                                      |
 |:-------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | `p`    | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **p**romise                                  |
-| `pa`   | `Promise.all([value]);`                                                                                  | **P**romise.**a**ll                              |
+| `pa`   | `Promise.all([promises]);`                                                                               | **P**romise.**a**ll                              |
+| `pan`  | `Promise.any([promises]);`                                                                               | **P**romise.**an**y                              |
+| `pas`  | `Promise.allSettled([promises]);`                                                                        | **P**romise.**a**ll**S**ettled                   |
+| `pr`   | `Promise.race([promises]);`                                                                              | **P**romise.**r**ace                             |
 | `prj`  | `Promise.reject(value);`                                                                                 | **P**romise.**r**e**j**ect                       |
 | `prs`  | `Promise.resolve(value);`                                                                                | **P**romise.**r**e**s**olve                      |
 | `rj`   | `reject(err);`                                                                                           | **r**e**j**ect                                   |

@@ -46,7 +46,7 @@
 			"\t})",
 			"});"
 		],
-		"description": "Promise.allSettled"
+		"description": "Promise.allSettled\n"
 	},
 	"Promise.race": {
 		"prefix": "pr",
@@ -55,7 +55,7 @@
 			"\tconsole.log(${3});",
 			"});"
 		],
-		"description": "Promise.race"
+		"description": "Promise.race\n"
 	},
 	"Promise.reject": {
 		"prefix": "prj",
