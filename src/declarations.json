@@ -9,5 +9,8 @@
   "var":                       { "prefix": "v",     "body": [ "var ${1:name} = ${2:value};" ],                         "description": "var assignment\n" },
   "var destructing object":    { "prefix": "vdo",   "body": [ "var {${2}} = ${1};" ],                                  "description": "var destructuring assignment\n" },
   "var destructing array":     { "prefix": "vda",   "body": [ "var [${2}] = ${1};" ],                                  "description": "var destructuring assignment\n" },
-  "destructuring parameter":   { "prefix": "dp",    "body": [ "{${0}}: ${1:parameter}" ],                              "description": "destructuring parameter\n" }
+  "destructuring parameter":   { "prefix": "dp",    "body": [ "{${0}}: ${1:parameter}" ],                              "description": "destructuring parameter\n" },
+  "property object":           { "prefix": "opo",   "body": [ "${1:property}: { ${2:property} },$0" ],                 "description": "option object property\n" },
+  "property array":            { "prefix": "opa",   "body": [ "${1:property}: [ ${2:item} ],$0" ],                     "description": "option array property\n" },
+  "property string":           { "prefix": "ops",   "body": [ "${1:property}: '${2:value}',$0" ],                      "description": "option string property\n" }
 }
