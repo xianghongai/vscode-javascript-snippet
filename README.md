@@ -1,4 +1,24 @@
-# JavaScript Snippets (Visual Studio Code)
+<p>
+  <h1 align="center">JavaScript Snippets (Visual Studio Code)</h1>
+</p>
+
+<p align="center">
+  <a href="https://github.com/xianghongai/vscode-javascript-snippet">
+    <img src="https://img.shields.io/github/repo-size/xianghongai/vscode-javascript-snippet?style=plastic&color=4ac51c">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
+    <img src="https://vsmarketplacebadge.apphb.com/version-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=ff40bf">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
+    <img src="https://vsmarketplacebadge.apphb.com/installs-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
+    <img src="https://vsmarketplacebadge.apphb.com/rating-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
+    <img src="https://img.shields.io/github/license/xianghongai/vscode-javascript-snippet?maxAge=2592000&style=plastic&color=4ac51c">
+  </a>
+</p>
 
 Code snippets for JavaScript in ES3/5/6+ syntax;
 
