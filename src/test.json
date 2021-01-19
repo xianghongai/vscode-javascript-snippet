@@ -1,10 +1,57 @@
 {
-  "test suite: describe":                 { "prefix": "desc",     "body": [ "describe('${1:description}', () => {\n\t${2}\n})" ],               "description": "test suite: describe\n" },
-  "test suite: context":                  { "prefix": "cont",     "body": [ "context('${1:description}', ${2:callback});${0}" ],                      "description": "test suite: context\n" },
-  "test suite: it synchronous":           { "prefix": "it",       "body": [ "it('${1:description}', () => {\n\t${2}\n})" ],                           "description": "test suite: it synchronous\n" },
-  "test suite: it asynchronous":          { "prefix": "ita",      "body": [ "it('${1:description}', async (done) => {\n\t${2}\n\tdone();\n});${0}" ], "description": "test suite: it asynchronous\n" },
-  "test suite: afterEach":                { "prefix": "afe",      "body": [ "afterEach(() => {\n\t${1}\n})" ],                                  "description": "test suite: afterEach\n" },
-  "test suite: beforeEach":               { "prefix": "bfe",      "body": [ "beforeEach(() => {\n\t${1}\n})" ],                                 "description": "test suite: beforeEach\n" },
-  "test suite: after":                    { "prefix": "aft",      "body": [ "after(() => {\n\t${1}\n})" ],                                      "description": "test suite: after\n" },
-  "test suite: before":                   { "prefix": "bf",       "body": [ "before(() => {\n\t${1}\n})" ],                                     "description": "test suite: before\n" }
+	"test suite: describe": {
+		"prefix": "desc",
+		"body": [
+			"describe('${1:description}', () => {",
+			"\t${2}",
+			"})"
+		],
+		"description": "test suite: describe\n"
+	},
+	"test suite: context": {
+		"prefix": "cont",
+		"body": [
+			"context('${1:description}', ${2:callback});${0}"
+		],
+		"description": "test suite: context\n"
+	},
+	"test suite: it synchronous": {
+		"prefix": "it",
+		"body": [
+			"it('${1:description}', () => {",
+			"\t${2}",
+			"})"
+		],
+		"description": "test suite: it synchronous\n"
+	},
+	"test suite: it asynchronous": {
+		"prefix": "ita",
+		"body": [
+			"it('${1:description}', async (done) => {",
+			"\t${2}",
+			"\tdone();",
+			"});${0}"
+		],
+		"description": "test suite: it asynchronous\n"
+	},
+	"test suite: afterEach": {
+		"prefix": "afe",
+		"body": ["afterEach(() => {", "\t${1}", "})"],
+		"description": "test suite: afterEach\n"
+	},
+	"test suite: beforeEach": {
+		"prefix": "bfe",
+		"body": ["beforeEach(() => {", "\t${1}", "})"],
+		"description": "test suite: beforeEach\n"
+	},
+	"test suite: after": {
+		"prefix": "aft",
+		"body": ["after(() => {", "\t${1}", "})"],
+		"description": "test suite: after\n"
+	},
+	"test suite: before": {
+		"prefix": "bf",
+		"body": ["before(() => {", "\t${1}", "})"],
+		"description": "test suite: before\n"
+	}
 }

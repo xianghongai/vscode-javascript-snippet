@@ -12,7 +12,7 @@
       "\t}",
       "});"
     ],
-    "description": "Validating Properties Using the set Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#validating-properties-using-the-set-trap"
+    "description": "const proxy = new Proxy(target, handler);\nValidating Properties Using the set Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#validating-properties-using-the-set-trap"
   },
   "proxy get": {
     "prefix": "proxy.get",
@@ -26,7 +26,7 @@
       "\t}",
       "});"
     ],
-    "description": "Object Shape Validation Using the get Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-shape-validation-using-the-get-trap"
+    "description": "const proxy = new Proxy(target, handler);\nObject Shape Validation Using the get Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-shape-validation-using-the-get-trap"
   },
   "proxy has": {
     "prefix": "proxy.has",
@@ -40,7 +40,7 @@
       "\t}",
       "});"
     ],
-    "description": "Hiding Property Existence Using the has Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#hiding-property-existence-using-the-has-trap"
+    "description": "const proxy = new Proxy(target, handler);\nHiding Property Existence Using the has Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#hiding-property-existence-using-the-has-trap"
   },
   "proxy delete": {
     "prefix": "proxy.delete",
@@ -54,7 +54,7 @@
       "\t}",
       "});"
     ],
-    "description": "Preventing Property Deletion with the deleteProperty Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#preventing-property-deletion-with-the-deleteproperty-trap"
+    "description": "const proxy = new Proxy(target, handler);\nPreventing Property Deletion with the deleteProperty Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#preventing-property-deletion-with-the-deleteproperty-trap"
   },
   "proxy prototype": {
     "prefix": "proxy.prototype",
@@ -74,7 +74,7 @@
       "\t}",
       "});"
     ],
-    "description": "Prototype Proxy Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#prototype-proxy-traps"
+    "description": "const proxy = new Proxy(target, handler);\nPrototype Proxy Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#prototype-proxy-traps"
   },
   "proxy object extensibility": {
     "prefix": "proxy.extensibility",
@@ -94,7 +94,7 @@
       "\t}",
       "});"
     ],
-    "description": "Object Extensibility Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-extensibility-traps"
+    "description": "const proxy = new Proxy(target, handler);\nObject Extensibility Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-extensibility-traps"
   },
   "proxy object property descriptor ": {
     "prefix": "proxy.property",
@@ -114,7 +114,7 @@
       "\t}",
       "});"
     ],
-    "description": "Property Descriptor Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#property-descriptor-traps"
+    "description": "const proxy = new Proxy(target, handler);\nProperty Descriptor Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#property-descriptor-traps"
   },
   "proxy ownKeys": {
     "prefix": "proxy.ownKeys",
@@ -131,7 +131,7 @@
       "\t}",
       "});"
     ],
-    "description": "The ownKeys Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#the-ownkeys-trap"
+    "description": "const proxy = new Proxy(target, handler);\nThe ownKeys Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#the-ownkeys-trap"
   },
   "proxy function": {
     "prefix": "proxy.function",
@@ -151,13 +151,13 @@
       "\t}",
       "});"
     ],
-    "description": "Function Proxies with the apply and construct Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#function-proxies-with-the-apply-and-construct-traps"
+    "description": "const proxy = new Proxy(target, handler);\nFunction Proxies with the apply and construct Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#function-proxies-with-the-apply-and-construct-traps"
   },
   "Revocable Proxies": {
     "prefix": "proxy.revocable",
     "body": [
       "const { proxy, revoke } = Proxy.revocable(${1:target}, {})"
     ],
-    "description": "Revocable Proxies\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#revocable-proxies"
+    "description": "Proxy.revocable(target, handler);\nRevocable Proxies\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#revocable-proxies"
   }
 }

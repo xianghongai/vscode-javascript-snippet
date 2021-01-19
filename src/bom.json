@@ -1,31 +1,191 @@
 {
-  "alert":                                             { "prefix": "wa",          "body": [ "window.alert('${1:msg}');" ],                              "description": "window.alert\n" },
-  "confirm":                                           { "prefix": "wc",          "body": [ "window.confirm('${1:msg}');" ],                            "description": "window.confirm\n" },
-  "prompt":                                            { "prefix": "wp",          "body": [ "window.prompt('${1:title}', '${2:defaultText}');" ],       "description": "window.prompt\n" },
-  "setTimeOut(), arrow function":                      { "prefix": "st",          "body": [ "setTimeout(() => {\n\t${0}\n}${2:, ${3:delay}});" ],       "description": "setTimeOut/clearTimeout\n" },
-  "setTimeOut(), clearTimeout(), arrow function, ":    { "prefix": "stctaf",      "body": [ "const ${1:timeout} = window.setTimeout(() => {\n\t${3}\n}, ${2:delay});\n\nwindow.clearTimeout(${1:timeout});" ],        "description": "setTimeOut/clearTimeout\n" },
-  "setTimeout()":                                      { "prefix": "stfn",        "body": [ "setTimeout(function() {\n\t${0}\n}${2:, ${3:delay}});" ],  "description": "setTimeout/clearTimeout\n" },
-  "setTimeout(), clearTimeout()":                      { "prefix": "stctfn",      "body": [ "var ${1:timeout} = window.setTimeout(function() {\n\t${3}\n}, ${2:delay});\n\nwindow.clearTimeout(${1:timeout});" ],     "description": "setTimeout/clearTimeout\n" },
-  "setInterval(), arrow function":                     { "prefix": "si",          "body": [ "setInterval(() => {\n\t${0}\n}${2:, ${3:interval}});" ],   "description": "setInterval/clearInterval\n" },
-  "setInterval(), clearInterval(), arrow function":    { "prefix": "sici",        "body": [ "const ${1:timer} = window.setInterval(() => {\n\t${3}\n}, ${2:interval});\n\nwindow.clearInterval(${1:timer});" ],       "description": "setInterval/clearInterval\n" },
-  "setInterval()":                                     { "prefix": "sifn",        "body": [ "setInterval(function() {\n\t${0}\n}${2:, ${3:interval}});\n" ], "description": "setInterval/clearInterval\n" },
-  "setInterval(), clearInterval()":                    { "prefix": "sicifn",      "body": [ "var ${1:timer} = window.setInterval(function() {\n\t${3}\n}, ${2:interval});\n\nwindow.clearInterval(${1:timer});" ],    "description": "setInterval/clearInterval\n" },
-  "localStorage.setItem('key', 'value');":             { "prefix": "lss",         "body": [ "localStorage.setItem('${1:key}', '${2:value}');" ],  "description": "localStorage.setItem('key', 'value');\n" },
-  "localStorage.getItem('key');":                      { "prefix": "lsg",         "body": [ "localStorage.getItem('${1:key}');" ],                "description": "localStorage.getItem('key');\n" },
-  "localStorage.removeItem('key');":                   { "prefix": "lsr",         "body": [ "localStorage.removeItem('${1:key}');" ],             "description": "localStorage.removeItem('key');\n" },
-  "localStorage.clear();":                             { "prefix": "lsc",         "body": [ "localStorage.clear();" ],                            "description": "localStorage.clear();\n" },
-  "window.screen.availWidth":                          { "prefix": "wsaw",        "body": [ "window.screen.availWidth" ],                         "description": "window.screen.availWidth;\n" },
-  "window.screen.availHeight":                         { "prefix": "wsah",        "body": [ "window.screen.availHeight" ],                        "description": "window.screen.availHeight;\n" },
-  "window.screen.width":                               { "prefix": "wsw",         "body": [ "window.screen.width" ],                              "description": "window.screen.width;\n" },
-  "window.screen.height":                              { "prefix": "wsh",         "body": [ "window.screen.height" ],                             "description": "window.screen.height;\n" },
-  "window.location.href":                              { "prefix": "wlh",         "body": [ "window.location.href" ],                             "description": "window.location.href\n" },
-  "window.location.hostname":                          { "prefix": "wlhn",        "body": [ "window.location.hostname" ],                         "description": "window.location.hostname\n" },
-  "window.location.pathname":                          { "prefix": "wlp",         "body": [ "window.location.pathname" ],                         "description": "window.location.pathname\n" },
-  "window.location.protocol":                          { "prefix": "wlpr",        "body": [ "window.location.protocol" ],                         "description": "window.location.protocol\n" },
-  "window.location.assign()":                          { "prefix": "wls",         "body": [ "window.location.assign(${1:url})" ],                 "description": "window.location.assign()\n" },
-  "window.history.back()":                             { "prefix": "whb",         "body": [ "window.history.back();" ],                           "description": "window.history.back()\n" },
-  "window.history.forward()":                          { "prefix": "whf",         "body": [ "window.history.forward();" ],                        "description": "window.history.forward()\n" },
-  "window.navigator.language":                         { "prefix": "wnl",         "body": [ "window.navigator.language" ],                        "description": "window.navigator.language\n" },
-  "window.navigator.languages":                        { "prefix": "wnls",        "body": [ "window.navigator.languages" ],                       "description": "window.navigator.languages\n" },
-  "window.navigator.userAgent":                        { "prefix": "wnu",         "body": [ "window.navigator.userAgent" ],                       "description": "window.navigator.userAgent\n" }
+	"alert": {
+		"prefix": "wa",
+		"body": ["window.alert('${1:msg}');"],
+		"description": "window.alert\n"
+	},
+	"confirm": {
+		"prefix": "wc",
+		"body": ["window.confirm('${1:msg}');"],
+		"description": "window.confirm\n"
+	},
+	"prompt": {
+		"prefix": "wp",
+		"body": [
+			"window.prompt('${1:title}', '${2:defaultText}');"
+		],
+		"description": "window.prompt\n"
+	},
+	"setTimeOut(), arrow function": {
+		"prefix": "st",
+		"body": [
+			"setTimeout(() => {",
+			"\t${0}",
+			"}${2:, ${3:delay}});",
+			""
+		],
+		"description": "setTimeOut\n"
+	},
+	"setTimeOut(), clearTimeout(), arrow function, ": {
+		"prefix": "stctaf",
+		"body": [
+			"const ${1:timeout} = window.setTimeout(() => {",
+			"\t${3}",
+			"}, ${2:delay});",
+			"",
+			"window.clearTimeout(${1:timeout});"
+		],
+		"description": "setTimeOut/clearTimeout\n"
+	},
+	"setTimeout()": {
+		"prefix": "stfn",
+		"body": [
+			"setTimeout(function() {",
+			"\t${0}",
+			"}${2:, ${3:delay}});",
+			""
+		],
+		"description": "setTimeout\n"
+	},
+	"setTimeout(), clearTimeout()": {
+		"prefix": "stctfn",
+		"body": [
+			"const ${1:timeout} = window.setTimeout(function() {",
+			"\t${3}",
+			"}, ${2:delay});",
+			"",
+			"window.clearTimeout(${1});"
+		],
+		"description": "setTimeout/clearTimeout\n"
+	},
+	"setInterval(), arrow function": {
+		"prefix": "si",
+		"body": [
+			"setInterval(() => {",
+			"\t${0}",
+			"}${2:, ${3:interval}});",
+			""
+		],
+		"description": "setInterval\n"
+	},
+	"setInterval(), clearInterval(), arrow function": {
+		"prefix": "sici",
+		"body": [
+			"const ${1:timer} = window.setInterval(() => {",
+			"\t${3}",
+			"}, ${2:interval});",
+			"",
+			"window.clearInterval(${1});"
+		],
+		"description": "setInterval/clearInterval\n"
+	},
+	"setInterval()": {
+		"prefix": "sifn",
+		"body": [
+			"setInterval(function() {",
+			"\t${0}",
+			"}${2:, ${3:interval}});",
+			""
+		],
+		"description": "setInterval\n"
+	},
+	"setInterval(), clearInterval()": {
+		"prefix": "sicifn",
+		"body": [
+			"const ${1:timer} = window.setInterval(function() {\n\t${3}\n}, ${2:interval});\n\nwindow.clearInterval(${1:timer});"
+		],
+		"description": "setInterval/clearInterval\n"
+	},
+	"localStorage.setItem('key', 'value');": {
+		"prefix": "lss",
+		"body": [
+			"localStorage.setItem('${1:key}', ${2:value});"
+		],
+		"description": "localStorage.setItem('key', 'value');\n"
+	},
+	"localStorage.getItem('key');": {
+		"prefix": "lsg",
+		"body": ["localStorage.getItem('${1:key}');"],
+		"description": "localStorage.getItem('key');\n"
+	},
+	"localStorage.removeItem('key');": {
+		"prefix": "lsr",
+		"body": ["localStorage.removeItem('${1:key}');"],
+		"description": "localStorage.removeItem('key');\n"
+	},
+	"localStorage.clear();": {
+		"prefix": "lsc",
+		"body": ["localStorage.clear();"],
+		"description": "localStorage.clear();\n"
+	},
+	"window.screen.availWidth": {
+		"prefix": "wsaw",
+		"body": ["window.screen.availWidth"],
+		"description": "window.screen.availWidth;\n"
+	},
+	"window.screen.availHeight": {
+		"prefix": "wsah",
+		"body": ["window.screen.availHeight"],
+		"description": "window.screen.availHeight;\n"
+	},
+	"window.screen.width": {
+		"prefix": "wsw",
+		"body": ["window.screen.width"],
+		"description": "window.screen.width;\n"
+	},
+	"window.screen.height": {
+		"prefix": "wsh",
+		"body": ["window.screen.height"],
+		"description": "window.screen.height;\n"
+	},
+	"window.location.href": {
+		"prefix": "wlh",
+		"body": ["window.location.href"],
+		"description": "window.location.href\n"
+	},
+	"window.location.hostname": {
+		"prefix": "wlhn",
+		"body": ["window.location.hostname"],
+		"description": "window.location.hostname\n"
+	},
+	"window.location.pathname": {
+		"prefix": "wlp",
+		"body": ["window.location.pathname"],
+		"description": "window.location.pathname\n"
+	},
+	"window.location.protocol": {
+		"prefix": "wlpr",
+		"body": ["window.location.protocol"],
+		"description": "window.location.protocol\n"
+	},
+	"window.location.assign()": {
+		"prefix": "wls",
+		"body": ["window.location.assign(${1:url})"],
+		"description": "window.location.assign()\n"
+	},
+	"window.history.back()": {
+		"prefix": "whb",
+		"body": ["window.history.back();"],
+		"description": "window.history.back()\n"
+	},
+	"window.history.forward()": {
+		"prefix": "whf",
+		"body": ["window.history.forward();"],
+		"description": "window.history.forward()\n"
+	},
+	"window.navigator.language": {
+		"prefix": "wnl",
+		"body": ["window.navigator.language"],
+		"description": "window.navigator.language\n"
+	},
+	"window.navigator.languages": {
+		"prefix": "wnls",
+		"body": ["window.navigator.languages"],
+		"description": "window.navigator.languages\n"
+	},
+	"window.navigator.userAgent": {
+		"prefix": "wnu",
+		"body": ["window.navigator.userAgent"],
+		"description": "window.navigator.userAgent\n"
+	}
 }

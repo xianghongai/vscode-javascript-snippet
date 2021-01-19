@@ -6,7 +6,7 @@
   "function expression(const)":         { "prefix": "cfn",      "body": [ "const ${1:name} = function (${2:params}) {\n\t${3}\n}\n" ],  "description": "function expression(const)\n" },
   "arrow function expression(let)":     { "prefix": "laf",      "body": [ "let ${1:name} = (${2:params}) => {\n\t${3}\n}\n" ],          "description": "arrow function expression(let)\n" },
   "arrow function expression(const)":   { "prefix": "caf",      "body": [ "const ${1:name} = (${2:params}) => {\n\t${3}\n}\n" ],        "description": "arrow function expression(const)\n" },
-  "function property":                  { "prefix": "fnp",      "body": [ "${1:name}: function(${2:params}) {\n\t${3}\n}" ],            "description": "function as a property of an object\n" },
+  "function property":                  { "prefix": "pfn",      "body": [ "${1:name}: function(${2:params}) {\n\t${3}\n}" ],            "description": "function as a property of an object\n" },
   "function apply":                     { "prefix": "fnapply",  "body": [ "${1:method}.apply(${2:context}, [${3:params}]);" ],          "description": "function.apply(thisArg, [argsArray])\n" },
   "function call":                      { "prefix": "fncall",   "body": [ "${1:method}.call(${2:context}, ${3:params});" ],             "description": "function.call(thisArg, arg1, arg2, ...)\n" },
   "function bind":                      { "prefix": "fnbind",   "body": [ "${1:method}.bind(${2:this});" ],                             "description": "function.bind(thisArg[, arg1[, arg2[, ...]]])\n" },

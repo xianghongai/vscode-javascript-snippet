@@ -1,9 +1,9 @@
 {
-  "throw new Error":          { "prefix": ["tn"],   "body": [ "throw new Error(${1:'Something bad happened.'});" ],                              "description": "throw new Error('message')\n" },
-  "throw new EvalError":      { "prefix": ["tne"],  "body": [ "throw new EvalError(${1:\"The doesn't evaluate.\"});" ],                          "description": "throw new EvalError('message')\n" },
-  "throw new RangeError":     { "prefix": ["tnr"],  "body": [ "throw new RangeError(${1:\"Sorry, you just don't have the range.\"});" ],         "description": "throw new RangeError('message')\n" },
-  "throw new ReferenceError": { "prefix": ["tnre"], "body": [ "throw new ReferenceError(${1:\"You didn't cite your references properly.\"});" ], "description": "throw new ReferenceError('message')\n" },
-  "throw new SyntaxError":    { "prefix": ["tns"],  "body": [ "throw new SyntaxError(${1:\"I don't like your syntax.\"});" ],                    "description": "throw new SyntaxError('message')\n" },
-  "throw new TypeError":      { "prefix": ["tnt"],  "body": [ "throw new TypeError(${1:'What type of variable do you take me for?'});" ],        "description": "throw new TypeError('message')\n" },
-  "throw new URIError":       { "prefix": ["tnu"],  "body": [ "throw new URIError(${1:'Uri, is that you?'});" ],                                 "description": "throw new URIError('message')\n" }
+  "throw new Error()":          { "prefix": ["tn", "throw.Error()"],            "body": [ "throw new Error(${1:'Something bad happened.'});" ],                              "description": "throw new Error('message')\n" },
+  "throw new EvalError()":      { "prefix": ["tne", "throw.EvalError()"],       "body": [ "throw new EvalError(${1:\"The doesn't evaluate.\"});" ],                          "description": "throw new EvalError('message')\n" },
+  "throw new RangeError()":     { "prefix": ["tnr", "throw.RangeError()"],      "body": [ "throw new RangeError(${1:\"Sorry, you just don't have the range.\"});" ],         "description": "throw new RangeError('message')\n" },
+  "throw new ReferenceError()": { "prefix": ["tnre", "throw.ReferenceError()"], "body": [ "throw new ReferenceError(${1:\"You didn't cite your references properly.\"});" ], "description": "throw new ReferenceError('message')\n" },
+  "throw new SyntaxError()":    { "prefix": ["tns", "throw.SyntaxError()"],     "body": [ "throw new SyntaxError(${1:\"I don't like your syntax.\"});" ],                    "description": "throw new SyntaxError('message')\n" },
+  "throw new TypeError()":      { "prefix": ["tnt", "throw.TypeError()"],       "body": [ "throw new TypeError(${1:'What type of variable do you take me for?'});" ],        "description": "throw new TypeError('message')\n" },
+  "throw new URIError()":       { "prefix": ["tnu", "throw.URIError()"],        "body": [ "throw new URIError(${1:'Uri, is that you?'});" ],                                 "description": "throw new URIError('message')\n" }
 }

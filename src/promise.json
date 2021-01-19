@@ -15,7 +15,7 @@
 		],
 		"description": "Promise\n"
 	},
-	"Promise.all": {
+	"Promise.all()": {
 		"prefix": "pa",
 		"body": [
 			"Promise.all([${1:promise1}, ${2:promise2}]).then((${3:values}) => {",
@@ -26,7 +26,7 @@
 		],
 		"description": "Promise.all\n"
 	},
-	"Promise.any": {
+	"Promise.any()": {
 		"prefix": "pa",
 		"body": [
 			"Promise.any([${1:promise1}, ${2:promise2}]).then((${3:result}) => {",
@@ -37,7 +37,7 @@
 		],
 		"description": "Promise.any\n"
 	},
-	"Promise.allSettled": {
+	"Promise.allSettled()": {
 		"prefix": "pas",
 		"body": [
 			"Promise.allSettled([${1:promise1}, ${2:promise2}]).then((${3:results}) => {",
@@ -48,7 +48,7 @@
 		],
 		"description": "Promise.allSettled\n"
 	},
-	"Promise.race": {
+	"Promise.race()": {
 		"prefix": "pr",
 		"body": [
 			"Promise.race([${1:promise1}, ${2:promise2}]).then((${3:result}) => {",
@@ -57,42 +57,57 @@
 		],
 		"description": "Promise.race\n"
 	},
-	"Promise.reject": {
+	"Promise.reject()": {
 		"prefix": "prj",
 		"body": ["Promise.reject(${1:reason});", ""],
 		"description": "Promise.reject\n"
 	},
-	"Promise.resolve": {
+	"Promise.resolve()": {
 		"prefix": "prs",
 		"body": ["Promise.resolve(${1:value});", ""],
 		"description": "Promise.resolve\n"
 	},
-	"reject": {
+	"reject()": {
 		"prefix": "rj",
 		"body": ["reject(${1:err});", ""],
 		"description": "reject()\n"
 	},
-	"resolve": {
+	"resolve()": {
 		"prefix": "rs",
 		"body": ["resolve(${1:value});", ""],
 		"description": "resolve()\n"
 	},
-	"Promise.catch": {
+	"promise.catch": {
 		"prefix": "pc",
-		"body": ["${1:promise}.catch(error => {", "\t${2}", "});", ""],
+		"body": [
+			"${1:promise}.catch(error => {",
+			"\t${2}",
+			"});",
+			""
+		],
 		"description": "promise.catch\n"
 	},
-	"Promise.finally": {
+	"promise.finally": {
 		"prefix": "pf",
-		"body": ["${1:promise}.finally(() => {", "\t${2}", "});", ""],
+		"body": [
+			"${1:promise}.finally(() => {",
+			"\t${2}",
+			"});",
+			""
+		],
 		"description": "promise.finally\n"
 	},
-	"Promise.then": {
+	"promise.then": {
 		"prefix": "pt",
-		"body": ["${1:promise}.then(${2:result} => {", "\t${3}", "});", ""],
+		"body": [
+			"${1:promise}.then(${2:result} => {",
+			"\t${3}",
+			"});",
+			""
+		],
 		"description": "promise.then\n"
 	},
-	"Promise.then.catch": {
+	"promise.then.catch": {
 		"prefix": "ptc",
 		"body": [
 			"${1:promise}.then(${2:result} => {",
@@ -103,16 +118,25 @@
 		],
 		"description": "promise.then.catch\n"
 	},
-	"Promise.then.catch.finally": {
+	"promise.then.catch.finally": {
 		"prefix": "ptcf",
 		"body": [
-			"${1:promise}.then(${2:result} => {\n\t${3}\n}).catch(${4:error} => {\n\t${5}\n}).finally(() => {\n\t${6}\n});\n"
+			"${1:promise}.then(${2:result} => {",
+			"\t${3}",
+			"}).catch(${4:error} => {",
+			"\t${5}",
+			"}).finally(() => {",
+			"\t${6}",
+			"});",
+			""
 		],
 		"description": "Promise.then.catch.finally\n"
 	},
 	"return promise": {
 		"prefix": "rp",
-		"body": ["return new Promise((resolve, reject) => {\n\t${1}\n})"],
+		"body": [
+			"return new Promise((resolve, reject) => {\n\t${1}\n})"
+		],
 		"description": "return a new Promise\n"
 	}
 }

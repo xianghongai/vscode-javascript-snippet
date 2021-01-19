@@ -9,7 +9,7 @@
   "console.warn labeled":   { "prefix": "cwl",   "body": [ "console.warn('${1}: %o', ${1});" ],                "description": "console.warn labeled\n" },
   "console.assert":         { "prefix": "ca",    "body": [ "console.assert(${1:assertion}, ${2:object});" ],   "description": "console.assert\n" },
   "console.clear":          { "prefix": "cc",    "body": [ "console.clear();" ],                               "description": "console.clear\n" },
-  "console.count":          { "prefix": "cco",   "body": [ "console.count(${1:label});" ],                     "description": "console.count\n" },
+  "console.count":          { "prefix": "cco",   "body": [ "console.count('${1:label}');" ],                   "description": "console.count\n" },
   "console.group":          { "prefix": "cg",    "body": [ "console.group('${1:label}');" ],                   "description": "console.group\n" },
   "console.groupEnd":       { "prefix": "cge",   "body": [ "console.groupEnd();" ],                            "description": "console.groupEnd\n" },
   "console.table":          { "prefix": "ct",    "body": [ "console.table(${1:object});" ],                    "description": "console.table\n" },

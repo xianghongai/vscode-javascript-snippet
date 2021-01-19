@@ -1,6 +1,107 @@
 {
-  "RegExp(pattern[, flags])":  { "prefix":"re",   "body": ["const ${1:regex} = RegExp('${2:pattern}');"],                                                 "description": "RegExp(pattern[, flags])" },
-  "/pattern/flags":            { "prefix":"rep",  "body": ["const ${1:regex} = /${2:pattern}/;"],                                                         "description": "/pattern/flags" },
-  "regexObj.exec(str)":        { "prefix":"ree",  "body": ["const ${1:regex} = RegExp('${2:pattern}');\nconst ${3:result} = ${1:regex}.exec(${4:str});"],  "description": "regexObj.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**." },
-  "regexObj.test(str)":        { "prefix":"ret",  "body": ["const ${1:regex} = RegExp('${2:pattern}');\nconst ${3:result} = ${1:regex}.test(${4:str});"],  "description": "regexObj.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**." }
+	"RegExp(pattern[, flags])": {
+		"prefix": "re",
+		"body": ["const ${1:regexp} = RegExp('${2:pattern}');"],
+		"description": "RegExp(pattern[, flags])"
+	},
+	"/pattern/flags": {
+		"prefix": "rep",
+		"body": ["const ${1:regexp} = /${2:pattern}/;"],
+		"description": "/pattern/flags\nliteral notation's"
+	},
+	"RegExp.prototype.exec()": {
+		"prefix": ["ree", "re.exec()"],
+		"body": [
+			"const ${1:regexp} = RegExp('${2:pattern}');",
+			"const ${3:result} = ${1}.exec(${4:str});"
+		],
+		"description": "Syntax: regexp.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**."
+	},
+	"RegExp.prototype.test()": {
+		"prefix": ["ret", "re.test()"],
+		"body": [
+			"const ${1:regexp} = RegExp('${2:pattern}');",
+			"const ${3:result} = ${1}.test(${4:str});"
+		],
+		"description": "Syntax: regexp.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**."
+	},
+	"get RegExp[@@species]": {
+		"prefix": "re.@@species",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\tstatic get [Symbol.species]() {",
+			"\t\treturn RegExp;",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: RegExp[Symbol.species]\nThe RegExp[@@species] accessor property returns the RegExp constructor."
+	},
+	"RegExp.prototype[@@match]()": {
+		"prefix": "re.@@match",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\t[Symbol.match](str) {",
+			"\t\tconst result = RegExp.prototype[Symbol.match].call(this, str);",
+			"\t\tif (result) {",
+			"\t\t\treturn 'VALID';",
+			"\t\t}",
+			"\t\treturn 'INVALID';",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: regexp[Symbol.match](str)\nThe [@@match]() method retrieves the matches when matching a string against a regular expression."
+	},
+	"RegExp.prototype[@@matchAll]()": {
+		"prefix": "re.@@matchAll",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\t[Symbol.matchAll](str) {",
+			"\t\tconst result = RegExp.prototype[Symbol.matchAll].call(this, str);",
+			"\t\tif (!result) {",
+			"\t\t\treturn null;",
+			"\t\t}",
+			"\t\treturn Array.from(result);",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: regexp[Symbol.matchAll](str)\nThe [@@matchAll] method returns all matches of the regular expression against a string."
+	},
+	"RegExp.prototype[@@replace]()": {
+		"prefix": "re.@@replace",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\t[Symbol.replace](str) {",
+			"\t\treturn RegExp.prototype[Symbol.replace].call(this, str, '#!@?');",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: regexp[Symbol.replace](str, newSubStr|function)\nThe [@@replace]() method replaces some or all matches of a this pattern in a string by a replacement, and returns the result of the replacement as a new string. The replacement can be a string or a function to be called for each match."
+	},
+	"RegExp.prototype[@@search]()": {
+		"prefix": "re.@@search",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\tconstructor(str) {",
+			"\t\tsuper(str);",
+			"\t\tthis.pattern = str;",
+			"\t}",
+			"\t[Symbol.search](str) {",
+			"\t\treturn str.indexOf(this.pattern);",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: regexp[Symbol.search](str)\nThe [@@search]() method executes a search for a match between a this regular expression and a string."
+	},
+	"RegExp.prototype[@@split]()": {
+		"prefix": "re.@@split",
+		"body": [
+			"class FeatureRegExp extends RegExp {",
+			"\t[Symbol.split](str, limit) {",
+			"\t\tconst result = RegExp.prototype[Symbol.split].call(this, str, limit);",
+			"\t\treturn result.map(x => `(${x})`);",
+			"\t}",
+			"}"
+		],
+		"description": "Syntax: regexp[Symbol.split](str[, limit])\nThe [@@split]() method splits a String object into an array of strings by separating the string into substrings."
+	}
 }

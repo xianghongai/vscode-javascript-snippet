@@ -121,85 +121,92 @@ Note: All the snippets include the final semicolon `;`
 
 ### Array
 
-| Prefix      | Body                                                               | Description                                      |
-|:------------|--------------------------------------------------------------------|--------------------------------------------------|
-| `ar`        | `const arr = [];`                                                  |                                                  |
-| `arl`       | `iterable.length;`                                                 |                                                  |
-| `isa`       | `Array.isArray(value)`                                             |                                                  |
-| `arfr`      | `Array.from(arrayLike);`                                           |                                                  |
-| `arfr`      | `Array.from(arrayLike, (item) => { });`                            |                                                  |
-| `arof`      | `Array.of(elementN);`                                              |                                                  |
-| `arc`       | `iterable.concat(valueN);`                                         | **ar**ray.**c**oncat                             |
-| `arcw`      | `iterable.copyWithin(target, start, end);`                         | **ar**ray.**c**opy**W**ithin                     |
-| `are`       | `iterable.entries();`                                              | **ar**ray.**e**ntries                            |
-| `arev`      | `iterable.every((element) => { });`                                | **ar**ray.**ev**ery                              |
-| `arfill`    | `iterable.fill(value, start, end);`                                |                                                  |
-| `arf`       | `iterable.filter((element) => { });`                               |                                                  |
-| `arfi`      | `iterable.find((element) => { });`                                 |                                                  |
-| `arfin`     | `iterable.findIndex((element) => { })`                             |                                                  |
-| `arflat`    | `iterable.flat();`                                                 |                                                  |
-| `arflatMap` | `iterable.flatMap((value) => value);`                              |                                                  |
-| `fea`       | `iterable.forEach((currentValue) => { });`                         | **f**or**E**ach callback with **a**rrow function |
-| `feai`      | `iterable.forEach((currentValue, index) => { });`                  |                                                  |
-| `fe`        | `iterable.forEach(function(currentValue) { });`                    |                                                  |
-| `fei`       | `iterable.forEach(function(currentValue, index) { });`             |                                                  |
-| `ari`       | `iterable.includes(valueToFind)`                                   |                                                  |
-| `ario`      | `iterable.indexOf(searchElement)`                                  |                                                  |
-| `arj`       | `iterable.join(separator);`                                        |                                                  |
-| `ark`       | `iterable.keys();`                                                 |                                                  |
-| `arlio`     | `iterable.lastIndexOf(searchElement)`                              |                                                  |
-| `map`       | `iterable.map((currentValue) => { });`                             |                                                  |
-| `arp`       | `iterable.pop();`                                                  |                                                  |
-| `arj`       | `iterable.push(elementN);`                                         |                                                  |
-| `arr`       | `iterable.reduce((accumulator, currentValue) => { return });`      |                                                  |
-| `arrr`      | `iterable.reduceRight((accumulator, currentValue) => { return });` |                                                  |
-| `arre`      | `iterable.reverse();`                                              |                                                  |
-| `ars`       | `iterable.shift();`                                                |                                                  |
-| `arsl`      | `iterable.slice(begin, end);`                                      |                                                  |
-| `arso`      | `iterable.some((element) => { });`                                 |                                                  |
-| `arsor`     | `iterable.sort((firstEl, secondEl) => { });`                       |                                                  |
-| `arsp`      | `iterable.splice(start, deleteCount, item);`                       |                                                  |
-| `aru`       | `iterable.unshift(elementN);`                                      |                                                  |
-| `arv`       | `iterable.values();`                                               |                                                  |
-| `arsi`      | `iterable[Symbol.iterator]();`                                     |                                                  |
-| `seq`       | `[...Array(length).keys()]`                                        |                                                  |
+`Arr.<static_method>` or `arr.<instance_method>`
+
+| Prefix           | Body                                                               | Description                                      |
+|:-----------------|--------------------------------------------------------------------|--------------------------------------------------|
+| `ar`             | `const arr = [];`                                                  |                                                  |
+| `arl`            | `iterable.length;`                                                 |                                                  |
+| `isa`            | `Array.isArray(value)`                                             |                                                  |
+| `arfr`           | `Array.from(arrayLike);`                                           |                                                  |
+| `arfr`           | `Array.from(arrayLike, (item) => { });`                            |                                                  |
+| `arof`           | `Array.of(elementN);`                                              |                                                  |
+| `arc`            | `iterable.concat(valueN);`                                         | **ar**ray.**c**oncat                             |
+| `arcw`           | `iterable.copyWithin(target, start, end);`                         | **ar**ray.**c**opy**W**ithin                     |
+| `are`            | `iterable.entries();`                                              | **ar**ray.**e**ntries                            |
+| `arev`           | `iterable.every((element) => { });`                                | **ar**ray.**ev**ery                              |
+| `arfill`         | `iterable.fill(value, start, end);`                                |                                                  |
+| `arf`            | `iterable.filter((element) => { });`                               |                                                  |
+| `arfi`           | `iterable.find((element) => { });`                                 |                                                  |
+| `arfin`          | `iterable.findIndex((element) => { })`                             |                                                  |
+| `arflat`         | `iterable.flat();`                                                 |                                                  |
+| `arflatMap`      | `iterable.flatMap((value) => value);`                              |                                                  |
+| `fea`            | `iterable.forEach((currentValue) => { });`                         | **f**or**E**ach callback with **a**rrow function |
+| `feai`           | `iterable.forEach((currentValue, index) => { });`                  |                                                  |
+| `fe`             | `iterable.forEach(function(currentValue) { });`                    |                                                  |
+| `fei`            | `iterable.forEach(function(currentValue, index) { });`             |                                                  |
+| `ari`            | `iterable.includes(valueToFind)`                                   |                                                  |
+| `ario`           | `iterable.indexOf(searchElement)`                                  |                                                  |
+| `arj`            | `iterable.join(separator);`                                        |                                                  |
+| `ark`            | `iterable.keys();`                                                 |                                                  |
+| `arlio`          | `iterable.lastIndexOf(searchElement)`                              |                                                  |
+| `map`            | `iterable.map((currentValue) => { });`                             |                                                  |
+| `arp`            | `iterable.pop();`                                                  |                                                  |
+| `arj`            | `iterable.push(elementN);`                                         |                                                  |
+| `arr`            | `iterable.reduce((accumulator, currentValue) => { return });`      |                                                  |
+| `arrr`           | `iterable.reduceRight((accumulator, currentValue) => { return });` |                                                  |
+| `arre`           | `iterable.reverse();`                                              |                                                  |
+| `ars`            | `iterable.shift();`                                                |                                                  |
+| `arsl`           | `iterable.slice(begin, end);`                                      |                                                  |
+| `arso`           | `iterable.some((element) => { });`                                 |                                                  |
+| `arsor`          | `iterable.sort((firstEl, secondEl) => { });`                       |                                                  |
+| `arsp`           | `iterable.splice(start, deleteCount, item);`                       |                                                  |
+| `aru`            | `iterable.unshift(elementN);`                                      |                                                  |
+| `arv`            | `iterable.values();`                                               |                                                  |
+| `arr.@@iterator` |                                                                    | `Array.prototype[@@iterator]()`                  |
+| `arr.@@species`  |                                                                    | `get Array[@@species]`                           |
+| `seq`            | `[...Array(length).keys()]`                                        |                                                  |
 
 ### Object
 
-| Prefix   | Body                                                                                                                                                                                                                                                   | Description                                                 |
-|:---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| `ol`     | `{ key: value }`                                                                                                                                                                                                                                       |                                                             |
-| `kv`     | `key: value,`                                                                                                                                                                                                                                          |                                                             |
-| `oa`     | `Object.assign(target, source);`                                                                                                                                                                                                                       |                                                             |
-| `oc`     | `Object.create(obj);`                                                                                                                                                                                                                                  |                                                             |
-| `odp`    | `Object.defineProperty(dest, 'propertyName', { value: undefined, configurable: false, enumerable: false, writable: false})`                                                                                                                            | **O**bject.**d**efine**P**roperty(data descriptors)         |
-| `odpa`   | `Object.defineProperty(dest, 'propertyName', { get() { return value; }, set(newValue) { value = newValue; }, enumerable: false, configurable: false})`                                                                                                 | **O**bject.**d**efine**P**roperty(**a**ccessor descriptors) |
-| `odps`   | `Object.defineProperties(dest, { propertyName: { configurable: false, enumerable: false value: undefined, writable: false }, propertyName: { get() { return value; }, set(newValue) { value = newValue; } enumerable: false, configurable: false }});` | **O**bject.**d**efine**P**ropertie**s**                     |
-| `oe`     | `Object.entries(obj);`                                                                                                                                                                                                                                 |                                                             |
-| `of`     | `Object.freeze(obj);`                                                                                                                                                                                                                                  |                                                             |
-| `ofe`    | `Object.fromEntries(iterable);`                                                                                                                                                                                                                        |                                                             |
-| `ogopd`  | `Object.getOwnPropertyDescriptor(obj, 'propertyName');`                                                                                                                                                                                                | **O**bject.**g**et**O**wn**P**roperty**D**escriptor         |
-| `ogopds` | `Object.getOwnPropertyDescriptors(obj);`                                                                                                                                                                                                               | **O**bject.**g**et**O**wn**P**roperty**D**escriptor**s**    |
-| `ogopn`  | `Object.getOwnPropertyNames(obj);`                                                                                                                                                                                                                     | **O**bject.**g**et**O**wn**P**roperty**N**ames              |
-| `ogops`  | `Object.getOwnPropertySymbols(obj);`                                                                                                                                                                                                                   | **O**bject.**g**et**O**wn**P**roperty**S**ymbols            |
-| `ogpo`   | `Object.getPrototypeOf(obj);`                                                                                                                                                                                                                          | **O**bject.**g**et**P**rototype**O**f                       |
-| `oi`     | `Object.is(value1, value2);`                                                                                                                                                                                                                           |                                                             |
-| `oie`    | `Object.isExtensible(obj)`                                                                                                                                                                                                                             |                                                             |
-| `oif`    | `Object.isFrozen(obj)`                                                                                                                                                                                                                                 |                                                             |
-| `ois`    | `Object.isSealed(obj)`                                                                                                                                                                                                                                 |                                                             |
-| `ok`     | `Object.keys(obj);`                                                                                                                                                                                                                                    |                                                             |
-| `ope`    | `Object.preventExtensions(obj);`                                                                                                                                                                                                                       |                                                             |
-| `os`     | `Object.seal(obj);`                                                                                                                                                                                                                                    |                                                             |
-| `ospo`   | `Object.setPrototypeOf(obj, prototype);`                                                                                                                                                                                                               | **O**bject.**s**et**P**rototype**O**f                       |
-| `ov`     | `Object.values(obj);`                                                                                                                                                                                                                                  |                                                             |
-| `hop`    | `obj.hasOwnProperty(propertyName)`                                                                                                                                                                                                                     | **h**as**O**wn**P**roperty                                  |
-| `ipo`    | `prototypeObj.isPrototypeOf(object)`                                                                                                                                                                                                                   | **i**s**P**rototype**O**f                                   |
-| `pie`    | `obj.propertyIsEnumerable(propertyName)`                                                                                                                                                                                                               | **p**roperty**I**s**E**numerable                            |
-| `tls`    | `objects.toLocaleString();`                                                                                                                                                                                                                            | **t**o**L**ocale**S**tring                                  |
-| `ts`     | `objects.toString();`                                                                                                                                                                                                                                  | **t**o**S**tring                                            |
-| `vo`     | `objects.valueOf();`                                                                                                                                                                                                                                   | **v**alue**O**f                                             |
+`Obj.<static_method>` or `obj.<instance_method>`
+
+| Prefix   | Body                                                                                                                                                                                                                                                     | Description                                                 |
+|:---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| `ol`     | `{ key: value }`                                                                                                                                                                                                                                         |                                                             |
+| `kv`     | `key: value,`                                                                                                                                                                                                                                            |                                                             |
+| `oa`     | `Object.assign(target, source);`                                                                                                                                                                                                                         |                                                             |
+| `oc`     | `Object.create(obj);`                                                                                                                                                                                                                                    |                                                             |
+| `odp`    | `Object.defineProperty(dest, 'propertyName', { value: undefined, configurable: false, enumerable: false, writable: false})`                                                                                                                              | **O**bject.**d**efine**P**roperty(data descriptors)         |
+| `odpa`   | `Object.defineProperty(dest, 'propertyName', { get() { return value; }, set(newValue) { value = newValue; }, enumerable: false, configurable: false})`                                                                                                   | **O**bject.**d**efine**P**roperty(**a**ccessor descriptors) |
+| `odps`   | `Object.defineProperties(dest, { propertyName: { configurable: false, enumerable: false, value: undefined, writable: false }, propertyName: { get() { return value; }, set(newValue) { value = newValue; }, enumerable: false, configurable: false }});` | **O**bject.**d**efine**P**ropertie**s**                     |
+| `oe`     | `Object.entries(obj);`                                                                                                                                                                                                                                   |                                                             |
+| `of`     | `Object.freeze(obj);`                                                                                                                                                                                                                                    |                                                             |
+| `ofe`    | `Object.fromEntries(iterable);`                                                                                                                                                                                                                          |                                                             |
+| `ogopd`  | `Object.getOwnPropertyDescriptor(obj, 'propertyName');`                                                                                                                                                                                                  | **O**bject.**g**et**O**wn**P**roperty**D**escriptor         |
+| `ogopds` | `Object.getOwnPropertyDescriptors(obj);`                                                                                                                                                                                                                 | **O**bject.**g**et**O**wn**P**roperty**D**escriptor**s**    |
+| `ogopn`  | `Object.getOwnPropertyNames(obj);`                                                                                                                                                                                                                       | **O**bject.**g**et**O**wn**P**roperty**N**ames              |
+| `ogops`  | `Object.getOwnPropertySymbols(obj);`                                                                                                                                                                                                                     | **O**bject.**g**et**O**wn**P**roperty**S**ymbols            |
+| `ogpo`   | `Object.getPrototypeOf(obj);`                                                                                                                                                                                                                            | **O**bject.**g**et**P**rototype**O**f                       |
+| `oi`     | `Object.is(value1, value2);`                                                                                                                                                                                                                             |                                                             |
+| `oie`    | `Object.isExtensible(obj)`                                                                                                                                                                                                                               |                                                             |
+| `oif`    | `Object.isFrozen(obj)`                                                                                                                                                                                                                                   |                                                             |
+| `ois`    | `Object.isSealed(obj)`                                                                                                                                                                                                                                   |                                                             |
+| `ok`     | `Object.keys(obj);`                                                                                                                                                                                                                                      |                                                             |
+| `ope`    | `Object.preventExtensions(obj);`                                                                                                                                                                                                                         |                                                             |
+| `os`     | `Object.seal(obj);`                                                                                                                                                                                                                                      |                                                             |
+| `ospo`   | `Object.setPrototypeOf(obj, prototype);`                                                                                                                                                                                                                 | **O**bject.**s**et**P**rototype**O**f                       |
+| `ov`     | `Object.values(obj);`                                                                                                                                                                                                                                    |                                                             |
+| `hop`    | `obj.hasOwnProperty(propertyName)`                                                                                                                                                                                                                       | **h**as**O**wn**P**roperty                                  |
+| `ipo`    | `prototypeObj.isPrototypeOf(object)`                                                                                                                                                                                                                     | **i**s**P**rototype**O**f                                   |
+| `pie`    | `obj.propertyIsEnumerable(propertyName)`                                                                                                                                                                                                                 | **p**roperty**I**s**E**numerable                            |
+| `tls`    | `objects.toLocaleString();`                                                                                                                                                                                                                              | **t**o**L**ocale**S**tring                                  |
+| `ts`     | `objects.toString();`                                                                                                                                                                                                                                    | **t**o**S**tring                                            |
+| `vo`     | `objects.valueOf();`                                                                                                                                                                                                                                     | **v**alue**O**f                                             |
 
 ### String
+
+`Str.<static_method>` or `str.<instance_method>`
 
 | Prefix  | Body                                     | Description                         |
 |:--------|------------------------------------------|-------------------------------------|
@@ -238,6 +245,8 @@ Note: All the snippets include the final semicolon `;`
 
 ### Number
 
+`Num.<static_method>` or `num.<instance_method>`
+
 | Prefix  | Body                          |
 |:--------|-------------------------------|
 | `ne`    | `Number.EPSILON`              |
@@ -258,36 +267,45 @@ Note: All the snippets include the final semicolon `;`
 | `ntf`   | `number.toFixed()`            |
 | `ntp`   | `number.toPrecision()`        |
 
-### Regexp
+### RegExp
 
-| Prefix | Body                                                          | Description                |
-|:-------|---------------------------------------------------------------|----------------------------|
-| `re`   | `let regex = RegExp('pattern');`                              | **R**eg**E**xp             |
-| `rep`  | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern |
-| `ree`  | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
-| `ret`  | `let regex = RegExp('pattern');let result = regex.test(str);` |                            |
+`re.<method>`
+
+| Prefix          | Body                                                          | Description                      |
+|:----------------|---------------------------------------------------------------|----------------------------------|
+| `re`            | `let regex = RegExp('pattern');`                              | **R**eg**E**xp                   |
+| `rep`           | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern       |
+| `ree`           | `let regex = RegExp('pattern');let result = regex.exec(str);` |                                  |
+| `ret`           | `let regex = RegExp('pattern');let result = regex.test(str);` |                                  |
+| `re.@@species`  |                                                               | `get RegExp[@@species]`          |
+| `re.@@match`    |                                                               | `RegExp.prototype[@@match]()`    |
+| `re.@@matchAll` |                                                               | `RegExp.prototype[@@matchAll]()` |
+| `re.@@replace`  |                                                               | `RegExp.prototype[@@replace]()`  |
+| `re.@@search`   |                                                               | `RegExp.prototype[@@search]()`   |
+| `re.@@split`    |                                                               | `RegExp.prototype[@@split]()`    |
 
 ### Chore
 
-| Prefix    | Body                                  | Description                    |
-|:----------|---------------------------------------|--------------------------------|
-| `to`      | `typeof object === 'undefined'`       | **t**ype**o**f                 |
-| `io`      | `object instanceof 'constructor'`     | **i**nstance**o**f             |
-| `jp`      | `JSON.parse(obj);`                    |                                |
-| `js`      | `JSON.stringify(obj);`                |                                |
-| `tc`      | `try { } catch (err) { }`             |                                |
-| `tcf`     | `try { } catch (err) { } finally { }` |                                |
-| `tf`      | `try { } finally { }`                 |                                |
-| `r`       | `return ;`                            |                                |
-| `rn`      | `return null;`                        |                                |
-| `rt`      | `return this;`                        |                                |
-| `ro`      | `return { };`                         |                                |
-| `ternary` | `? : ;`                               |                                |
-| `de`      | `debugger;`                           |                                |
-| `eu`      | `encodeURI(URI)`                      | **e**ncode**U**RI              |
-| `du`      | `decodeURI(encodedURI)`               | **d**ecode**U**RI              |
-| `euc`     | `encodeURIComponent(str)`             | **e**ncode**U**RI**C**omponent |
-| `duc`     | `decodeURIComponent(encodedURI)`      | **d**ecode**U**RI**C**omponent |
+| Prefix     | Body                                                          | Description                    |
+|:-----------|---------------------------------------------------------------|--------------------------------|
+| `to`       | `typeof object === 'undefined'`                               | **t**ype**o**f                 |
+| `to<type>` | `typeof object === '<function|string|number|boolean|symbol>'` | **t**ype**o**f                 |
+| `io`       | `object instanceof 'constructor'`                             | **i**nstance**o**f             |
+| `jp`       | `JSON.parse(obj);`                                            |                                |
+| `js`       | `JSON.stringify(obj);`                                        |                                |
+| `tc`       | `try { } catch (err) { }`                                     |                                |
+| `tcf`      | `try { } catch (err) { } finally { }`                         |                                |
+| `tf`       | `try { } finally { }`                                         |                                |
+| `r`        | `return ;`                                                    |                                |
+| `rn`       | `return null;`                                                |                                |
+| `rt`       | `return this;`                                                |                                |
+| `ro`       | `return { };`                                                 |                                |
+| `ternary`  | `? : ;`                                                       |                                |
+| `de`/`bug` | `debugger;`                                                   |                                |
+| `eu`       | `encodeURI(URI)`                                              | **e**ncode**U**RI              |
+| `du`       | `decodeURI(encodedURI)`                                       | **d**ecode**U**RI              |
+| `euc`      | `encodeURIComponent(str)`                                     | **e**ncode**U**RI**C**omponent |
+| `duc`      | `decodeURIComponent(encodedURI)`                              | **d**ecode**U**RI**C**omponent |
 
 ### Module
 
@@ -385,6 +403,11 @@ Note: All the snippets include the final semicolon `;`
 
 ### Maps & Sets
 
+- `map.<method>`
+- `weakmap.<method>`
+- `set.<method>`
+- `weakset.<method>`
+
 | Prefix      | Body                                     | Description |
 |:------------|------------------------------------------|-------------|
 | `lm`        | `let resourceMap = new Map();`           |             |
@@ -397,6 +420,8 @@ Note: All the snippets include the final semicolon `;`
 | `cws`, `ws` | `const resourceWeakSet = new WeakSet();` |             |
 
 ### Error
+
+`throw.<Type>`
 
 | Prefix | Body                                  | Description |
 |:-------|---------------------------------------|-------------|
@@ -435,6 +460,8 @@ Note: All the snippets include the final semicolon `;`
 
 ### Proxy & Reflection
 
+`proxy.<method>`
+
 | Prefix                | Body | Description                                                   |
 |:----------------------|------|---------------------------------------------------------------|
 | `proxy.set`           |      | Validating Properties Using the `set` Trap                    |
@@ -459,6 +486,9 @@ Note: All the snippets include the final semicolon `;`
 | `mtr`  | `Math.trunc()`  | 5.05 → 5, -0.123 → -0  |
 
 ### Dom
+
+`dom.<method>` or `dom.<property>`
+
 | Prefix                        | Body                                                                |
 |:------------------------------|---------------------------------------------------------------------|
 | `dom.createDocumentFragment`  | `document.createDocumentFragment();`                                |
@@ -609,30 +639,20 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix | Body                                             |
 |:-------|--------------------------------------------------|
-| `desc` | `describe('description', function () { })`       |
+| `desc` | `describe('description', () => { })`             |
 | `cont` | `context('description', callback);`              |
 | `it`   | `it('description', () => { })`                   |
 | `ita`  | `it('description', async (done) => { done();});` |
-| `afe`  | `afterEach(function () { })`                     |
-| `bfe`  | `beforeEach(function () { })`                    |
-| `aft`  | `after(function () { })`                         |
-| `bf`   | `before(function () { })`                        |
+| `afe`  | `afterEach(() => { })`                           |
+| `bfe`  | `beforeEach(() => { })`                          |
+| `aft`  | `after(() => { })`                               |
+| `bf`   | `before(() => { })`                              |
 
 ## License
 
 MIT License
 
 ---
-
-`placeholder` → `placeholder`: `(\$\{\d+)(:?)([a-zA-Z0-9]*)(\}{1})` → `$3`
-
-```
-^\n  → \\n\n
-\s{2} → \\t
-" → '
-(^) → "
-($) → ",
-```
 
 **Donate**
 

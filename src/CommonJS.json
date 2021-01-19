@@ -1,7 +1,29 @@
 {
-  "module as class (CommonJS)":     { "prefix": "ec",   "body": [ "class ${1:name} {\n\tconstructor (${2:params}) {\n\t\t${3}\n\t}\n}\n\nmodule.exports = ${1:name}\n" ], "description": "exports.member (CommonJS)\n" },
-  "exports.member (CommonJS)":      { "prefix": "em",   "body": [ "exports.${1:member} = ${2:value}" ],             "description": "exports.member (CommonJS)\n" },
-  "module.exports (CommonJS)":      { "prefix": "me",   "body": [ "module.exports = ${1:name}" ],                   "description": "module.exports (CommonJS)\n" },
-  "require (CommonJS)":             { "prefix": "rq",   "body": [ "require('${1:module}')" ],                       "description": "require (CommonJS)\n" },
-  "require assignment (CommonJS)":  { "prefix": "crq",  "body": [ "const ${1:module} = require('${1:module}');" ],  "description": "require assignment (CommonJS)\n" }
+	"module as class (CommonJS)": {
+		"prefix": "ec",
+		"body": [
+			"class ${1:name} {\n\tconstructor (${2:params}) {\n\t\t${3}\n\t}\n}\n\nmodule.exports = ${1:name}\n"
+		],
+		"description": "exports.member (CommonJS)\n"
+	},
+	"exports.member (CommonJS)": {
+		"prefix": "em",
+		"body": ["exports.${1:member} = ${2:value}"],
+		"description": "exports.member (CommonJS)\n"
+	},
+	"module.exports (CommonJS)": {
+		"prefix": "me",
+		"body": ["module.exports = ${1:name}"],
+		"description": "module.exports (CommonJS)\n"
+	},
+	"require (CommonJS)": {
+		"prefix": "rq",
+		"body": ["require('${1:module}')"],
+		"description": "require (CommonJS)\n"
+	},
+	"require assignment (CommonJS)": {
+		"prefix": "crq",
+		"body": ["const ${1:module} = require('${1:module}');"],
+		"description": "require assignment (CommonJS)\n"
+	}
 }
