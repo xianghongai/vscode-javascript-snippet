@@ -1,0 +1,30 @@
+{
+  "eslint-disable": {
+    "prefix": "ed",
+    "body": [
+      "/* eslint-disable ${1:no-console, no-unused-vars} */"
+    ],
+    "description": "Disabling Rules with Inline Comments"
+  },
+  "eslint-enable": {
+    "prefix": "ee",
+    "body": [
+      "/* eslint-enable ${1:no-console, no-unused-vars} */"
+    ],
+    "description": "Disabling Rules with Inline Comments"
+  },
+  "eslint-disable-line": {
+    "prefix": "edl",
+    "body": [
+      "// eslint-disable-line ${1:no-console, no-unused-vars}"
+    ],
+    "description": "Disabling Rules with Inline Comments"
+  },
+  "eslint-disable-next-line": {
+    "prefix": "ednl",
+    "body": [
+      "// eslint-disable-next-line ${1:no-console, no-unused-vars}"
+    ],
+    "description": "Disabling Rules with Inline Comments"
+  }
+}
