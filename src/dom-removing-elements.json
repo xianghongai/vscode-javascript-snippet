@@ -1,0 +1,13 @@
+{
+	"Node.removeChild()": {
+		"prefix": ["rmc", "dom.removeChild"],
+		"body": ["${1:node}.removeChild(${2:child});"],
+		"description": "removeChild\n"
+	},
+
+	"ChildNode.remove()": {
+		"prefix": ["rm", "dom.remove"],
+		"body": ["${1:childNode}.remove();"],
+		"description": "Removes this ChildNode from the children list of its parent.\n"
+	}
+}

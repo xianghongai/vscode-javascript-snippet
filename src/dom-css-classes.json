@@ -1,0 +1,22 @@
+{
+	"Element.classList.add()": {
+		"prefix": ["cla", "dom.classList.add"],
+		"body": ["${1:element}.classList.add('${2:className}');"],
+		"description": "Element.classList.add\n"
+	},
+	"Element.classList.contains()": {
+		"prefix": ["clc", "dom.classList.contains"],
+		"body": ["${1:element}.classList.contains('${2:className}');"],
+		"description": "Element.classList.contains\n"
+	},
+	"Element.classList.remove()": {
+		"prefix": ["clr", "dom.classList.remove"],
+		"body": ["${1:element}.classList.remove('${2:className}');"],
+		"description": "Element.classList.remove\n"
+	},
+	"Element.classList.toggle()": {
+		"prefix": ["clt", "dom.classList.toggle"],
+		"body": ["${1:element}.classList.toggle('${2:className}');"],
+		"description": "Element.classList.toggle\n"
+	}
+}

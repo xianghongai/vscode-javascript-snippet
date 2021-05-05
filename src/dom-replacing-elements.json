@@ -1,0 +1,13 @@
+{
+	"Node.replaceChild()": {
+		"prefix": ["rpc", "dom.replaceChild"],
+		"body": ["${1:parentNode}.replaceChild(${2:newChild}, ${3:oldChild});"],
+		"description": "The `Node.replaceChild()` method replaces a child node within the given (parent) node.\n"
+	},
+
+	"ChildNode.replaceWith()": {
+		"prefix": ["rpw", "dom.replaceWith"],
+		"body": ["${1:childNode}.replaceWith(${2:Node/DOMString});"],
+		"description": "The `ChildNode.replaceWith()` method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes.\n"
+	}
+}

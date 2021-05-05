@@ -1,0 +1,36 @@
+{
+	"Element.innerHTML": {
+		"prefix": ["ih", "dom.innerHTML"],
+		"body": [
+			"${1:htmlElement}.innerHTML = ${2:'DOMString'};",
+			"// const content = element.innerHTML;"
+		],
+		"description": "The `innerHTML` property sets or returns the HTML content (inner HTML) of an element.\n"
+	},
+	"Element.outerHTML": {
+		"prefix": ["oh", "dom.outerHTML"],
+		"body": [
+			"${1:element}.outerHTML = ${2:'DOMString'};",
+			"// const content = element.outerHTML;"
+		],
+		"description": "The `outerHTML` property sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag.\n"
+	},
+
+	"HTMLElement.innerText": {
+		"prefix": ["it", "dom.innerText"],
+		"body": [
+			"${1:htmlElement}.innerText = ${2:'renderText'};",
+			"// const renderedText = htmlElement.innerText;"
+		],
+		"description": "The `innerText` property sets or returns the text content of the specified node, and all its descendants.\n"
+	},
+
+	"Node.textContent": {
+		"prefix": ["tc", "dom.textContent"],
+		"body": [
+			"${1:node}.textContent = '${2:content}';",
+			"// const text = node.textContent;"
+		],
+		"description": "The `textContent` property of the Node interface represents the text content of the node and its descendants.\n"
+	}
+}

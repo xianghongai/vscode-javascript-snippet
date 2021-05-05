@@ -1,0 +1,105 @@
+{
+	"Element.getClientRects()": {
+		"prefix": ["gcr", "dom.getClientRects"],
+		"body": ["const ${3:rectCollection} = ${1:element}.getClientRects();"],
+		"description": "The getClientRects() method of the Element interface returns a collection of DOMRect objects that indicate the bounding rectangles for each CSS border box in a client.\n"
+	},
+	"Element.getBoundingClientRect()": {
+		"prefix": ["gbcr", "dom.getBoundingClientRect"],
+		"body": ["const ${3:domRect} = ${1:element}.getBoundingClientRect();"],
+		"description": "The `Element.getBoundingClientRect()` method returns the size of an element and its position relative to the viewport.\n"
+	},
+
+	"Element.scroll()": {
+		"prefix": ["scroll", "dom.scroll"],
+		"body": [
+			"${1:element}.scroll({top: ${2:top}, left: ${3:left}, behavior: 'smooth'});"
+		],
+		"description": "The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element.\n"
+	},
+	"Element.scrollBy()": {
+		"prefix": ["scrollBy", "dom.scrollBy"],
+		"body": [
+			"${1:element}.scrollBy({top: ${2:top}, left: ${3:left}, behavior: 'smooth'});"
+		],
+		"description": "The scrollBy() method of the Element interface scrolls an element by the given amount.\n"
+	},
+	"Element.scrollTo()": {
+		"prefix": ["scrollTo", "dom.scrollTo"],
+		"body": [
+			"${1:element}.scrollTo({top: ${2:top}, left: ${3:left}, behavior: 'smooth'});"
+		],
+		"description": "The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.\n"
+	},
+	"Element.scrollIntoView()": {
+		"prefix": ["scrollIntoView", "dom.scrollIntoView"],
+		"body": ["${1:element}.scrollIntoView({behavior: 'smooth'});"],
+		"description": "The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user\n"
+	},
+	"Element.clientWidth": {
+		"prefix": ["clientWidth", "dom.clientWidth"],
+		"body": ["${1:element}.clientWidth"],
+		"description": "The Element.clientWidth property is zero for inline elements and elements with no CSS; otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present).\n"
+	},
+	"Element.clientHeight": {
+		"prefix": ["clientHeight", "dom.clientHeight"],
+		"body": ["${1:element}.clientHeight"],
+		"description": "The Element.clientHeight read-only property is zero for elements with no CSS or inline layout boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes borders, margins, and horizontal scrollbars (if present).\n"
+	},
+	"Element.clientLeft": {
+		"prefix": ["clientLeft", "dom.clientLeft"],
+		"body": ["${1:element}.clientLeft"],
+		"description": "The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right–to–left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.\n"
+	},
+	"Element.clientTop": {
+		"prefix": ["clientTop", "dom.clientTop"],
+		"body": ["${1:element}.clientTop"],
+		"description": "The width of the top border of an element in pixels. It is a read-only, integer property of element.\n"
+	},
+	"Element.scrollWidth": {
+		"prefix": ["scrollWidth", "dom.scrollWidth"],
+		"body": ["${1:element}.scrollWidth"],
+		"description": "The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow.\n"
+	},
+	"Element.scrollHeight": {
+		"prefix": ["scrollHeight", "dom.scrollHeight"],
+		"body": ["${1:element}.scrollHeight"],
+		"description": "The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow.\n"
+	},
+	"Element.scrollLeft": {
+		"prefix": ["scrollLeft", "dom.scrollLeft"],
+		"body": ["${1:element}.scrollLeft"],
+		"description": "The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge.\n"
+	},
+	"Element.scrollTop": {
+		"prefix": ["scrollTop", "dom.scrollTop"],
+		"body": ["${1:element}.scrollTop"],
+		"description": "The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically.\n"
+	},
+
+	"HTMLElement.offsetWidth": {
+		"prefix": ["offsetWidth", "dom.offsetWidth"],
+		"body": ["${1:HTMLElement}.offsetWidth"],
+		"description": "The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer.\n"
+	},
+	"HTMLElement.offsetHeight": {
+		"prefix": ["offsetHeight", "dom.offsetHeight"],
+		"body": ["${1:HTMLElement}.offsetHeight"],
+		"description": "The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.\n"
+	},
+	"HTMLElement.offsetTop": {
+		"prefix": ["offsetTop", "dom.offsetTop"],
+		"body": ["${1:HTMLElement}.offsetTop"],
+		"description": "The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node.\n"
+	},
+	"HTMLElement.offsetLeft": {
+		"prefix": ["offsetLeft", "dom.offsetLeft"],
+		"body": ["${1:HTMLElement}.offsetLeft"],
+		"description": "The HTMLElement.offsetLeft read-only property returns the number of pixels that the upper left corner of the current element is offset to the left within the HTMLElement.offsetParent node.\n"
+	},
+	"HTMLElement.offsetParent": {
+		"prefix": ["offsetParent", "dom.offsetParent"],
+		"body": ["${1:HTMLElement}.offsetParent"],
+		"description": "The HTMLElement.offsetParent read-only property returns a reference to the element which is the closest (nearest in the containment hierarchy) positioned ancestor element. If there is no positioned ancestor element, the nearest ancestor td, th, table will be returned, or the body if there are no ancestor table elements either.\n"
+	}
+}

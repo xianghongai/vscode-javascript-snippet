@@ -1,0 +1,17 @@
+{
+	"Document.createDocumentFragment": {
+		"prefix": ["cdf", "dom.createDocumentFragment"],
+		"body": ["${1:document}.createDocumentFragment();$2"],
+		"description": "Creates a new document fragment.\n"
+	},
+	"Document.createElement": {
+		"prefix": ["cel", "dom.createElement"],
+		"body": ["${1:document}.createElement(${2:elem});"],
+		"description": "Creates a new element with the given tag name.\n"
+	},
+	"Document.createTextNode": {
+		"prefix": ["ctn", "dom.createTextNode"],
+		"body": ["${1:document}.createTextNode(${2:data});"],
+		"description": "Creates a text node.\n"
+	}
+}

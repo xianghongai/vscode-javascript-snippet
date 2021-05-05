@@ -1,0 +1,86 @@
+{
+	"Node.getRootNode()": {
+		"prefix": ["dom.getRootNode"],
+		"body": ["const ${2:root} = ${1:node}.getRootNode(true);"],
+		"description": "The getRootNode() method of the Node interface returns the context object's root, which optionally includes the shadow root if it is available.\n"
+	},
+
+	"ParentNode.firstElementChild": {
+		"prefix": ["fec", "dom.firstElementChild"],
+		"body": ["const ${2:element} = ${1:parentnode}.firstElementChild;"],
+		"description": "The `Element.firstElementChild` read-only property returns an element's first child Element, or null if there are no child elements.\n"
+	},
+	"ParentNode.lastElementChild": {
+		"prefix": ["lec", "dom.lastElementChild"],
+		"body": ["const ${2:element} = ${1:parentnode}.lastElementChild;"],
+		"description": "The `Element.lastElementChild` read-only property returns an element's last child Element, or null if there are no child elements.\n"
+	},
+	"ParentNode.children": {
+		"prefix": ["children", "dom.children"],
+		"body": ["const ${2:children} = ${1:parentnode}.children;"],
+		"description": "The read-only children property returns a live HTMLCollection which contains all of the child elements of the element upon which it was called..\n"
+	},
+	"ParentNode.childElementCount": {
+		"prefix": ["cec", "dom.childElementCount"],
+		"body": ["const ${2:count} = ${1:parentnode}.childElementCount;"],
+		"description": "Returns the number of children of this ParentNode which are elements.\n"
+	},
+
+	"Element.previousElementSibling": {
+		"prefix": ["pes", "dom.previousElementSibling"],
+		"body": [
+			"const ${2:prevElement} = ${1:NonDocumentTypeChildNode}.previousElementSibling;"
+		],
+		"description": "The `Element.previousElementSibling` read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.\n"
+	},
+	"Element.nextElementSibling": {
+		"prefix": ["nes", "dom.nextElementSibling"],
+		"body": [
+			"const ${2:nextElement} = ${1:NonDocumentTypeChildNode}.nextElementSibling;"
+		],
+		"description": "The `Element.nextElementSibling` read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list..\n"
+	},
+	"Element.closest()": {
+		"prefix": ["closest", "dom.closest"],
+		"body": [
+			"const ${1:closestElement} = ${2:targetElement}.closest('${3:selectorString}');"
+		],
+		"description": "The `Element.closest()` method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.\n"
+	},
+
+	"Node.childNodes": {
+		"prefix": ["cn", "dom.childNodes"],
+		"body": ["const ${2:nodeList} = ${1:node}.childNodes;"],
+		"description": "Returns a live NodeList containing all the children of this node. \n"
+	},
+	"Node.parentElement": {
+		"prefix": ["pe", "dom.parentElement"],
+		"body": ["const ${2:parentElement} = ${1:node}.parentElement;"],
+		"description": "Returns an Element that is the parent of this node. If the node has no parent, or if that parent is not an Element, this property returns null. \n"
+	},
+	"Node.parentNode": {
+		"prefix": ["pn", "dom.parentNode"],
+		"body": ["const ${2:parentNode} = ${1:node}.parentNode;"],
+		"description": "Returns a Node that is the parent of this node. \n"
+	},
+	"Node.firstChild": {
+		"prefix": ["fc", "dom.firstChild"],
+		"body": ["const ${2:childNode} = ${1:node}.firstChild;"],
+		"description": "Returns a Node representing the first direct child node of the node, or null if the node has no child.\n"
+	},
+	"Node.lastChild": {
+		"prefix": ["lc", "dom.lastChild"],
+		"body": ["const ${2:childNode} = ${1:node}.lastChild;"],
+		"description": "Returns a Node representing the last direct child node of the node, or null if the node has no child.\n"
+	},
+	"Node.previousSibling": {
+		"prefix": ["ps", "dom.previousSibling"],
+		"body": ["const ${2:previousNode} = ${1:node}.previousSibling;"],
+		"description": "Returns a Node representing the previous node in the tree, or null if there isn't such node.\n"
+	},
+	"Node.nextSibling": {
+		"prefix": ["ns", "dom.nextSibling"],
+		"body": ["const ${2:nextNode} = ${1:node}.nextSibling;"],
+		"description": "Returns a Node representing the next node in the tree, or null if there isn't such node.\n"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"Document.getElementById": {
+		"prefix": ["gi", "dom.getElementById"],
+		"body": ["${1:document}.getElementById('${2:id}');"],
+		"description": "Finding HTML elements by id.\n"
+	},
+	"Document.getElementsByClassName": {
+		"prefix": ["gc", "dom.getElementsByClassName"],
+		"body": ["${1:document}.getElementsByClassName('${2:className}');"],
+		"description": "Finding HTML elements by class name.\n"
+	},
+	"Document.getElementsByTagName": {
+		"prefix": ["gt", "dom.getElementsByTagName"],
+		"body": ["${1:document}.getElementsByTagName('${2:tagName}');"],
+		"description": "Finding HTML elements by tag name.\n"
+	},
+	"Document.querySelector": {
+		"prefix": ["qs", "dom.querySelector"],
+		"body": ["${1:document}.querySelector('${2:selector}');"],
+		"description": "querySelector\n"
+	},
+	"Document.querySelectorAll": {
+		"prefix": ["qsa", "dom.querySelectorAll"],
+		"body": ["${1:document}.querySelectorAll('${2:selector}');"],
+		"description": "querySelectorAll\n"
+	}
+}

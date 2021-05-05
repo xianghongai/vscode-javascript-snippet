@@ -1,0 +1,110 @@
+{
+	"Document.createAttribute": {
+		"prefix": ["ca", "dom.createAttribute"],
+		"body": [
+			"const ${1:attribute} = document.createAttribute('${2:name}');",
+			"$1.value = ${3:'value'};",
+			"node.setAttributeNode($1);"
+		],
+		"description": "Creates a new attribute node.\n"
+	},
+
+	"Element.getAttributeNames()": {
+		"prefix": ["dom.getAttributeNames"],
+		"body": ["const ${2:attributeNames} = ${1:element}.getAttributeNames();"],
+		"description": "Returns the attribute names of the element as an Array of strings. If the element has no attributes it returns an empty array.\n"
+	},
+	"Element.hasAttributes()": {
+		"prefix": ["dom.hasAttributes"],
+		"body": ["${1:element}.hasAttributes()"],
+		"description": "returns a Boolean indicating whether the current element has any attributes or not.\n(DOM 2)\n"
+	},
+
+	"Element.setAttribute()": {
+		"prefix": ["sa", "dom.setAttribute"],
+		"body": ["${1:element}.setAttribute('${2:attrName}', '${3:value}');"],
+		"description": "Sets the value of a named attribute of the current node.\n(Not namespace-aware, most commonly used methods)\n(DOM 1)\n"
+	},
+	"Element.getAttribute()": {
+		"prefix": ["ga", "dom.getAttribute"],
+		"body": [
+			"const ${3:attribute} = ${1:element}.getAttribute('${2:attrName}');"
+		],
+		"description": "Retrieves the value of the named attribute from the current node and returns it as an Object.\n(Not namespace-aware, most commonly used methods)\n(DOM 1)\n"
+	},
+	"Element.hasAttribute()": {
+		"prefix": ["ha", "dom.hasAttribute"],
+		"body": ["${1:element}.hasAttribute('${2:attrName}')"],
+		"description": "Returns a Boolean indicating if the element has the specified attribute or not.\n(Not namespace-aware, most commonly used methods)\n(DOM 2)\n"
+	},
+	"Element.removeAttribute()": {
+		"prefix": ["ra", "dom.removeAttribute"],
+		"body": ["${1:element}.removeAttribute('${2:attrName}');"],
+		"description": "Removes the named attribute from the current node.\n(Not namespace-aware, most commonly used methods)\n(DOM 1)\n"
+	},
+
+	"Element.getAttributeNode()": {
+		"prefix": ["gan", "dom.getAttributeNode"],
+		"body": [
+			"const ${3:attrNode} = ${1:element}.getAttributeNode('${2:attrName}');"
+		],
+		"description": "Returns the specified attribute of the specified element, as an Attr node.\n(DOM Level 1 methods for dealing with Attr nodes directly (seldom used))\n(DOM 1)"
+	},
+	"Element.setAttributeNode()": {
+		"prefix": ["san", "dom.setAttributeNode"],
+		"body": ["${1:element}.setAttributeNode(${2:attributeNode});"],
+		"description": "Adds a new Attr node to the specified element.\n(DOM Level 1 methods for dealing with Attr nodes directly (seldom used))\n(DOM 1)"
+	},
+	"Element.removeAttributeNode()": {
+		"prefix": ["ran", "dom.removeAttributeNode"],
+		"body": ["${1:element}.removeAttributeNode(${2:attributeNode});"],
+		"description": "Removes the specified attribute from the current element.\n(DOM Level 1 methods for dealing with Attr nodes directly (seldom used))\n(DOM 1)"
+	},
+
+	"Element.setAttributeNS()": {
+		"prefix": ["sans", "dom.setAttributeNS"],
+		"body": [
+			"${1:element}.setAttributeNS('${2:namespace}', '${3:attrName}', '${4:value}');"
+		],
+		"description": "Adds a new attribute or changes the value of an attribute with the given namespace and name.\n(Namespace-aware variants (DOM Level 2))\n"
+	},
+	"Element.getAttributeNS()": {
+		"prefix": ["ga", "dom.getAttributeNS"],
+		"body": [
+			"const ${4:attrVal} = ${1:element}.getAttributeNS('${2:namespace}', '${3:attrName}');"
+		],
+		"description": "Returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or \"\" (the empty string). \n(Namespace-aware variants (DOM Level 2))\n"
+	},
+	"Element.hasAttributeNS()": {
+		"prefix": ["ha", "dom.hasAttributeNS"],
+		"body": ["${1:element}.hasAttributeNS('${2:namespace}', '${3:attrName}')"],
+		"description": "Returns a boolean value indicating whether the current element has the specified attribute.\n(Namespace-aware variants (DOM Level 2))\n"
+	},
+	"Element.removeAttributeNS()": {
+		"prefix": ["ra", "dom.removeAttributeNS"],
+		"body": [
+			"${1:element}.removeAttributeNS('${2:namespace}', '${3:attrName}');"
+		],
+		"description": "Removes the specified attribute from an element.\n(Namespace-aware variants (DOM Level 2))\n"
+	},
+
+	"Element.setAttributeNodeNS()": {
+		"prefix": "dom.setAttributeNodeNS",
+		"body": ["${1:element}.setAttributeNodeNS(${2:attributeNode})"],
+		"description": "Adds a new namespaced attribute node to an element.\n(DOM Level 2 namespace-aware methods for dealing with Attr nodes directly (seldom used))\n(DOM 2)\n"
+	},
+	"Element.getAttributeNodeNS()": {
+		"prefix": "dom.getAttributeNodeNS",
+		"body": [
+			"const ${1:namespace} = '${2:<url/ns/specialspace>}';",
+			"let ${3:attributeNode} = ${4:element}.getAttributeNodeNS(${1}, '${5:nodeName}')"
+		],
+		"description": "Returns the Attr node for the attribute with the given namespace and name.\n(DOM Level 2 namespace-aware methods for dealing with Attr nodes directly (seldom used))\n(DOM 2)\n"
+	},
+
+	"Element.toggleAttribute()": {
+		"prefix": ["ta", "dom.toggleAttribute"],
+		"body": ["${1:element}.toggleAttribute('${2:attrName}');"],
+		"description": "Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.\n"
+	}
+}
