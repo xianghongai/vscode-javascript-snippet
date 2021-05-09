@@ -98,7 +98,7 @@
 			"class FeatureRegExp extends RegExp {",
 			"\t[Symbol.split](str, limit) {",
 			"\t\tconst result = RegExp.prototype[Symbol.split].call(this, str, limit);",
-			"\t\treturn result.map(x => `(${x})`);",
+			"\t\treturn result.map(x => `(${1:x})`);",
 			"\t}",
 			"}"
 		],
