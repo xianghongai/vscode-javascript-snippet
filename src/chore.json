@@ -42,7 +42,7 @@
 	"instanceof": {
 		"prefix": "io",
 		"body": ["${1:object} instanceof ${2:Constructor}"],
-		"description": "instanceof\n"
+		"description": "instanceof\nThe `instanceof` operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. \nthe `prototype` actually defines the type, not the constructor function."
 	},
 	"JSON.parse()": {
 		"prefix": "jp",
