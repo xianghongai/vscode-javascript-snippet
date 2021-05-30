@@ -9,6 +9,16 @@
 		"body": ["${1:key}: ${2:value},"],
 		"description": "key/value pair\n"
 	},
+  "object method()": {
+		"prefix": "om",
+		"body": ["${1:method} (${2:params}) {", "\t${3}", "},"],
+		"description": "method\n"
+	},
+	"object async method()": {
+		"prefix": "asom",
+		"body": ["async ${1:method}(${2:params}) {", "\t${3}", "},"],
+		"description": "async method\n"
+	},
 	"Object.assign()": {
 		"prefix": ["oa", "Obj.assign()"],
 		"body": ["Object.assign(${1:target}, ${2:source});"],
