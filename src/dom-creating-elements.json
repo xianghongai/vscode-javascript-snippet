@@ -6,7 +6,7 @@
 	},
 	"Document.createElement": {
 		"prefix": ["cel", "dom.createElement"],
-		"body": ["${1:document}.createElement(${2:elem});"],
+		"body": ["${1:document}.createElement('${2:tagName}');"],
 		"description": "Creates a new element with the given tag name.\n"
 	},
 	"Document.createTextNode": {

@@ -10,7 +10,7 @@
 		"description": "The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node).\n"
 	},
 
-  "ParentNode.append()": {
+	"ParentNode.append()": {
 		"prefix": ["append", "dom.append"],
 		"body": ["${1:parentNode}.append(${2:Nodes/DOMStrings});"],
 		"description": "Inserts a set of Node objects or DOMString objects after the last child of the ParentNode. \n"
@@ -34,9 +34,7 @@
 
 	"Element.insertAdjacentHTML('beforebegin', 'DOMString')": {
 		"prefix": ["before", "dom.before.html"],
-		"body": [
-			"${1:element}.insertAdjacentHTML('beforebegin', ${2:'DOMString'});"
-		],
+		"body": ["${1:element}.insertAdjacentHTML('beforebegin', ${2:'DOMString'});"],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentHTML('afterend', 'DOMString')": {
@@ -46,9 +44,7 @@
 	},
 	"Element.insertAdjacentHTML('afterbegin', 'DOMString')": {
 		"prefix": ["prepend", "dom.prepend.html"],
-		"body": [
-			"${1:element}.insertAdjacentHTML('afterbegin', ${2:'DOMString'});"
-		],
+		"body": ["${1:element}.insertAdjacentHTML('afterbegin', ${2:'DOMString'});"],
 		"description": "Just inside the element, before its first child.\n"
 	},
 	"Element.insertAdjacentHTML('beforeend', 'DOMString')": {
@@ -59,9 +55,7 @@
 
 	"Element.insertAdjacentElement('beforebegin', element)": {
 		"prefix": ["before", "dom.before.element"],
-		"body": [
-			"${1:element}.insertAdjacentElement('beforebegin', ${2:element});"
-		],
+		"body": ["${1:element}.insertAdjacentElement('beforebegin', ${2:element});"],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentElement('afterend', element)": {

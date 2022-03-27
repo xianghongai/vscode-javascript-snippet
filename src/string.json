@@ -81,16 +81,12 @@
 	},
 	"String.prototype.padEnd()": {
 		"prefix": ["spe", "str.padEnd()"],
-		"body": [
-			"${1:str}.padEnd(${2:targetLength}, ${3:padString})"
-		],
+		"body": ["${1:str}.padEnd(${2:targetLength}, ${3:padString})"],
 		"description": "str.padEnd(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied at the end of the current string.\n"
 	},
 	"String.prototype.padStart()": {
 		"prefix": ["sps", "str.padStart()"],
-		"body": [
-			"${1:str}.padStart(${2:targetLength}, ${3:padString})"
-		],
+		"body": ["${1:str}.padStart(${2:targetLength}, ${3:padString})"],
 		"description": "str.padStart(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied from the start.\n"
 	},
 	"String.prototype.repeat()": {
@@ -100,9 +96,7 @@
 	},
 	"String.prototype.replace()": {
 		"prefix": ["sre", "str.replace()"],
-		"body": [
-			"${1:str}.replace(${2:regexp}, ${3:newSubStr})"
-		],
+		"body": ["${1:str}.replace(${2:regexp}, ${3:newSubStr})"],
 		"description": "str.replace(regexp|substr, newSubStr|function)\nreturn a new string with some or all matches of a **pattern** replaced by a **replacement**. The **pattern** can be a string or a **RegExp**, and the **replacement** can be a string or a function to be called for each match. If **pattern** is a string, only the first occurrence will be replaced.\nThe original string is left unchanged.\n"
 	},
 	"String.prototype.search()": {
@@ -112,9 +106,7 @@
 	},
 	"String.prototype.slice()": {
 		"prefix": ["ssl", "str.slice()"],
-		"body": [
-			"${1:str}.slice(${2:beginIndex}, ${3:endIndex})"
-		],
+		"body": ["${1:str}.slice(${2:beginIndex}, ${3:endIndex})"],
 		"description": "str.slice(beginIndex[, endIndex])\nreturn a new string containing the extracted section of the string.\n"
 	},
 	"String.prototype.split()": {
@@ -124,16 +116,12 @@
 	},
 	"String.prototype.startsWith()": {
 		"prefix": ["ssw", "str.startsWith()"],
-		"body": [
-			"${1:str}.startsWith(${2:searchString}, ${3:position})"
-		],
+		"body": ["${1:str}.startsWith(${2:searchString}, ${3:position})"],
 		"description": "str.startsWith(searchString[, position])\nreturn **true** if the given characters are found at the beginning of the string; otherwise, **false**.\n"
 	},
 	"String.prototype.substring()": {
 		"prefix": ["sss", "str.substring()"],
-		"body": [
-			"${1:str}.substring(${2:indexStart}, ${3:indexEnd})"
-		],
+		"body": ["${1:str}.substring(${2:indexStart}, ${3:indexEnd})"],
 		"description": "str.substring(indexStart[, indexEnd])\nreturn the part of the string between the start and end indexes, or to the end of the string.\n"
 	},
 	"String.prototype.toLocaleLowerCase()": {
@@ -173,10 +161,7 @@
 	},
 	"String.prototype[@@iterator]()": {
 		"prefix": "ssi",
-		"body": [
-			"const ${2:iterator} = ${1:str}[Symbol.iterator]();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:str}[Symbol.iterator]();", "$2.next().value"],
 		"description": "str[Symbol.iterator]\nreturn a new **Iterator** object.\n"
 	}
 }

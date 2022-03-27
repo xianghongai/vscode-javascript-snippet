@@ -1,43 +1,43 @@
 {
 	"typeof": {
 		"prefix": "to",
-		"body": ["typeof ${1:object} === '${2:undefined}'"],
+		"body": ["typeof ${1:operand} === '${2:undefined}'"],
 		"description": "typeof\n"
 	},
 	"typeof is undefined": {
 		"prefix": "tou",
-		"body": ["typeof ${1:Undefined} === 'undefined'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'undefined'"],
+		"description": "Type is Undefined\n"
 	},
 	"typeof is function": {
 		"prefix": "tof",
-		"body": ["typeof ${1:Function} === 'function'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'function'"],
+		"description": "Type is Function\n"
 	},
 	"typeof is symbol": {
 		"prefix": "tosy",
-		"body": ["typeof ${1:Symbol} === 'symbol'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'symbol'"],
+		"description": "Type is Symbol\n"
 	},
 	"typeof is string": {
 		"prefix": "tos",
-		"body": ["typeof ${1:String} === 'string'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'string'"],
+		"description": "Type is String\n"
 	},
 	"typeof is number": {
 		"prefix": "ton",
-		"body": ["typeof ${1:Number} === 'number'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'number'"],
+		"description": "Type is Number\n"
 	},
 	"typeof is boolean": {
 		"prefix": "tob",
-		"body": ["typeof ${1:Boolean} === 'boolean'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'boolean'"],
+		"description": "Type is Boolean\n"
 	},
 	"typeof is bigint": {
 		"prefix": "tobi",
-		"body": ["typeof ${1:BigInt} === 'bigint'"],
-		"description": "typeof\n"
+		"body": ["typeof ${1:operand} === 'bigint'"],
+		"description": "Type is Bigint\n"
 	},
 	"instanceof": {
 		"prefix": "io",
@@ -61,9 +61,7 @@
 	},
 	"try/catch/finally": {
 		"prefix": "tcf",
-		"body": [
-			"try {\n\t${1}\n} catch (${2:err}) {\n\t\n} finally {\n\t\n}"
-		],
+		"body": ["try {\n\t${1}\n} catch (${2:err}) {\n\t\n} finally {\n\t\n}"],
 		"description": "try/catch/finally\n"
 	},
 	"try/finally": {

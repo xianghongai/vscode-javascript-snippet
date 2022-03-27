@@ -1,17 +1,82 @@
 {
-  "console.dir":            { "prefix": "cd",    "body": [ "console.dir($1);" ],                               "description": "console.dir\n" },
-  "console.error":          { "prefix": "ce",    "body": [ "console.error($1);" ],                             "description": "console.error\n" },
-  "console.error labeled":  { "prefix": "celb",  "body": [ "console.error('${1}: %o', ${1});" ],               "description": "console.error labeled\n" },
-  "console.info":           { "prefix": "ci",    "body": [ "console.info($1);" ],                              "description": "console.info\n" },
-  "console.log":            { "prefix": "clg",   "body": [ "console.log($1);" ],                               "description": "console.log\n" },
-  "console.log labeled":    { "prefix": "clgl",  "body": [ "console.log('${1}: %o', ${1});" ],                 "description": "console.log labeled\n" },
-  "console.warn":           { "prefix": "cw",    "body": [ "console.warn($1);" ],                              "description": "console.warn\n" },
-  "console.warn labeled":   { "prefix": "cwl",   "body": [ "console.warn('${1}: %o', ${1});" ],                "description": "console.warn labeled\n" },
-  "console.assert":         { "prefix": "ca",    "body": [ "console.assert(${1:assertion}, ${2:object});" ],   "description": "console.assert\n" },
-  "console.clear":          { "prefix": "cc",    "body": [ "console.clear();" ],                               "description": "console.clear\n" },
-  "console.count":          { "prefix": "cco",   "body": [ "console.count('${1:label}');" ],                   "description": "console.count\n" },
-  "console.group":          { "prefix": "cg",    "body": [ "console.group('${1:label}');" ],                   "description": "console.group\n" },
-  "console.groupEnd":       { "prefix": "cge",   "body": [ "console.groupEnd();" ],                            "description": "console.groupEnd\n" },
-  "console.table":          { "prefix": "ct",    "body": [ "console.table(${1:object});" ],                    "description": "console.table\n" },
-  "console.trace":          { "prefix": "ctr",   "body": [ "console.trace(${1:object});" ],                    "description": "console.trace\n" }
+	"console.dir": {
+		"prefix": "cd",
+		"body": ["console.dir($1);"],
+		"description": "console.dir\n"
+	},
+	"console.error": {
+		"prefix": "ce",
+		"body": ["console.error($1);"],
+		"description": "console.error\n"
+	},
+	"console.error labeled": {
+		"prefix": "celb",
+		"body": ["console.error('${1}: %o', ${1});"],
+		"description": "console.error labeled\n"
+	},
+	"console.info": {
+		"prefix": "ci",
+		"body": ["console.info($1);"],
+		"description": "console.info\n"
+	},
+	"console.log": {
+		"prefix": "clg",
+		"body": ["console.log($1);"],
+		"description": "console.log\n"
+	},
+	"console.log labeled": {
+		"prefix": "clgl",
+		"body": ["console.log('${1}: %o', ${1});"],
+		"description": "console.log labeled\n"
+	},
+	"console.warn": {
+		"prefix": "cw",
+		"body": ["console.warn($1);"],
+		"description": "console.warn\n"
+	},
+	"console.warn labeled": {
+		"prefix": "cwl",
+		"body": ["console.warn('${1}: %o', ${1});"],
+		"description": "console.warn labeled\n"
+	},
+	"console.assert": {
+		"prefix": "ca",
+		"body": ["console.assert(${1:assertion}, ${2:object});"],
+		"description": "console.assert\n"
+	},
+	"console.clear": {
+		"prefix": "cc",
+		"body": ["console.clear();"],
+		"description": "The `console.clear()` method clears the console if the environment allows it. \n"
+	},
+	"console.count": {
+		"prefix": "cco",
+		"body": ["console.count('${1:label}');"],
+		"description": "The `console.count()` method logs the number of times that this particular call to count() has been called. \n"
+	},
+	"console.group": {
+		"prefix": "cg",
+		"body": ["console.group('${1:label}');"],
+		"description": "console.group\n"
+	},
+	"console.groupEnd": {
+		"prefix": "cge",
+		"body": ["console.groupEnd();"],
+		"description": "console.groupEnd\n"
+	},
+	"console.table": {
+		"prefix": "cta",
+		"body": ["console.table(${1:object});"],
+		"description": "console.table\n"
+	},
+	"console.time": {
+		"prefix": "ct",
+		"body": ["console.time('${1:label}');", "console.timeEnd('${1}');"],
+		"description": "The `console.time()` & `console.timeEnd()` method starts/stops a timer you can use to track how long an operation takes.\n"
+	},
+	"console.trace": {
+		"prefix": "ctr",
+		"body": ["console.trace(${1:object});"],
+		"description": "The `console.trace()` method outputs a stack trace to the Web console.\n"
+	}
 }

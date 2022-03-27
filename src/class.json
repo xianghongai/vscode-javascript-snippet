@@ -34,7 +34,7 @@
 		"body": ["static ${1:property} = ${2:'value'};"],
 		"description": "class static property\n"
 	},
-  "class private method()": {
+	"class private method()": {
 		"prefix": ["clpm", "privateMethod"],
 		"body": ["#${1:methodName}(${2:params}) {", "\treturn ${3};", "}"],
 		"description": "class private method\n"

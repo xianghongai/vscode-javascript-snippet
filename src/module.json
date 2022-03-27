@@ -34,11 +34,6 @@
 		"body": ["export {${1:variable} as ${2:name}};"],
 		"description": "*renaming exports as\n"
 	},
-	"export let": {
-		"prefix": "exl",
-		"body": ["export let ${1:name} = ${2:value};"],
-		"description": "*exporting individual features(let)\n"
-	},
 	"export const": {
 		"prefix": "exc",
 		"body": ["export const ${1:name} = ${2:value};"],
@@ -77,14 +72,7 @@
 	},
 	"export class": {
 		"prefix": "exdc",
-		"body": [
-			"export default class ${1:className} {",
-			"\tconstructor (${2:params}) {",
-			"\t\t${3}",
-			"\t}",
-			"}",
-			""
-		],
+		"body": ["export default class ${1:className} {", "\tconstructor (${2:params}) {", "\t\t${3}", "\t}", "}", ""],
 		"description": "export class\n"
 	},
 	"export class extends": {
@@ -106,12 +94,7 @@
 	},
 	"export default function": {
 		"prefix": "exdfn",
-		"body": [
-			"export default function ${1:name} (${2:params}) {",
-			"\t${3}",
-			"}",
-			""
-		],
+		"body": ["export default function ${1:name} (${2:params}) {", "\t${3}", "}", ""],
 		"description": "export default function\n"
 	},
 	"export from": {

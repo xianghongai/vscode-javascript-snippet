@@ -32,6 +32,11 @@
 		"description": "Array.of(elementN);\nreturn a new Array instance.\n"
 	},
 
+	"Array.prototype.at()": {
+		"prefix": ["ara", "arr.at()"],
+		"body": ["${1:items}.at(${2:index});"],
+		"description": "const item = items.at(index);\nThe `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.\nReturns `undefined` if the given index can not be found.\n"
+	},
 	"Array.prototype.concat()": {
 		"prefix": ["arc", "arr.concat()"],
 		"body": ["${1:items}.concat(${2:valueN});"],
@@ -48,9 +53,9 @@
 	"Array.prototype.every()": {
 		"prefix": ["arev", "arr.every()"],
 		"body": [
-			"${1:items}.every((${2:item}) => {\n\t${3}\n});"
+			"${1:items}.every((${2:item}) => $3);"
 		],
-		"description": "array.every(callback(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
+		"description": "array.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
 	},
 	"Array.prototype.fill()": {
 		"prefix": ["arfill", "arr.fill()"],
@@ -62,23 +67,23 @@
 	"Array.prototype.filter()": {
 		"prefix": ["arf", "filter", "arr.filter()"],
 		"body": [
-			"${1:items}.filter((${2:item}) => {\n\t${3}\n});"
+			"${1:items}.filter((${2:item}) => $3);"
 		],
-		"description": "let newArray = array.filter(callback(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
+		"description": "let newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
 	},
 	"Array.prototype.find()": {
 		"prefix": ["arfi", "find", "arr.find()"],
 		"body": [
-			"${1:items}.find((${2:item}) => {\n\t${3}\n});"
+			"${1:items}.find((${2:item}) => $3);"
 		],
-		"description": "array.find(callback[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
+		"description": "array.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
 	},
 	"Array.prototype.findIndex()": {
 		"prefix": ["arfin", "findIndex", "arr.findIndex()"],
 		"body": [
-			"${1:items}.findIndex((${2:item}) => {\n\t${3}\n})"
+			"${1:items}.findIndex((${2:item}) => $3)"
 		],
-		"description": "array.findIndex(callback(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
+		"description": "array.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
 	},
 	"Array.prototype.flat()": {
 		"prefix": ["arflat", "arr.flat()"],
@@ -90,7 +95,7 @@
 		"body": [
 			"${1:items}.flatMap((${2:value}) => ${3:value});"
 		],
-		"description": "let newArray = array.flatMap(function callback(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
+		"description": "let newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
 	},
 	"Array.prototype.forEach(), arrow function": {
 		"prefix": ["fe", "arr.forEach()"],
@@ -118,7 +123,7 @@
 		"body": [
 			"${1:items}.forEach(function(${2:item}, ${3:index}) {\n\t${4}\n});"
 		],
-		"description": "array.forEach(function callback(currentValue [, index [, array]]) { }[, thisArg]);\n"
+		"description": "array.forEach(function callbackFn(currentValue [, index [, array]]) { }[, thisArg]);\n"
 	},
 	"Array.prototype.includes()": {
 		"prefix": ["ari", "arr.includes()"],
@@ -145,7 +150,7 @@
 		"body": [
 			"${1:items}.map((${2:currentValue}) => {\n\t${3}\n});"
 		],
-		"description": "let newArray = array.map(function callback(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
+		"description": "let newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
 	},
 	"Array.prototype.pop()": {
 		"prefix": ["arp", "arr.pop()"],
@@ -160,16 +165,16 @@
 	"Array.prototype.reduce()": {
 		"prefix": ["arr", "arr.reduce()"],
 		"body": [
-			"${1:items}.reduce((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${3}\n});"
+			"${1:items}.reduce((${2:previousValue}, ${3:currentValue}) => {\n\treturn ${3}\n});"
 		],
-		"description": "array.reduce(callback(accumulator, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n"
+		"description": "array.reduce(callbackFn(previousValue, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n"
 	},
 	"Array.prototype.reduceRight()": {
 		"prefix": ["arrr", "arr.reduceRight()"],
 		"body": [
 			"${1:items}.reduceRight((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${4}\n});"
 		],
-		"description": "array.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n"
+		"description": "array.reduceRight(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n"
 	},
 	"Array.prototype.reverse()": {
 		"prefix": ["arre", "arr.reverse()"],
@@ -191,9 +196,9 @@
 	"Array.prototype.some()": {
 		"prefix": ["arso", "arr.some()"],
 		"body": [
-			"${1:items}.some((${2:item}) => {\n\t${3}\n});"
+			"${1:items}.some((${2:item}) => $3);"
 		],
-		"description": "array.some(callback(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
+		"description": "array.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
 	},
 	"Array.prototype.sort()": {
 		"prefix": ["arsor", "arr.sort()"],

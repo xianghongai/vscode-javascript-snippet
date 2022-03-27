@@ -16,7 +16,7 @@
 			"outFiles": [
 				"${workspaceFolder}/snippets/**/*.json"
 			],
-			"preLaunchTask": "npm: compile"
+			"preLaunchTask": "npm: prebuild"
 		}
 	]
 }

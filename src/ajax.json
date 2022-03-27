@@ -92,7 +92,10 @@
 		"description": "Working with the Fetch API"
 	},
 	"fetch get": {
-		"prefix": ["fetchget", "fg"],
+		"prefix": [
+			"fetchget",
+			"fg"
+		],
 		"body": [
 			"fetch('${1:server}')",
 			"\t.then(response => {",
@@ -115,7 +118,10 @@
 		"description": "Make a GET request"
 	},
 	"fetch post": {
-		"prefix": ["fetchpost", "fp"],
+		"prefix": [
+			"fetchpost",
+			"fp"
+		],
 		"body": [
 			"fetch('${1:server}', {",
 			"\tmethod: 'POST',",

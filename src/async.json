@@ -4,11 +4,6 @@
 		"body": ["const ${1:result} = await ${2:promise};"],
 		"description": "const assignment awaited\n"
 	},
-	"let awaited": {
-		"prefix": "law",
-		"body": ["let ${1:result} = await ${2:promise};"],
-		"description": "let assignment awaited\n"
-	},
 	"async function named": {
 		"prefix": "asfn",
 		"body": [
@@ -23,16 +18,12 @@
 	},
 	"async generator function named": {
 		"prefix": "asgfn",
-		"body": [
-			"async function* ${1:name} (${2:params}) {\n\t${3}\n}\n"
-		],
+		"body": ["async function* ${1:name} (${2:params}) {\n\t${3}\n}\n"],
 		"description": "async generator function named\n"
 	},
 	"async generator function anonymous": {
 		"prefix": "asgfna",
-		"body": [
-			"async function* (${1:params}) {\n\t${2}\n}\n"
-		],
+		"body": ["async function* (${1:params}) {\n\t${2}\n}\n"],
 		"description": "async generator function anonymous\n"
 	},
 	"async arrow function": {
@@ -52,9 +43,7 @@
 	},
 	"await Promise.all.map": {
 		"prefix": "awpam",
-		"body": [
-			"await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"
-		],
+		"body": ["await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"],
 		"description": "await Promise.all.map\n"
 	}
 }

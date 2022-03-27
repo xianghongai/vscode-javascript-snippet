@@ -11,18 +11,12 @@
 	},
 	"RegExp.prototype.exec()": {
 		"prefix": ["ree", "re.exec()"],
-		"body": [
-			"const ${1:regexp} = RegExp('${2:pattern}');",
-			"const ${3:result} = ${1}.exec(${4:str});"
-		],
+		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.exec(${4:str});"],
 		"description": "Syntax: regexp.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**."
 	},
 	"RegExp.prototype.test()": {
 		"prefix": ["ret", "re.test()"],
-		"body": [
-			"const ${1:regexp} = RegExp('${2:pattern}');",
-			"const ${3:result} = ${1}.test(${4:str});"
-		],
+		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.test(${4:str});"],
 		"description": "Syntax: regexp.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**."
 	},
 	"get RegExp[@@species]": {
