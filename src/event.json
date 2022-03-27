@@ -6,31 +6,23 @@
 	},
 	"removeEventListener()": {
 		"prefix": ["rel", "dom.removeEventListener()"],
-		"body": [
-			"${1:document}.removeEventListener('${2:type}', ${3:listener});\n"
-		],
+		"body": ["${1:document}.removeEventListener('${2:type}', ${3:listener});\n"],
 		"description": "EventTarget.removeEventListener()\n"
 	},
 	"addEventListener arrow function": {
 		"prefix": ["aela", "dom.addEventListener()"],
-		"body": [
-			"${1:document}.addEventListener('${2:type}', (${3:event}) => {\n\t${4}\n});\n"
-		],
+		"body": ["${1:document}.addEventListener('${2:type}', (${3:event}) => {\n\t${4}\n});\n"],
 		"description": "addEventListener, arrow function\n"
 	},
 	"dispatchEvent()": {
 		"prefix": ["dev", "dom.dispatchEvent()"],
-		"body": [
-			"const ${3:cancelled} = !${1:target}.dispatchEvent(${2:event});\n"
-		],
+		"body": ["const ${3:cancelled} = !${1:target}.dispatchEvent(${2:event});\n"],
 		"description": "Dispatches an Event at the specified EventTarget\n"
 	},
 
 	"preventDefault() and stopPropagation()": {
 		"prefix": ["eps"],
-		"body": [
-			"event.preventDefault();\nevent.stopPropagation();\nreturn false;"
-		],
+		"body": ["event.preventDefault();\nevent.stopPropagation();\nreturn false;"],
 		"description": "event.preventDefault(); event.stopPropagation()\n"
 	},
 	"event preventDefault": {
@@ -68,12 +60,7 @@
 	},
 	"ready": {
 		"prefix": "ready",
-		"body": [
-			"window.addEventListener('DOMContentLoaded', () => {",
-			"\t${1}",
-			"});",
-			""
-		],
+		"body": ["window.addEventListener('DOMContentLoaded', () => {", "\t${1}", "});", ""],
 		"description": "DOM fully loaded and parsed. \n The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. \n"
 	},
 	"CustomEvent()": {

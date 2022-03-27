@@ -4,7 +4,7 @@
 	"displayName": "JavaScript Code Snippet",
 	"description": "Code snippets for JavaScript in ES3/5/6+ syntax",
 	"icon": "art/icon3.png",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"galleryBanner": {
 		"color": "#ffffff",
 		"theme": "dark"
@@ -26,6 +26,10 @@
 	],
 	"keywords": [
 		"JavaScript",
+		"snippet",
+		"代码",
+		"代码片断",
+		"snippets",
 		"ES6 Snippets",
 		"ES6+ Snippets",
 		"Javascript Snippets",

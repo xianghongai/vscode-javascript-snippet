@@ -9,9 +9,9 @@
 		"body": ["${1:key}: ${2:value},"],
 		"description": "key/value pair\n"
 	},
-  "object method()": {
+	"object method()": {
 		"prefix": "om",
-		"body": ["${1:method} (${2:params}) {", "\t${3}", "},"],
+		"body": ["${1:method}(${2:params}) {", "\t${3}", "},"],
 		"description": "method\n"
 	},
 	"object async method()": {
@@ -93,9 +93,7 @@
 	},
 	"Object.getOwnPropertyDescriptor()": {
 		"prefix": ["ogopd", "Obj.getOwnPropertyDescriptor()"],
-		"body": [
-			"Object.getOwnPropertyDescriptor(${1:obj}, '${2:propertyName}');"
-		],
+		"body": ["Object.getOwnPropertyDescriptor(${1:obj}, '${2:propertyName}');"],
 		"description": "Object.getOwnPropertyDescriptor(obj, propertyName);\nreturn a property descriptor of the given property if it exists on the object, 'undefined' otherwise.\n"
 	},
 	"Object.getOwnPropertyDescriptors()": {
@@ -150,24 +148,22 @@
 	},
 	"Object.setPrototypeOf()": {
 		"prefix": ["ospo", "Obj.setPrototypeOf()"],
-		"body": [
-			"Object.setPrototypeOf(${1:obj}, ${2:prototype});"
-		],
+		"body": ["Object.setPrototypeOf(${1:obj}, ${2:prototype});"],
 		"description": "Object.setPrototypeOf(obj, prototype);\nreturn the specified object.\n"
 	},
 	"Object.entries()": {
 		"prefix": ["oe", "Obj.entries()"],
-		"body": ["Object.entries(${1:obj});"],
+		"body": ["Object.entries(${1:obj})"],
 		"description": "Object.entries(obj);\nreturn an array of a given object's own enumerable string-keyed property [key, value] pairs.\n"
 	},
 	"Object.keys()": {
 		"prefix": ["ok", "Obj.keys()"],
-		"body": ["Object.keys(${1:obj});"],
+		"body": ["Object.keys(${1:obj})"],
 		"description": "Object.keys(obj);\nreturn an array of a given object's own property names, in the same order as we get with a normal loop.\n"
 	},
 	"Object.values()": {
 		"prefix": ["ov", "Obj.values()"],
-		"body": ["Object.values(${1:obj});"],
+		"body": ["Object.values(${1:obj})"],
 		"description": "Object.values(obj);\nreturn an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).\n"
 	},
 	"*obj.hasOwnProperty()": {
@@ -177,16 +173,12 @@
 	},
 	"*prototypeObj.isPrototypeOf()": {
 		"prefix": ["ipo", "obj.isPrototypeOf()"],
-		"body": [
-			"${1:prototypeObj}.isPrototypeOf(${2:object})"
-		],
+		"body": ["${1:prototypeObj}.isPrototypeOf(${2:object})"],
 		"description": "Object.prototype.isPrototypeOf(object);\nreturn a Boolean indicating whether the calling object lies in the prototype chain of the specified object.\nthrown a TypeError is thrown if 'prototypeObj' is 'undefined' or 'null'.\n"
 	},
 	"*obj.propertyIsEnumerable()": {
 		"prefix": ["pie", "obj.propertyIsEnumerable()"],
-		"body": [
-			"${1:obj}.propertyIsEnumerable(${2:propertyName})"
-		],
+		"body": ["${1:obj}.propertyIsEnumerable(${2:propertyName})"],
 		"description": "Object.prototype.propertyIsEnumerable(propertyName);\nreturn a Boolean indicating whether the specified property is enumerable.\n"
 	},
 	"*obj.toLocaleString()": {

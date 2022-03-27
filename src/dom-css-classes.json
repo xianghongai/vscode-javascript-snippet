@@ -2,21 +2,26 @@
 	"Element.classList.add()": {
 		"prefix": ["cla", "dom.classList.add"],
 		"body": ["${1:element}.classList.add('${2:className}');"],
-		"description": "Element.classList.add\n"
+		"description": "DOMTokenList.add(token0, token1, /* ... ,*/ tokenN);\n"
 	},
 	"Element.classList.contains()": {
 		"prefix": ["clc", "dom.classList.contains"],
 		"body": ["${1:element}.classList.contains('${2:className}');"],
-		"description": "Element.classList.contains\n"
+		"description": "DOMTokenList.contains(token);\n"
+	},
+	"Element.classList.replace()": {
+		"prefix": ["clrp", "dom.classList.replace"],
+		"body": ["${1:element}.classList.replace('${2:oldToken}', '${3:newToken}');"],
+		"description": "DOMTokenList.replace(oldToken, newToken);\n"
 	},
 	"Element.classList.remove()": {
 		"prefix": ["clr", "dom.classList.remove"],
 		"body": ["${1:element}.classList.remove('${2:className}');"],
-		"description": "Element.classList.remove\n"
+		"description": "DOMTokenList.remove(token0, token1, /* ... ,*/ tokenN);\n"
 	},
 	"Element.classList.toggle()": {
 		"prefix": ["clt", "dom.classList.toggle"],
 		"body": ["${1:element}.classList.toggle('${2:className}');"],
-		"description": "Element.classList.toggle\n"
+		"description": "DOMTokenList.toggle(token, force);\n"
 	}
 }

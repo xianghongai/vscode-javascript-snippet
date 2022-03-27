@@ -19,13 +19,14 @@
 		"body": ["let ${1:resource}WeakSet = new WeakSet();"],
 		"description": "let assignment WeakSet\n"
 	},
+
 	"const Map": {
-		"prefix": ["cm", "ma"],
+		"prefix": ["cm", "map"],
 		"body": ["const ${1:resource}Map = new Map();"],
 		"description": "const assignment Map\n"
 	},
 	"const Set": {
-		"prefix": ["cs", "se"],
+		"prefix": ["cs", "set"],
 		"body": ["const ${1:resource}Set = new Set();"],
 		"description": "const assignment Set\n"
 	},
@@ -57,11 +58,7 @@
 	},
 	"Map.prototype.forEach()": {
 		"prefix": "map.forEach()",
-		"body": [
-			"${1:map}.forEach((${2:value}, ${3:key}) => {",
-			"\t$0",
-			"});"
-		],
+		"body": ["${1:map}.forEach((${2:value}, ${3:key}) => {", "\t$0", "});"],
 		"description": "The forEach() method executes a provided function once per each key/value pair in the Map object, in insertion order.\n"
 	},
 	"Map.prototype.get()": {
@@ -81,43 +78,27 @@
 	},
 	"Map.prototype.entries()": {
 		"prefix": "map.entries()",
-		"body": [
-			"const ${2:iterator} = ${1:map}.entries();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:map}.entries();", "$2.next().value"],
 		"description": "The entries() method returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order.\n"
 	},
 	"Map.prototype.keys()": {
 		"prefix": "map.keys()",
-		"body": [
-			"const ${2:iterator} = ${1:map}.keys();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:map}.keys();", "$2.next().value"],
 		"description": "The keys() method returns a new Iterator object that contains the keys for each element in the Map object in insertion order.\n"
 	},
 	"Map.prototype.values()": {
 		"prefix": "map.values()",
-		"body": [
-			"const ${2:iterator} = ${1:map}.values()",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:map}.values()", "$2.next().value"],
 		"description": "The values() method returns a new Iterator object that contains the values for each element in the Map object in insertion order.\n"
 	},
 	"Map.prototype[@@iterator]()": {
 		"prefix": "map.@@iterator()",
-		"body": [
-			"const ${2:iterator} = ${1:map}[Symbol.iterator]();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:map}[Symbol.iterator]();", "$2.next().value"],
 		"description": "The initial value of the @@iterator property is the same function object as the initial value of the entries method.\n"
 	},
 	"get Map[@@species]": {
 		"prefix": ["map.@@species"],
-		"body": [
-			"class FeatureMap extends Map {",
-			"\tstatic get [@@species]() { return Map; }",
-			"}"
-		],
+		"body": ["class FeatureMap extends Map {", "\tstatic get [@@species]() { return Map; }", "}"],
 		"description": "The Map[@@species] accessor property returns the Map constructor.\n"
 	},
 
@@ -164,11 +145,7 @@
 	},
 	"Set.prototype.forEach()": {
 		"prefix": "set.forEach()",
-		"body": [
-			"${1:set}.forEach((${2:value}) => {",
-			"\t$0",
-			"});"
-		],
+		"body": ["${1:set}.forEach((${2:value}) => {", "\t$0", "});"],
 		"description": "The forEach() method executes a provided function once for each value in the Set object, in insertion order.\n"
 	},
 	"Set.prototype.has()": {
@@ -178,35 +155,22 @@
 	},
 	"Set.prototype.entries()": {
 		"prefix": "set.entries()",
-		"body": [
-			"const ${2:iterator} = ${1:set}.entries();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:set}.entries();", "$2.next().value"],
 		"description": "The entries() method returns a new Iterator object that contains an array of [value, value] for each element in the Set object, in insertion order. For Set objects there is no key like in Map objects. However, to keep the API similar to the Map object, each entry has the same value for its key and value here, so that an array [value, value] is returned.\n"
 	},
 	"Set.prototype.values()": {
 		"prefix": "set.values()",
-		"body": [
-			"const ${2:iterator} = ${1:set}.values()",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:set}.values()", "$2.next().value"],
 		"description": "The values() method returns a new iterator object that contains the values for each element in the Set object in insertion order.\n"
 	},
 	"Set.prototype[@@iterator]()": {
 		"prefix": "set.@@iterator()",
-		"body": [
-			"const ${2:iterator} = ${1:set}[Symbol.iterator]();",
-			"$2.next().value"
-		],
+		"body": ["const ${2:iterator} = ${1:set}[Symbol.iterator]();", "$2.next().value"],
 		"description": "The initial value of the @@iterator property is the same function object as the initial value of the values property.\n"
 	},
 	"get Set[@@species]": {
 		"prefix": ["set.@@species"],
-		"body": [
-			"class FeatureSet extends Set {",
-			"\tstatic get [@@species]() { return Set; }",
-			"}"
-		],
+		"body": ["class FeatureSet extends Set {", "\tstatic get [@@species]() { return Set; }", "}"],
 		"description": "The Set[Symbol.species] accessor property returns the Set constructor.\n"
 	},
 
