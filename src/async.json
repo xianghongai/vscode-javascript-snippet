@@ -7,7 +7,7 @@
 	"async function named": {
 		"prefix": "asfn",
 		"body": [
-			"async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n\n${1:name}().then(${5:result} => {$6});\n"
+			"async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
 		],
 		"description": "async function named\n"
 	},
