@@ -39,17 +39,12 @@
 		"body": ["export const ${1:name} = ${2:value};"],
 		"description": "exporting individual features(const)\n"
 	},
-	"export function": {
-		"prefix": "exfn",
-		"body": ["export function ${1:name} (){", "\t${2}", "}"],
-		"description": "exporting individual features(function)\n"
-	},
-	"export named arrow function": {
+	"export arrow function (named)": {
 		"prefix": "exafn",
 		"body": ["export const ${1:name} = (${2:params}) => {", "\t$3", "};"],
 		"description": "export named arrow function\n"
 	},
-	"export named async arrow function": {
+	"export async arrow function (named)": {
 		"prefix": "exasafn",
 		"body": [
 			"export const ${1:name} = async (${2:params}) => {",
@@ -58,7 +53,39 @@
 			"};",
 			""
 		],
-		"description": "export async arrow function\n"
+		"description": "export named async arrow function\n"
+	},
+	"export default arrow function": {
+		"prefix": "exdaf",
+		"body": ["export default (${1:params}) => {", "\t${2}", "}", ""],
+		"description": "export default arrow function\n"
+	},
+	"export default async arrow function": {
+		"prefix": "exdasaf",
+		"body": ["export default async (${1:params}) => {", "\t${2}", "}", ""],
+		"description": "export default async arrow function\n"
+	},
+	"export function (named)": {
+		"prefix": "exfn",
+		"body": ["export function ${1:name} (){", "\t${2}", "}"],
+		"description": "export named function\n"
+	},
+	"export async function (named)": {
+		"prefix": "exasfn",
+		"body": [
+			"export async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+		],
+		"description": "export named async function\n"
+	},
+	"export default function": {
+		"prefix": "exdfn",
+		"body": ["export default function (${1:params}) {", "\t${2}", "}", ""],
+		"description": "export default function\n"
+	},
+	"export default async function": {
+		"prefix": "exdasfn",
+		"body": ["export default async function (${1:params}) {", "\t${2}", "}", ""],
+		"description": "export default async function\n"
 	},
 	"export default": {
 		"prefix": "exd",
@@ -86,16 +113,6 @@
 			"}"
 		],
 		"description": "export class extends\n"
-	},
-	"export default arrow function": {
-		"prefix": "exdaf",
-		"body": ["export default (${1:params}) => {", "\t${2}", "}", ""],
-		"description": "export default arrow function\n"
-	},
-	"export default function": {
-		"prefix": "exdfn",
-		"body": ["export default function ${1:name} (${2:params}) {", "\t${3}", "}", ""],
-		"description": "export default function\n"
 	},
 	"export from": {
 		"prefix": "exfr",
