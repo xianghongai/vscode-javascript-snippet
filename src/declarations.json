@@ -9,6 +9,21 @@
 		"body": ["const ${1:name} = ${2:value};"],
 		"description": "const assignment\n"
 	},
+	"const object": {
+		"prefix": "co",
+		"body": ["const ${1:feature} = {\n\t$2\n};"],
+		"description": "const object\n"
+	},
+	"const array": {
+		"prefix": "ca",
+		"body": ["const ${1:feature} = [$2];"],
+		"description": "const object\n"
+	},
+	"const string": {
+		"prefix": "cs",
+		"body": ["const ${1:feature} = '$2';"],
+		"description": "const string\n"
+	},
 	"const destructing object": {
 		"prefix": "cdo",
 		"body": ["const {${2}} = ${1};"],
@@ -24,6 +39,21 @@
 		"body": ["let ${1:name} = ${2:value};"],
 		"description": "let assignment\n"
 	},
+	"let object": {
+		"prefix": "lo",
+		"body": ["let ${1:feature} = {\n\t$2\n};"],
+		"description": "let object\n"
+	},
+	"let array": {
+		"prefix": "la",
+		"body": ["let ${1:feature} = [$2];"],
+		"description": "let object\n"
+	},
+	"let string": {
+		"prefix": "ls",
+		"body": ["let ${1:feature} = '$2';"],
+		"description": "let string\n"
+	},
 	"let destructing object": {
 		"prefix": "ldo",
 		"body": ["let {${2}} = ${1};"],
@@ -38,6 +68,21 @@
 		"prefix": "v",
 		"body": ["var ${1:name} = ${2:value};"],
 		"description": "var assignment\n"
+	},
+	"var object": {
+		"prefix": "vo",
+		"body": ["var ${1:feature} = {\n\t$2\n};"],
+		"description": "var object\n"
+	},
+	"var array": {
+		"prefix": "va",
+		"body": ["var ${1:feature} = [$2];"],
+		"description": "var object\n"
+	},
+	"var string": {
+		"prefix": "vs",
+		"body": ["var ${1:feature} = '$2';"],
+		"description": "var string\n"
 	},
 	"var destructing object": {
 		"prefix": "vdo",
@@ -56,12 +101,12 @@
 	},
 	"property object": {
 		"prefix": "po",
-		"body": ["${1:property}: { ${2:property} },$0"],
+		"body": ["${1:property}: {\n\t${2:property},\n},$0"],
 		"description": "object property\n"
 	},
 	"property array": {
 		"prefix": "pa",
-		"body": ["${1:property}: [ ${2:item} ],$0"],
+		"body": ["${1:property}: [${2:item}],$0"],
 		"description": "array property\n"
 	},
 	"property string": {

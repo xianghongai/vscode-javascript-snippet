@@ -8,7 +8,7 @@
     {
       "files": ["src/**/*.json"],
       "options": {
-        "printWidth": 120,
+        "printWidth": 80,
         "useTabs": true
       }
     }

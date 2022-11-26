@@ -2,8 +2,8 @@
 	"class": {
 		"prefix": "cl",
 		"body": [
-			"class ${1:name} {",
-			"\tconstructor(${2:params}) {",
+			"class ${1:ClassName} {",
+			"\tconstructor(${2:param}) {",
 			"\t\t${3}",
 			"\t}",
 			"",
@@ -14,8 +14,8 @@
 	"class extends": {
 		"prefix": "cle",
 		"body": [
-			"class ${1:className} extends ${2:baseClassName} {",
-			"\tconstructor(${3:params}) {",
+			"class ${1:ClassName} extends ${2:BaseClassName} {",
+			"\tconstructor(${3:param}) {",
 			"\t\tsuper();",
 			"\t\t${4}",
 			"\t}",
@@ -24,44 +24,54 @@
 		],
 		"description": "class extends\n"
 	},
+	"class property": {
+		"prefix": ["p", "clp"],
+		"body": ["${1:property} = ${2:value};"],
+		"description": "class property\n"
+	},
+	"class method()": {
+		"prefix": ["m", "clm"],
+		"body": ["${1:method} (${2:param}) {", "\t${3}", "}"],
+		"description": "method statements\n"
+	},
 	"class static method()": {
 		"prefix": ["clsm", "staticMethod"],
-		"body": ["static ${1:methodName}(${2:params}) {", "\treturn ${3};", "}"],
+		"body": ["static ${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
 		"description": "class static method\n"
 	},
 	"class static property": {
 		"prefix": ["clsp", "staticProperty"],
-		"body": ["static ${1:property} = ${2:'value'};"],
+		"body": ["static ${1:property} = ${2:value};"],
 		"description": "class static property\n"
 	},
 	"class private method()": {
 		"prefix": ["clpm", "privateMethod"],
-		"body": ["#${1:methodName}(${2:params}) {", "\treturn ${3};", "}"],
+		"body": ["#${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
 		"description": "class private method\n"
 	},
 	"class private property": {
 		"prefix": ["clpp", "privateProperty"],
-		"body": ["#${1:property} = ${2:'value'};"],
+		"body": ["#${1:property} = ${2:value};"],
 		"description": "class private property\n"
 	},
 	"class static private method()": {
 		"prefix": ["clspm", "staticPrivateMethod"],
-		"body": ["static #${1:methodName}(${2:params}) {", "\treturn ${3};", "}"],
+		"body": ["static #${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
 		"description": "class static private method\n"
 	},
 	"class static private property": {
 		"prefix": ["clspp", "staticPrivateProperty"],
-		"body": ["static #${1:property} = ${2:'value'};"],
+		"body": ["static #${1:property} = ${2:value};"],
 		"description": "class static private property\n"
 	},
 	"class generator method()": {
 		"prefix": ["clgm", "generatorMethod"],
-		"body": ["*${1:methodName}(${2:params}) {", "\tyield ${3};", "}"],
+		"body": ["*${1:methodName}(${2:param}) {", "\tyield ${3};", "}"],
 		"description": "class static\n"
 	},
 	"class constructor()": {
 		"prefix": ["clc", "cons"],
-		"body": ["constructor(${1:params}) {\n\t${2}\n}"],
+		"body": ["constructor(${1:param}) {\n\t${2}\n}"],
 		"description": "class constructor\n"
 	},
 	"get property()": {
@@ -91,29 +101,20 @@
 		],
 		"description": "getter and setter\n"
 	},
-	"method()": {
-		"prefix": "m",
-		"body": ["${1:method} (${2:params}) {", "\t${3}", "}"],
-		"description": "method\n"
-	},
 	"async method()": {
 		"prefix": "asm",
-		"body": ["async ${1:method}(${2:params}) {", "\t${3}", "}"],
+		"body": ["async ${1:method}(${2:param}) {", "\t${3}", "}"],
 		"description": "async method\n"
 	},
 	"prototype constructor()": {
 		"prefix": ["pc", "protoc"],
-		"body": [
-			"const ${1:Constructor} = function(${2:params}) {",
-			"\t${3}",
-			"};"
-		],
+		"body": ["const ${1:Constructor} = function(${2:param}) {", "\t${3}", "};"],
 		"description": "prototypal constructor\n"
 	},
 	"prototype method()": {
 		"prefix": ["pm", "protom"],
 		"body": [
-			"${1:Constructor}.prototype.${2:method} = function (${3:params}) {",
+			"${1:Constructor}.prototype.${2:method} = function (${3:param}) {",
 			"\t${4}",
 			"};"
 		],

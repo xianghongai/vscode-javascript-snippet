@@ -11,8 +11,53 @@
 	},
 	"generator function": {
 		"prefix": "gf",
-		"body": ["function* ${1:name}(${2:params}) {\n\t${3:yield} ;\n}\n"],
+		"body": [
+			"function* ${1:name}(${2:param}) {",
+			"\tyield* ${3:expression}();",
+			"\tyield ${4:expression};",
+			"}"
+		],
 		"description": "Creates generator function\n"
+	},
+	"generator method": {
+		"prefix": "gm",
+		"body": [
+			"*generator(${1:param}) {",
+			"\tyield* ${3:expression}();",
+			"\tyield ${4:expression};",
+			"},"
+		],
+		"description": "generator method"
+	},
+	"async generator method": {
+		"prefix": "asgm",
+		"body": [
+			"async *generator(${1:param}) {",
+			"\tyield* ${3:expression}();",
+			"\tyield ${4:expression};",
+			"},"
+		],
+		"description": "async generator method"
+	},
+	"generator method expression": {
+		"prefix": "gme",
+		"body": [
+			"*[generator](${1:param}) {",
+			"\tyield* ${3:expression}();",
+			"\tyield ${4:expression};",
+			"},"
+		],
+		"description": "generator method with computed keys"
+	},
+	"async generator method expression": {
+		"prefix": "asgme",
+		"body": [
+			"async *[generator](${1:param}) {",
+			"\tyield* ${3:expression}();",
+			"\tyield ${4:expression};",
+			"},"
+		],
+		"description": "async generator method with computed keys"
 	},
 	"yield": {
 		"prefix": "y",
@@ -21,7 +66,7 @@
 	},
 	"yield*": {
 		"prefix": "yg",
-		"body": ["yield* ${1:expression};"],
+		"body": ["yield* ${1:expression}();"],
 		"description": "The yield* expression is used to delegate to another generator or iterable object."
 	}
 }

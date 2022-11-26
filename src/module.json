@@ -26,12 +26,12 @@
 	},
 	"export": {
 		"prefix": "ex",
-		"body": ["export {${1:nameN}};"],
+		"body": ["export { ${1:feature} };"],
 		"description": "*export list\n"
 	},
 	"export renaming": {
 		"prefix": "exas",
-		"body": ["export {${1:variable} as ${2:name}};"],
+		"body": ["export { ${1:variable} as ${2:feature} };"],
 		"description": "*renaming exports as\n"
 	},
 	"export const": {
@@ -39,15 +39,20 @@
 		"body": ["export const ${1:name} = ${2:value};"],
 		"description": "exporting individual features(const)\n"
 	},
-	"export arrow function (named)": {
-		"prefix": "exafn",
-		"body": ["export const ${1:name} = (${2:params}) => {", "\t$3", "};"],
-		"description": "export named arrow function\n"
+	"export arrow function statements": {
+		"prefix": "exaf",
+		"body": ["export const ${1:name} = (${2:param}) => {", "\t$3", "};"],
+		"description": "export named arrow function statements\n"
+	},
+	"export arrow function expression": {
+		"prefix": "exafe",
+		"body": ["export const ${1:name} = (${2:param}) => $3;"],
+		"description": "export named arrow function expression\n"
 	},
 	"export async arrow function (named)": {
 		"prefix": "exasafn",
 		"body": [
-			"export const ${1:name} = async (${2:params}) => {",
+			"export const ${1:name} = async (${2:param}) => {",
 			"\tconst ${3:result} = await ${4:promise};",
 			"\treturn ${3:result};",
 			"};",
@@ -55,14 +60,19 @@
 		],
 		"description": "export named async arrow function\n"
 	},
-	"export default arrow function": {
+	"export default arrow function statements": {
 		"prefix": "exdaf",
-		"body": ["export default (${1:params}) => {", "\t${2}", "}", ""],
-		"description": "export default arrow function\n"
+		"body": ["export default (${1:param}) => {", "\t${2}", "}", ""],
+		"description": "export default arrow function statements\n"
+	},
+	"export default arrow function expression": {
+		"prefix": "exdafe",
+		"body": ["export default (${1:param}) => ${2}", ""],
+		"description": "export default arrow function expression\n"
 	},
 	"export default async arrow function": {
 		"prefix": "exdasaf",
-		"body": ["export default async (${1:params}) => {", "\t${2}", "}", ""],
+		"body": ["export default async (${1:param}) => {", "\t${2}", "}", ""],
 		"description": "export default async arrow function\n"
 	},
 	"export function (named)": {
@@ -73,18 +83,18 @@
 	"export async function (named)": {
 		"prefix": "exasfn",
 		"body": [
-			"export async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+			"export async function ${1:name} (${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
 		],
 		"description": "export named async function\n"
 	},
 	"export default function": {
 		"prefix": "exdfn",
-		"body": ["export default function (${1:params}) {", "\t${2}", "}", ""],
+		"body": ["export default function (${1:param}) {", "\t${2}", "}", ""],
 		"description": "export default function\n"
 	},
 	"export default async function": {
 		"prefix": "exdasfn",
-		"body": ["export default async function (${1:params}) {", "\t${2}", "}", ""],
+		"body": ["export default async function (${1:param}) {", "\t${2}", "}", ""],
 		"description": "export default async function\n"
 	},
 	"export default": {
@@ -94,19 +104,26 @@
 	},
 	"export as default": {
 		"prefix": "exdas",
-		"body": ["export {${1:name} as default};"],
+		"body": ["export { ${1:name} as default };"],
 		"description": "export as default\n"
 	},
 	"export class": {
 		"prefix": "exdc",
-		"body": ["export default class ${1:className} {", "\tconstructor (${2:params}) {", "\t\t${3}", "\t}", "}", ""],
+		"body": [
+			"export default class ${1:className} {",
+			"\tconstructor (${2:param}) {",
+			"\t\t${3}",
+			"\t}",
+			"}",
+			""
+		],
 		"description": "export class\n"
 	},
 	"export class extends": {
 		"prefix": "exdce",
 		"body": [
 			"export default class ${1:className} extends ${2:baseClassName} {",
-			"\tconstructor (${3:params}) {",
+			"\tconstructor (${3:param}) {",
 			"\t\tsuper();",
 			"\t\t${4}",
 			"\t}",

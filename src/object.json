@@ -11,12 +11,42 @@
 	},
 	"object method()": {
 		"prefix": "om",
-		"body": ["${1:method}(${2:params}) {", "\t${3}", "},"],
+		"body": ["${1:method}(${2:param}) {", "\t${3}", "},"],
 		"description": "method\n"
 	},
+	"object set": {
+		"prefix": "oset",
+		"body": ["set ${1:property}(${2:value}) {\n\t$3\n},"],
+		"description": "setter"
+	},
+	"object get": {
+		"prefix": "oget",
+		"body": ["get ${1:property}() {\n\t$2\n},"],
+		"description": "getter"
+	},
+	"object set with computed keys": {
+		"prefix": "osete",
+		"body": ["set [${1:property}](${2:value}) {\n\t$3\n},"],
+		"description": "setter"
+	},
+	"object get with computed keys": {
+		"prefix": "ogete",
+		"body": ["get [${1:property}]() {\n\t$2\n},"],
+		"description": "getter"
+	},
+	"object arrow method statements": {
+		"prefix": "oam",
+		"body": ["${1:method}: (${2:param}) => {", "\t${3}", "},"],
+		"description": "note we can't use an arrow function if we want to use `this`.\n"
+	},
+	"object arrow method expression": {
+		"prefix": "oame",
+		"body": ["${1:method}: (${2:param}) => ${3},"],
+		"description": "note we can't use an arrow function if we want to use `this`.\n"
+	},
 	"object async method()": {
-		"prefix": "asom",
-		"body": ["async ${1:method}(${2:params}) {", "\t${3}", "},"],
+		"prefix": "oasm",
+		"body": ["````async```` ${1:method}(${2:param}) {", "\t${3}", "},"],
 		"description": "async method\n"
 	},
 	"Object.assign()": {

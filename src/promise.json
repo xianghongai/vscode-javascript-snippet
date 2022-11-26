@@ -1,6 +1,6 @@
 {
 	"new Promise": {
-		"prefix": "p",
+		"prefix": "pr",
 		"body": ["const ${1:promise} = new Promise((resolve, reject) => {", "\t${2}", "});", ""],
 		"description": "Promise\n"
 	},

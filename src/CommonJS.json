@@ -2,7 +2,7 @@
 	"module as class (CommonJS)": {
 		"prefix": "ec",
 		"body": [
-			"class ${1:name} {\n\tconstructor (${2:params}) {\n\t\t${3}\n\t}\n}\n\nmodule.exports = ${1:name}\n"
+			"class ${1:name} {\n\tconstructor (${2:param}) {\n\t\t${3}\n\t}\n}\n\nmodule.exports = ${1:name}\n"
 		],
 		"description": "exports.member (CommonJS)\n"
 	},
