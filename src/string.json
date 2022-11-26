@@ -1,4 +1,9 @@
 {
+	"Template literals": {
+		"prefix": "tl",
+		"body": ["$2`\\${${1:expression}\\}$3`"],
+		"description": "Template strings\n"
+	},
 	"String.prototype.length": {
 		"prefix": ["sl", "str.length"],
 		"body": ["${1:str}.length"],
@@ -161,7 +166,10 @@
 	},
 	"String.prototype[@@iterator]()": {
 		"prefix": "ssi",
-		"body": ["const ${2:iterator} = ${1:str}[Symbol.iterator]();", "$2.next().value"],
+		"body": [
+			"const ${2:iterator} = ${1:str}[Symbol.iterator]();",
+			"$2.next().value"
+		],
 		"description": "str[Symbol.iterator]\nreturn a new **Iterator** object.\n"
 	}
 }

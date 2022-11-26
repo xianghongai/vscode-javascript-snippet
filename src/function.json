@@ -9,29 +9,39 @@
 		"body": ["function (${1:param}) {\n\t${2}\n}"],
 		"description": "function anonymous\n"
 	},
-	"function expression(var)": {
+	"function statements(var)": {
 		"prefix": "vfn",
 		"body": ["var ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function expression(var)\n"
+		"description": "function statements(var)\n"
 	},
-	"function expression(let)": {
+	"function statements(let)": {
 		"prefix": "lfn",
 		"body": ["let ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function expression(let)\n"
+		"description": "function statements(let)\n"
 	},
-	"function expression(const)": {
+	"function statements(const)": {
 		"prefix": "cfn",
 		"body": ["const ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function expression(const)\n"
+		"description": "function statements(const)\n"
+	},
+	"arrow function statements(let)": {
+		"prefix": ["laf"],
+		"body": ["let ${1:name} = (${2:param}) => {\n\t${3}\n}\n"],
+		"description": "arrow function statements(let)\n"
 	},
 	"arrow function expression(let)": {
-		"prefix": "laf",
-		"body": ["let ${1:name} = (${2:param}) => {\n\t${3}\n}\n"],
+		"prefix": "lafe",
+		"body": ["let ${1:name} = (${2:param}) => ${3};\n"],
 		"description": "arrow function expression(let)\n"
 	},
-	"arrow function expression(const)": {
-		"prefix": "caf",
+	"arrow function statements(const)": {
+		"prefix": ["caf"],
 		"body": ["const ${1:name} = (${2:param}) => {\n\t${3}\n}\n"],
+		"description": "arrow function statements(const)\n"
+	},
+	"arrow function expression(const)": {
+		"prefix": "cafe",
+		"body": ["const ${1:name} = (${2:param}) => ${3};\n"],
 		"description": "arrow function expression(const)\n"
 	},
 	"function property": {
@@ -54,7 +64,16 @@
 		"body": ["${1:method}.bind(${2:this});"],
 		"description": "function.bind(thisArg[, arg1[, arg2[, ...]]])\n"
 	},
-	"arrow function": { "prefix": "af", "body": ["(${1:param}) => {\n\t${2}\n}\n"], "description": "arrow function" },
+	"arrow function statements": {
+		"prefix": ["af", "afs"],
+		"body": ["(${1:param}) => {\n\t${2}\n}\n"],
+		"description": "arrow function statements\n"
+	},
+	"arrow function expression": {
+		"prefix": "afe",
+		"body": ["(${1:param}) => ${2}"],
+		"description": "arrow function expression\n"
+	},
 	"arrow function with return": {
 		"prefix": "afr",
 		"body": ["(${1:param}) => {\n\treturn ${2};\n}\n"],
@@ -77,6 +96,8 @@
 	},
 	"new.target": {
 		"prefix": "nt",
-		"body": ["if (typeof new.target === 'undefined') {\n\tthrow new Error('Fn() must be called with new');\n}"]
+		"body": [
+			"if (typeof new.target === 'undefined') {\n\tthrow new Error('Fn() must be called with new');\n}"
+		]
 	}
 }

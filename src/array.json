@@ -1,11 +1,11 @@
 {
 	"const array": {
-		"prefix": "arr",
+		"prefix": "ar",
 		"body": ["const ${1:arr} = [];"],
 		"description": "Create an Array\n"
 	},
 	"Array.length": {
-		"prefix": ["arrl", "arr.length"],
+		"prefix": ["arl", "arr.length"],
 		"body": ["${1:items}.length;"],
 		"description": "Array.length\n"
 	},
@@ -21,9 +21,7 @@
 	},
 	"Array.from(arrayLike, mapFn)": {
 		"prefix": ["arfr", "Arr.from()"],
-		"body": [
-			"Array.from(${1:arrayLike}, (${2:item}) => {\n\t${3}\n});"
-		],
+		"body": ["Array.from(${1:arrayLike}, (${2:item}) => {\n\t${3}\n});"],
 		"description": "Array.from(arrayLike[, mapFn[, thisArg]]);\n"
 	},
 	"Array.of(elementN)": {
@@ -44,45 +42,33 @@
 	},
 	"Array.prototype.copyWithin()": {
 		"prefix": ["arcw", "arr.copyWithin()"],
-		"body": [
-			"${1:items}.copyWithin(${2:target}, ${3:start}, ${4:end});"
-		],
+		"body": ["${1:items}.copyWithin(${2:target}, ${3:start}, ${4:end});"],
 		"description": "array.copyWithin(target[, start[, end]]);\nreturn the modified array\n"
 	},
 
 	"Array.prototype.every()": {
 		"prefix": ["arev", "arr.every()"],
-		"body": [
-			"${1:items}.every((${2:item}) => $3);"
-		],
+		"body": ["${1:items}.every((${2:item}) => $3);"],
 		"description": "array.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
 	},
 	"Array.prototype.fill()": {
 		"prefix": ["arfill", "arr.fill()"],
-		"body": [
-			"${1:items}.fill(${2:value}, ${3:start}, ${4:end});"
-		],
+		"body": ["${1:items}.fill(${2:value}, ${3:start}, ${4:end});"],
 		"description": "array.fill(value[, start[, end]]);\nreturn the modified array\n"
 	},
 	"Array.prototype.filter()": {
 		"prefix": ["arf", "filter", "arr.filter()"],
-		"body": [
-			"${1:items}.filter((${2:item}) => $3);"
-		],
+		"body": ["${1:items}.filter((${2:item}) => $3);"],
 		"description": "let newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
 	},
 	"Array.prototype.find()": {
 		"prefix": ["arfi", "find", "arr.find()"],
-		"body": [
-			"${1:items}.find((${2:item}) => $3);"
-		],
+		"body": ["${1:items}.find((${2:item}) => $3);"],
 		"description": "array.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
 	},
 	"Array.prototype.findIndex()": {
 		"prefix": ["arfin", "findIndex", "arr.findIndex()"],
-		"body": [
-			"${1:items}.findIndex((${2:item}) => $3)"
-		],
+		"body": ["${1:items}.findIndex((${2:item}) => $3)"],
 		"description": "array.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
 	},
 	"Array.prototype.flat()": {
@@ -92,30 +78,22 @@
 	},
 	"Array.prototype.flatMap()": {
 		"prefix": ["arflatMap", "arr.flatMap()"],
-		"body": [
-			"${1:items}.flatMap((${2:value}) => ${3:value});"
-		],
+		"body": ["${1:items}.flatMap((${2:value}) => ${3:value});"],
 		"description": "let newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
 	},
 	"Array.prototype.forEach(), arrow function": {
 		"prefix": ["fe", "arr.forEach()"],
-		"body": [
-			"${1:items}.forEach((${2:item}) => {\n\t${3}\n});"
-		],
+		"body": ["${1:items}.forEach((${2:item}) => {\n\t${3}\n});"],
 		"description": "array.forEach(arrow function(currentValue));\n"
 	},
 	"Array.prototype.forEach(), index": {
 		"prefix": ["fei", "arr.forEach()"],
-		"body": [
-			"${1:items}.forEach((${2:item}, ${3:index}) => {\n\t${4}\n});"
-		],
+		"body": ["${1:items}.forEach((${2:item}, ${3:index}) => {\n\t${4}\n});"],
 		"description": "array.forEach(arrow function(currentValue, index));\n"
 	},
 	"Array.prototype.forEach()": {
 		"prefix": ["fefn", "arr.forEach()"],
-		"body": [
-			"${1:items}.forEach(function(${2:item}) {\n\t${3}\n});"
-		],
+		"body": ["${1:items}.forEach(function(${2:item}) {\n\t${3}\n});"],
 		"description": "array.forEach(function(currentValue);\n"
 	},
 	"Array.prototype.forEach(function(currentValue, index)": {
@@ -147,9 +125,7 @@
 	},
 	"Array.prototype.map()": {
 		"prefix": ["map", "arr.map()"],
-		"body": [
-			"${1:items}.map((${2:currentValue}) => {\n\t${3}\n});"
-		],
+		"body": ["${1:items}.map((${2:currentValue}) => {\n\t${3}\n});"],
 		"description": "let newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
 	},
 	"Array.prototype.pop()": {
@@ -188,23 +164,17 @@
 	},
 	"Array.prototype.slice()": {
 		"prefix": ["arsl", "arr.slice()"],
-		"body": [
-			"${1:items}.slice(${2:beginIndex}, ${3:endIndex});"
-		],
+		"body": ["${1:items}.slice(${2:beginIndex}, ${3:endIndex});"],
 		"description": "array.slice([begin[, end]]);\n return a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.\n"
 	},
 	"Array.prototype.some()": {
 		"prefix": ["arso", "arr.some()"],
-		"body": [
-			"${1:items}.some((${2:item}) => $3);"
-		],
+		"body": ["${1:items}.some((${2:item}) => $3);"],
 		"description": "array.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
 	},
 	"Array.prototype.sort()": {
 		"prefix": ["arsor", "arr.sort()"],
-		"body": [
-			"${1:items}.sort((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"
-		],
+		"body": ["${1:items}.sort((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
 		"description": "array.sort([compareFunction(firstEl, secondEl)]);\nreturn the sorted array. Note that the array is sorted in-place, and no copy is made.\n"
 	},
 	"Array.prototype.splice()": {

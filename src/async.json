@@ -7,28 +7,28 @@
 	"async function (named)": {
 		"prefix": "asfn",
 		"body": [
-			"async function ${1:name} (${2:params}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+			"async function ${1:name} (${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
 		],
 		"description": "async function named\n"
 	},
 	"async function (anonymous)": {
 		"prefix": "asfna",
-		"body": ["async function (${1:params}) {\n\t${2}\n}\n"],
+		"body": ["async function (${1:param}) {\n\t${2}\n}\n"],
 		"description": "async function anonymous\n"
 	},
 	"async generator function (named)": {
 		"prefix": "asgfn",
-		"body": ["async function* ${1:name} (${2:params}) {\n\t${3}\n}\n"],
+		"body": ["async function* ${1:name} (${2:param}) {\n\t${3}\n}\n"],
 		"description": "async generator function named\n"
 	},
 	"async generator function (anonymous)": {
 		"prefix": "asgfna",
-		"body": ["async function* (${1:params}) {\n\t${2}\n}\n"],
+		"body": ["async function* (${1:param}) {\n\t${2}\n}\n"],
 		"description": "async generator function anonymous\n"
 	},
 	"async arrow function": {
 		"prefix": "asaf",
-		"body": ["async (${1:params}) => {\n\t${2}\n}\n"],
+		"body": ["async (${1:param}) => {\n\t${2}\n}\n"],
 		"description": "async arrow function\n"
 	},
 	"await": {

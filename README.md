@@ -66,19 +66,25 @@ Note: All the snippets include the final semicolon `;`
 
 ### Declarations
 
-| Prefix  | Body                  | Description                          |
-|:--------|-----------------------|--------------------------------------|
-| `usm` → | `'use strict';`       | **u**se **s**trict **m**ode          |
-| `c` →   | `const name = value;` |                                      |
-| `cdo` → | `const {} = ;`        | **c**onst **d**estructing **o**bject |
-| `cda` → | `const [] = ;`        | **c**onst **d**estructing **a**rray  |
-| `l` →   | `let name = value;`   |                                      |
-| `ldo` → | `let {} = ;`          |                                      |
-| `lda` → | `let [] = ;`          |                                      |
-| `v` →   | `var name = value;`   |                                      |
-| `vdo` → | `var {} = ;`          |                                      |
-| `vda` → | `var [] = ;`          |                                      |
-| `dp` →  | `{}: parameter`       | **d**estructuring **p**arameter      |
+| Prefix           | Body                          | Description                          |
+|:-----------------|-------------------------------|--------------------------------------|
+| `usm` →          | `'use strict';`               | **u**se **s**trict **m**ode          |
+| `c` →            | `const name = value;`         |                                      |
+| `co`/`lo`/`vo` → | `const/let/var feature = {};` |                                      |
+| `ca`/`la`/`va` → | `const/let/var feature = [];` |                                      |
+| `cs`/`ls`/`vs` → | `const/let/var feature = '';` |                                      |
+| `cdo` →          | `const {} = ;`                | **c**onst **d**estructing **o**bject |
+| `cda` →          | `const [] = ;`                | **c**onst **d**estructing **a**rray  |
+| `l` →            | `let name = value;`           |                                      |
+| `ldo` →          | `let {} = ;`                  |                                      |
+| `lda` →          | `let [] = ;`                  |                                      |
+| `v` →            | `var name = value;`           |                                      |
+| `vdo` →          | `var {} = ;`                  |                                      |
+| `vda` →          | `var [] = ;`                  |                                      |
+| `dp` →           | `{}: parameter`               | **d**estructuring **p**arameter      |
+| `po` →           | `property: { property, },`    | property object                      |
+| `pa` →           | `property: [item],`           | property array                       |
+| `ps` →           | `property: 'value',`          | property string                      |
 
 ### Statement
 
@@ -88,8 +94,8 @@ Note: All the snippets include the final semicolon `;`
 | `ife` →           | `if (condition) { } else { }`                                                     |                                        |
 | `ei` →            | `else if (condition) { }`                                                         |                                        |
 | `el` →            | `else { }`                                                                        |                                        |
-| `swi` →           | `switch () { case : break; default: break;}`                                      |                                        |
-| `cas` →           | `case : break;`                                                                   |                                        |
+| `swi` →           | `switch () { case : statements; break; default: statements; break;}`              |                                        |
+| `cas` →           | `case value: statements; break;`                                                  |                                        |
 | `fin` →           | `for (const key in object) { if (object.hasOwnProperty(key)) { }}`                | **f**or-**in**                         |
 | `fof` →           | `for (const item of object) { }`                                                  | **f**or-**of**                         |
 | `fl`/`fo`/`for` → | `for (const index = 0, length = iterable.length; index < length; index += 1) { }` |                                        |
@@ -101,22 +107,22 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix      | Body                                                                                             | Description                                   |
 |:------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| `fn` →      | `function name (params) { }`                                                                     | **f**u**n**ction                              |
-| `fna` →     | `function (params) { }`                                                                          | **f**u**n**ction **a**nonymous                |
-| `vfn` →     | `var name = function (params) { }`                                                               |                                               |
-| `lfn` →     | `let name = function (params) { }`                                                               |                                               |
-| `cfn` →     | `const name = function (params) { }`                                                             |                                               |
-| `fnp` →     | `name: function(params) { }`                                                                     | **f**u**n**ction as **p**roperty              |
-| `fnapply` → | `method.apply(context, [params]);`                                                               | **f**u**n**ction.**apply**                    |
-| `fncall` →  | `method.call(context, params);`                                                                  | **f**u**n**ction.**call**                     |
+| `fn` →      | `function name (param) { }`                                                                      | **f**u**n**ction                              |
+| `fna` →     | `function (param) { }`                                                                           | **f**u**n**ction **a**nonymous                |
+| `vfn` →     | `var name = function (param) { }`                                                                |                                               |
+| `lfn` →     | `let name = function (param) { }`                                                                |                                               |
+| `cfn` →     | `const name = function (param) { }`                                                              |                                               |
+| `fnp` →     | `name: function(param) { }`                                                                      | **f**u**n**ction as **p**roperty              |
+| `fnapply` → | `method.apply(context, [param]);`                                                                | **f**u**n**ction.**apply**                    |
+| `fncall` →  | `method.call(context, param);`                                                                   | **f**u**n**ction.**call**                     |
 | `fnbind` →  | `method.bind(this);`                                                                             | **f**u**n**ction.**bind**                     |
-| `af` →      | `(params) => { }`                                                                                | **a**rrow **f**unction                        |
-| `afr` →     | `(params) => { return }`                                                                         | **a**rrow **f**unction with **r**eturn        |
-| `afd` →     | `({params}) => statement`                                                                        | **a**rrow **f**unction with **d**estructuring |
-| `laf` →     | `let name = (params) => { }`                                                                     |                                               |
-| `caf` →     | `const name = (params) => { }`                                                                   |                                               |
-| `iif` →     | `;((params) => { })()`                                                                           |                                               |
-| `iife` →    | `;(function (params) { })()`                                                                     |                                               |
+| `af` →      | `(param) => { }`                                                                                 | **a**rrow **f**unction                        |
+| `afr` →     | `(param) => { return }`                                                                          | **a**rrow **f**unction with **r**eturn        |
+| `afd` →     | `({param}) => statement`                                                                         | **a**rrow **f**unction with **d**estructuring |
+| `laf` →     | `let name = (param) => { }`                                                                      |                                               |
+| `caf` →     | `const name = (param) => { }`                                                                    |                                               |
+| `iif` →     | `;((param) => { })()`                                                                            |                                               |
+| `iife` →    | `;(function (param) { })()`                                                                      |                                               |
 | `nt` →      | `if (typeof new.target === 'undefined') { throw new Error('Fn() must be called with new');}`" ]} | **n**ew.**t**arget                            |
 
 ### Array
@@ -176,6 +182,12 @@ Note: All the snippets include the final semicolon `;`
 |:-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | `ol` →     | `{ key: value }`                                                                                                                                                                                                                                         |                                                             |
 | `kv` →     | `key: value,`                                                                                                                                                                                                                                            |                                                             |
+| `om` →     | `method(param) {  },`                                                                                                                                                                                                                                    | **o**bject **m**ethod()                                     |
+| `oset` →   | `set property(value) {  },`                                                                                                                                                                                                                              | **o**bject **set**                                          |
+| `oget` →   | `get property() {  },`                                                                                                                                                                                                                                   | **o**bject **get**                                          |
+| `oam` →    | `method: (param) => {  },`                                                                                                                                                                                                                               | **o**bject **a**rrow **m**ethod statements                  |
+| `oame` →   | `method: (param) => $3,`                                                                                                                                                                                                                                 | **o**bject **a**rrow **m**ethod **e**xpression              |
+| `oasm` →   | `async method(param) {  },`                                                                                                                                                                                                                              | **o**bject **as**ync **m**ethod()                           |
 | `oa` →     | `Object.assign(target, source);`                                                                                                                                                                                                                         |                                                             |
 | `oc` →     | `Object.create(obj);`                                                                                                                                                                                                                                    |                                                             |
 | `odp` →    | `Object.defineProperty(dest, 'propertyName', { value: undefined, configurable: false, enumerable: false, writable: false})`                                                                                                                              | **O**bject.**d**efine**P**roperty(data descriptors)         |
@@ -211,6 +223,7 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix    | Body                                     | Description                         |
 |:----------|------------------------------------------|-------------------------------------|
+| `tl` →    | `${expression}`                          | **T**emplate **l**iterals           |
 | `sfcc` →  | `String.fromCharCode(numN)`              | **S**tring.**f**rom**C**har**C**ode |
 | `sfcp` →  | `String.fromCodePoint(numN)`             |                                     |
 | `sr` →    | <code>String.raw`templateString`</code>  |                                     |
@@ -272,18 +285,18 @@ Note: All the snippets include the final semicolon `;`
 
 `re.<method>`
 
-| Prefix          | Body                                                          | Description                      |
-|:----------------|---------------------------------------------------------------|----------------------------------|
-| `re` →          | `let regex = RegExp('pattern');`                              | **R**eg**E**xp                   |
-| `rep` →         | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern       |
-| `ree` →         | `let regex = RegExp('pattern');let result = regex.exec(str);` |                                  |
-| `ret` →         | `let regex = RegExp('pattern');let result = regex.test(str);` |                                  |
-| `re.@@species`  |                                                               | `get RegExp[@@species]`          |
-| `re.@@match`    |                                                               | `RegExp.prototype[@@match]()`    |
-| `re.@@matchAll` |                                                               | `RegExp.prototype[@@matchAll]()` |
-| `re.@@replace`  |                                                               | `RegExp.prototype[@@replace]()`  |
-| `re.@@search`   |                                                               | `RegExp.prototype[@@search]()`   |
-| `re.@@split`    |                                                               | `RegExp.prototype[@@split]()`    |
+| Prefix            | Body                                                          | Description                |
+|:------------------|---------------------------------------------------------------|----------------------------|
+| `re` →            | `let regex = RegExp('pattern');`                              | **R**eg**E**xp             |
+| `rep` →           | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern |
+| `ree` →           | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
+| `ret` →           | `let regex = RegExp('pattern');let result = regex.test(str);` |                            |
+| `re.@@species` →  | `get RegExp[@@species]`                                       |                            |
+| `re.@@match` →    | `RegExp.prototype[@@match]()`                                 |                            |
+| `re.@@matchAll` → | `RegExp.prototype[@@matchAll]()`                              |                            |
+| `re.@@replace` →  | `RegExp.prototype[@@replace]()`                               |                            |
+| `re.@@search` →   | `RegExp.prototype[@@search]()`                                |                            |
+| `re.@@split` →    | `RegExp.prototype[@@split]()`                                 |                            |
 
 ### Chore
 
@@ -318,48 +331,57 @@ Note: All the snippets include the final semicolon `;`
 
 ### Module
 
-| Prefix     | Body                                                                                         | Description                                 |
-|:-----------|----------------------------------------------------------------------------------------------|---------------------------------------------|
-| `im` →     | `import { moduleName } from 'module';`                                                       | **im**port                                  |
-| `imd` →    | `import moduleName from 'module';`                                                           | **im**port **d**efault export               |
-| `imas` →   | `import { originalName as alias } from 'module';`                                            | **im**port **as** renamed exports           |
-| `imall` →  | `import * as alias from 'module';`                                                           | **im**port **all** module as alias          |
-| `imn` →    | `import 'module';`                                                                           | **im**port without module **n**ame          |
-| `ex` →     | `export {nameN};`                                                                            | **ex**port                                  |
-| `exas` →   | `export {variable as name};`                                                                 | **ex**port **as** renaming                  |
-| `exc` →    | `export const name = value;`                                                                 |                                             |
-| `exfn` →   | `export function name (){ }`                                                                 |                                             |
-| `exafn` →  | `export const name = (params) => { };`                                                       | **ex**port named **a**rrow **f**u**n**ction |
-| `exd` →    | `export default expression;`                                                                 | **ex**port **d**efault                      |
-| `exdas` →  | `export {name as default};`                                                                  |                                             |
-| `exdc` →   | `export default class className { constructor (params) { } }`                                |                                             |
-| `exdce` →  | `export default class className extends baseClassName { constructor (params) { super(); } }` |                                             |
-| `exdaf` →  | `export default (params) => { }`                                                             |                                             |
-| `exdfn` →  | `export default function name (params) { }`                                                  |                                             |
-| `exfr` →   | `export {default} from otherModule;`                                                         | **ex**port **fr**om                         |
-| `exallo` → | `export * from otherModule;`                                                                 | **ex**port **all** from **o**ther module    |
+| Prefix     | Body                                                                                        | Description                              |
+|:-----------|---------------------------------------------------------------------------------------------|------------------------------------------|
+| `im` →     | `import { moduleName } from 'module';`                                                      | **im**port                               |
+| `imd` →    | `import moduleName from 'module';`                                                          | **im**port **d**efault export            |
+| `imas` →   | `import { originalName as alias } from 'module';`                                           | **im**port **as** renamed exports        |
+| `imall` →  | `import * as alias from 'module';`                                                          | **im**port **all** module as alias       |
+| `imn` →    | `import 'module';`                                                                          | **im**port without module **n**ame       |
+| `ex` →     | `export { feature };`                                                                       | **ex**port                               |
+| `exas` →   | `export { variable as feature };`                                                           | **ex**port **as** renaming               |
+| `exc` →    | `export const name = value;`                                                                |                                          |
+| `exfn` →   | `export function name (){ }`                                                                | **ex**port **f**u**n**ction              |
+| `exaf` →   | `export const name = (param) => { };`                                                       | **ex**port named **a**rrow **f**unction  |
+| `exafe` →  | `export const name = (param) => $3;`                                                        | **ex**port named **a**rrow **f**unction  |
+| `exd` →    | `export default expression;`                                                                | **ex**port **d**efault                   |
+| `exdas` →  | `export { name as default };`                                                               |                                          |
+| `exdc` →   | `export default class className { constructor (param) { } }`                                |                                          |
+| `exdce` →  | `export default class className extends baseClassName { constructor (param) { super(); } }` |                                          |
+| `exdaf` →  | `export default (param) => { }`                                                             |                                          |
+| `exdafe` → | `export default (param) => $3`                                                              |                                          |
+| `exdfn` →  | `export default function name (param) { }`                                                  |                                          |
+| `exfr` →   | `export {default} from otherModule;`                                                        | **ex**port **fr**om                      |
+| `exallo` → | `export * from otherModule;`                                                                | **ex**port **all** from **o**ther module |
 
 ### Class
 
-| Prefix     | Body                                                                                              | Description                   |
-|:-----------|---------------------------------------------------------------------------------------------------|-------------------------------|
-| `cl` →     | `class name { constructor (params) { } }`                                                         | **cl**ass                     |
-| `cle` →    | `class className extends baseClassName { constructor (params) { super(); } }`                     | **cl**ass **e**xtends         |
-| `cls` →    | `static create(params) { return new PersonClass(params);}`                                        | **cl**ass **s**tatic          |
-| `cons` →   | `constructor(params) { }`                                                                         | class **cons**tructor         |
-| `get` →    | `get propertyName () { return this.element; }`                                                    | **g**et **p**ropertyName      |
-| `set` →    | `set propertyName (value) { this.element = value; }`                                              | **s**et **p**ropertyName      |
-| `gs` →     | `get propertyName () { return this.element; } set propertyName (value) { this.element = value; }` | **g**etter and **s**etter     |
-| `m` →      | `method (params) { }`                                                                             | **m**ethod                    |
-| `asm` →    | `async method(params) { }`                                                                        | **as**ync **m**ethod          |
-| `protoc` → | `var Constructor = function(params) { };`                                                         | **pro**totype **c**onstructor |
-| `protom` → | `Constructor.prototype.method = function (params) { };`                                           | **pro**totype **m**ethod      |
+| Prefix          | Body                                                                                              | Description                                   |
+|:----------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| `cl` →          | `class ClassName { constructor (param) { } }`                                                     | **cl**ass                                     |
+| `cle` →         | `class ClassName extends BaseClassName { constructor (param) { super(); } }`                      | **cl**ass **e**xtends                         |
+| `clc`/`cons` →  | `constructor(param) { }`                                                                          | class **cons**tructor                         |
+| `p`/`clp` →     | `property = value;`                                                                               | class **p**roperty                            |
+| `m`/`clm` →     | `method (param) { }`                                                                              | class **m**ethod                              |
+| `clsm` →        | `static methodName(param) { return; }`                                                            | **cl**ass **s**tatic **m**ethod()             |
+| `clsp` →        | `static property = value;`                                                                        | **cl**ass **s**tatic **p**roperty             |
+| `clpm` →        | `#methodName(param) { return ; }`                                                                 | **cl**ass **p**rivate **m**ethod()            |
+| `clpp` →        | `#property = value;`                                                                              | **cl**ass **p**rivate **p**roperty            |
+| `clspm` →       | `static #methodName(param) { return ; }`                                                          | **cl**ass **s**tatic **p**rivate **m**ethod() |
+| `clspp` →       | `static #property = value;`                                                                       | **cl**ass **s**tatic **p**rivate **p**roperty |
+| `clgm` →        | `*methodName(params) { yield ; }`                                                                 | **cl**ass **g**enerator **m**ethod()          |
+| `get` →         | `get propertyName () { return this.element; }`                                                    | **g**et **p**ropertyName                      |
+| `set` →         | `set propertyName (value) { this.element = value; }`                                              | **s**et **p**ropertyName                      |
+| `gs` →          | `get propertyName () { return this.element; } set propertyName (value) { this.element = value; }` | **g**etter and **s**etter                     |
+| `asm` →         | `async method(param) { }`                                                                         | **as**ync **m**ethod                          |
+| `pc`/`protoc` → | `var Constructor = function(param) { };`                                                          | **pro**totype **c**onstructor                 |
+| `pm`/`protom` → | `Constructor.prototype.method = function (param) { };`                                            | **pro**totype **m**ethod                      |
 
 ### Promise
 
 | Prefix   | Body                                                                                                     | Description                                      |
 |:---------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| `p` →    | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **p**romise                                  |
+| `pr` →   | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **Pr**omise                                  |
 | `pa` →   | `const results = await Promise.all([promises]);`                                                         | **P**romise.**a**ll                              |
 | `pan` →  | `const result = await Promise.any([promises]);`                                                          | **P**romise.**an**y                              |
 | `pas` →  | `const results = await Promise.allSettled([promises]);`                                                  | **P**romise.**a**ll**S**ettled                   |
@@ -377,27 +399,29 @@ Note: All the snippets include the final semicolon `;`
 
 ### Generator Iterator
 
-| Prefix | Body                                | Description                |
-|:-------|-------------------------------------|----------------------------|
-| `cy` → | `const name = yield value;`         |                            |
-| `ly` → | `let name = yield value;`           |                            |
-| `gf` → | `function* name(params) { yield ;}` | **g**enerator **f**unction |
-| `y` →  | `yield expression;`                 |                            |
-| `yg` → | `yield* expression;`                |                            |
+| Prefix   | Body                                         | Description                |
+|:---------|----------------------------------------------|----------------------------|
+| `cy` →   | `const name = yield value;`                  |                            |
+| `ly` →   | `let name = yield value;`                    |                            |
+| `gf` →   | `function* name(param) { yield expression;}` | **g**enerator **f**unction |
+| `gm` →   | `*generator(param) {  },`                    | generator method           |
+| `asgm` → | `async *generator(param) {  },`              | generator method           |
+| `y` →    | `yield expression;`                          |                            |
+| `yg` →   | `yield* expression();`                       |                            |
 
 ### Async
 
-| Prefix     | Body                                                                                                      | Description                                            |
-|:-----------|-----------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| `caw` →    | `const result = await promise;`                                                                           | **c**onst **aw**aited                                  |
-| `asfn` →   | `async function name (params) { const result = await promise; return result;}name().then(result => { });` | **as**ync **f**unction **n**amed                       |
-| `asfna` →  | `async function (params) { }`                                                                             | **as**ync **f**u**n**ction **a**nonymous               |
-| `asgfn` →  | `async function* name (params) { }`                                                                       | **as**ync **g**enerator **f**unction **n**amed         |
-| `asgfna` → | `async function* (params) { }`                                                                            | **as**ync **g**enerator **f**u**n**ction **a**nonymous |
-| `asaf` →   | `async (params) => { }`                                                                                   | **as**ync **a**rrow **f**unction                       |
-| `aw` →     | `await promise`                                                                                           |                                                        |
-| `awpa` →   | `await Promise.all(value)`                                                                                |                                                        |
-| `awpam` →  | `await Promise.all(array.map((value) => { }))`                                                            |                                                        |
+| Prefix     | Body                                                                                                     | Description                                            |
+|:-----------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| `caw` →    | `const result = await promise;`                                                                          | **c**onst **aw**aited                                  |
+| `asfn` →   | `async function name (param) { const result = await promise; return result;}name().then(result => { });` | **as**ync **f**unction **n**amed                       |
+| `asfna` →  | `async function (param) { }`                                                                             | **as**ync **f**u**n**ction **a**nonymous               |
+| `asgfn` →  | `async function* name (param) { }`                                                                       | **as**ync **g**enerator **f**unction **n**amed         |
+| `asgfna` → | `async function* (param) { }`                                                                            | **as**ync **g**enerator **f**u**n**ction **a**nonymous |
+| `asaf` →   | `async (param) => { }`                                                                                   | **as**ync **a**rrow **f**unction                       |
+| `aw` →     | `await promise`                                                                                          |                                                        |
+| `awpa` →   | `await Promise.all(value)`                                                                               |                                                        |
+| `awpam` →  | `await Promise.all(array.map((value) => { }))`                                                           |                                                        |
 
 ### Symbol
 
@@ -420,6 +444,31 @@ Note: All the snippets include the final semicolon `;`
 | `cs`/`set` → | `const resourceSet = new Set();`         |             |
 | `cwm`/`wm` → | `const resourceWeakMap = new WeakMap();` |             |
 | `cws`/`ws` → | `const resourceWeakSet = new WeakSet();` |             |
+|              | `map.size`                               |             |
+|              | `map.clear()`                            |             |
+|              | `map.delete()`                           |             |
+|              | `map.forEach()`                          |             |
+|              | `map.get()`                              |             |
+|              | `map.has()`                              |             |
+|              | `map.set()`                              |             |
+|              | `map.entries()`                          |             |
+|              | `map.keys()`                             |             |
+|              | `map.values()`                           |             |
+|              | `weakmap.delete()`                       |             |
+|              | `weakmap.get()`                          |             |
+|              | `weakmap.has()`                          |             |
+|              | `weakmap.set()`                          |             |
+|              | `set.size`                               |             |
+|              | `set.add()`                              |             |
+|              | `set.clear()`                            |             |
+|              | `set.delete()`                           |             |
+|              | `set.forEach()`                          |             |
+|              | `set.has()`                              |             |
+|              | `set.entries()`                          |             |
+|              | `set.values()`                           |             |
+|              | `weakset.add()`                          |             |
+|              | `weakset.delete()`                       |             |
+|              | `weakset.has()`                          |             |
 
 ### Error
 
@@ -628,26 +677,28 @@ Note: All the snippets include the final semicolon `;`
 
 ### Common Js/Node.js
 
-| Prefix  | Body                                                           | Description |
-|:--------|----------------------------------------------------------------|-------------|
-| `ec` →  | `class name { constructor (params) { }} module.exports = name` |             |
-| `em` →  | `exports.member = value`                                       |             |
-| `me` →  | `module.exports = name`                                        |             |
-| `rq` →  | `require('module')`                                            |             |
-| `crq` → | `const module = require('module');`                            |             |
+| Prefix  | Body                                                          | Description |
+|:--------|---------------------------------------------------------------|-------------|
+| `ec` →  | `class name { constructor (param) { }} module.exports = name` |             |
+| `em` →  | `exports.member = value`                                      |             |
+| `me` →  | `module.exports = name`                                       |             |
+| `rq` →  | `require('module')`                                           |             |
+| `crq` → | `const module = require('module');`                           |             |
 
 ### Bdd Testing (Mocha, Jasmine, etc.)
 
-| Prefix   | Body                                             |
-|:---------|--------------------------------------------------|
-| `desc` → | `describe('description', () => { })`             |
-| `cont` → | `context('description', callback);`              |
-| `it` →   | `it('description', () => { })`                   |
-| `ita` →  | `it('description', async (done) => { done();});` |
-| `afe` →  | `afterEach(() => { })`                           |
-| `bfe` →  | `beforeEach(() => { })`                          |
-| `aft` →  | `after(() => { })`                               |
-| `bf` →   | `before(() => { })`                              |
+`test.<method>`
+
+| Prefix   | Body                                              |
+|:---------|---------------------------------------------------|
+| `desc` → | `describe('description', () => { })`              |
+| `cont` → | `context('description', callback);`               |
+| `it` →   | `it('description', () => { })`                    |
+| `itas` → | `it('description', async (done) => { done(); });` |
+| `afe` →  | `afterEach(() => { })`                            |
+| `bfe` →  | `beforeEach(() => { })`                           |
+| `aft` →  | `after(() => { })`                                |
+| `bf` →   | `before(() => { })`                               |
 
 ## License
 
