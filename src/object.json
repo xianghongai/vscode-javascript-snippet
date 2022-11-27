@@ -46,7 +46,7 @@
 	},
 	"object async method()": {
 		"prefix": "oasm",
-		"body": ["````async```` ${1:method}(${2:param}) {", "\t${3}", "},"],
+		"body": ["async ${1:method}(${2:param}) {", "\t${3}", "},"],
 		"description": "async method\n"
 	},
 	"Object.assign()": {
