@@ -4,19 +4,19 @@
 
 <p align="center">
   <a href="https://github.com/xianghongai/vscode-javascript-snippet">
-    <img src="https://img.shields.io/github/repo-size/xianghongai/vscode-javascript-snippet?style=plastic&color=4ac51c">
+    <img src="https://img.shields.io/github/repo-size/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://vsmarketplacebadge.apphb.com/version-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=ff40bf">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/nicholashsiang.vscode-javascript-snippet?color=%234ac51c&style=plastic&?cacheSeconds=3600">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://vsmarketplacebadge.apphb.com/installs-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/nicholashsiang.vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://vsmarketplacebadge.apphb.com/rating-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c">
+    <img src="https://img.shields.io/visual-studio-marketplace/r/nicholashsiang.vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://img.shields.io/github/license/xianghongai/vscode-javascript-snippet?maxAge=2592000&style=plastic&color=4ac51c">
+    <img src="https://img.shields.io/github/license/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
   </a>
 </p>
 
@@ -107,12 +107,12 @@ Note: All the snippets include the final semicolon `;`
 
 | Prefix      | Body                                                                                             | Description                                   |
 |:------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| `fn` →      | `function name (param) { }`                                                                      | **f**u**n**ction                              |
-| `fna` →     | `function (param) { }`                                                                           | **f**u**n**ction **a**nonymous                |
+| `fn` →      | `function name(param) { }`                                                                      | **f**u**n**ction                              |
+| `fna` →     | `function(param) { }`                                                                           | **f**u**n**ction **a**nonymous                |
 | `vfn` →     | `var name = function (param) { }`                                                                |                                               |
 | `lfn` →     | `let name = function (param) { }`                                                                |                                               |
 | `cfn` →     | `const name = function (param) { }`                                                              |                                               |
-| `fnp` →     | `name: function(param) { }`                                                                      | **f**u**n**ction as **p**roperty              |
+| `fnp` →     | `name: function (param) { }`                                                                      | **f**u**n**ction as **p**roperty              |
 | `fnapply` → | `method.apply(context, [param]);`                                                                | **f**u**n**ction.**apply**                    |
 | `fncall` →  | `method.call(context, param);`                                                                   | **f**u**n**ction.**call**                     |
 | `fnbind` →  | `method.bind(this);`                                                                             | **f**u**n**ction.**bind**                     |

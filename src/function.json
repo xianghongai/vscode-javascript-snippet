@@ -1,12 +1,12 @@
 {
 	"function named": {
 		"prefix": "fn",
-		"body": ["function ${1:name} (${2:param}) {\n\t${3}\n}\n"],
+		"body": ["function ${1:name}(${2:param}) {\n\t${3}\n}\n"],
 		"description": "function named\n"
 	},
 	"function anonymous": {
 		"prefix": "fna",
-		"body": ["function (${1:param}) {\n\t${2}\n}"],
+		"body": ["function(${1:param}) {\n\t${2}\n}"],
 		"description": "function anonymous\n"
 	},
 	"function statements(var)": {
