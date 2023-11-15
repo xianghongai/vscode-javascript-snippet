@@ -77,13 +77,13 @@
 	},
 	"export function (named)": {
 		"prefix": "exfn",
-		"body": ["export function ${1:name} (){", "\t${2}", "}"],
+		"body": ["export function ${1:name}(){", "\t${2}", "}"],
 		"description": "export named function\n"
 	},
 	"export async function (named)": {
 		"prefix": "exasfn",
 		"body": [
-			"export async function ${1:name} (${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+			"export async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
 		],
 		"description": "export named async function\n"
 	},

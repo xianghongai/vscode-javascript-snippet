@@ -26,22 +26,22 @@
 	},
 	"Promise.reject()": {
 		"prefix": "prj",
-		"body": ["Promise.reject(${1:reason});", ""],
+		"body": ["Promise.reject(${1:reason})${2:;}"],
 		"description": "Promise.reject\n"
 	},
 	"Promise.resolve()": {
 		"prefix": "prs",
-		"body": ["Promise.resolve(${1:value});", ""],
+		"body": ["Promise.resolve(${1:value})${2:;}"],
 		"description": "Promise.resolve\n"
 	},
 	"reject()": {
 		"prefix": "rj",
-		"body": ["reject(${1:err});", ""],
+		"body": ["reject(${1:err});"],
 		"description": "reject()\n"
 	},
 	"resolve()": {
 		"prefix": "rs",
-		"body": ["resolve(${1:value});", ""],
+		"body": ["resolve(${1:value});"],
 		"description": "resolve()\n"
 	},
 	"promise.catch": {
@@ -80,7 +80,7 @@
 	},
 	"return promise": {
 		"prefix": "rp",
-		"body": ["return new Promise((resolve, reject) => {\n\t${1}\n})"],
+		"body": ["return new Promise((resolve, reject) => {\n\t${1}\n});"],
 		"description": "return a new Promise\n"
 	}
 }
