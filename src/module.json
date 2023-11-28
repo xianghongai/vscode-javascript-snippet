@@ -1,144 +1,201 @@
 {
-	"import individual features": {
-		"prefix": "im",
-		"body": ["import { ${2:moduleName} } from '${1:module}';"],
-		"description": "Import individual features\n"
-	},
-	"import default export": {
-		"prefix": "imd",
-		"body": ["import ${2:moduleName} from '${1:module}';"],
-		"description": "Import default export\n"
-	},
-	"import renamed exports": {
-		"prefix": "imas",
-		"body": ["import { ${2:originalName} as ${3:alias} } from '${1:module}';"],
-		"description": "Import renamed exports\n"
-	},
-	"import all module as alias": {
-		"prefix": "imall",
-		"body": ["import * as ${2:alias} from '${1:module}';"],
-		"description": "Import all of a module's exports as a module object\n"
-	},
-	"import without module name": {
-		"prefix": "imn",
-		"body": ["import '${1:module}';"],
-		"description": "Import a module for side effects only\n"
-	},
-	"export": {
-		"prefix": "ex",
-		"body": ["export { ${1:feature} };"],
-		"description": "*export list\n"
-	},
-	"export renaming": {
-		"prefix": "exas",
-		"body": ["export { ${1:variable} as ${2:feature} };"],
-		"description": "*renaming exports as\n"
-	},
-	"export const": {
-		"prefix": "exc",
-		"body": ["export const ${1:name} = ${2:value};"],
-		"description": "exporting individual features(const)\n"
-	},
-	"export arrow function statements": {
-		"prefix": "exaf",
-		"body": ["export const ${1:name} = (${2:param}) => {", "\t$3", "};"],
-		"description": "export named arrow function statements\n"
-	},
-	"export arrow function expression": {
-		"prefix": "exafe",
-		"body": ["export const ${1:name} = (${2:param}) => $3;"],
-		"description": "export named arrow function expression\n"
-	},
-	"export async arrow function (named)": {
-		"prefix": "exasafn",
-		"body": [
-			"export const ${1:name} = async (${2:param}) => {",
-			"\tconst ${3:result} = await ${4:promise};",
-			"\treturn ${3:result};",
-			"};",
-			""
-		],
-		"description": "export named async arrow function\n"
-	},
-	"export default arrow function statements": {
-		"prefix": "exdaf",
-		"body": ["export default (${1:param}) => {", "\t${2}", "}", ""],
-		"description": "export default arrow function statements\n"
-	},
-	"export default arrow function expression": {
-		"prefix": "exdafe",
-		"body": ["export default (${1:param}) => ${2}", ""],
-		"description": "export default arrow function expression\n"
-	},
-	"export default async arrow function": {
-		"prefix": "exdasaf",
-		"body": ["export default async (${1:param}) => {", "\t${2}", "}", ""],
-		"description": "export default async arrow function\n"
-	},
-	"export function (named)": {
-		"prefix": "exfn",
-		"body": ["export function ${1:name}(){", "\t${2}", "}"],
-		"description": "export named function\n"
-	},
-	"export async function (named)": {
-		"prefix": "exasfn",
-		"body": [
-			"export async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
-		],
-		"description": "export named async function\n"
-	},
-	"export default function": {
-		"prefix": "exdfn",
-		"body": ["export default function (${1:param}) {", "\t${2}", "}", ""],
-		"description": "export default function\n"
-	},
-	"export default async function": {
-		"prefix": "exdasfn",
-		"body": ["export default async function (${1:param}) {", "\t${2}", "}", ""],
-		"description": "export default async function\n"
-	},
-	"export default": {
-		"prefix": "exd",
-		"body": ["export default ${1:expression};"],
-		"description": "*export default\n"
-	},
-	"export as default": {
-		"prefix": "exdas",
-		"body": ["export { ${1:name} as default };"],
-		"description": "export as default\n"
-	},
-	"export class": {
-		"prefix": "exdc",
-		"body": [
-			"export default class ${1:className} {",
-			"\tconstructor (${2:param}) {",
-			"\t\t${3}",
-			"\t}",
-			"}",
-			""
-		],
-		"description": "export class\n"
-	},
-	"export class extends": {
-		"prefix": "exdce",
-		"body": [
-			"export default class ${1:className} extends ${2:baseClassName} {",
-			"\tconstructor (${3:param}) {",
-			"\t\tsuper();",
-			"\t\t${4}",
-			"\t}",
-			"}"
-		],
-		"description": "export class extends\n"
-	},
-	"export from": {
-		"prefix": "exfr",
-		"body": ["export {${1:default}} from ${2:otherModule};"],
-		"description": "*aggregating modules, export from\n"
-	},
-	"export all from other module": {
-		"prefix": "exallo",
-		"body": ["export * from ${1:otherModule};"],
-		"description": "export all from other module\n"
-	}
+  "import individual features": {
+    "prefix": "im",
+    "body": [
+      "import { ${2:moduleName} } from '${1:module}';"
+    ],
+    "description": "Import individual features\n"
+  },
+  "import default export": {
+    "prefix": "imd",
+    "body": [
+      "import ${2:moduleName} from '${1:module}';"
+    ],
+    "description": "Import default export\n"
+  },
+  "import renamed exports": {
+    "prefix": "imas",
+    "body": [
+      "import { ${2:originalName} as ${3:alias} } from '${1:module}';"
+    ],
+    "description": "Import renamed exports\n"
+  },
+  "import all module as alias": {
+    "prefix": "imall",
+    "body": [
+      "import * as ${2:alias} from '${1:module}';"
+    ],
+    "description": "Import all of a module's exports as a module object\n"
+  },
+  "import without module name": {
+    "prefix": "imn",
+    "body": [
+      "import '${1:module}';"
+    ],
+    "description": "Import a module for side effects only\n"
+  },
+  "export": {
+    "prefix": "ex",
+    "body": [
+      "export { ${1:feature} };"
+    ],
+    "description": "*export list\n"
+  },
+  "export renaming": {
+    "prefix": "exas",
+    "body": [
+      "export { ${1:variable} as ${2:feature} };"
+    ],
+    "description": "*renaming exports as\n"
+  },
+  "export const": {
+    "prefix": "exc",
+    "body": [
+      "export const ${1:name} = ${2:value};"
+    ],
+    "description": "exporting individual features(const)\n"
+  },
+  "export arrow function statements": {
+    "prefix": "exaf",
+    "body": [
+      "export const ${1:name} = (${2:param}) => {",
+      "\t$3",
+      "};"
+    ],
+    "description": "export named arrow function statements\n"
+  },
+  "export arrow function expression": {
+    "prefix": "exafe",
+    "body": [
+      "export const ${1:name} = (${2:param}) => $3;"
+    ],
+    "description": "export named arrow function expression\n"
+  },
+  "export async arrow function (named)": {
+    "prefix": "exasafn",
+    "body": [
+      "export const ${1:name} = async (${2:param}) => {",
+      "\tconst ${3:result} = await ${4:promise};",
+      "\treturn ${3:result};",
+      "};",
+      ""
+    ],
+    "description": "export named async arrow function\n"
+  },
+  "export default arrow function statements": {
+    "prefix": "exdaf",
+    "body": [
+      "export default (${1:param}) => {",
+      "\t${2}",
+      "}",
+      ""
+    ],
+    "description": "export default arrow function statements\n"
+  },
+  "export default arrow function expression": {
+    "prefix": "exdafe",
+    "body": [
+      "export default (${1:param}) => ${2}",
+      ""
+    ],
+    "description": "export default arrow function expression\n"
+  },
+  "export default async arrow function": {
+    "prefix": "exdasaf",
+    "body": [
+      "export default async (${1:param}) => {",
+      "\t${2}",
+      "}",
+      ""
+    ],
+    "description": "export default async arrow function\n"
+  },
+  "export function (named)": {
+    "prefix": "exfn",
+    "body": [
+      "export function ${1:name}(${2:param}) {",
+      "\t${3}",
+      "}"
+    ],
+    "description": "export named function\n"
+  },
+  "export async function (named)": {
+    "prefix": "exasfn",
+    "body": [
+      "export async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+    ],
+    "description": "export named async function\n"
+  },
+  "export default function": {
+    "prefix": "exdfn",
+    "body": [
+      "export default function (${1:param}) {",
+      "\t${2}",
+      "}",
+      ""
+    ],
+    "description": "export default function\n"
+  },
+  "export default async function": {
+    "prefix": "exdasfn",
+    "body": [
+      "export default async function (${1:param}) {",
+      "\t${2}",
+      "}",
+      ""
+    ],
+    "description": "export default async function\n"
+  },
+  "export default": {
+    "prefix": "exd",
+    "body": [
+      "export default ${1:expression};"
+    ],
+    "description": "*export default\n"
+  },
+  "export as default": {
+    "prefix": "exdas",
+    "body": [
+      "export { ${1:name} as default };"
+    ],
+    "description": "export as default\n"
+  },
+  "export class": {
+    "prefix": "exdc",
+    "body": [
+      "export default class ${1:className} {",
+      "\tconstructor (${2:param}) {",
+      "\t\t${3}",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "export class\n"
+  },
+  "export class extends": {
+    "prefix": "exdce",
+    "body": [
+      "export default class ${1:className} extends ${2:baseClassName} {",
+      "\tconstructor (${3:param}) {",
+      "\t\tsuper();",
+      "\t\t${4}",
+      "\t}",
+      "}"
+    ],
+    "description": "export class extends\n"
+  },
+  "export from": {
+    "prefix": "exfr",
+    "body": [
+      "export {${1:default}} from ${2:otherModule};"
+    ],
+    "description": "*aggregating modules, export from\n"
+  },
+  "export all from other module": {
+    "prefix": "exallo",
+    "body": [
+      "export * from ${1:otherModule};"
+    ],
+    "description": "export all from other module\n"
+  }
 }
