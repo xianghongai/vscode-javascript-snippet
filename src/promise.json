@@ -1,86 +1,130 @@
 {
-	"new Promise": {
-		"prefix": "pr",
-		"body": ["const ${1:promise} = new Promise((resolve, reject) => {", "\t${2}", "});", ""],
-		"description": "Promise\n"
-	},
-	"Promise.all()": {
-		"prefix": "pa",
-		"body": ["const results = await Promise.all([${1:promises}]);"],
-		"description": "The `Promise.all()` method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises.\n"
-	},
-	"Promise.any()": {
-		"prefix": "pan",
-		"body": ["const result = await Promise.any([${1:promises}]);"],
-		"description": "`Promise.any()` takes an iterable of Promise objects. It returns a single promise that resolves as soon as any of the promises in the iterable fulfills, with the value of the fulfilled promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an AggregateError, a new subclass of Error that groups together individual errors.\n"
-	},
-	"Promise.allSettled()": {
-		"prefix": "pas",
-		"body": ["const results = await Promise.allSettled([${1:promises}]);"],
-		"description": "The `Promise.allSettled()` method returns a promise that resolves after all of the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise.\n"
-	},
-	"Promise.race()": {
-		"prefix": "pra",
-		"body": ["const result = await Promise.race([${1:promises}]);"],
-		"description": "The `Promise.race()` method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.\n"
-	},
-	"Promise.reject()": {
-		"prefix": "prj",
-		"body": ["Promise.reject(${1:reason})${2:;}"],
-		"description": "Promise.reject\n"
-	},
-	"Promise.resolve()": {
-		"prefix": "prs",
-		"body": ["Promise.resolve(${1:value})${2:;}"],
-		"description": "Promise.resolve\n"
-	},
-	"reject()": {
-		"prefix": "rj",
-		"body": ["reject(${1:err});"],
-		"description": "reject()\n"
-	},
-	"resolve()": {
-		"prefix": "rs",
-		"body": ["resolve(${1:value});"],
-		"description": "resolve()\n"
-	},
-	"promise.catch": {
-		"prefix": "pc",
-		"body": ["${1:promise}.catch(error => {", "\t${2}", "});", ""],
-		"description": "promise.catch\n"
-	},
-	"promise.finally": {
-		"prefix": "pf",
-		"body": ["${1:promise}.finally(() => {", "\t${2}", "});", ""],
-		"description": "promise.finally\n"
-	},
-	"promise.then": {
-		"prefix": "pt",
-		"body": ["${1:promise}.then(${2:result} => {", "\t${3}", "});", ""],
-		"description": "promise.then\n"
-	},
-	"promise.then.catch": {
-		"prefix": "ptc",
-		"body": ["${1:promise}.then(${2:result} => {", "\t${3}", "}).catch(${4:error} => {", "\t${5}", "});"],
-		"description": "promise.then.catch\n"
-	},
-	"promise.then.catch.finally": {
-		"prefix": "ptcf",
-		"body": [
-			"${1:promise}.then(${2:result} => {",
-			"\t${3}",
-			"}).catch(${4:error} => {",
-			"\t${5}",
-			"}).finally(() => {",
-			"\t${6}",
-			"});",
-			""
-		],
-		"description": "Promise.then.catch.finally\n"
-	},
-	"return promise": {
-		"prefix": "rp",
-		"body": ["return new Promise((resolve, reject) => {\n\t${1}\n});"],
-		"description": "return a new Promise\n"
-	}
+  "new Promise": {
+    "prefix": "pr",
+    "body": [
+      "const ${1:promise} = new Promise((resolve, reject) => {",
+      "\t${2}",
+      "});",
+      ""
+    ],
+    "description": "Promise\n"
+  },
+  "Promise.all()": {
+    "prefix": "pa",
+    "body": [
+      "const results = await Promise.all([${1:promises}]);"
+    ],
+    "description": "The `Promise.all()` method takes an iterable of promises as an input, and returns a single Promise that resolves to an array of the results of the input promises.\n"
+  },
+  "Promise.any()": {
+    "prefix": "pan",
+    "body": [
+      "const result = await Promise.any([${1:promises}]);"
+    ],
+    "description": "`Promise.any()` takes an iterable of Promise objects. It returns a single promise that resolves as soon as any of the promises in the iterable fulfills, with the value of the fulfilled promise. If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an AggregateError, a new subclass of Error that groups together individual errors.\n"
+  },
+  "Promise.allSettled()": {
+    "prefix": "pas",
+    "body": [
+      "const results = await Promise.allSettled([${1:promises}]);"
+    ],
+    "description": "The `Promise.allSettled()` method returns a promise that resolves after all of the given promises have either fulfilled or rejected, with an array of objects that each describes the outcome of each promise.\n"
+  },
+  "Promise.race()": {
+    "prefix": "pra",
+    "body": [
+      "const result = await Promise.race([${1:promises}]);"
+    ],
+    "description": "The `Promise.race()` method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.\n"
+  },
+  "Promise.reject()": {
+    "prefix": "prj",
+    "body": [
+      "Promise.reject(${1:reason})${2:;}"
+    ],
+    "description": "Promise.reject\n"
+  },
+  "Promise.resolve()": {
+    "prefix": "prs",
+    "body": [
+      "Promise.resolve(${1:value})${2:;}"
+    ],
+    "description": "Promise.resolve\n"
+  },
+  "reject()": {
+    "prefix": "rj",
+    "body": [
+      "reject(${1:reason});"
+    ],
+    "description": "reject()\n"
+  },
+  "resolve()": {
+    "prefix": "rs",
+    "body": [
+      "resolve(${1:value});"
+    ],
+    "description": "resolve()\n"
+  },
+  "promise.catch": {
+    "prefix": "pc",
+    "body": [
+      "${1:promise}.catch((error) => {",
+      "\t${2}",
+      "});",
+      ""
+    ],
+    "description": "promise.catch\n"
+  },
+  "promise.finally": {
+    "prefix": "pf",
+    "body": [
+      "${1:promise}.finally(() => {",
+      "\t${2}",
+      "});",
+      ""
+    ],
+    "description": "promise.finally\n"
+  },
+  "promise.then": {
+    "prefix": "pt",
+    "body": [
+      "${1:promise}.then((${2:result}) => {",
+      "\t${3}",
+      "});",
+      ""
+    ],
+    "description": "promise.then\n"
+  },
+  "promise.then.catch": {
+    "prefix": "ptc",
+    "body": [
+      "${1:promise}.then((${2:result}) => {",
+      "\t${3}",
+      "}).catch((${4:error}) => {",
+      "\t${5}",
+      "});"
+    ],
+    "description": "promise.then.catch\n"
+  },
+  "promise.then.catch.finally": {
+    "prefix": "ptcf",
+    "body": [
+      "${1:promise}.then((${2:result}) => {",
+      "\t${3}",
+      "}).catch((${4:error}) => {",
+      "\t${5}",
+      "}).finally(() => {",
+      "\t${6}",
+      "});",
+      ""
+    ],
+    "description": "Promise.then.catch.finally\n"
+  },
+  "return promise": {
+    "prefix": "rp",
+    "body": [
+      "return new Promise((resolve, reject) => {\n\t${1}\n});"
+    ],
+    "description": "return a new Promise\n"
+  }
 }
