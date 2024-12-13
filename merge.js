@@ -1,29 +1,58 @@
 // https://stackoverflow.com/a/40022630
-const fs = require('fs');
-const glob = require('glob');
+import fs from 'fs';
+import { glob } from 'glob';
 
-const output = {};
 const outputPath = './snippets/';
 
-glob('src/**/*.json', (error, files) => {
-    try {
-        fs.existsSync(outputPath) || fs.mkdirSync(outputPath);
+const options = [
+	{
+		path: 'src/**/*.json',
+		filename: 'javascript',
+	},
+];
 
-        fs.accessSync(outputPath, fs.constants.R_OK | fs.constants.W_OK)
+function handler(files, filename) {
+  try {
+    let output = {};
 
-        // console.log(`${outputPath} exists, and it is writable`);
+    fs.existsSync(outputPath) || fs.mkdirSync(outputPath);
 
-        files.forEach((filename) => {
-            const contents = JSON.parse(fs.readFileSync(filename, 'utf8'));
-            Object.assign(output, contents);
-        });
+    fs.accessSync(
+      outputPath,
+      fs.constants.R_OK | fs.constants.W_OK
+    );
 
-        fs.writeFileSync(outputPath + 'javascript.json', JSON.stringify(output));
+    files.forEach((file) => {
+      console.log('filename: %o', file);
+      const contents = JSON.parse(
+        fs.readFileSync(file, 'utf8')
+      );
+      Object.assign(output, contents);
+    });
 
-        console.log(`Complete! :)`);
+    fs.writeFileSync(
+      `${outputPath}${filename}.json`,
+      JSON.stringify(output, null, 4)
+    );
 
-    } catch (err) {
-        console.error(`${outputPath} ${err.code === 'ENOENT' ? 'does not exist' : 'is read-only'}`);
-        console.log('Failed! :(')
-    }
-});
+    console.log(`Complete! :)`);
+  } catch (err) {
+    console.log(err);
+    console.error(
+      `${outputPath} ${err.code === 'ENOENT'
+        ? 'does not exist'
+        : 'is read-only'
+      }`
+    );
+    console.log('Failed! :(');
+  }
+}
+
+function init() {
+  options.forEach(async ({ path, filename }) => {
+    const files = await glob(path);
+    handler(files, filename)
+  });
+}
+
+init();
