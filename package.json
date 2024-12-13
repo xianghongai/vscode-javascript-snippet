@@ -5,6 +5,7 @@
   "description": "Code snippets for JavaScript in ES3/5/6+ syntax",
   "icon": "art/icon3.png",
   "version": "0.2.5",
+  "type": "module",
   "galleryBanner": {
     "color": "#ffffff",
     "theme": "dark"
@@ -19,7 +20,7 @@
     "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
   },
   "engines": {
-    "vscode": "^0.12.x"
+    "vscode": "^1.0.0"
   },
   "categories": [
     "Snippets"
@@ -67,6 +68,7 @@
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "glob": "^7.1.4"
+    "@vscode/vsce": "^3.2.1",
+    "glob": "^10.3.10"
   }
 }
