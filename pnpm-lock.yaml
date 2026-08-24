@@ -9,10 +9,10 @@ importers:
   .:
     devDependencies:
       '@vscode/vsce':
-        specifier: ^3.2.1
+        specifier: ^3.9.2
         version: 3.9.2(supports-color@7.2.0)
       glob:
-        specifier: ^10.3.10
+        specifier: ^10.5.0
         version: 10.5.0
 
 packages:
