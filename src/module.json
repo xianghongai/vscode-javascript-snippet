@@ -1,69 +1,69 @@
 {
   "import individual features": {
-    "prefix": "im",
+    "prefix": ["im", "import.named"],
     "body": [
       "import { ${2:moduleName} } from '${1:module}';"
     ],
     "description": "ES2015\nImport individual features\n"
   },
   "import default export": {
-    "prefix": "imd",
+    "prefix": ["imd", "import.default"],
     "body": [
       "import ${2:moduleName} from '${1:module}';"
     ],
     "description": "ES2015\nImport default export\n"
   },
   "import renamed exports": {
-    "prefix": "imas",
+    "prefix": ["imas", "import.renamed"],
     "body": [
       "import { ${2:originalName} as ${3:alias} } from '${1:module}';"
     ],
     "description": "Import renamed exports\n"
   },
   "import all module as alias": {
-    "prefix": "imall",
+    "prefix": ["imall", "import.namespace"],
     "body": [
       "import * as ${2:alias} from '${1:module}';"
     ],
     "description": "Import all of a module's exports as a module object\n"
   },
   "import without module name": {
-    "prefix": "imn",
+    "prefix": ["imn", "import.sideEffect"],
     "body": [
       "import '${1:module}';"
     ],
     "description": "Import a module for side effects only\n"
   },
   "dynamic import()": {
-    "prefix": "imdyn",
+    "prefix": ["imdyn", "import.dynamic"],
     "body": [
       "const ${2:moduleName} = await import('${1:module}');"
     ],
     "description": "ES2020\nimport(module)\nreturns a Promise that resolves to the module namespace object. Unlike static `import`, it can be called from anywhere (conditionally, lazily) and takes a dynamic expression rather than a string literal.\n"
   },
   "export": {
-    "prefix": "ex",
+    "prefix": ["ex", "export.named"],
     "body": [
       "export { ${1:feature} };"
     ],
     "description": "ES2015\n*export list\n"
   },
   "export renaming": {
-    "prefix": "exas",
+    "prefix": ["exas", "export.renamed"],
     "body": [
       "export { ${1:variable} as ${2:feature} };"
     ],
     "description": "*renaming exports as\n"
   },
   "export const": {
-    "prefix": "exc",
+    "prefix": ["exc", "export.const"],
     "body": [
       "export const ${1:name} = ${2:value};"
     ],
     "description": "exporting individual features(const)\n"
   },
   "export arrow function statements": {
-    "prefix": "exaf",
+    "prefix": ["exaf", "export.arrow"],
     "body": [
       "export const ${1:name} = (${2:param}) => {",
       "\t$3",
@@ -72,14 +72,14 @@
     "description": "export named arrow function statements\n"
   },
   "export arrow function expression": {
-    "prefix": "exafe",
+    "prefix": ["exafe", "export.arrow.expression"],
     "body": [
       "export const ${1:name} = (${2:param}) => $3;"
     ],
     "description": "export named arrow function expression\n"
   },
   "export async arrow function (named)": {
-    "prefix": "exasafn",
+    "prefix": ["exasafn", "export.async.arrow"],
     "body": [
       "export const ${1:name} = async (${2:param}) => {",
       "\tconst ${3:result} = await ${4:promise};",
@@ -90,7 +90,7 @@
     "description": "export named async arrow function\n"
   },
   "export default arrow function statements": {
-    "prefix": "exdaf",
+    "prefix": ["exdaf", "export.default.arrow"],
     "body": [
       "export default (${1:param}) => {",
       "\t${2}",
@@ -100,7 +100,7 @@
     "description": "export default arrow function statements\n"
   },
   "export default arrow function expression": {
-    "prefix": "exdafe",
+    "prefix": ["exdafe", "export.default.arrow.expression"],
     "body": [
       "export default (${1:param}) => ${2}",
       ""
@@ -108,7 +108,7 @@
     "description": "export default arrow function expression\n"
   },
   "export default async arrow function": {
-    "prefix": "exdasaf",
+    "prefix": ["exdasaf", "export.default.async.arrow"],
     "body": [
       "export default async (${1:param}) => {",
       "\t${2}",
@@ -118,7 +118,7 @@
     "description": "export default async arrow function\n"
   },
   "export function (named)": {
-    "prefix": "exfn",
+    "prefix": ["exfn", "export.function"],
     "body": [
       "export function ${1:name}(${2:param}) {",
       "\t${3}",
@@ -127,14 +127,14 @@
     "description": "export named function\n"
   },
   "export async function (named)": {
-    "prefix": "exasfn",
+    "prefix": ["exasfn", "export.async.function"],
     "body": [
       "export async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
     ],
     "description": "export named async function\n"
   },
   "export default function": {
-    "prefix": "exdfn",
+    "prefix": ["exdfn", "export.default.function"],
     "body": [
       "export default function (${1:param}) {",
       "\t${2}",
@@ -144,7 +144,7 @@
     "description": "export default function\n"
   },
   "export default async function": {
-    "prefix": "exdasfn",
+    "prefix": ["exdasfn", "export.default.async.function"],
     "body": [
       "export default async function (${1:param}) {",
       "\t${2}",
@@ -154,21 +154,21 @@
     "description": "export default async function\n"
   },
   "export default": {
-    "prefix": "exd",
+    "prefix": ["exd", "export.default"],
     "body": [
       "export default ${1:expression};"
     ],
     "description": "ES2015\n*export default\n"
   },
   "export as default": {
-    "prefix": "exdas",
+    "prefix": ["exdas", "export.as.default"],
     "body": [
       "export { ${1:name} as default };"
     ],
     "description": "export as default\n"
   },
   "export class": {
-    "prefix": "exdc",
+    "prefix": ["exdc", "export.class"],
     "body": [
       "export default class ${1:className} {",
       "\tconstructor (${2:param}) {",
@@ -180,7 +180,7 @@
     "description": "export class\n"
   },
   "export class extends": {
-    "prefix": "exdce",
+    "prefix": ["exdce", "export.class.extends"],
     "body": [
       "export default class ${1:className} extends ${2:baseClassName} {",
       "\tconstructor (${3:param}) {",
@@ -192,14 +192,14 @@
     "description": "export class extends\n"
   },
   "export from": {
-    "prefix": "exfr",
+    "prefix": ["exfr", "export.from"],
     "body": [
       "export {${1:default}} from ${2:otherModule};"
     ],
     "description": "*aggregating modules, export from\n"
   },
   "export all from other module": {
-    "prefix": "exallo",
+    "prefix": ["exallo", "export.all.from"],
     "body": [
       "export * from ${1:otherModule};"
     ],

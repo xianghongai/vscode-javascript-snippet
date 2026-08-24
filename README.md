@@ -50,6 +50,8 @@ Download this extension from the [Visual Studio Code Marketplace](https://market
 - Console
 - CommonJS/Node.js
 - BDD Testing (Mocha, Jasmine, etc.)
+- Resource Management (`using`/`await using`)
+- Typed Arrays / ArrayBuffer
 
 ## Supported languages (file extensions)
 
@@ -59,6 +61,22 @@ Download this extension from the [Visual Studio Code Marketplace](https://market
 - TypeScript React (`.tsx`)
 - Html (`.html`)
 - Vue (`.vue`)
+
+## Prefix design
+
+Prefixes follow two deliberate patterns:
+
+1. **Hard abbreviation for well-known, high-frequency constructs** — e.g. `tc` for try/catch, `qsa` for `querySelectorAll`. No dotted form is added here; once you know the construct, a short code is faster to recall than to browse for.
+2. **Namespace-triggered discovery for large or rarely-memorized API surfaces** — e.g. the `dom.*`, `map.*`, `set.*`, `import.*`/`export.*` families. Type the namespace (`dom.`) to get a filtered list, then keep typing to fuzzy-match the member you want (`domnes` → `dom.nextElementSibling`). This is meant as an onboarding path, not a permanent one: once a member turns out to be well-known enough on its own, it also gets a short direct prefix alongside the dotted one — `nextElementSibling` itself is reachable both via `dom.nextElementSibling` and directly via `nes`.
+
+The goal either way is to minimize what you have to memorize before a prefix "just works": either it's short because everyone already knows it, or it's discoverable by typing the real API name.
+
+前缀遵循两种刻意区分的模式：
+
+1. **众所周知的高频场景 → 硬缩写**——例如 `tc` 对应 try/catch，`qsa` 对应 `querySelectorAll`。这类不需要额外的点号形式；一旦记住了这个写法，短代码比翻找补全列表更快。
+2. **API 面很大或不常被记住的场景 → 命名空间触发**——例如 `dom.*`、`map.*`、`set.*`、`import.*`/`export.*` 这几个系列。先输入命名空间（如 `dom.`）触发一份过滤后的列表，再继续输入做模糊匹配定位到具体成员（如 `domnes` → `dom.nextElementSibling`）。这条路径是给"上手阶段"用的，不是终态：一旦某个成员本身也变得足够出名，它会在点号形式之外再拥有一个独立的短前缀——`nextElementSibling` 既能通过 `dom.nextElementSibling` 触发，也能直接靠 `nes` 触发。
+
+两种方式的目标是一致的：让"打出前缀就能触发"这件事尽量不依赖死记硬背——要么因为足够常见所以缩写本身就很短，要么可以直接打出真实 API 名字来触发发现。
 
 ## Snippets
 
@@ -625,7 +643,6 @@ Note: All the snippets include the final semicolon `;`
 | `dom.offsetTop` →               | `HTMLElement.offsetTop`                                             |
 | `dom.offsetLeft` →              | `HTMLElement.offsetLeft`                                            |
 | `dom.offsetParent` →            | `HTMLElement.offsetParent`                                          |
-
 
 ### Bom
 
