@@ -11,3 +11,9 @@ art/js-icon.psd
 .travis.yml
 test-data/**
 coverage/**
+.github/**
+mise.toml
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.npmrc
+CLAUDE.md
