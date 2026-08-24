@@ -40,7 +40,7 @@
 		"description": "console.warn labeled\n"
 	},
 	"console.assert": {
-		"prefix": "ca",
+		"prefix": "consa",
 		"body": ["console.assert(${1:assertion}, ${2:object});"],
 		"description": "console.assert\n"
 	},

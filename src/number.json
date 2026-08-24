@@ -2,12 +2,12 @@
 	"Number.EPSILON": {
 		"prefix": ["ne", "Num.EPSILON"],
 		"body": ["Number.EPSILON"],
-		"description": "Number.EPSILON = Math.pow(2, -52);\n"
+		"description": "ES2015\nNumber.EPSILON = Math.pow(2, -52);\n"
 	},
 	"Number.MAX_SAFE_INTEGER": {
 		"prefix": ["nmasi", "Num.MAX_SAFE_INTEGER"],
 		"body": ["Number.MAX_SAFE_INTEGER"],
-		"description": "Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;\n"
+		"description": "ES2015\nNumber.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;\n"
 	},
 	"Number.MAX_VALUE": {
 		"prefix": ["nmav", "Num.MAX_VALUE"],
@@ -17,10 +17,10 @@
 	"Number.MIN_SAFE_INTEGER": {
 		"prefix": ["nmisi", "Num.MIN_SAFE_INTEGER"],
 		"body": ["Number.MIN_SAFE_INTEGER"],
-		"description": "Number.MIN_SAFE_INTEGER = -9007199254740991; // -(Math.pow(2, 53) - 1)\n"
+		"description": "ES2015\nNumber.MIN_SAFE_INTEGER = -9007199254740991; // -(Math.pow(2, 53) - 1)\n"
 	},
 	"Number.MIN_VALUE": {
-		"prefix": ["nmav", "Num.MIN_VALUE"],
+		"prefix": ["nmiv", "Num.MIN_VALUE"],
 		"body": ["Number.MIN_VALUE"],
 		"description": "The MIN_VALUE property is the number closest to 0, not the most negative number, that JavaScript can represent.\nMIN_VALUE has a value of approximately 5e-324. Values smaller than MIN_VALUE ('underflow values') are converted to 0.\n"
 	},
@@ -42,32 +42,32 @@
 	"Number.isFinite()": {
 		"prefix": ["nif", "Num.isFinite()"],
 		"body": ["Number.isFinite(${1:value})"],
-		"description": "return a Boolean indicating whether or not the given value is a finite number.\n"
+		"description": "ES2015\nreturn a Boolean indicating whether or not the given value is a finite number.\n"
 	},
 	"Number.isInteger()": {
 		"prefix": ["nii", "Num.isInteger()"],
 		"body": ["Number.isInteger(${1:value})"],
-		"description": "return a Boolean indicating whether or not the given value is an integer.\n"
+		"description": "ES2015\nreturn a Boolean indicating whether or not the given value is an integer.\n"
 	},
 	"Number.isNaN()": {
 		"prefix": ["nin", "Num.isNaN()"],
 		"body": ["Number.isNaN(${1:value})"],
-		"description": "return **true** if the given value is NaN and its type is Number; otherwise, **false**.\n"
+		"description": "ES2015\nreturn **true** if the given value is NaN and its type is Number; otherwise, **false**.\n"
 	},
 	"Number.isSafeInteger()": {
 		"prefix": ["nisi", "Num.isSafeInteger()"],
 		"body": ["Number.isSafeInteger(${1:value})"],
-		"description": "return a Boolean indicating whether or not the given value is a number that is a safe integer.\n"
+		"description": "ES2015\nreturn a Boolean indicating whether or not the given value is a number that is a safe integer.\n"
 	},
 	"Number.parseFloat()": {
 		"prefix": ["npf", "Num.parseFloat()"],
 		"body": ["Number.parseFloat(${1:string})"],
-		"description": "parses a string argument and returns a floating point number.\n"
+		"description": "ES2015\nparses a string argument and returns a floating point number.\n"
 	},
 	"Number.parseInt()": {
-		"prefix": ["npi", "Num.parseInt()"],
+		"prefix": ["npint", "Num.parseInt()"],
 		"body": ["Number.parseInt(${1:string})"],
-		"description": "Number.parseInt(string,[ radix])\nparses a string argument and returns an integer of the specified radix or base.\n"
+		"description": "ES2015\nNumber.parseInt(string,[ radix])\nparses a string argument and returns an integer of the specified radix or base.\n"
 	},
 
 	"Number.prototype.toExponential()": {
@@ -84,5 +84,11 @@
 		"prefix": ["ntp", "num.toPrecision()"],
 		"body": ["number.toPrecision()"],
 		"description": "numObj.toPrecision([precision])\nreturn a string representing the Number object to the specified precision."
+	},
+
+	"Numeric separators": {
+		"prefix": ["nns", "num.separator"],
+		"body": ["${1:1_000_000}"],
+		"description": "ES2021\nUnderscores (_) as numeric separators improve readability of large numeric literals by creating a visual separation between groups of digits.\n"
 	}
 }

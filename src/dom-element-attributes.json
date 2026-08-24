@@ -1,6 +1,6 @@
 {
 	"Document.createAttribute": {
-		"prefix": ["ca", "dom.createAttribute"],
+		"prefix": ["dca", "dom.createAttribute"],
 		"body": [
 			"const ${1:attribute} = document.createAttribute('${2:name}');",
 			"$1.value = ${3:'value'};",
@@ -63,17 +63,17 @@
 		"description": "Adds a new attribute or changes the value of an attribute with the given namespace and name.\n(Namespace-aware variants (DOM Level 2))\n"
 	},
 	"Element.getAttributeNS()": {
-		"prefix": ["ga", "dom.getAttributeNS"],
+		"prefix": ["gans", "dom.getAttributeNS"],
 		"body": ["const ${4:attrVal} = ${1:element}.getAttributeNS('${2:namespace}', '${3:attrName}');"],
 		"description": "Returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or \"\" (the empty string). \n(Namespace-aware variants (DOM Level 2))\n"
 	},
 	"Element.hasAttributeNS()": {
-		"prefix": ["ha", "dom.hasAttributeNS"],
+		"prefix": ["hans", "dom.hasAttributeNS"],
 		"body": ["${1:element}.hasAttributeNS('${2:namespace}', '${3:attrName}')"],
 		"description": "Returns a boolean value indicating whether the current element has the specified attribute.\n(Namespace-aware variants (DOM Level 2))\n"
 	},
 	"Element.removeAttributeNS()": {
-		"prefix": ["ra", "dom.removeAttributeNS"],
+		"prefix": ["rans", "dom.removeAttributeNS"],
 		"body": ["${1:element}.removeAttributeNS('${2:namespace}', '${3:attrName}');"],
 		"description": "Removes the specified attribute from an element.\n(Namespace-aware variants (DOM Level 2))\n"
 	},

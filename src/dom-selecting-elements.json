@@ -49,7 +49,7 @@
 	},
 
 	"Node.childNodes": {
-		"prefix": ["cn", "dom.childNodes"],
+		"prefix": ["cnodes", "dom.childNodes"],
 		"body": ["const ${2:nodeList} = ${1:node}.childNodes;"],
 		"description": "Returns a live NodeList containing all the children of this node. \n"
 	},

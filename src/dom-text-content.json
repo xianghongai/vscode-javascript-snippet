@@ -11,13 +11,13 @@
 	},
 
 	"HTMLElement.innerText": {
-		"prefix": ["it", "dom.innerText"],
+		"prefix": ["dit", "dom.innerText"],
 		"body": ["${1:htmlElement}.innerText = ${2:'renderText'};", "// const renderedText = htmlElement.innerText;"],
 		"description": "The `innerText` property sets or returns the text content of the specified node, and all its descendants.\n"
 	},
 
 	"Node.textContent": {
-		"prefix": ["tc", "dom.textContent"],
+		"prefix": ["dtc", "dom.textContent"],
 		"body": ["${1:node}.textContent = '${2:content}';", "// const text = node.textContent;"],
 		"description": "The `textContent` property of the Node interface represents the text content of the node and its descendants.\n"
 	}

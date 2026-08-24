@@ -31,7 +31,7 @@
 			"\t\t\tconst headers = xhr.getAllResponseHeaders();",
 			"",
 			"\t\t\tif (xhr.status == 200 || xhr.status == 304) {",
-			"\t\t\t\tvar data = xhr.responseText;",
+			"\t\t\t\tconst data = xhr.responseText;",
 			"\t\t\t\tconsole.log('COMPLETE!');",
 			"\t\t\t\tconsole.dir(data);$0",
 			"\t\t\t} else {",
@@ -116,6 +116,28 @@
 			"\t});"
 		],
 		"description": "Make a GET request"
+	},
+	"fetch with AbortController": {
+		"prefix": ["fetchabort", "fa"],
+		"body": [
+			"const ${1:controller} = new AbortController();",
+			"const ${2:timeout} = setTimeout(() => ${1}.abort(), ${3:5000});",
+			"",
+			"fetch('${4:server}', { signal: ${1}.signal })",
+			"\t.then(response => response.json())",
+			"\t.then(result => {",
+			"\t\tclearTimeout(${2});",
+			"\t\t${5}",
+			"\t})",
+			"\t.catch(error => {",
+			"\t\tif (error.name === 'AbortError') {",
+			"\t\t\t// request was cancelled/timed out",
+			"\t\t}",
+			"\t});",
+			"",
+			"// ${1}.abort(); // call to cancel the request early"
+		],
+		"description": "AbortController lets you cancel one or more fetch() requests, or time them out, via its linked AbortSignal.\n"
 	},
 	"fetch post": {
 		"prefix": [

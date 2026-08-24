@@ -12,28 +12,28 @@
 	"Array.isArray()": {
 		"prefix": ["isa", "Arr.isArray()"],
 		"body": ["Array.isArray(${1:value})"],
-		"description": "Array.isArray(value);\nreturn 'true' if the value is an Array; otherwise, 'false'.\n"
+		"description": "ES5\nArray.isArray(value);\nreturn 'true' if the value is an Array; otherwise, 'false'.\n"
 	},
-	"Array.from(arrayLike)": {
+	"Array.from()": {
 		"prefix": ["arfr", "Arr.from()"],
-		"body": ["Array.from(${1:arrayLike});"],
-		"description": "Array.from(arrayLike);\nreturn a new Array instance, shallow-copied Array instance from an array-like or iterable object.\n"
+		"body": ["Array.from(${1:arrayLike}${2:, (${3:item}) => {\n\t$4\n\\}});"],
+		"description": "ES2015\nArray.from(arrayLike[, mapFn[, thisArg]]);\nreturn a new Array instance, shallow-copied from an array-like or iterable object, optionally mapping each element through mapFn.\nThe mapFn part is optional — select and delete it for the plain `Array.from(arrayLike)` form.\n"
 	},
-	"Array.from(arrayLike, mapFn)": {
-		"prefix": ["arfr", "Arr.from()"],
-		"body": ["Array.from(${1:arrayLike}, (${2:item}) => {\n\t${3}\n});"],
-		"description": "Array.from(arrayLike[, mapFn[, thisArg]]);\n"
+	"Array.fromAsync()": {
+		"prefix": ["arfra", "Arr.fromAsync()"],
+		"body": ["Array.fromAsync(${1:asyncIterable});"],
+		"description": "ES2026\nArray.fromAsync(asyncIterableOrLike[, mapFn[, thisArg]]);\nreturn a Promise for a new Array instance, awaiting each value from an async iterable, an iterable of promises, or an array-like of promises.\n"
 	},
 	"Array.of(elementN)": {
 		"prefix": ["arof", "Arr.of()"],
 		"body": ["Array.of(${1:elementN});"],
-		"description": "Array.of(elementN);\nreturn a new Array instance.\n"
+		"description": "ES2015\nArray.of(elementN);\nreturn a new Array instance.\n"
 	},
 
 	"Array.prototype.at()": {
 		"prefix": ["ara", "arr.at()"],
 		"body": ["${1:items}.at(${2:index});"],
-		"description": "const item = items.at(index);\nThe `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.\nReturns `undefined` if the given index can not be found.\n"
+		"description": "ES2022\nconst item = items.at(index);\nThe `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.\nReturns `undefined` if the given index can not be found.\n"
 	},
 	"Array.prototype.concat()": {
 		"prefix": ["arc", "arr.concat()"],
@@ -43,75 +43,85 @@
 	"Array.prototype.copyWithin()": {
 		"prefix": ["arcw", "arr.copyWithin()"],
 		"body": ["${1:items}.copyWithin(${2:target}, ${3:start}, ${4:end});"],
-		"description": "array.copyWithin(target[, start[, end]]);\nreturn the modified array\n"
+		"description": "ES2015\narray.copyWithin(target[, start[, end]]);\nreturn the modified array\n"
 	},
 
 	"Array.prototype.every()": {
 		"prefix": ["arev", "arr.every()"],
 		"body": ["${1:items}.every((${2:item}) => $3);"],
-		"description": "array.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
+		"description": "ES5\narray.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
 	},
 	"Array.prototype.fill()": {
 		"prefix": ["arfill", "arr.fill()"],
 		"body": ["${1:items}.fill(${2:value}, ${3:start}, ${4:end});"],
-		"description": "array.fill(value[, start[, end]]);\nreturn the modified array\n"
+		"description": "ES2015\narray.fill(value[, start[, end]]);\nreturn the modified array\n"
 	},
 	"Array.prototype.filter()": {
 		"prefix": ["arf", "filter", "arr.filter()"],
 		"body": ["${1:items}.filter((${2:item}) => $3);"],
-		"description": "let newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
+		"description": "ES5\nlet newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
 	},
 	"Array.prototype.find()": {
 		"prefix": ["arfi", "find", "arr.find()"],
 		"body": ["${1:items}.find((${2:item}) => $3);"],
-		"description": "array.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
+		"description": "ES2015\narray.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
 	},
 	"Array.prototype.findIndex()": {
 		"prefix": ["arfin", "findIndex", "arr.findIndex()"],
 		"body": ["${1:items}.findIndex((${2:item}) => $3)"],
-		"description": "array.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
+		"description": "ES2015\narray.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
+	},
+	"Array.prototype.findLast()": {
+		"prefix": ["arfl", "findLast", "arr.findLast()"],
+		"body": ["${1:items}.findLast((${2:item}) => $3);"],
+		"description": "ES2023\narray.findLast(callbackFn[, thisArg]);\nreturn the value of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise 'undefined' is returned.\n"
+	},
+	"Array.prototype.findLastIndex()": {
+		"prefix": ["arflin", "findLastIndex", "arr.findLastIndex()"],
+		"body": ["${1:items}.findLastIndex((${2:item}) => $3)"],
+		"description": "ES2023\narray.findLastIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise, it returns '-1'.\n"
 	},
 	"Array.prototype.flat()": {
 		"prefix": ["arflat", "arr.flat()"],
 		"body": ["${1:items}.flat();"],
-		"description": "let newArray = array.flat([depth]);\nreturn a new array\n"
+		"description": "ES2019\nlet newArray = array.flat([depth]);\nreturn a new array\n"
 	},
 	"Array.prototype.flatMap()": {
 		"prefix": ["arflatMap", "arr.flatMap()"],
 		"body": ["${1:items}.flatMap((${2:value}) => ${3:value});"],
-		"description": "let newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
+		"description": "ES2019\nlet newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
 	},
 	"Array.prototype.forEach(), arrow function": {
 		"prefix": ["fe", "arr.forEach()"],
 		"body": ["${1:items}.forEach((${2:item}) => {\n\t${3}\n});"],
-		"description": "array.forEach(arrow function(currentValue));\n"
+		"description": "ES5\narray.forEach(arrow function(currentValue));\n"
 	},
 	"Array.prototype.forEach(), index": {
-		"prefix": ["fei", "arr.forEach()"],
+		"prefix": ["fei", "arr.forEach().index"],
 		"body": ["${1:items}.forEach((${2:item}, ${3:index}) => {\n\t${4}\n});"],
-		"description": "array.forEach(arrow function(currentValue, index));\n"
+		"description": "ES5\narray.forEach(arrow function(currentValue, index));\n"
 	},
 	"Array.prototype.forEach()": {
-		"prefix": ["fefn", "arr.forEach()"],
+		"prefix": ["fefn", "arr.forEach().function"],
 		"body": ["${1:items}.forEach(function(${2:item}) {\n\t${3}\n});"],
-		"description": "array.forEach(function(currentValue);\n"
+		"description": "ES5\narray.forEach(function(currentValue);\n"
 	},
 	"Array.prototype.forEach(function(currentValue, index)": {
-		"prefix": ["feifn", "arr.forEach()"],
+		"prefix": ["feifn", "arr.forEach().function.index"],
 		"body": [
 			"${1:items}.forEach(function(${2:item}, ${3:index}) {\n\t${4}\n});"
 		],
-		"description": "array.forEach(function callbackFn(currentValue [, index [, array]]) { }[, thisArg]);\n"
+		"description": "ES5\narray.forEach(function callbackFn(currentValue [, index [, array]]) { }[, thisArg]);\n"
 	},
 	"Array.prototype.includes()": {
 		"prefix": ["ari", "arr.includes()"],
 		"body": ["${1:items}.includes(${2:value})"],
-		"description": "array.includes(valueToFind[, fromIndex]);\nreturn a Boolean value\n"
+		"description": "ES2016\narray.includes(valueToFind[, fromIndex]);\nreturn a Boolean value\n"
 	},
 	"Array.prototype.indexOf()": {
 		"prefix": ["ario", "arr.indexOf()"],
 		"body": ["${1:items}.indexOf(${2:item})"],
-		"description": "array.indexOf(searchElement[, fromIndex]);\nreturn the first index of the element in the array; '-1' if not found.\n"
+		"description": "ES5\narray.indexOf(searchElement[, fromIndex]);\nreturn the first index of the element in the array; '-1' if not found.\n"
 	},
 	"Array.prototype.join()": {
 		"prefix": ["arj", "arr.join()"],
@@ -121,12 +131,12 @@
 	"Array.prototype.lastIndexOf()": {
 		"prefix": ["arlio", "arr.lastIndexOf()"],
 		"body": ["${1:items}.lastIndexOf(${2:item})"],
-		"description": "array.lastIndexOf(searchElement[, fromIndex]);\nreturn the last index of the element in the array; '-1' if not found.\n"
+		"description": "ES5\narray.lastIndexOf(searchElement[, fromIndex]);\nreturn the last index of the element in the array; '-1' if not found.\n"
 	},
 	"Array.prototype.map()": {
 		"prefix": ["map", "arr.map()"],
 		"body": ["${1:items}.map((${2:currentValue}) => {\n\t${3}\n});"],
-		"description": "let newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
+		"description": "ES5\nlet newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
 	},
 	"Array.prototype.pop()": {
 		"prefix": ["arp", "arr.pop()"],
@@ -134,7 +144,7 @@
 		"description": "array.pop();\nreturn the removed element from the array; 'undefined' if the array is empty.\n"
 	},
 	"Array.prototype.push()": {
-		"prefix": ["arj", "arr.push()"],
+		"prefix": ["arpu", "arr.push()"],
 		"body": ["${1:items}.push(${2:item});"],
 		"description": "arr.push(element1[, ...[, elementN]]);\nreturn the new length of the array.\n"
 	},
@@ -143,19 +153,29 @@
 		"body": [
 			"${1:items}.reduce((${2:previousValue}, ${3:currentValue}) => {\n\treturn ${3}\n});"
 		],
-		"description": "array.reduce(callbackFn(previousValue, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n"
+		"description": "ES5\narray.reduce(callbackFn(previousValue, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n"
 	},
 	"Array.prototype.reduceRight()": {
 		"prefix": ["arrr", "arr.reduceRight()"],
 		"body": [
 			"${1:items}.reduceRight((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${4}\n});"
 		],
-		"description": "array.reduceRight(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n"
+		"description": "ES5\narray.reduceRight(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n"
 	},
 	"Array.prototype.reverse()": {
 		"prefix": ["arre", "arr.reverse()"],
 		"body": ["${1:items}.reverse();"],
 		"description": "array.reverse();\nreturn the reversed array.\n"
+	},
+	"Array.prototype.toReversed()": {
+		"prefix": ["artre", "arr.toReversed()"],
+		"body": ["${1:items}.toReversed();"],
+		"description": "ES2023\narray.toReversed();\nthe copying counterpart of `reverse()` — return a new reversed array, leaving the original array unchanged.\n"
+	},
+	"Array.prototype.with()": {
+		"prefix": ["arw", "arr.with()"],
+		"body": ["${1:items}.with(${2:index}, ${3:value});"],
+		"description": "ES2023\narray.with(index, value);\nthe copying counterpart of index assignment (`arr[index] = value`) — return a new array with the element at `index` replaced by `value`, leaving the original array unchanged.\n"
 	},
 	"Array.prototype.shift()": {
 		"prefix": ["ars", "arr.shift()"],
@@ -170,12 +190,17 @@
 	"Array.prototype.some()": {
 		"prefix": ["arso", "arr.some()"],
 		"body": ["${1:items}.some((${2:item}) => $3);"],
-		"description": "array.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
+		"description": "ES5\narray.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
 	},
 	"Array.prototype.sort()": {
 		"prefix": ["arsor", "arr.sort()"],
 		"body": ["${1:items}.sort((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
 		"description": "array.sort([compareFunction(firstEl, secondEl)]);\nreturn the sorted array. Note that the array is sorted in-place, and no copy is made.\n"
+	},
+	"Array.prototype.toSorted()": {
+		"prefix": ["artso", "arr.toSorted()"],
+		"body": ["${1:items}.toSorted((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
+		"description": "ES2023\narray.toSorted([compareFunction(firstEl, secondEl)]);\nthe copying counterpart of `sort()` — return a new sorted array, leaving the original array unchanged.\n"
 	},
 	"Array.prototype.splice()": {
 		"prefix": ["arsp", "arr.splice()"],
@@ -183,6 +208,13 @@
 			"${1:items}.splice(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"
 		],
 		"description": "let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]]);\nchanges the contents of an array by removing or replacing existing elements and/or adding new elements in-place.\nreturn an array containing the deleted elements,\nIf no elements are removed, an empty array is returned.\n"
+	},
+	"Array.prototype.toSpliced()": {
+		"prefix": ["artsp", "arr.toSpliced()"],
+		"body": [
+			"${1:items}.toSpliced(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"
+		],
+		"description": "ES2023\nlet newArray = array.toSpliced(start[, deleteCount[, item1[, item2[, ...]]]]);\nthe copying counterpart of `splice()` — return a new array with the changes applied, leaving the original array unchanged.\n"
 	},
 	"Array.prototype.unshift()": {
 		"prefix": ["aru", "arr.unshift()"],
@@ -192,17 +224,17 @@
 	"Array.prototype.entries()": {
 		"prefix": ["are", "arr.entries()"],
 		"body": ["${1:items}.entries();"],
-		"description": "array.entries();\nreturn a new Array Iterator object that contains the key/value pairs for each index in the array.\n"
+		"description": "ES2015\narray.entries();\nreturn a new Array Iterator object that contains the key/value pairs for each index in the array.\n"
 	},
 	"Array.prototype.keys()": {
 		"prefix": ["ark", "arr.keys()"],
 		"body": ["${1:items}.keys();"],
-		"description": "array.keys();\nreturns a new Array Iterator object that contains the keys for each index in the array.\n"
+		"description": "ES2015\narray.keys();\nreturns a new Array Iterator object that contains the keys for each index in the array.\n"
 	},
 	"Array.prototype.values()": {
 		"prefix": ["arv", "arr.values()"],
 		"body": ["${1:items}.values();"],
-		"description": "array.values();\nreturn a new Array Iterator object that contains the values for each index in the array.\n"
+		"description": "ES2015\narray.values();\nreturn a new Array Iterator object that contains the values for each index in the array.\n"
 	},
 	"Array.prototype[@@iterator]()": {
 		"prefix": ["arr.@@iterator"],
@@ -210,7 +242,7 @@
 			"const ${2:iterator} = ${1:items}[Symbol.iterator]();",
 			"$2.next().value"
 		],
-		"description": "array[Symbol.iterator]();\nThe initial value of the @@iterator property is the same function object as the initial value of the values() property.\n"
+		"description": "ES2015\narray[Symbol.iterator]();\nThe initial value of the @@iterator property is the same function object as the initial value of the values() property.\n"
 	},
 	"get Array[@@species]": {
 		"prefix": ["arr.@@species"],
@@ -219,7 +251,7 @@
 			"\tstatic get [Symbol.species]() { return Array; }",
 			"}"
 		],
-		"description": "Array[Symbol.species]\nThe Array[@@species] accessor property returns the Array constructor.\n"
+		"description": "ES2015\nArray[Symbol.species]\nThe Array[@@species] accessor property returns the Array constructor.\n"
 	},
 	"sequence of 0..n": {
 		"prefix": "seq",

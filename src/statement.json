@@ -32,7 +32,7 @@
 	"for-of": {
 		"prefix": "fof",
 		"body": ["for (let ${1:variable} of ${2:iterable}) {\n\t${3}\n}"],
-		"description": "The for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.\n"
+		"description": "ES2015\nThe for...of statement creates a loop iterating over iterable objects, including: built-in String, Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables. It invokes a custom iteration hook with statements to be executed for the value of each distinct property of the object.\n"
 	},
 	"for loop iterable": {
 		"prefix": ["fl", "fo", "for"],
@@ -55,7 +55,7 @@
 	},
 	"while iteration decrementing": {
 		"prefix": "whi",
-		"body": ["let ${1:iterable}Index = ${1:array}.length\nwhile (${1:iterableIndex}Index--) {\n\t${2}\n}"],
+		"body": ["let ${2:index} = ${1:array}.length;\nwhile (${2:index}--) {\n\t${3}\n}"],
 		"description": "while iteration decrementing\n"
 	}
 }

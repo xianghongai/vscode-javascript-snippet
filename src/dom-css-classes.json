@@ -5,7 +5,7 @@
 		"description": "DOMTokenList.add(token0, token1, /* ... ,*/ tokenN);\n"
 	},
 	"Element.classList.contains()": {
-		"prefix": ["clc", "dom.classList.contains"],
+		"prefix": ["clco", "dom.classList.contains"],
 		"body": ["${1:element}.classList.contains('${2:className}');"],
 		"description": "DOMTokenList.contains(token);\n"
 	},

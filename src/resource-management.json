@@ -1,0 +1,58 @@
+{
+	"using declaration": {
+		"prefix": "using",
+		"body": ["using ${1:resource} = ${2:getResource()};"],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nusing x = expression;\ndeclares a block-scoped resource that is automatically disposed (its `[Symbol.dispose]()` is called) when control leaves the enclosing block — even via an exception. Similar to a synchronous `try { } finally { resource.dispose(); }`, but composable and can't be forgotten.\n"
+	},
+	"await using declaration": {
+		"prefix": "awusing",
+		"body": ["await using ${1:resource} = ${2:getResourceAsync()};"],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nawait using x = expression;\nlike `using`, but disposal calls the resource's `[Symbol.asyncDispose]()` and is awaited. Only valid inside an async function/module, same restriction as top-level `await`.\n"
+	},
+	"disposable object (Symbol.dispose)": {
+		"prefix": ["symdispose", "Symbol.dispose"],
+		"body": [
+			"const ${1:resource} = {",
+			"\t${2:/* ...resource state... */}",
+			"\t[Symbol.dispose]() {",
+			"\t\t${3:/* release the resource */}",
+			"\t}",
+			"};"
+		],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.dispose]()` can be declared with `using` and will be cleaned up automatically.\n"
+	},
+	"async disposable object (Symbol.asyncDispose)": {
+		"prefix": ["symasyncdispose", "Symbol.asyncDispose"],
+		"body": [
+			"const ${1:resource} = {",
+			"\t${2:/* ...resource state... */}",
+			"\tasync [Symbol.asyncDispose]() {",
+			"\t\t${3:await /* release the resource */}",
+			"\t}",
+			"};"
+		],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.asyncDispose]()` can be declared with `await using` and will be cleaned up (awaited) automatically.\n"
+	},
+	"DisposableStack": {
+		"prefix": ["dstack", "DisposableStack"],
+		"body": [
+			"using ${1:stack} = new DisposableStack();",
+			"const ${2:resource} = ${1}.use(${3:getResource()});",
+			"${1}.defer(() => {",
+			"\t${4:/* extra cleanup, runs LIFO on stack disposal */}",
+			"});"
+		],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nDisposableStack collects multiple disposable resources (via `.use()`) and ad-hoc cleanup callbacks (via `.defer()`), then disposes them all, in reverse order, when the stack itself is disposed.\n"
+	},
+	"AsyncDisposableStack": {
+		"prefix": ["adstack", "AsyncDisposableStack"],
+		"body": [
+			"await using ${1:stack} = new AsyncDisposableStack();",
+			"const ${2:resource} = ${1}.use(${3:getResourceAsync()});",
+			"${1}.defer(async () => {",
+			"\t${4:/* extra async cleanup, runs LIFO on stack disposal */}",
+			"});"
+		],
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nthe async counterpart of DisposableStack — collects disposable/async-disposable resources and cleanup callbacks, disposing (and awaiting) them all in reverse order.\n"
+	}
+}

@@ -2,12 +2,12 @@
 	"use strict": {
 		"prefix": "usm",
 		"body": ["'use strict';"],
-		"description": "use strict mode\n"
+		"description": "ES5\nuse strict mode\n"
 	},
 	"const": {
 		"prefix": "c",
 		"body": ["const ${1:name} = ${2:value};"],
-		"description": "const assignment\n"
+		"description": "ES2015\nconst assignment\n"
 	},
 	"const object": {
 		"prefix": "co",
@@ -27,17 +27,17 @@
 	"const destructing object": {
 		"prefix": "cdo",
 		"body": ["const {${2}} = ${1};"],
-		"description": "const assignment destructuring\n"
+		"description": "ES2015\nconst assignment destructuring\n"
 	},
 	"const destructing array": {
 		"prefix": "cda",
 		"body": ["const [${2}] = ${1};"],
-		"description": "const assignment destructuring\n"
+		"description": "ES2015\nconst assignment destructuring\n"
 	},
 	"let": {
 		"prefix": "l",
 		"body": ["let ${1:name} = ${2:value};"],
-		"description": "let assignment\n"
+		"description": "ES2015\nlet assignment\n"
 	},
 	"let object": {
 		"prefix": "lo",
@@ -57,12 +57,12 @@
 	"let destructing object": {
 		"prefix": "ldo",
 		"body": ["let {${2}} = ${1};"],
-		"description": "let assignment destructuring\n"
+		"description": "ES2015\nlet assignment destructuring\n"
 	},
 	"let destructing array": {
 		"prefix": "lda",
 		"body": ["let [${2}] = ${1};"],
-		"description": "let assignment destructuring\n"
+		"description": "ES2015\nlet assignment destructuring\n"
 	},
 	"var": {
 		"prefix": "v",
@@ -94,10 +94,20 @@
 		"body": ["var [${2}] = ${1};"],
 		"description": "var destructuring assignment\n"
 	},
+	"BigInt literal": {
+		"prefix": "bign",
+		"body": ["${1:10}n"],
+		"description": "ES2020\nan integer literal suffixed with `n` (or `BigInt(value)`) creates a BigInt — an arbitrary-precision integer that can safely exceed `Number.MAX_SAFE_INTEGER`. BigInts cannot be mixed with regular Numbers in arithmetic without explicit conversion.\n"
+	},
+	"globalThis": {
+		"prefix": "globth",
+		"body": ["globalThis"],
+		"description": "ES2020\nglobalThis provides a standard way to access the global object (`window` in browsers, `self` in workers, `global` in Node.js) across all environments.\n"
+	},
 	"destructuring parameter": {
 		"prefix": "dp",
 		"body": ["{${0}}: ${1:parameter}"],
-		"description": "destructuring parameter\n"
+		"description": "ES2015\ndestructuring parameter\n"
 	},
 	"property object": {
 		"prefix": "po",
@@ -105,12 +115,12 @@
 		"description": "object property\n"
 	},
 	"property array": {
-		"prefix": "pa",
+		"prefix": "parr",
 		"body": ["${1:property}: [${2:item}],$0"],
 		"description": "array property\n"
 	},
 	"property string": {
-		"prefix": "ps",
+		"prefix": "pstr",
 		"body": ["${1:property}: '${2:value}',$0"],
 		"description": "string property\n"
 	}
