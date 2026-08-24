@@ -62,32 +62,32 @@
 	"function bind": {
 		"prefix": "fnbind",
 		"body": ["${1:method}.bind(${2:this});"],
-		"description": "function.bind(thisArg[, arg1[, arg2[, ...]]])\n"
+		"description": "ES5\nfunction.bind(thisArg[, arg1[, arg2[, ...]]])\n"
 	},
 	"arrow function statements": {
 		"prefix": ["af", "afs"],
 		"body": ["(${1:param}) => {\n\t${2}\n}\n"],
-		"description": "arrow function statements\n"
+		"description": "ES2015\narrow function statements\n"
 	},
 	"arrow function expression": {
 		"prefix": "afe",
 		"body": ["(${1:param}) => ${2}"],
-		"description": "arrow function expression\n"
+		"description": "ES2015\narrow function expression\n"
 	},
 	"arrow function with return": {
 		"prefix": "afr",
 		"body": ["(${1:param}) => {\n\treturn ${2};\n}\n"],
-		"description": "arrow function with return\n"
+		"description": "ES2015\narrow function with return\n"
 	},
 	"arrow function with destructuring": {
 		"prefix": "afd",
 		"body": ["({${1:param}}) => ${2:statement}\n"],
-		"description": "arrow function with destructuring\n"
+		"description": "ES2015\narrow function with destructuring\n"
 	},
 	"iife, arrow function": {
 		"prefix": "iif",
 		"body": [";((${1:param}) => {\n\t${3}\n})(${2})\n"],
-		"description": "immediately-invoked function expression (IIFE)\n"
+		"description": "ES2015\nimmediately-invoked function expression (IIFE)\n"
 	},
 	"iife": {
 		"prefix": "iife",
@@ -98,6 +98,7 @@
 		"prefix": "nt",
 		"body": [
 			"if (typeof new.target === 'undefined') {\n\tthrow new Error('Fn() must be called with new');\n}"
-		]
+		],
+		"description": "ES2015\n"
 	}
 }

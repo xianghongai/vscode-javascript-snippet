@@ -2,43 +2,43 @@
 	"let Map": {
 		"prefix": "lm",
 		"body": ["let ${1:resource}Map = new Map();"],
-		"description": "let assignment Map\n"
+		"description": "ES2015\nlet assignment Map\n"
 	},
 	"let Set": {
-		"prefix": "ls",
+		"prefix": "lset",
 		"body": ["let ${1:resource}Set = new Set();"],
-		"description": "let assignment Set\n"
+		"description": "ES2015\nlet assignment Set\n"
 	},
 	"let WeakMap": {
 		"prefix": "lwm",
 		"body": ["let ${1:resource}WeakMap = new WeakMap();"],
-		"description": "let assignment WeakMap\n"
+		"description": "ES2015\nlet assignment WeakMap\n"
 	},
 	"let WeakSet": {
 		"prefix": "lws",
 		"body": ["let ${1:resource}WeakSet = new WeakSet();"],
-		"description": "let assignment WeakSet\n"
+		"description": "ES2015\nlet assignment WeakSet\n"
 	},
 
 	"const Map": {
-		"prefix": ["cm", "map"],
+		"prefix": ["cm"],
 		"body": ["const ${1:resource}Map = new Map();"],
-		"description": "const assignment Map\n"
+		"description": "ES2015\nconst assignment Map\n"
 	},
 	"const Set": {
-		"prefix": ["cs", "set"],
+		"prefix": ["cset"],
 		"body": ["const ${1:resource}Set = new Set();"],
-		"description": "const assignment Set\n"
+		"description": "ES2015\nconst assignment Set\n"
 	},
 	"const WeakMap": {
 		"prefix": ["cwm", "wm"],
 		"body": ["const ${1:resource}WeakMap = new WeakMap();"],
-		"description": "const assignment WeakMap\n"
+		"description": "ES2015\nconst assignment WeakMap\n"
 	},
 	"const WeakSet": {
 		"prefix": ["cws", "ws"],
 		"body": ["const ${1:resource}WeakSet = new WeakSet();"],
-		"description": "const assignment WeakSet\n"
+		"description": "ES2015\nconst assignment WeakSet\n"
 	},
 
 	"Map.prototype.size": {
@@ -65,6 +65,16 @@
 		"prefix": "map.get()",
 		"body": ["${1:map}.get(${2:key});"],
 		"description": "The get() method returns a specified element from a Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map object.\n"
+	},
+	"Map.prototype.getOrInsert()": {
+		"prefix": ["mapgoi", "map.getOrInsert()"],
+		"body": ["${1:map}.getOrInsert(${2:key}, ${3:defaultValue});"],
+		"description": "ES2026 (Upsert)\nmap.getOrInsert(key, defaultValue)\nreturn the existing value for `key`, or insert `defaultValue` and return it if absent — a single lookup instead of the classic `map.has(key) ? map.get(key) : (map.set(key, defaultValue), defaultValue)` dance. Also available on WeakMap.\n"
+	},
+	"Map.prototype.getOrInsertComputed()": {
+		"prefix": ["mapgoic", "map.getOrInsertComputed()"],
+		"body": ["${1:map}.getOrInsertComputed(${2:key}, (${3:key}) => ${4:computedDefault});"],
+		"description": "ES2026 (Upsert)\nmap.getOrInsertComputed(key, callbackFn)\nlike `getOrInsert()`, but the default value is computed lazily by `callbackFn(key)` only when `key` is absent — useful when the default is expensive to construct (e.g. `() => []`). Also available on WeakMap.\n"
 	},
 	"Map.prototype.has()": {
 		"prefix": "map.has()",
@@ -100,6 +110,11 @@
 		"prefix": ["map.@@species"],
 		"body": ["class FeatureMap extends Map {", "\tstatic get [@@species]() { return Map; }", "}"],
 		"description": "The Map[@@species] accessor property returns the Map constructor.\n"
+	},
+	"Map.groupBy()": {
+		"prefix": ["mgb", "Map.groupBy()"],
+		"body": ["const ${2:grouped} = Map.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+		"description": "ES2024\nMap.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the values returned by `callbackFn`, and returns a Map. Prefer this over `Object.groupBy()` when group keys aren't strings/symbols.\n"
 	},
 
 	"WeakMap.prototype.delete()": {
@@ -172,6 +187,42 @@
 		"prefix": ["set.@@species"],
 		"body": ["class FeatureSet extends Set {", "\tstatic get [@@species]() { return Set; }", "}"],
 		"description": "The Set[Symbol.species] accessor property returns the Set constructor.\n"
+	},
+
+	"Set.prototype.union()": {
+		"prefix": "set.union()",
+		"body": ["${1:set}.union(${2:otherSet})"],
+		"description": "ES2025\nsetA.union(setB)\nreturn a new Set containing every element in either `setA` or `setB` (or both).\n"
+	},
+	"Set.prototype.intersection()": {
+		"prefix": "set.intersection()",
+		"body": ["${1:set}.intersection(${2:otherSet})"],
+		"description": "ES2025\nsetA.intersection(setB)\nreturn a new Set containing every element that is in both `setA` and `setB`.\n"
+	},
+	"Set.prototype.difference()": {
+		"prefix": "set.difference()",
+		"body": ["${1:set}.difference(${2:otherSet})"],
+		"description": "ES2025\nsetA.difference(setB)\nreturn a new Set containing every element in `setA` that is **not** in `setB`.\n"
+	},
+	"Set.prototype.symmetricDifference()": {
+		"prefix": "set.symmetricDifference()",
+		"body": ["${1:set}.symmetricDifference(${2:otherSet})"],
+		"description": "ES2025\nsetA.symmetricDifference(setB)\nreturn a new Set containing every element that is in exactly one of `setA` or `setB`, but not both.\n"
+	},
+	"Set.prototype.isSubsetOf()": {
+		"prefix": "set.isSubsetOf()",
+		"body": ["${1:set}.isSubsetOf(${2:otherSet})"],
+		"description": "ES2025\nsetA.isSubsetOf(setB)\nreturn a boolean indicating whether every element of `setA` is also in `setB`.\n"
+	},
+	"Set.prototype.isSupersetOf()": {
+		"prefix": "set.isSupersetOf()",
+		"body": ["${1:set}.isSupersetOf(${2:otherSet})"],
+		"description": "ES2025\nsetA.isSupersetOf(setB)\nreturn a boolean indicating whether every element of `setB` is also in `setA`.\n"
+	},
+	"Set.prototype.isDisjointFrom()": {
+		"prefix": "set.isDisjointFrom()",
+		"body": ["${1:set}.isDisjointFrom(${2:otherSet})"],
+		"description": "ES2025\nsetA.isDisjointFrom(setB)\nreturn a boolean indicating whether `setA` and `setB` have no elements in common.\n"
 	},
 
 	"WeakSet.prototype.add()": {

@@ -20,7 +20,7 @@
 		"description": "test suite: it asynchronous\n"
 	},
 	"test suite: afterEach": {
-		"prefix":[ "afe", "test.afterEach"],
+		"prefix":[ "afte", "test.afterEach"],
 		"body": ["afterEach(() => {", "\t${1}", "})"],
 		"description": "test suite: afterEach\n"
 	},

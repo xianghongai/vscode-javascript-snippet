@@ -25,7 +25,7 @@
     "body": [
       "typeof ${1:operand} === 'symbol'"
     ],
-    "description": "Type is Symbol\n"
+    "description": "ES2015 (Symbol)\nType is Symbol\n"
   },
   "typeof is string": {
     "prefix": "tos",
@@ -53,7 +53,42 @@
     "body": [
       "typeof ${1:operand} === 'bigint'"
     ],
-    "description": "Type is Bigint\n"
+    "description": "ES2020 (BigInt)\nType is Bigint\n"
+  },
+  "optional chaining": {
+    "prefix": "optch",
+    "body": [
+      "${1:object}?.${2:property}"
+    ],
+    "description": "ES2020\nobj?.prop, obj?.[expr], obj?.method?.(args)\nshort-circuits to `undefined` instead of throwing when a reference in the chain is `null`/`undefined`.\n"
+  },
+  "nullish coalescing": {
+    "prefix": "ncoal",
+    "body": [
+      "${1:leftExpr} ?? ${2:rightExpr}"
+    ],
+    "description": "ES2020\nleftExpr ?? rightExpr\nreturns the right-hand operand only when the left-hand operand is `null` or `undefined` — unlike `||`, it doesn't fall through for other falsy values like `0`, `''`, or `false`.\n"
+  },
+  "logical OR assignment": {
+    "prefix": "lora",
+    "body": [
+      "${1:variable} ||= ${2:value};"
+    ],
+    "description": "ES2021\nx ||= y is shorthand for x || (x = y)\nassigns `value` only if the current value is falsy.\n"
+  },
+  "logical AND assignment": {
+    "prefix": "landa",
+    "body": [
+      "${1:variable} &&= ${2:value};"
+    ],
+    "description": "ES2021\nx &&= y is shorthand for x && (x = y)\nassigns `value` only if the current value is truthy.\n"
+  },
+  "logical nullish assignment": {
+    "prefix": "lnula",
+    "body": [
+      "${1:variable} ??= ${2:value};"
+    ],
+    "description": "ES2021\nx ??= y is shorthand for x ?? (x = y)\nassigns `value` only if the current value is `null` or `undefined`.\n"
   },
   "instanceof": {
     "prefix": "io",
@@ -67,14 +102,38 @@
     "body": [
       "JSON.parse(${1:obj});"
     ],
-    "description": "JSON.parse()\n"
+    "description": "ES5\nJSON.parse()\n"
   },
   "JSON.stringify()": {
     "prefix": "js",
     "body": [
       "JSON.stringify(${1:obj});"
     ],
-    "description": "JSON.stringify()\n"
+    "description": "ES5\nJSON.stringify()\n"
+  },
+  "JSON.parse() with source access": {
+    "prefix": ["jpsrc", "JSON.parse().source"],
+    "body": [
+      "JSON.parse(${1:text}, (${2:key}, ${3:value}, { source }) => {",
+      "\t${4}",
+      "\treturn ${3:value};",
+      "});"
+    ],
+    "description": "ES2026 (JSON.parse source text access)\nthe reviver function's 3rd argument is a context object whose `source` property holds the exact input substring a value was parsed from — lets you recover precision JSON.parse would otherwise lose (e.g. big integers as BigInt instead of a rounded Number).\n"
+  },
+  "JSON.rawJSON()": {
+    "prefix": ["jrj", "JSON.rawJSON()"],
+    "body": [
+      "JSON.rawJSON(${1:rawJsonText})"
+    ],
+    "description": "ES2026 (JSON.parse source text access)\nJSON.rawJSON(text)\nwraps a raw JSON text fragment so `JSON.stringify()` emits it verbatim, unparsed — pairs with the reviver's `source` to round-trip values (like large integers) without losing precision.\n"
+  },
+  "structuredClone()": {
+    "prefix": "sclone",
+    "body": [
+      "structuredClone(${1:value});"
+    ],
+    "description": "ES2021 (Web/Node API standardized alongside)\nstructuredClone(value)\nreturn a deep copy of `value` using the structured clone algorithm — handles Dates, Maps, Sets, TypedArrays, circular references, etc. Throws on functions, DOM nodes, and a few other non-cloneable types.\n"
   },
   "try/catch": {
     "prefix": "tc",

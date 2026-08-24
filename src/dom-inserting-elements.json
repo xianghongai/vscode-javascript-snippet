@@ -33,64 +33,64 @@
 	},
 
 	"Element.insertAdjacentHTML('beforebegin', 'DOMString')": {
-		"prefix": ["before", "dom.before.html"],
+		"prefix": ["beforehtml", "dom.before.html"],
 		"body": ["${1:element}.insertAdjacentHTML('beforebegin', ${2:'DOMString'});"],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentHTML('afterend', 'DOMString')": {
-		"prefix": ["after", "dom.after.html"],
+		"prefix": ["afterhtml", "dom.after.html"],
 		"body": ["${1:element}.insertAdjacentHTML('afterend', ${2:'DOMString'});"],
 		"description": "After the element itself.\n"
 	},
 	"Element.insertAdjacentHTML('afterbegin', 'DOMString')": {
-		"prefix": ["prepend", "dom.prepend.html"],
+		"prefix": ["prependhtml", "dom.prepend.html"],
 		"body": ["${1:element}.insertAdjacentHTML('afterbegin', ${2:'DOMString'});"],
 		"description": "Just inside the element, before its first child.\n"
 	},
 	"Element.insertAdjacentHTML('beforeend', 'DOMString')": {
-		"prefix": ["append", "dom.append.html"],
+		"prefix": ["appendhtml", "dom.append.html"],
 		"body": ["${1:element}.insertAdjacentHTML('beforeend', ${2:'DOMString'});"],
 		"description": "Just inside the element, after its last child.\n"
 	},
 
 	"Element.insertAdjacentElement('beforebegin', element)": {
-		"prefix": ["before", "dom.before.element"],
+		"prefix": ["beforeelem", "dom.before.element"],
 		"body": ["${1:element}.insertAdjacentElement('beforebegin', ${2:element});"],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentElement('afterend', element)": {
-		"prefix": ["after", "dom.after.element"],
+		"prefix": ["afterelem", "dom.after.element"],
 		"body": ["${1:element}.insertAdjacentElement('afterend', ${2:element});"],
 		"description": "After the element itself.\n"
 	},
 	"Element.insertAdjacentElement('afterbegin', element)": {
-		"prefix": ["prepend", "dom.prepend.element"],
+		"prefix": ["prependelem", "dom.prepend.element"],
 		"body": ["${1:element}.insertAdjacentElement('afterbegin', ${2:element});"],
 		"description": "Just inside the element, before its first child.\n"
 	},
 	"Element.insertAdjacentElement('beforeend', element)": {
-		"prefix": ["append", "dom.append.element"],
+		"prefix": ["appendelem", "dom.append.element"],
 		"body": ["${1:element}.insertAdjacentElement('beforeend', ${2:element});"],
 		"description": "Just inside the element, after its last child.\n"
 	},
 
 	"Element.insertAdjacentText('beforebegin', value)": {
-		"prefix": ["before", "dom.before.text"],
+		"prefix": ["beforetext", "dom.before.text"],
 		"body": ["${1:element}.insertAdjacentText('beforebegin', ${2:value});"],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentText('afterend', value)": {
-		"prefix": ["after", "dom.after.text"],
+		"prefix": ["aftertext", "dom.after.text"],
 		"body": ["${1:element}.insertAdjacentText('afterend', ${2:value});"],
 		"description": "After the element itself.\n"
 	},
 	"Element.insertAdjacentText('afterbegin', value)": {
-		"prefix": ["prepend", "dom.prepend.text"],
+		"prefix": ["prependtext", "dom.prepend.text"],
 		"body": ["${1:element}.insertAdjacentText('afterbegin', ${2:value});"],
 		"description": "Just inside the element, before its first child.\n"
 	},
 	"Element.insertAdjacentText('beforeend', value)": {
-		"prefix": ["append", "dom.append.text"],
+		"prefix": ["appendtext", "dom.append.text"],
 		"body": ["${1:element}.insertAdjacentText('beforeend', ${2:value});"],
 		"description": "Just inside the element, after its last child.\n"
 	}

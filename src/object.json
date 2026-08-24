@@ -12,7 +12,7 @@
 	"object method()": {
 		"prefix": "om",
 		"body": ["${1:method}(${2:param}) {", "\t${3}", "},"],
-		"description": "method\n"
+		"description": "ES2015\nmethod\n"
 	},
 	"object set": {
 		"prefix": "oset",
@@ -27,37 +27,37 @@
 	"object set with computed keys": {
 		"prefix": "osete",
 		"body": ["set [${1:property}](${2:value}) {\n\t$3\n},"],
-		"description": "setter"
+		"description": "ES2015\nsetter (computed property names)"
 	},
 	"object get with computed keys": {
 		"prefix": "ogete",
 		"body": ["get [${1:property}]() {\n\t$2\n},"],
-		"description": "getter"
+		"description": "ES2015\ngetter (computed property names)"
 	},
 	"object arrow method statements": {
 		"prefix": "oam",
 		"body": ["${1:method}: (${2:param}) => {", "\t${3}", "},"],
-		"description": "note we can't use an arrow function if we want to use `this`.\n"
+		"description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n"
 	},
 	"object arrow method expression": {
 		"prefix": "oame",
 		"body": ["${1:method}: (${2:param}) => ${3},"],
-		"description": "note we can't use an arrow function if we want to use `this`.\n"
+		"description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n"
 	},
 	"object async method()": {
 		"prefix": "oasm",
 		"body": ["async ${1:method}(${2:param}) {", "\t${3}", "},"],
-		"description": "async method\n"
+		"description": "ES2017\nasync method\n"
 	},
 	"Object.assign()": {
 		"prefix": ["oa", "Obj.assign()"],
 		"body": ["Object.assign(${1:target}, ${2:source});"],
-		"description": "Object.assign(target, ...sources);\nreturn the target object.\n"
+		"description": "ES2015\nObject.assign(target, ...sources);\nreturn the target object.\n"
 	},
 	"Object.create()": {
 		"prefix": ["oc", "Obj.create()"],
 		"body": ["Object.create(${1:obj});"],
-		"description": "Object.create(proto, [propertiesObject]);\nreturn a new object with the specified prototype object and properties.\nA TypeError exception if the propertiesObject parameter is 'null' or a non-primitive-wrapper object.\n"
+		"description": "ES5\nObject.create(proto, [propertiesObject]);\nreturn a new object with the specified prototype object and properties.\nA TypeError exception if the propertiesObject parameter is 'null' or a non-primitive-wrapper object.\n"
 	},
 	"Object.defineProperty(data descriptors)": {
 		"prefix": ["odp", "Obj.defineProperty()"],
@@ -69,10 +69,10 @@
 			"\t${9:writable}: ${10:false}",
 			"})"
 		],
-		"description": "Object.defineProperty(data descriptors)\ndata descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
+		"description": "ES5\nObject.defineProperty(data descriptors)\ndata descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
 	},
 	"Object.defineProperty(accessor descriptors)": {
-		"prefix": ["odpa", "Obj.defineProperty()"],
+		"prefix": ["odpa", "Obj.defineProperty().accessor"],
 		"body": [
 			"Object.defineProperty(${1:dest}, '${2:propertyName}', {",
 			"\tget() {",
@@ -85,7 +85,7 @@
 			"\tconfigurable: ${7:false}",
 			"})"
 		],
-		"description": "Object.defineProperty(accessor descriptors)\naccessor descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
+		"description": "ES5\nObject.defineProperty(accessor descriptors)\naccessor descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
 	},
 	"Object.defineProperties()": {
 		"prefix": ["odps", "Obj.defineProperties()"],
@@ -109,97 +109,107 @@
 			"\t}",
 			"});"
 		],
-		"description": "Object.defineProperties(obj, props)\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
+		"description": "ES5\nObject.defineProperties(obj, props)\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
 	},
 	"Object.freeze()": {
 		"prefix": ["of", "Obj.freeze()"],
 		"body": ["Object.freeze(${1:obj});"],
-		"description": "Object.freeze(obj);\nreturn the same object that was passed in.\n"
+		"description": "ES5\nObject.freeze(obj);\nreturn the same object that was passed in.\n"
 	},
 	"Object.fromEntries()": {
 		"prefix": ["ofe", "Obj.fromEntries()"],
 		"body": ["Object.fromEntries(${1:iterable});"],
-		"description": "Object.fromEntries(iterable);\ntransforms a list of key-value pairs into an object.\n"
+		"description": "ES2019\nObject.fromEntries(iterable);\ntransforms a list of key-value pairs into an object.\n"
 	},
 	"Object.getOwnPropertyDescriptor()": {
 		"prefix": ["ogopd", "Obj.getOwnPropertyDescriptor()"],
 		"body": ["Object.getOwnPropertyDescriptor(${1:obj}, '${2:propertyName}');"],
-		"description": "Object.getOwnPropertyDescriptor(obj, propertyName);\nreturn a property descriptor of the given property if it exists on the object, 'undefined' otherwise.\n"
+		"description": "ES5\nObject.getOwnPropertyDescriptor(obj, propertyName);\nreturn a property descriptor of the given property if it exists on the object, 'undefined' otherwise.\n"
 	},
 	"Object.getOwnPropertyDescriptors()": {
 		"prefix": ["ogopds", "Obj.getOwnPropertyDescriptors()"],
 		"body": ["Object.getOwnPropertyDescriptors(${1:obj});"],
-		"description": "Object.getOwnPropertyDescriptors(obj);\nreturn an object containing all own property descriptors of an object. Might be an empty object, if there are no properties.\n"
+		"description": "ES2017\nObject.getOwnPropertyDescriptors(obj);\nreturn an object containing all own property descriptors of an object. Might be an empty object, if there are no properties.\n"
 	},
 	"Object.getOwnPropertyNames()": {
 		"prefix": ["ogopn", "Obj.getOwnPropertyNames()"],
 		"body": ["Object.getOwnPropertyNames(${1:obj});"],
-		"description": "Object.getOwnPropertyNames(obj);\nreturn an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.\n"
+		"description": "ES5\nObject.getOwnPropertyNames(obj);\nreturn an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.\n"
 	},
 	"Object.getOwnPropertySymbols()": {
 		"prefix": ["ogops", "Obj.getOwnPropertySymbols()"],
 		"body": ["Object.getOwnPropertySymbols(${1:obj});"],
-		"description": "Object.getOwnPropertySymbols(obj);\nreturn an array of all symbol properties found directly upon a given object.\n"
+		"description": "ES2015\nObject.getOwnPropertySymbols(obj);\nreturn an array of all symbol properties found directly upon a given object.\n"
 	},
 	"Object.getPrototypeOf()": {
 		"prefix": ["ogpo", "Obj.getPrototypeOf()"],
 		"body": ["Object.getPrototypeOf(${1:obj});"],
-		"description": "Object.getPrototypeOf(obj);\nreturn the prototype of the given object. If there are no inherited properties, 'null' is returned.\n"
+		"description": "ES5\nObject.getPrototypeOf(obj);\nreturn the prototype of the given object. If there are no inherited properties, 'null' is returned.\n"
 	},
 	"Object.is()": {
 		"prefix": ["oi", "Obj.is()"],
 		"body": ["Object.is(${1:value1}, ${2:value2});"],
-		"description": "Object.is(value1, value2);\ndetermines whether two values are the same value\n"
+		"description": "ES2015\nObject.is(value1, value2);\ndetermines whether two values are the same value\n"
 	},
 	"Object.isExtensible()": {
 		"prefix": ["oie", "Obj.isExtensible()"],
 		"body": ["Object.isExtensible(${1:obj})"],
-		"description": "Object.isExtensible(obj);\ndetermines if an object is extensible (whether it can have new properties added to it).\n"
+		"description": "ES5\nObject.isExtensible(obj);\ndetermines if an object is extensible (whether it can have new properties added to it).\n"
 	},
 	"Object.isFrozen()": {
 		"prefix": ["oif", "Obj.isFrozen()"],
 		"body": ["Object.isFrozen(${1:obj})"],
-		"description": "Object.isFrozen(obj);\ndetermines if an object is frozen.\n"
+		"description": "ES5\nObject.isFrozen(obj);\ndetermines if an object is frozen.\n"
 	},
 	"Object.isSealed()": {
 		"prefix": ["ois", "Obj.isSealed()"],
 		"body": ["Object.isSealed(${1:obj})"],
-		"description": "Object.isSealed(obj);\ndetermines if an object is sealed.\n"
+		"description": "ES5\nObject.isSealed(obj);\ndetermines if an object is sealed.\n"
 	},
 	"Object.preventExtensions()": {
 		"prefix": ["ope", "Obj.preventExtensions()"],
 		"body": ["Object.preventExtensions(${1:obj});"],
-		"description": "Object.preventExtensions(obj);\nreturn the object being made non-extensible.\n"
+		"description": "ES5\nObject.preventExtensions(obj);\nreturn the object being made non-extensible.\n"
 	},
 	"Object.seal()": {
 		"prefix": ["os", "Obj.seal()"],
 		"body": ["Object.seal(${1:obj});"],
-		"description": "Object.seal(obj);\nseals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.\nreturn the object being sealed.\n"
+		"description": "ES5\nObject.seal(obj);\nseals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.\nreturn the object being sealed.\n"
 	},
 	"Object.setPrototypeOf()": {
 		"prefix": ["ospo", "Obj.setPrototypeOf()"],
 		"body": ["Object.setPrototypeOf(${1:obj}, ${2:prototype});"],
-		"description": "Object.setPrototypeOf(obj, prototype);\nreturn the specified object.\n"
+		"description": "ES2015\nObject.setPrototypeOf(obj, prototype);\nreturn the specified object.\n"
 	},
 	"Object.entries()": {
 		"prefix": ["oe", "Obj.entries()"],
 		"body": ["Object.entries(${1:obj})"],
-		"description": "Object.entries(obj);\nreturn an array of a given object's own enumerable string-keyed property [key, value] pairs.\n"
+		"description": "ES2017\nObject.entries(obj);\nreturn an array of a given object's own enumerable string-keyed property [key, value] pairs.\n"
 	},
 	"Object.keys()": {
 		"prefix": ["ok", "Obj.keys()"],
 		"body": ["Object.keys(${1:obj})"],
-		"description": "Object.keys(obj);\nreturn an array of a given object's own property names, in the same order as we get with a normal loop.\n"
+		"description": "ES5\nObject.keys(obj);\nreturn an array of a given object's own property names, in the same order as we get with a normal loop.\n"
 	},
 	"Object.values()": {
 		"prefix": ["ov", "Obj.values()"],
 		"body": ["Object.values(${1:obj})"],
-		"description": "Object.values(obj);\nreturn an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).\n"
+		"description": "ES2017\nObject.values(obj);\nreturn an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).\n"
 	},
 	"*obj.hasOwnProperty()": {
 		"prefix": ["hop", "obj.hasOwnProperty()"],
 		"body": ["${1:obj}.hasOwnProperty(${2:propertyName})"],
 		"description": "Object.prototype.hasOwnProperty(propertyName);\nreturn a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).\n"
+	},
+	"Object.hasOwn()": {
+		"prefix": ["ohso", "Obj.hasOwn()"],
+		"body": ["Object.hasOwn(${1:obj}, '${2:propertyName}')"],
+		"description": "ES2022\nObject.hasOwn(obj, propertyName);\nreturn a boolean indicating whether `obj` has `propertyName` as its own property. Preferred over `obj.hasOwnProperty(propertyName)` since it also works for objects created with `Object.create(null)`.\n"
+	},
+	"Object.groupBy()": {
+		"prefix": ["ogb", "Obj.groupBy()"],
+		"body": ["const ${2:grouped} = Object.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+		"description": "ES2024\nObject.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the string/symbol values returned by `callbackFn`, and returns a null-prototype object with those keys.\n"
 	},
 	"*prototypeObj.isPrototypeOf()": {
 		"prefix": ["ipo", "obj.isPrototypeOf()"],
@@ -222,7 +232,7 @@
 		"description": "Object.prototype.toString();\n"
 	},
 	"*obj.valueOf()": {
-		"prefix": ["vo", "obj.valueOf()"],
+		"prefix": ["ovof", "obj.valueOf()"],
 		"body": ["${1:obj}.valueOf()"],
 		"description": "Object.prototype.valueOf();\n returns the primitive value of a **Objects** object\n"
 	}

@@ -4,14 +4,14 @@
     "body": [
       "import { ${2:moduleName} } from '${1:module}';"
     ],
-    "description": "Import individual features\n"
+    "description": "ES2015\nImport individual features\n"
   },
   "import default export": {
     "prefix": "imd",
     "body": [
       "import ${2:moduleName} from '${1:module}';"
     ],
-    "description": "Import default export\n"
+    "description": "ES2015\nImport default export\n"
   },
   "import renamed exports": {
     "prefix": "imas",
@@ -34,12 +34,19 @@
     ],
     "description": "Import a module for side effects only\n"
   },
+  "dynamic import()": {
+    "prefix": "imdyn",
+    "body": [
+      "const ${2:moduleName} = await import('${1:module}');"
+    ],
+    "description": "ES2020\nimport(module)\nreturns a Promise that resolves to the module namespace object. Unlike static `import`, it can be called from anywhere (conditionally, lazily) and takes a dynamic expression rather than a string literal.\n"
+  },
   "export": {
     "prefix": "ex",
     "body": [
       "export { ${1:feature} };"
     ],
-    "description": "*export list\n"
+    "description": "ES2015\n*export list\n"
   },
   "export renaming": {
     "prefix": "exas",
@@ -151,7 +158,7 @@
     "body": [
       "export default ${1:expression};"
     ],
-    "description": "*export default\n"
+    "description": "ES2015\n*export default\n"
   },
   "export as default": {
     "prefix": "exdas",

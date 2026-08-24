@@ -4,6 +4,16 @@
 		"body": ["throw new Error(${1:'Something bad happened.'});"],
 		"description": "throw new Error('message')\n"
 	},
+	"throw new Error() with cause": {
+		"prefix": ["tnc", "throw.Error().cause"],
+		"body": ["throw new Error(${1:'Something bad happened.'}, { cause: ${2:error} });"],
+		"description": "ES2022\nnew Error(message, { cause });\nthe `cause` option lets you chain the original error, preserving the full trace when re-throwing after a catch.\n"
+	},
+	"throw new AggregateError()": {
+		"prefix": ["tna", "throw.AggregateError()"],
+		"body": ["throw new AggregateError([${1:errors}], ${2:'Multiple errors occurred.'});"],
+		"description": "ES2021\nnew AggregateError(errors, message)\nrepresents several errors wrapped in a single error, e.g. the rejection reason of `Promise.any()` when every input promise rejects.\n"
+	},
 	"throw new EvalError()": {
 		"prefix": ["tne", "throw.EvalError()"],
 		"body": ["throw new EvalError(${1:\"The doesn't evaluate.\"});"],
@@ -33,5 +43,10 @@
 		"prefix": ["tnu", "throw.URIError()"],
 		"body": ["throw new URIError(${1:'Uri, is that you?'});"],
 		"description": "throw new URIError('message')\n"
+	},
+	"Error.isError()": {
+		"prefix": ["eise", "Error.isError()"],
+		"body": ["Error.isError(${1:value})"],
+		"description": "ES2026\nError.isError(value)\nreturn a boolean indicating whether `value` is a built-in Error instance. More reliable than `value instanceof Error`, which can give false negatives across realms (e.g. iframes) or with subclassed Errors.\n"
 	}
 }
