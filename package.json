@@ -70,7 +70,7 @@
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "@vscode/vsce": "^3.2.1",
-    "glob": "^10.3.10"
+    "@vscode/vsce": "^3.9.2",
+    "glob": "^10.5.0"
   }
 }
