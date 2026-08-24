@@ -1,5 +1,6 @@
 {
   "search.exclude": {
     "**/snippets": true
-  }
+  },
+  "npm.packageManager": "pnpm"
 }

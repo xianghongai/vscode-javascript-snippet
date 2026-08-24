@@ -6,6 +6,7 @@
   "icon": "art/icon3.png",
   "version": "0.2.5",
   "type": "module",
+  "packageManager": "pnpm@11.23.0",
   "galleryBanner": {
     "color": "#ffffff",
     "theme": "dark"
@@ -20,6 +21,7 @@
     "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
   },
   "engines": {
+    "node": ">=24.18.0",
     "vscode": "^1.0.0"
   },
   "categories": [
@@ -62,9 +64,9 @@
     ]
   },
   "scripts": {
-    "prebuild": "node merge.js",
+    "prebuild": "node main.js",
     "build": "vsce package",
-    "prepublish": "npm run build",
+    "prepublish": "pnpm run build",
     "publish": "vsce publish"
   },
   "devDependencies": {
