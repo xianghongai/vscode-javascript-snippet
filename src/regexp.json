@@ -11,7 +11,10 @@
 	},
 	"named capture group": {
 		"prefix": ["rencg", "re.namedGroup"],
-		"body": ["const ${1:regexp} = /(?<${2:name}>${3:pattern})/;", "const { ${2:name} } = ${1}.exec(${4:str}).groups;"],
+		"body": [
+			"const ${1:regexp} = /(?<${2:name}>${3:pattern})/;",
+			"const { ${2:name} } = ${1}.exec(${4:str}).groups;"
+		],
 		"description": "(?<name>pattern)\nnamed capture groups let you reference a match by a name instead of an index, via `match.groups.name`.\n"
 	},
 	"lookbehind assertion": {
@@ -21,7 +24,11 @@
 	},
 	"/pattern/d (match indices)": {
 		"prefix": ["red", "re.dFlag"],
-		"body": ["const ${1:regexp} = /${2:pattern}/d;", "const ${3:result} = ${1}.exec(${4:str});", "// ${3}.indices[0] -> [start, end] of the whole match"],
+		"body": [
+			"const ${1:regexp} = /${2:pattern}/d;",
+			"const ${3:result} = ${1}.exec(${4:str});",
+			"// ${3}.indices[0] -> [start, end] of the whole match"
+		],
 		"description": "ES2022\nthe `d` flag makes `exec()`/`matchAll()` results include an `indices` property with `[start, end]` positions for the whole match and each capture group.\n"
 	},
 	"/pattern/v (unicode sets)": {
@@ -36,12 +43,18 @@
 	},
 	"RegExp.prototype.exec()": {
 		"prefix": ["ree", "re.exec()"],
-		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.exec(${4:str});"],
+		"body": [
+			"const ${1:regexp} = RegExp('${2:pattern}');",
+			"const ${3:result} = ${1}.exec(${4:str});"
+		],
 		"description": "Syntax: regexp.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**."
 	},
 	"RegExp.prototype.test()": {
 		"prefix": ["ret", "re.test()"],
-		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.test(${4:str});"],
+		"body": [
+			"const ${1:regexp} = RegExp('${2:pattern}');",
+			"const ${3:result} = ${1}.test(${4:str});"
+		],
 		"description": "Syntax: regexp.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**."
 	},
 	"get RegExp[@@species]": {

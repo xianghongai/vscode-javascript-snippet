@@ -20,7 +20,7 @@
   </a>
 </p>
 
-Code snippets for JavaScript in ES3/5/6+ syntax;
+Code snippets for JavaScript (ES3/5/6+) and TypeScript;
 
 Download this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=NicholasHsiang.vscode-javascript-snippet).
 
@@ -52,6 +52,16 @@ Download this extension from the [Visual Studio Code Marketplace](https://market
 - BDD Testing (Mocha, Jasmine, etc.)
 - Resource Management (`using`/`await using`)
 - Typed Arrays / ArrayBuffer
+- TypeScript: Interfaces
+- TypeScript: Type Aliases
+- TypeScript: Generics
+- TypeScript: Utility Types
+- TypeScript: Type Narrowing / Guards
+- TypeScript: Mapped & Conditional Types
+- TypeScript: Decorators
+- TypeScript: Class Modifiers
+- TypeScript: Assertions & Type-only Imports
+- TypeScript: Ambient Declarations
 
 ## Supported languages (file extensions)
 
@@ -62,19 +72,21 @@ Download this extension from the [Visual Studio Code Marketplace](https://market
 - Html (`.html`)
 - Vue (`.vue`)
 
+`.ts`/`.tsx` additionally get the TypeScript-only snippets (interfaces, type aliases, generics, utility types, decorators, ...) — these aren't offered in `.js`/`.jsx`/`.vue`, since they're not valid JavaScript syntax there.
+
 ## Prefix design
 
 Prefixes follow two deliberate patterns:
 
 1. **Hard abbreviation for well-known, high-frequency constructs** — e.g. `tc` for try/catch, `qsa` for `querySelectorAll`. No dotted form is added here; once you know the construct, a short code is faster to recall than to browse for.
-2. **Namespace-triggered discovery for large or rarely-memorized API surfaces** — e.g. the `dom.*`, `map.*`, `set.*`, `import.*`/`export.*` families. Type the namespace (`dom.`) to get a filtered list, then keep typing to fuzzy-match the member you want (`domnes` → `dom.nextElementSibling`). This is meant as an onboarding path, not a permanent one: once a member turns out to be well-known enough on its own, it also gets a short direct prefix alongside the dotted one — `nextElementSibling` itself is reachable both via `dom.nextElementSibling` and directly via `nes`.
+2. **Namespace-triggered discovery for large or rarely-memorized API surfaces** — e.g. the `dom.*`, `map.*`, `set.*`, `import.*`/`export.*`, `ts.*` families. Type the namespace (`dom.`) to get a filtered list, then keep typing to fuzzy-match the member you want (`domnes` → `dom.nextElementSibling`). This is meant as an onboarding path, not a permanent one: once a member turns out to be well-known enough on its own, it also gets a short direct prefix alongside the dotted one — `nextElementSibling` itself is reachable both via `dom.nextElementSibling` and directly via `nes`. The TypeScript-only snippets follow the same split: common constructs like `interface`/`type` get short prefixes (`int`/`tal`), while the large utility-type and decorator families live under `ts.utility.*`/`ts.decorator.*`.
 
 The goal either way is to minimize what you have to memorize before a prefix "just works": either it's short because everyone already knows it, or it's discoverable by typing the real API name.
 
 前缀遵循两种刻意区分的模式：
 
 1. **众所周知的高频场景 → 硬缩写**——例如 `tc` 对应 try/catch，`qsa` 对应 `querySelectorAll`。这类不需要额外的点号形式；一旦记住了这个写法，短代码比翻找补全列表更快。
-2. **API 面很大或不常被记住的场景 → 命名空间触发**——例如 `dom.*`、`map.*`、`set.*`、`import.*`/`export.*` 这几个系列。先输入命名空间（如 `dom.`）触发一份过滤后的列表，再继续输入做模糊匹配定位到具体成员（如 `domnes` → `dom.nextElementSibling`）。这条路径是给"上手阶段"用的，不是终态：一旦某个成员本身也变得足够出名，它会在点号形式之外再拥有一个独立的短前缀——`nextElementSibling` 既能通过 `dom.nextElementSibling` 触发，也能直接靠 `nes` 触发。
+2. **API 面很大或不常被记住的场景 → 命名空间触发**——例如 `dom.*`、`map.*`、`set.*`、`import.*`/`export.*`、`ts.*` 这几个系列。先输入命名空间（如 `dom.`）触发一份过滤后的列表，再继续输入做模糊匹配定位到具体成员（如 `domnes` → `dom.nextElementSibling`）。这条路径是给"上手阶段"用的，不是终态：一旦某个成员本身也变得足够出名，它会在点号形式之外再拥有一个独立的短前缀——`nextElementSibling` 既能通过 `dom.nextElementSibling` 触发，也能直接靠 `nes` 触发。TypeScript 专属片段遵循同样的划分：`interface`/`type` 这类常见构造有短前缀（`int`/`tal`），而 utility types、decorators 这类体量较大的系列则放在 `ts.utility.*`/`ts.decorator.*` 命名空间下。
 
 两种方式的目标是一致的：让"打出前缀就能触发"这件事尽量不依赖死记硬背——要么因为足够常见所以缩写本身就很短，要么可以直接打出真实 API 名字来触发发现。
 
@@ -85,7 +97,7 @@ Note: All the snippets include the final semicolon `;`
 ### Declarations
 
 | Prefix           | Body                          | Description                          |
-|:-----------------|-------------------------------|--------------------------------------|
+| :--------------- | ----------------------------- | ------------------------------------ |
 | `usm` →          | `'use strict';`               | **u**se **s**trict **m**ode          |
 | `c` →            | `const name = value;`         |                                      |
 | `co`/`lo`/`vo` → | `const/let/var feature = {};` |                                      |
@@ -107,7 +119,7 @@ Note: All the snippets include the final semicolon `;`
 ### Statement
 
 | Prefix            | Body                                                                              | Description                            |
-|:------------------|-----------------------------------------------------------------------------------|----------------------------------------|
+| :---------------- | --------------------------------------------------------------------------------- | -------------------------------------- |
 | `if` →            | `if (condition) { }`                                                              |                                        |
 | `ife` →           | `if (condition) { } else { }`                                                     |                                        |
 | `ei` →            | `else if (condition) { }`                                                         |                                        |
@@ -124,13 +136,13 @@ Note: All the snippets include the final semicolon `;`
 ### Function
 
 | Prefix      | Body                                                                                             | Description                                   |
-|:------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| `fn` →      | `function name(param) { }`                                                                      | **f**u**n**ction                              |
-| `fna` →     | `function(param) { }`                                                                           | **f**u**n**ction **a**nonymous                |
+| :---------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------- |
+| `fn` →      | `function name(param) { }`                                                                       | **f**u**n**ction                              |
+| `fna` →     | `function(param) { }`                                                                            | **f**u**n**ction **a**nonymous                |
 | `vfn` →     | `var name = function (param) { }`                                                                |                                               |
 | `lfn` →     | `let name = function (param) { }`                                                                |                                               |
 | `cfn` →     | `const name = function (param) { }`                                                              |                                               |
-| `fnp` →     | `name: function (param) { }`                                                                      | **f**u**n**ction as **p**roperty              |
+| `fnp` →     | `name: function (param) { }`                                                                     | **f**u**n**ction as **p**roperty              |
 | `fnapply` → | `method.apply(context, [param]);`                                                                | **f**u**n**ction.**apply**                    |
 | `fncall` →  | `method.call(context, param);`                                                                   | **f**u**n**ction.**call**                     |
 | `fnbind` →  | `method.bind(this);`                                                                             | **f**u**n**ction.**bind**                     |
@@ -148,7 +160,7 @@ Note: All the snippets include the final semicolon `;`
 `Arr.<static_method>` or `arr.<instance_method>`
 
 | Prefix           | Body                                                        | Description                                      |
-|:-----------------|-------------------------------------------------------------|--------------------------------------------------|
+| :--------------- | ----------------------------------------------------------- | ------------------------------------------------ |
 | `ar` →           | `const arr = [];`                                           |                                                  |
 | `arl` →          | `iterable.length;`                                          |                                                  |
 | `isa` →          | `Array.isArray(value)`                                      |                                                  |
@@ -197,7 +209,7 @@ Note: All the snippets include the final semicolon `;`
 `Obj.<static_method>` or `obj.<instance_method>`
 
 | Prefix     | Body                                                                                                                                                                                                                                                     | Description                                                 |
-|:-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
+| :--------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | `ol` →     | `{ key: value }`                                                                                                                                                                                                                                         |                                                             |
 | `kv` →     | `key: value,`                                                                                                                                                                                                                                            |                                                             |
 | `om` →     | `method(param) {  },`                                                                                                                                                                                                                                    | **o**bject **m**ethod()                                     |
@@ -240,7 +252,7 @@ Note: All the snippets include the final semicolon `;`
 `Str.<static_method>` or `str.<instance_method>`
 
 | Prefix    | Body                                     | Description                         |
-|:----------|------------------------------------------|-------------------------------------|
+| :-------- | ---------------------------------------- | ----------------------------------- |
 | `tl` →    | `${expression}`                          | **T**emplate **l**iterals           |
 | `sfcc` →  | `String.fromCharCode(numN)`              | **S**tring.**f**rom**C**har**C**ode |
 | `sfcp` →  | `String.fromCodePoint(numN)`             |                                     |
@@ -280,7 +292,7 @@ Note: All the snippets include the final semicolon `;`
 `Num.<static_method>` or `num.<instance_method>`
 
 | Prefix    | Body                          |
-|:----------|-------------------------------|
+| :-------- | ----------------------------- |
 | `ne` →    | `Number.EPSILON`              |
 | `nmasi` → | `Number.MAX_SAFE_INTEGER`     |
 | `nmav` →  | `Number.MAX_VALUE`            |
@@ -304,7 +316,7 @@ Note: All the snippets include the final semicolon `;`
 `re.<method>`
 
 | Prefix            | Body                                                          | Description                |
-|:------------------|---------------------------------------------------------------|----------------------------|
+| :---------------- | ------------------------------------------------------------- | -------------------------- |
 | `re` →            | `let regex = RegExp('pattern');`                              | **R**eg**E**xp             |
 | `rep` →           | `let regex = /pattern/;`                                      | **R**eg**E**xp **p**attern |
 | `ree` →           | `let regex = RegExp('pattern');let result = regex.exec(str);` |                            |
@@ -319,7 +331,7 @@ Note: All the snippets include the final semicolon `;`
 ### Chore
 
 | Prefix       | Body                                  | Description                         |
-|:-------------|---------------------------------------|-------------------------------------|
+| :----------- | ------------------------------------- | ----------------------------------- |
 | `to` →       | `typeof operand === 'undefined'`      | **t**ype**o**f                      |
 | `tou` →      | `typeof operand === 'undefined'`      | **t**ype**o**f **U**ndefined        |
 | `too` →      | `typeof operand === 'object'`         | **t**ype**o**f **N**ull             |
@@ -350,7 +362,7 @@ Note: All the snippets include the final semicolon `;`
 ### Module
 
 | Prefix     | Body                                                                                        | Description                              |
-|:-----------|---------------------------------------------------------------------------------------------|------------------------------------------|
+| :--------- | ------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | `im` →     | `import { moduleName } from 'module';`                                                      | **im**port                               |
 | `imd` →    | `import moduleName from 'module';`                                                          | **im**port **d**efault export            |
 | `imas` →   | `import { originalName as alias } from 'module';`                                           | **im**port **as** renamed exports        |
@@ -375,7 +387,7 @@ Note: All the snippets include the final semicolon `;`
 ### Class
 
 | Prefix          | Body                                                                                              | Description                                   |
-|:----------------|---------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| :-------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | `cl` →          | `class ClassName { constructor (param) { } }`                                                     | **cl**ass                                     |
 | `cle` →         | `class ClassName extends BaseClassName { constructor (param) { super(); } }`                      | **cl**ass **e**xtends                         |
 | `clc`/`cons` →  | `constructor(param) { }`                                                                          | class **cons**tructor                         |
@@ -398,7 +410,7 @@ Note: All the snippets include the final semicolon `;`
 ### Promise
 
 | Prefix   | Body                                                                                                     | Description                                      |
-|:---------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| :------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
 | `pr` →   | `const promise = new Promise((resolve, reject) => { });promise.then(result => { }).catch(error => { });` | new **Pr**omise                                  |
 | `pa` →   | `const results = await Promise.all([promises]);`                                                         | **P**romise.**a**ll                              |
 | `pan` →  | `const result = await Promise.any([promises]);`                                                          | **P**romise.**an**y                              |
@@ -418,7 +430,7 @@ Note: All the snippets include the final semicolon `;`
 ### Generator Iterator
 
 | Prefix   | Body                                         | Description                |
-|:---------|----------------------------------------------|----------------------------|
+| :------- | -------------------------------------------- | -------------------------- |
 | `cy` →   | `const name = yield value;`                  |                            |
 | `ly` →   | `let name = yield value;`                    |                            |
 | `gf` →   | `function* name(param) { yield expression;}` | **g**enerator **f**unction |
@@ -430,7 +442,7 @@ Note: All the snippets include the final semicolon `;`
 ### Async
 
 | Prefix     | Body                                                                                                     | Description                                            |
-|:-----------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| :--------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | `caw` →    | `const result = await promise;`                                                                          | **c**onst **aw**aited                                  |
 | `asfn` →   | `async function name (param) { const result = await promise; return result;}name().then(result => { });` | **as**ync **f**unction **n**amed                       |
 | `asfna` →  | `async function (param) { }`                                                                             | **as**ync **f**u**n**ction **a**nonymous               |
@@ -444,7 +456,7 @@ Note: All the snippets include the final semicolon `;`
 ### Symbol
 
 | Prefix | Body                       | Description |
-|:-------|----------------------------|-------------|
+| :----- | -------------------------- | ----------- |
 | csy →  | `const symObj = Symbol();` |             |
 | symf → | `Symbol.for('key');`       |             |
 | symk → | `Symbol.keyFor('symObj');` |             |
@@ -457,7 +469,7 @@ Note: All the snippets include the final semicolon `;`
 - `weakset.<method>`
 
 | Prefix       | Body                                     | Description |
-|:-------------|------------------------------------------|-------------|
+| :----------- | ---------------------------------------- | ----------- |
 | `cm`/`map` → | `const resourceMap = new Map();`         |             |
 | `cs`/`set` → | `const resourceSet = new Set();`         |             |
 | `cwm`/`wm` → | `const resourceWeakMap = new WeakMap();` |             |
@@ -493,7 +505,7 @@ Note: All the snippets include the final semicolon `;`
 `throw.<Type>`
 
 | Prefix   | Body                                  | Description |
-|:---------|---------------------------------------|-------------|
+| :------- | ------------------------------------- | ----------- |
 | `tn` →   | `throw new Error('message')`          |             |
 | `tne` →  | `throw new EvalError('message')`      |             |
 | `tnr` →  | `throw new RangeError('message')`     |             |
@@ -505,7 +517,7 @@ Note: All the snippets include the final semicolon `;`
 ### Event
 
 | Prefix      | Body                                                           | Description                                          |
-|:------------|----------------------------------------------------------------|------------------------------------------------------|
+| :---------- | -------------------------------------------------------------- | ---------------------------------------------------- |
 | `ael` →     | `document.addEventListener('type', event => { });`             | **a**dd**E**vent**L**istener **a**rrow function      |
 | `aelfn` →   | `document.addEventListener('type', function (event) { });`     | **a**dd**E**vent**L**istener                         |
 | `rel` →     | `document.removeEventListener('event', listener);`             | **r**emove**E**vent**L**istener                      |
@@ -521,7 +533,7 @@ Note: All the snippets include the final semicolon `;`
 ### Ajax
 
 | Prefix             | Body | Description                |
-|:-------------------|------|----------------------------|
+| :----------------- | ---- | -------------------------- |
 | `xhr` →            |      | **X**ML**H**ttp**R**equest |
 | `fetch` →          |      | fetch                      |
 | `fetchget`/`fg` →  |      | fetch get                  |
@@ -532,7 +544,7 @@ Note: All the snippets include the final semicolon `;`
 `proxy.<method>`
 
 | Prefix                  | Body | Description                                                   |
-|:------------------------|------|---------------------------------------------------------------|
+| :---------------------- | ---- | ------------------------------------------------------------- |
 | `proxy.set` →           |      | Validating Properties Using the `set` Trap                    |
 | `proxy.get` →           |      | Object Shape Validation Using the `get` Trap                  |
 | `proxy.has` →           |      | Hiding Property Existence Using the `has` Trap                |
@@ -547,7 +559,7 @@ Note: All the snippets include the final semicolon `;`
 ### Math
 
 | Prefix  | Body            | Description            |
-|:--------|-----------------|------------------------|
+| :------ | --------------- | ---------------------- |
 | `mr` →  | `Math.random()` |                        |
 | `mro` → | `Math.round()`  | 20.49 → 20, 20.5 → 21  |
 | `mc` →  | `Math.ceil()`   | 7.004 → 8, -7.004 → -7 |
@@ -559,7 +571,7 @@ Note: All the snippets include the final semicolon `;`
 `dom.<method>` or `dom.<property>`
 
 | Prefix                          | Body                                                                |
-|:--------------------------------|---------------------------------------------------------------------|
+| :------------------------------ | ------------------------------------------------------------------- |
 | `dom.createDocumentFragment` →  | `document.createDocumentFragment();`                                |
 | `dom.createElement` →           | `document.createElement(elem);`                                     |
 | `dom.createTextNode` →          | `document.createTextNode(data);`                                    |
@@ -647,7 +659,7 @@ Note: All the snippets include the final semicolon `;`
 ### Bom
 
 | Prefix   | Body                                                                                     | Description                              |
-|:---------|------------------------------------------------------------------------------------------|------------------------------------------|
+| :------- | ---------------------------------------------------------------------------------------- | ---------------------------------------- |
 | `wa` →   | `window.alert('msg');`                                                                   |                                          |
 | `wc` →   | `window.confirm('msg');`                                                                 |                                          |
 | `wp` →   | `window.prompt('title', 'defaultText');`                                                 |                                          |
@@ -677,7 +689,7 @@ Note: All the snippets include the final semicolon `;`
 ### Console
 
 | Prefix   | Body                                               | Description             |
-|:---------|----------------------------------------------------|-------------------------|
+| :------- | -------------------------------------------------- | ----------------------- |
 | `cd` →   | `console.dir();`                                   | **c**onsole.**d**ir     |
 | `ce` →   | `console.error();`                                 |                         |
 | `celb` → | `console.error('foo: %o', foo);`                   |                         |
@@ -695,7 +707,7 @@ Note: All the snippets include the final semicolon `;`
 ### Common Js/Node.js
 
 | Prefix  | Body                                                          | Description |
-|:--------|---------------------------------------------------------------|-------------|
+| :------ | ------------------------------------------------------------- | ----------- |
 | `ec` →  | `class name { constructor (param) { }} module.exports = name` |             |
 | `em` →  | `exports.member = value`                                      |             |
 | `me` →  | `module.exports = name`                                       |             |
@@ -707,7 +719,7 @@ Note: All the snippets include the final semicolon `;`
 `test.<method>`
 
 | Prefix   | Body                                              |
-|:---------|---------------------------------------------------|
+| :------- | ------------------------------------------------- |
 | `desc` → | `describe('description', () => { })`              |
 | `cont` → | `context('description', callback);`               |
 | `it` →   | `it('description', () => { })`                    |

@@ -1,0 +1,30 @@
+{
+	"declare module": {
+		"prefix": ["decmod", "ts.ambient.module"],
+		"body": ["declare module '${1:module-name}' {", "\t$0", "}"],
+		"description": "TS 1.0\ndeclare module 'name' { ... }\nProvides ambient type declarations for a module that has none of its own (e.g. an untyped npm package) — usually placed in a `.d.ts` file.\n"
+	},
+	"declare global": {
+		"prefix": ["decglob", "ts.ambient.global"],
+		"body": [
+			"declare global {",
+			"\tinterface ${1:Window} {",
+			"\t\t${2:prop}: ${3:type};",
+			"\t}",
+			"}$0"
+		],
+		"description": "TS 2.8\ndeclare global { ... }\nAugments the global scope from inside a module file — e.g. adding a custom property to `Window`.\n"
+	},
+	"ambient variable declaration": {
+		"prefix": ["decvar", "ts.ambient.variable"],
+		"body": ["declare const ${1:name}: ${2:type};$0"],
+		"description": "TS 1.0\ndeclare const name: Type\nDeclares that a variable exists at runtime (e.g. injected by a script tag / global) without providing an implementation — type-checking only, erased at compile.\n"
+	},
+	"ambient function declaration": {
+		"prefix": ["decfn", "ts.ambient.function"],
+		"body": [
+			"declare function ${1:name}(${2:arg}: ${3:type}): ${4:ReturnType};$0"
+		],
+		"description": "TS 1.0\ndeclare function name(arg: Type): ReturnType\nDeclares a function's signature that exists at runtime elsewhere (e.g. a global script), without an implementation.\n"
+	}
+}

@@ -5,29 +5,28 @@ on:
   #   branches: [ main ]
   push:
     tags:
-      - "*"
+      - '*'
 
   workflow_dispatch:
 
 name: Publish VS Code Extension — GitHub Action
+
+permissions:
+  contents: read
+
 jobs:
   release:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout
+        uses: actions/checkout@v7
 
-      - uses: pnpm/setup@v2
-        with:
-          runtime: node@24
-          cache: true
-          install: false
+      - name: Setup mise (Node.js + pnpm)
+        uses: jdx/mise-action@v4
 
-      - name: Install dependencies
+      - name: Install the dependencies
         run: pnpm install --frozen-lockfile
-
-      - name: Build
-        run: pnpm run build
 
       - name: Publish
         run: pnpm exec vsce publish -p ${{ secrets.VS_MARKETPLACE_TOKEN }}

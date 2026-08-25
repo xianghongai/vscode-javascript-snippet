@@ -73,7 +73,9 @@
 	},
 	"Map.prototype.getOrInsertComputed()": {
 		"prefix": ["mapgoic", "map.getOrInsertComputed()"],
-		"body": ["${1:map}.getOrInsertComputed(${2:key}, (${3:key}) => ${4:computedDefault});"],
+		"body": [
+			"${1:map}.getOrInsertComputed(${2:key}, (${3:key}) => ${4:computedDefault});"
+		],
 		"description": "ES2026 (Upsert)\nmap.getOrInsertComputed(key, callbackFn)\nlike `getOrInsert()`, but the default value is computed lazily by `callbackFn(key)` only when `key` is absent — useful when the default is expensive to construct (e.g. `() => []`). Also available on WeakMap.\n"
 	},
 	"Map.prototype.has()": {
@@ -103,17 +105,26 @@
 	},
 	"Map.prototype[@@iterator]()": {
 		"prefix": "map.@@iterator()",
-		"body": ["const ${2:iterator} = ${1:map}[Symbol.iterator]();", "$2.next().value"],
+		"body": [
+			"const ${2:iterator} = ${1:map}[Symbol.iterator]();",
+			"$2.next().value"
+		],
 		"description": "The initial value of the @@iterator property is the same function object as the initial value of the entries method.\n"
 	},
 	"get Map[@@species]": {
 		"prefix": ["map.@@species"],
-		"body": ["class FeatureMap extends Map {", "\tstatic get [@@species]() { return Map; }", "}"],
+		"body": [
+			"class FeatureMap extends Map {",
+			"\tstatic get [@@species]() { return Map; }",
+			"}"
+		],
 		"description": "The Map[@@species] accessor property returns the Map constructor.\n"
 	},
 	"Map.groupBy()": {
 		"prefix": ["mgb", "Map.groupBy()"],
-		"body": ["const ${2:grouped} = Map.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+		"body": [
+			"const ${2:grouped} = Map.groupBy(${1:items}, (${3:item}) => ${4:item.key});"
+		],
 		"description": "ES2024\nMap.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the values returned by `callbackFn`, and returns a Map. Prefer this over `Object.groupBy()` when group keys aren't strings/symbols.\n"
 	},
 
@@ -180,12 +191,19 @@
 	},
 	"Set.prototype[@@iterator]()": {
 		"prefix": "set.@@iterator()",
-		"body": ["const ${2:iterator} = ${1:set}[Symbol.iterator]();", "$2.next().value"],
+		"body": [
+			"const ${2:iterator} = ${1:set}[Symbol.iterator]();",
+			"$2.next().value"
+		],
 		"description": "The initial value of the @@iterator property is the same function object as the initial value of the values property.\n"
 	},
 	"get Set[@@species]": {
 		"prefix": ["set.@@species"],
-		"body": ["class FeatureSet extends Set {", "\tstatic get [@@species]() { return Set; }", "}"],
+		"body": [
+			"class FeatureSet extends Set {",
+			"\tstatic get [@@species]() { return Set; }",
+			"}"
+		],
 		"description": "The Set[Symbol.species] accessor property returns the Set constructor.\n"
 	},
 

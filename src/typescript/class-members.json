@@ -1,0 +1,47 @@
+{
+	"parameter properties": {
+		"prefix": ["ppr", "ts.class.parameterProperty"],
+		"body": [
+			"class ${1:Name} {",
+			"\tconstructor(private ${2:value}: ${3:type}) {}",
+			"}$0"
+		],
+		"description": "TS 1.0 (parameter properties)\nconstructor(private x: T) {}\nAn access-modifier on a constructor parameter both declares and initializes a same-named class property in one step.\n"
+	},
+	"access modifiers": {
+		"prefix": ["clsam", "ts.class.accessModifiers"],
+		"body": [
+			"class ${1:Name} {",
+			"\tpublic ${2:pub}: ${3:type};",
+			"\tprotected ${4:prot}: $3;",
+			"\tprivate ${5:priv}: $3;",
+			"}$0"
+		],
+		"description": "TS 1.0\naccess modifiers\n`public` (default) / `protected` (visible to subclasses) / `private` (class-only) — all compile-time only, erased at emit; JS's own `#field` (see class.json) is the runtime-enforced alternative.\n"
+	},
+	"abstract class": {
+		"prefix": ["clsab", "ts.class.abstract"],
+		"body": [
+			"abstract class ${1:Name} {",
+			"\tabstract ${2:method}(${3:arg}: ${4:type}): ${5:ReturnType};",
+			"}$0"
+		],
+		"description": "TS 1.6\nabstract class / abstract method\nAn abstract class can't be instantiated directly and may declare abstract members that subclasses must implement.\n"
+	},
+	"definite assignment assertion": {
+		"prefix": ["clsdfa", "ts.class.definiteAssignment"],
+		"body": ["class ${1:Name} {", "\t${2:value}!: ${3:type};", "}$0"],
+		"description": "TS 2.7\ndefinite assignment assertion (`!`)\nTells the compiler a property is guaranteed to be assigned before use (e.g. by a lifecycle method), suppressing the 'property has no initializer' error.\n"
+	},
+	"override method": {
+		"prefix": ["clsov", "ts.class.override"],
+		"body": [
+			"class ${1:Derived} extends ${2:Base} {",
+			"\toverride ${3:method}(): ${4:void} {",
+			"\t\t$0",
+			"\t}",
+			"}"
+		],
+		"description": "TS 4.3\noverride\nMarks a subclass method as intentionally overriding a base-class member; the compiler errors if the base member doesn't actually exist (catches typos/renames).\n"
+	}
+}

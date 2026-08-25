@@ -11,7 +11,9 @@
 	},
 	"ArrayBuffer.prototype.transfer()": {
 		"prefix": ["abtransfer", "buffer.transfer()"],
-		"body": ["const ${2:newBuffer} = ${1:buffer}.transfer(${3:newByteLength});"],
+		"body": [
+			"const ${2:newBuffer} = ${1:buffer}.transfer(${3:newByteLength});"
+		],
 		"description": "ES2024\nbuffer.transfer([newByteLength])\nmoves the buffer's data to a new ArrayBuffer (optionally resizing) and detaches the original — `buffer.byteLength` becomes `0` and it can no longer be used. Cheap ownership transfer without a copy.\n"
 	},
 
@@ -27,12 +29,16 @@
 	},
 	"new Float64Array()": {
 		"prefix": ["nf64", "new.Float64Array()"],
-		"body": ["const ${1:floats} = new Float64Array(${2:lengthOrArrayOrBuffer});"],
+		"body": [
+			"const ${1:floats} = new Float64Array(${2:lengthOrArrayOrBuffer});"
+		],
 		"description": "new Float64Array(length | typedArray | object | buffer[, byteOffset[, length]])\na typed array of 64-bit floating point numbers (standard JS `number` precision).\n"
 	},
 	"new Float16Array()": {
 		"prefix": ["nf16", "new.Float16Array()"],
-		"body": ["const ${1:floats} = new Float16Array(${2:lengthOrArrayOrBuffer});"],
+		"body": [
+			"const ${1:floats} = new Float16Array(${2:lengthOrArrayOrBuffer});"
+		],
 		"description": "ES2025\nnew Float16Array(length | typedArray | object | buffer[, byteOffset[, length]])\na typed array of half-precision (16-bit) floating point numbers — half the memory of Float32Array, useful for ML/GPU-adjacent data.\n"
 	},
 

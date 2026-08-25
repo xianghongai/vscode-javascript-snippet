@@ -11,19 +11,12 @@
 	},
 	"prompt": {
 		"prefix": "wp",
-		"body": [
-			"window.prompt('${1:title}', '${2:defaultText}');"
-		],
+		"body": ["window.prompt('${1:title}', '${2:defaultText}');"],
 		"description": "window.prompt\n"
 	},
 	"setTimeOut(), arrow function": {
 		"prefix": "st",
-		"body": [
-			"setTimeout(() => {",
-			"\t${0}",
-			"}${2:, ${3:delay}});",
-			""
-		],
+		"body": ["setTimeout(() => {", "\t${0}", "}${2:, ${3:delay}});", ""],
 		"description": "setTimeOut\n"
 	},
 	"setTimeOut(), clearTimeout(), arrow function, ": {
@@ -39,12 +32,7 @@
 	},
 	"setTimeout()": {
 		"prefix": "stfn",
-		"body": [
-			"setTimeout(function() {",
-			"\t${0}",
-			"}${2:, ${3:delay}});",
-			""
-		],
+		"body": ["setTimeout(function() {", "\t${0}", "}${2:, ${3:delay}});", ""],
 		"description": "setTimeout\n"
 	},
 	"setTimeout(), clearTimeout()": {
@@ -60,12 +48,7 @@
 	},
 	"setInterval(), arrow function": {
 		"prefix": "si",
-		"body": [
-			"setInterval(() => {",
-			"\t${0}",
-			"}${2:, ${3:interval}});",
-			""
-		],
+		"body": ["setInterval(() => {", "\t${0}", "}${2:, ${3:interval}});", ""],
 		"description": "setInterval\n"
 	},
 	"setInterval(), clearInterval(), arrow function": {
@@ -98,9 +81,7 @@
 	},
 	"localStorage.setItem('key', 'value');": {
 		"prefix": "lss",
-		"body": [
-			"localStorage.setItem('${1:key}', ${2:value});"
-		],
+		"body": ["localStorage.setItem('${1:key}', ${2:value});"],
 		"description": "localStorage.setItem('key', 'value');\n"
 	},
 	"localStorage.getItem('key');": {

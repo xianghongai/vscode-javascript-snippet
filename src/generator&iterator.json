@@ -97,7 +97,9 @@
 	},
 	"Iterator Helpers: .reduce()": {
 		"prefix": ["itreduce", "iterator.reduce()"],
-		"body": ["${1:iterator}.reduce((${2:accumulator}, ${3:item}) => {\n\treturn ${4}\n});"],
+		"body": [
+			"${1:iterator}.reduce((${2:accumulator}, ${3:item}) => {\n\treturn ${4}\n});"
+		],
 		"description": "ES2025\niterator.reduce(reducerFn[, initialValue])\nconsumes the iterator eagerly and returns the accumulated result, like `Array.prototype.reduce()`.\n"
 	},
 	"Iterator Helpers: .some()": {

@@ -34,7 +34,9 @@
 
 	"Element.insertAdjacentHTML('beforebegin', 'DOMString')": {
 		"prefix": ["beforehtml", "dom.before.html"],
-		"body": ["${1:element}.insertAdjacentHTML('beforebegin', ${2:'DOMString'});"],
+		"body": [
+			"${1:element}.insertAdjacentHTML('beforebegin', ${2:'DOMString'});"
+		],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentHTML('afterend', 'DOMString')": {
@@ -44,7 +46,9 @@
 	},
 	"Element.insertAdjacentHTML('afterbegin', 'DOMString')": {
 		"prefix": ["prependhtml", "dom.prepend.html"],
-		"body": ["${1:element}.insertAdjacentHTML('afterbegin', ${2:'DOMString'});"],
+		"body": [
+			"${1:element}.insertAdjacentHTML('afterbegin', ${2:'DOMString'});"
+		],
 		"description": "Just inside the element, before its first child.\n"
 	},
 	"Element.insertAdjacentHTML('beforeend', 'DOMString')": {
@@ -55,7 +59,9 @@
 
 	"Element.insertAdjacentElement('beforebegin', element)": {
 		"prefix": ["beforeelem", "dom.before.element"],
-		"body": ["${1:element}.insertAdjacentElement('beforebegin', ${2:element});"],
+		"body": [
+			"${1:element}.insertAdjacentElement('beforebegin', ${2:element});"
+		],
 		"description": "Before the element itself.\n"
 	},
 	"Element.insertAdjacentElement('afterend', element)": {

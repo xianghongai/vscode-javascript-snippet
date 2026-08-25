@@ -1,0 +1,87 @@
+{
+	"Partial<Type>": {
+		"prefix": ["part", "ts.utility.Partial"],
+		"body": ["Partial<${1:Type}>"],
+		"description": "TS 2.1\nPartial<Type>\nMakes every property of `Type` optional — handy for patch/update-style function parameters.\n"
+	},
+	"Required<Type>": {
+		"prefix": ["requ", "ts.utility.Required"],
+		"body": ["Required<${1:Type}>"],
+		"description": "TS 2.8\nRequired<Type>\nMakes every property of `Type` required, stripping any `?` optionality.\n"
+	},
+	"Readonly<Type>": {
+		"prefix": ["rdo", "ts.utility.Readonly"],
+		"body": ["Readonly<${1:Type}>"],
+		"description": "TS 2.1\nReadonly<Type>\nMakes every property of `Type` read-only, so reassigning any of them is a compile-time error.\n"
+	},
+	"Record<Keys, Type>": {
+		"prefix": ["rec", "ts.utility.Record"],
+		"body": ["Record<${1:Keys}, ${2:Type}>"],
+		"description": "TS 2.1\nRecord<Keys, Type>\nConstructs an object type whose keys are `Keys` and whose values are all `Type` — a typed dictionary/map.\n"
+	},
+	"Pick<Type, Keys>": {
+		"prefix": ["pick", "ts.utility.Pick"],
+		"body": ["Pick<${1:Type}, ${2:'key1' | 'key2'}>"],
+		"description": "TS 2.1\nPick<Type, Keys>\nConstructs a type by keeping only the given subset of `Type`'s properties.\n"
+	},
+	"Omit<Type, Keys>": {
+		"prefix": ["omit", "ts.utility.Omit"],
+		"body": ["Omit<${1:Type}, ${2:'key1' | 'key2'}>"],
+		"description": "TS 3.5\nOmit<Type, Keys>\nConstructs a type by removing the given subset of `Type`'s properties — the inverse of `Pick`.\n"
+	},
+	"Exclude<UnionType, ExcludedMembers>": {
+		"prefix": "ts.utility.Exclude",
+		"body": ["Exclude<${1:UnionType}, ${2:ExcludedMembers}>"],
+		"description": "TS 2.8\nExclude<UnionType, ExcludedMembers>\nRemoves from `UnionType` every member assignable to `ExcludedMembers`.\n"
+	},
+	"Extract<Type, Union>": {
+		"prefix": "ts.utility.Extract",
+		"body": ["Extract<${1:Type}, ${2:Union}>"],
+		"description": "TS 2.8\nExtract<Type, Union>\nKeeps from `Type` only the members assignable to `Union` — the inverse of `Exclude`.\n"
+	},
+	"NonNullable<Type>": {
+		"prefix": "ts.utility.NonNullable",
+		"body": ["NonNullable<${1:Type}>"],
+		"description": "TS 2.8\nNonNullable<Type>\nRemoves `null` and `undefined` from `Type`.\n"
+	},
+	"ReturnType<Type>": {
+		"prefix": "ts.utility.ReturnType",
+		"body": ["ReturnType<typeof ${1:func}>"],
+		"description": "TS 2.8\nReturnType<Type>\nExtracts a function type's return type — commonly written as `ReturnType<typeof fn>` to derive it from an existing value.\n"
+	},
+	"Parameters<Type>": {
+		"prefix": "ts.utility.Parameters",
+		"body": ["Parameters<typeof ${1:func}>"],
+		"description": "TS 3.1\nParameters<Type>\nExtracts a function type's parameter types as a tuple.\n"
+	},
+	"Awaited<Type>": {
+		"prefix": "ts.utility.Awaited",
+		"body": ["Awaited<${1:Promise<Type>}>"],
+		"description": "TS 4.5\nAwaited<Type>\nRecursively unwraps a `Promise` (or thenable) type to the type it resolves to — models what `await` does at the type level.\n"
+	},
+	"InstanceType<Type>": {
+		"prefix": "ts.utility.InstanceType",
+		"body": ["InstanceType<typeof ${1:ClassName}>"],
+		"description": "TS 2.8\nInstanceType<Type>\nExtracts the instance type produced by a class constructor type.\n"
+	},
+	"ConstructorParameters<Type>": {
+		"prefix": "ts.utility.ConstructorParameters",
+		"body": ["ConstructorParameters<typeof ${1:ClassName}>"],
+		"description": "TS 3.1\nConstructorParameters<Type>\nExtracts a class constructor's parameter types as a tuple.\n"
+	},
+	"ThisType<Type>": {
+		"prefix": "ts.utility.ThisType",
+		"body": ["ThisType<${1:Type}>"],
+		"description": "TS 2.3\nThisType<Type>\nA marker (no properties) used inside an object-literal type to set what `this` refers to within its methods — mainly used by object-literal-with-methods factory helpers.\n"
+	},
+	"string manipulation types": {
+		"prefix": "ts.utility.stringCase",
+		"body": [
+			"type ${1:Upper} = Uppercase<${2:Str}>;",
+			"type ${3:Lower} = Lowercase<$2>;",
+			"type ${4:Cap} = Capitalize<$2>;",
+			"type ${5:Uncap} = Uncapitalize<$2>;$0"
+		],
+		"description": "TS 4.1\nUppercase/Lowercase/Capitalize/Uncapitalize<StringType>\nIntrinsic string-literal-type transforms, most often used together with template literal types.\n"
+	}
+}
