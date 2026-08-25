@@ -1,0 +1,52 @@
+{
+	"class decorator": {
+		"prefix": ["decc", "ts.decorator.class"],
+		"body": [
+			"function ${1:decoratorName}(${2:target}: ${3:Function}, ${4:context}: ClassDecoratorContext) {",
+			"\t$0",
+			"}"
+		],
+		"description": "TS 5.0 (standard decorators)\nclass decorator\nA function invoked with the class itself and a `ClassDecoratorContext`; may return a replacement class. Applied as `@decoratorName class Foo {}`.\n"
+	},
+	"method decorator": {
+		"prefix": ["decm", "ts.decorator.method"],
+		"body": [
+			"function ${1:decoratorName}(${2:target}: ${3:Function}, ${4:context}: ClassMethodDecoratorContext) {",
+			"\t$0",
+			"}"
+		],
+		"description": "TS 5.0 (standard decorators)\nmethod decorator\nWraps a class method; receives the original method and a `ClassMethodDecoratorContext`, and may return a replacement function.\n"
+	},
+	"field decorator": {
+		"prefix": ["decf", "ts.decorator.field"],
+		"body": [
+			"function ${1:decoratorName}(${2:target}: undefined, ${3:context}: ClassFieldDecoratorContext) {",
+			"\treturn (${4:initialValue}: unknown) => {",
+			"\t\t$0",
+			"\t\treturn $4;",
+			"\t};",
+			"}"
+		],
+		"description": "TS 5.0 (standard decorators)\nfield decorator\nReceives a `ClassFieldDecoratorContext` and may return an initializer function that transforms the field's initial value.\n"
+	},
+	"accessor auto-accessor field": {
+		"prefix": ["deca", "ts.decorator.accessor"],
+		"body": [
+			"class ${1:Name} {",
+			"\t@${2:decoratorName} accessor ${3:value}: ${4:type};",
+			"}$0"
+		],
+		"description": "TS 5.0 (standard decorators)\naccessor auto-accessor field\nThe `accessor` keyword turns a field into a private-backed getter/setter pair, making it a valid target for `ClassAccessorDecoratorContext`-based decorators.\n"
+	},
+	"decorator factory": {
+		"prefix": ["decfa", "ts.decorator.factory"],
+		"body": [
+			"function ${1:decoratorName}(${2:option}: ${3:type}) {",
+			"\treturn function (${4:target}: ${5:Function}, ${6:context}: ClassMethodDecoratorContext) {",
+			"\t\t$0",
+			"\t};",
+			"}"
+		],
+		"description": "TS 5.0 (standard decorators)\ndecorator factory\nA function that returns a decorator, letting the decorator itself take configuration arguments: `@decoratorName(option) class Foo {}`.\n"
+	}
+}

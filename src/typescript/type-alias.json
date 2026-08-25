@@ -1,0 +1,77 @@
+{
+	"type alias": {
+		"prefix": ["tal", "ts.type"],
+		"body": ["type ${1:Name} = ${2:type};$0"],
+		"description": "TS 1.4\ntype Name = ...\nGives an existing type (primitive, union, object shape, etc.) a new name. Unlike `interface`, a type alias can't be reopened/merged, but can name unions, tuples, and other non-object types.\n"
+	},
+	"union type": {
+		"prefix": ["tun", "ts.type.union"],
+		"body": ["type ${1:Name} = ${2:TypeA} | ${3:TypeB};$0"],
+		"description": "TS 1.4\ntype Name = A | B\nA value matching this type is valid if it matches *any* member type.\n"
+	},
+	"intersection type": {
+		"prefix": ["tin", "ts.type.intersection"],
+		"body": ["type ${1:Name} = ${2:TypeA} & ${3:TypeB};$0"],
+		"description": "TS 1.6\ntype Name = A & B\nA value matching this type must satisfy *all* member types simultaneously — commonly used to combine object shapes.\n"
+	},
+	"tuple type": {
+		"prefix": ["ttup", "ts.type.tuple"],
+		"body": [
+			"type ${1:Name} = [${2:first}: ${3:string}, ${4:second}?: ${5:number}, ...${6:rest}: ${7:boolean}[]];$0"
+		],
+		"description": "TS 1.0 (labels: TS 4.0; optional/variadic elements: TS 3.0/4.0)\ntype Name = [label: Type, ...]\nA fixed-length (or partially fixed) array with a known type per position; elements can be labeled, optional (`?`), or a variadic rest element.\n"
+	},
+	"readonly array / tuple": {
+		"prefix": ["trra", "ts.type.readonlyArray"],
+		"body": ["type ${1:Name} = readonly ${2:string}[];$0"],
+		"description": "TS 3.4\nreadonly T[] | ReadonlyArray<T>\nAn array/tuple type whose mutating methods (`push`, `splice`, index assignment, ...) are removed at the type level.\n"
+	},
+	"index signature": {
+		"prefix": ["tidx", "ts.type.index"],
+		"body": [
+			"type ${1:Name} = {",
+			"\t[${2:key}: ${3:string}]: ${4:ValueType};",
+			"};$0"
+		],
+		"description": "TS 1.0\nindex signature\nDescribes an object whose property keys aren't known ahead of time but whose key/value types are.\n"
+	},
+	"function type expression": {
+		"prefix": ["tfn", "ts.type.function"],
+		"body": ["type ${1:Name} = (${2:arg}: ${3:type}) => ${4:ReturnType};$0"],
+		"description": "TS 1.0\ntype Name = (arg: T) => R\nDescribes the shape of a callable value — parameter and return types only, no implementation.\n"
+	},
+	"call & construct signature": {
+		"prefix": ["tcs", "ts.type.callSignature"],
+		"body": [
+			"type ${1:Name} = {",
+			"\t(${2:arg}: ${3:type}): ${4:ReturnType};",
+			"\tnew (${5:arg}: $3): ${6:Instance};",
+			"};$0"
+		],
+		"description": "TS 1.0\ncall signature / construct signature\nDescribes a value that can be invoked directly (call signature) and/or with `new` (construct signature) — e.g. typing a class constructor value.\n"
+	},
+	"unknown type": {
+		"prefix": ["unk", "ts.type.unknown"],
+		"body": ["${1:value}: unknown"],
+		"description": "TS 3.0\nunknown\nThe type-safe counterpart of `any` — accepts anything, but must be narrowed (`typeof`, `instanceof`, a type guard) before use. Prefer over `any` at API boundaries.\n"
+	},
+	"never type": {
+		"prefix": ["nev", "ts.type.never"],
+		"body": [
+			"function ${1:assertUnreachable}(${2:x}: never): never {",
+			"\tthrow new Error('Unexpected value: ' + $2);",
+			"}"
+		],
+		"description": "TS 2.0\nnever\nThe type of a value that never occurs — a function that always throws, or an exhaustiveness-check branch that should be unreachable.\n"
+	},
+	"as const object literal": {
+		"prefix": ["asc", "ts.type.asConst"],
+		"body": [
+			"const ${1:Name} = {",
+			"\t${2:memberA}: '${3:valueA}',",
+			"\t${4:memberB}: '${5:valueB}',",
+			"} as const;$0"
+		],
+		"description": "TS 3.4\nconst Name = { ... } as const\nA plain object literal frozen to its most specific (readonly, literal) type. The community- and TypeScript-team-recommended alternative to `enum`: enums generate real runtime code and are excluded from the `erasableSyntaxOnly` (TS 5.8+) type-stripping model that Node.js/Deno/Bun use to run `.ts` files directly — `as const` objects are plain JS and need no such carve-out.\n"
+	}
+}

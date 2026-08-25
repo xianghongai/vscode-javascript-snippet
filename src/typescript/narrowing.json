@@ -1,0 +1,46 @@
+{
+	"typeof type guard": {
+		"prefix": ["nartypeof", "ts.narrow.typeof"],
+		"body": ["if (typeof ${1:value} === '${2:string}') {", "\t$0", "}"],
+		"description": "TS 1.0\ntypeof type guard\nNarrows a union type by runtime-checking a primitive's `typeof` tag (`'string'|'number'|'boolean'|'bigint'|'symbol'|'function'|'object'|'undefined'`).\n"
+	},
+	"instanceof type guard": {
+		"prefix": ["narinstanceof", "ts.narrow.instanceof"],
+		"body": ["if (${1:value} instanceof ${2:ClassName}) {", "\t$0", "}"],
+		"description": "TS 1.0\ninstanceof type guard\nNarrows a union type by runtime-checking the value's prototype chain.\n"
+	},
+	"in type guard": {
+		"prefix": ["narin", "ts.narrow.in"],
+		"body": ["if ('${1:property}' in ${2:value}) {", "\t$0", "}"],
+		"description": "TS 2.7\nin type guard\nNarrows a union of object types by checking whether a given property key exists on the value at runtime.\n"
+	},
+	"custom type predicate": {
+		"prefix": ["nartp", "ts.narrow.predicate"],
+		"body": [
+			"function ${1:isType}(${2:value}: unknown): $2 is ${3:Type} {",
+			"\treturn $0;",
+			"}"
+		],
+		"description": "TS 1.6\nfunction isType(value): value is Type\nA user-defined type guard — the `value is Type` return annotation tells the compiler to narrow the argument's type wherever this function returns `true`.\n"
+	},
+	"discriminated union": {
+		"prefix": ["nardu", "ts.narrow.discriminatedUnion"],
+		"body": [
+			"type ${1:Shape} =",
+			"\t| { ${2:kind}: '${3:circle}'; ${4:radius}: number }",
+			"\t| { $2: '${5:square}'; ${6:side}: number };$0"
+		],
+		"description": "TS 2.0\ndiscriminated union\nA union of object types sharing a common literal-typed tag property (here `kind`); switching on the tag lets the compiler narrow each branch automatically.\n"
+	},
+	"assertion function": {
+		"prefix": ["narassert", "ts.narrow.assert"],
+		"body": [
+			"function ${1:assertIsType}(${2:value}: unknown): asserts $2 is ${3:Type} {",
+			"\tif (!(${4:condition})) {",
+			"\t\tthrow new Error(${5:'assertion failed'});",
+			"\t}",
+			"}"
+		],
+		"description": "TS 3.7\nfunction assertIsType(value): asserts value is Type\nInstead of returning a boolean, an assertion function narrows the argument's type for the rest of the enclosing scope after it's called (throws if the assertion fails).\n"
+	}
+}

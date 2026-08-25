@@ -1,0 +1,41 @@
+{
+	"mapped type": {
+		"prefix": ["mapty", "ts.mapped"],
+		"body": [
+			"type ${1:Name}<${2:T}> = {",
+			"\t[${3:K} in keyof $2]: $2[$3];",
+			"};$0"
+		],
+		"description": "TS 2.1\nmapped type\nBuilds a new object type by iterating over another type's keys (`in keyof T`) and transforming each property.\n"
+	},
+	"mapped type with key remapping": {
+		"prefix": ["mapas", "ts.mapped.as"],
+		"body": [
+			"type ${1:Name}<${2:T}> = {",
+			"\t[${3:K} in keyof $2 as `get\\${Capitalize<string & $3>\\}`]: () => $2[$3];",
+			"};$0"
+		],
+		"description": "TS 4.1\nmapped type key remapping (`as` clause)\nRemaps each mapped key via an `as` clause — commonly combined with template literal types to derive new key names (e.g. `get${Prop}`) from the original ones.\n"
+	},
+	"conditional type": {
+		"prefix": ["cond", "ts.mapped.conditional"],
+		"body": [
+			"type ${1:Name}<${2:T}> = $2 extends ${3:Constraint} ? ${4:TrueType} : ${5:FalseType};$0"
+		],
+		"description": "TS 2.8\nconditional type\ntype Name<T> = T extends U ? X : Y\nSelects between two types based on a type-level `extends` check, resolved per usage — the foundation for most advanced type utilities.\n"
+	},
+	"infer within a conditional type": {
+		"prefix": ["infer", "ts.mapped.infer"],
+		"body": [
+			"type ${1:ElementType}<${2:T}> = $2 extends (infer ${3:U})[] ? $3 : never;$0"
+		],
+		"description": "TS 2.8\ninfer within a conditional type\nCaptures a nested type into a new type variable (`infer U`) for use in the conditional's true branch — e.g. extracting an array's element type or a Promise's resolved type.\n"
+	},
+	"template literal type": {
+		"prefix": ["tpl", "ts.mapped.templateLiteral"],
+		"body": [
+			"type ${1:Name}<${2:Suffix} extends string> = `${3:prefix}-\\${$2\\}`;$0"
+		],
+		"description": "TS 4.1\ntemplate literal type\ntype Name = `prefix-${Suffix}`\nBuilds new string-literal types by interpolating other types (usually string/number/boolean literal unions) into a template — commonly combined with mapped-type key remapping.\n"
+	}
+}

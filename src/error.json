@@ -6,12 +6,16 @@
 	},
 	"throw new Error() with cause": {
 		"prefix": ["tnc", "throw.Error().cause"],
-		"body": ["throw new Error(${1:'Something bad happened.'}, { cause: ${2:error} });"],
+		"body": [
+			"throw new Error(${1:'Something bad happened.'}, { cause: ${2:error} });"
+		],
 		"description": "ES2022\nnew Error(message, { cause });\nthe `cause` option lets you chain the original error, preserving the full trace when re-throwing after a catch.\n"
 	},
 	"throw new AggregateError()": {
 		"prefix": ["tna", "throw.AggregateError()"],
-		"body": ["throw new AggregateError([${1:errors}], ${2:'Multiple errors occurred.'});"],
+		"body": [
+			"throw new AggregateError([${1:errors}], ${2:'Multiple errors occurred.'});"
+		],
 		"description": "ES2021\nnew AggregateError(errors, message)\nrepresents several errors wrapped in a single error, e.g. the rejection reason of `Promise.any()` when every input promise rejects.\n"
 	},
 	"throw new EvalError()": {
@@ -21,12 +25,16 @@
 	},
 	"throw new RangeError()": {
 		"prefix": ["tnr", "throw.RangeError()"],
-		"body": ["throw new RangeError(${1:\"Sorry, you just don't have the range.\"});"],
+		"body": [
+			"throw new RangeError(${1:\"Sorry, you just don't have the range.\"});"
+		],
 		"description": "throw new RangeError('message')\n"
 	},
 	"throw new ReferenceError()": {
 		"prefix": ["tnre", "throw.ReferenceError()"],
-		"body": ["throw new ReferenceError(${1:\"You didn't cite your references properly.\"});"],
+		"body": [
+			"throw new ReferenceError(${1:\"You didn't cite your references properly.\"});"
+		],
 		"description": "throw new ReferenceError('message')\n"
 	},
 	"throw new SyntaxError()": {
@@ -36,7 +44,9 @@
 	},
 	"throw new TypeError()": {
 		"prefix": ["tnt", "throw.TypeError()"],
-		"body": ["throw new TypeError(${1:'What type of variable do you take me for?'});"],
+		"body": [
+			"throw new TypeError(${1:'What type of variable do you take me for?'});"
+		],
 		"description": "throw new TypeError('message')\n"
 	},
 	"throw new URIError()": {

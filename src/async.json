@@ -43,7 +43,9 @@
 	},
 	"await Promise.all.map": {
 		"prefix": "awpam",
-		"body": ["await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"],
+		"body": [
+			"await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"
+		],
 		"description": "ES2017\nawait Promise.all.map\n"
 	},
 	"top-level await": {

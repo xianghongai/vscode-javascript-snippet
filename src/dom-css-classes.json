@@ -11,7 +11,9 @@
 	},
 	"Element.classList.replace()": {
 		"prefix": ["clrp", "dom.classList.replace"],
-		"body": ["${1:element}.classList.replace('${2:oldToken}', '${3:newToken}');"],
+		"body": [
+			"${1:element}.classList.replace('${2:oldToken}', '${3:newToken}');"
+		],
 		"description": "DOMTokenList.replace(oldToken, newToken);\n"
 	},
 	"Element.classList.remove()": {

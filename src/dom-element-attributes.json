@@ -27,7 +27,9 @@
 	},
 	"Element.getAttribute()": {
 		"prefix": ["ga", "dom.getAttribute"],
-		"body": ["const ${3:attribute} = ${1:element}.getAttribute('${2:attrName}');"],
+		"body": [
+			"const ${3:attribute} = ${1:element}.getAttribute('${2:attrName}');"
+		],
 		"description": "Retrieves the value of the named attribute from the current node and returns it as an Object.\n(Not namespace-aware, most commonly used methods)\n(DOM 1)\n"
 	},
 	"Element.hasAttribute()": {
@@ -43,7 +45,9 @@
 
 	"Element.getAttributeNode()": {
 		"prefix": ["gan", "dom.getAttributeNode"],
-		"body": ["const ${3:attrNode} = ${1:element}.getAttributeNode('${2:attrName}');"],
+		"body": [
+			"const ${3:attrNode} = ${1:element}.getAttributeNode('${2:attrName}');"
+		],
 		"description": "Returns the specified attribute of the specified element, as an Attr node.\n(DOM Level 1 methods for dealing with Attr nodes directly (seldom used))\n(DOM 1)"
 	},
 	"Element.setAttributeNode()": {
@@ -59,12 +63,16 @@
 
 	"Element.setAttributeNS()": {
 		"prefix": ["sans", "dom.setAttributeNS"],
-		"body": ["${1:element}.setAttributeNS('${2:namespace}', '${3:attrName}', '${4:value}');"],
+		"body": [
+			"${1:element}.setAttributeNS('${2:namespace}', '${3:attrName}', '${4:value}');"
+		],
 		"description": "Adds a new attribute or changes the value of an attribute with the given namespace and name.\n(Namespace-aware variants (DOM Level 2))\n"
 	},
 	"Element.getAttributeNS()": {
 		"prefix": ["gans", "dom.getAttributeNS"],
-		"body": ["const ${4:attrVal} = ${1:element}.getAttributeNS('${2:namespace}', '${3:attrName}');"],
+		"body": [
+			"const ${4:attrVal} = ${1:element}.getAttributeNS('${2:namespace}', '${3:attrName}');"
+		],
 		"description": "Returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or \"\" (the empty string). \n(Namespace-aware variants (DOM Level 2))\n"
 	},
 	"Element.hasAttributeNS()": {
@@ -74,7 +82,9 @@
 	},
 	"Element.removeAttributeNS()": {
 		"prefix": ["rans", "dom.removeAttributeNS"],
-		"body": ["${1:element}.removeAttributeNS('${2:namespace}', '${3:attrName}');"],
+		"body": [
+			"${1:element}.removeAttributeNS('${2:namespace}', '${3:attrName}');"
+		],
 		"description": "Removes the specified attribute from an element.\n(Namespace-aware variants (DOM Level 2))\n"
 	},
 

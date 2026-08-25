@@ -1,5 +1,9 @@
 {
-	"if": { "prefix": "if", "body": ["if (${1:condition}) {\n\t${2}\n}"], "description": "if statement \n" },
+	"if": {
+		"prefix": "if",
+		"body": ["if (${1:condition}) {\n\t${2}\n}"],
+		"description": "if statement \n"
+	},
 	"if/else": {
 		"prefix": "ife",
 		"body": ["if (${1:condition}) {\n\t${2}\n} else {\n\t${3}\n}"],
@@ -10,10 +14,16 @@
 		"body": ["else if (${1:condition}) {\n\t${2}\n}"],
 		"description": "else if statement \n"
 	},
-	"else": { "prefix": "el", "body": ["else {\n\t${1}\n}"], "description": "else statement \n" },
+	"else": {
+		"prefix": "el",
+		"body": ["else {\n\t${1}\n}"],
+		"description": "else statement \n"
+	},
 	"switch": {
 		"prefix": "swi",
-		"body": ["switch (${1:expression}) {\n\tcase '${2:value}':\n\t\t${3}\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}"],
+		"body": [
+			"switch (${1:expression}) {\n\tcase '${2:value}':\n\t\t${3}\n\t\tbreak;\n\tdefault:\n\t\tbreak;\n}"
+		],
 		"description": "switch statement\n"
 	},
 	"case": {
@@ -55,7 +65,9 @@
 	},
 	"while iteration decrementing": {
 		"prefix": "whi",
-		"body": ["let ${2:index} = ${1:array}.length;\nwhile (${2:index}--) {\n\t${3}\n}"],
+		"body": [
+			"let ${2:index} = ${1:array}.length;\nwhile (${2:index}--) {\n\t${3}\n}"
+		],
 		"description": "while iteration decrementing\n"
 	}
 }

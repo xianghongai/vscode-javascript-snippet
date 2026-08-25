@@ -1,5 +1,5 @@
 [tools]
-node = "24.18.0"
+node = "24"
 
 [settings]
 # Read the pnpm version from package.json's "packageManager" field

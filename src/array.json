@@ -1,5 +1,5 @@
 {
-	"const array": {
+	"Array literal": {
 		"prefix": "ar",
 		"body": ["const ${1:arr} = [];"],
 		"description": "Create an Array\n"
@@ -199,7 +199,9 @@
 	},
 	"Array.prototype.toSorted()": {
 		"prefix": ["artso", "arr.toSorted()"],
-		"body": ["${1:items}.toSorted((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
+		"body": [
+			"${1:items}.toSorted((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"
+		],
 		"description": "ES2023\narray.toSorted([compareFunction(firstEl, secondEl)]);\nthe copying counterpart of `sort()` — return a new sorted array, leaving the original array unchanged.\n"
 	},
 	"Array.prototype.splice()": {

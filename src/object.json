@@ -208,7 +208,9 @@
 	},
 	"Object.groupBy()": {
 		"prefix": ["ogb", "Obj.groupBy()"],
-		"body": ["const ${2:grouped} = Object.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+		"body": [
+			"const ${2:grouped} = Object.groupBy(${1:items}, (${3:item}) => ${4:item.key});"
+		],
 		"description": "ES2024\nObject.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the string/symbol values returned by `callbackFn`, and returns a null-prototype object with those keys.\n"
 	},
 	"*prototypeObj.isPrototypeOf()": {

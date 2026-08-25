@@ -2,9 +2,9 @@
   "name": "vscode-javascript-snippet",
   "publisher": "NicholasHsiang",
   "displayName": "JavaScript Code Snippet",
-  "description": "Code snippets for JavaScript in ES3/5/6+ syntax",
-  "icon": "art/icon3.png",
-  "version": "1.0.0",
+  "description": "Code snippets for JavaScript (ES3/5/6+) and TypeScript",
+  "icon": "art/icon.png",
+  "version": "1.1.0",
   "type": "module",
   "packageManager": "pnpm@11.23.0",
   "galleryBanner": {
@@ -21,7 +21,7 @@
     "url": "https://github.com/xianghongai/vscode-javascript-snippet/blob/master/README.md"
   },
   "engines": {
-    "node": ">=24.18.0",
+    "node": ">=24",
     "vscode": "^1.0.0"
   },
   "categories": [
@@ -37,7 +37,10 @@
     "ES6+ Snippets",
     "Javascript Snippets",
     "JS Snippets",
-    "ECMAScript Snippets"
+    "ECMAScript Snippets",
+    "TypeScript",
+    "TS Snippets",
+    "TypeScript Snippets"
   ],
   "contributes": {
     "snippets": [
@@ -50,6 +53,10 @@
         "path": "./snippets/javascript.json"
       },
       {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
         "language": "javascriptreact",
         "path": "./snippets/javascript.json"
       },
@@ -58,19 +65,28 @@
         "path": "./snippets/javascript.json"
       },
       {
+        "language": "typescriptreact",
+        "path": "./snippets/typescript.json"
+      },
+      {
         "language": "vue",
         "path": "./snippets/javascript.json"
       }
     ]
   },
   "scripts": {
+    "format": "prettier --write --cache .",
+    "dev": "nodemon --watch src -e json -x 'pnpm run prebuild'",
     "prebuild": "node main.js",
+    "vscode:prepublish": "node main.js",
     "build": "vsce package",
-    "prepublish": "pnpm run build",
     "publish": "vsce publish"
   },
   "devDependencies": {
+    "@types/node": "^24.13.3",
     "@vscode/vsce": "^3.9.2",
-    "glob": "^10.5.0"
+    "glob": "^13.0.6",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.9.6"
   }
 }

@@ -4,7 +4,13 @@ All notable changes to the "JavaScript Code Snippet" extension are documented in
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Each entry lists only the headline change per release — see git history/tags for full detail.
 
-## [Unreleased]
+## [1.1.0] - 2026-08-25
+
+- Added TypeScript-only snippets — interfaces, type aliases, generics, utility types, type narrowing/guards, mapped & conditional types, standard decorators, class modifiers, assertions, and ambient declarations — loaded only for `.ts`/`.tsx`, never `.js`/`.jsx`/`.vue`
+- Added a `ts.*` namespace-prefix family for the larger TypeScript API surfaces (`ts.utility.*`, `ts.decorator.*`, ...), following the existing prefix-design philosophy
+- Deliberately excluded `enum` — TypeScript's `erasableSyntaxOnly` direction and community consensus favor `as const` object literals instead
+- Reworked `main.js` to fail the build on duplicate snippet names (not just duplicate prefixes) and to build two separate output files (`javascript.json`, `typescript.json`)
+- Added `prettier`/`nodemon` dev tooling (`pnpm run format`, `pnpm run dev`)
 
 ## [1.0.0] - 2026-08-24
 
