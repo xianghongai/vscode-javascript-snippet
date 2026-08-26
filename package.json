@@ -4,7 +4,7 @@
   "displayName": "JavaScript Code Snippet",
   "description": "Code snippets for JavaScript (ES3/5/6+) and TypeScript",
   "icon": "art/icon.png",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "packageManager": "pnpm@11.23.0",
   "galleryBanner": {

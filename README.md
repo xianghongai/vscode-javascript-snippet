@@ -1,22 +1,20 @@
-<p>
-  <h1 align="center">JavaScript Snippets (Visual Studio Code)</h1>
-</p>
+# JavaScript Snippets (Visual Studio Code)
 
-<p align="center">
+<p>
   <a href="https://github.com/xianghongai/vscode-javascript-snippet">
-    <img src="https://img.shields.io/github/repo-size/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
+    <img src="https://img.shields.io/github/repo-size/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic" alt="Repo Size">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/nicholashsiang.vscode-javascript-snippet?color=%234ac51c&style=plastic&?cacheSeconds=3600">
+    <img src="https://vsmarketplacebadges.dev/version/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c" alt="Visual Studio Marketplace Version">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/nicholashsiang.vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
+    <img src="https://vsmarketplacebadges.dev/downloads-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c" alt="Downloads">
   </a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://img.shields.io/visual-studio-marketplace/r/nicholashsiang.vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
+    <img src="https://vsmarketplacebadges.dev/rating-short/nicholashsiang.vscode-javascript-snippet.svg?style=plastic&color=4ac51c" alt="Rating">
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=nicholashsiang.vscode-javascript-snippet">
-    <img src="https://img.shields.io/github/license/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic&?cacheSeconds=3600">
+  <a href="https://github.com/xianghongai/vscode-javascript-snippet/blob/HEAD/LICENSE">
+    <img src="https://img.shields.io/github/license/xianghongai/vscode-javascript-snippet?color=4ac51c&style=plastic" alt="License">
   </a>
 </p>
 
