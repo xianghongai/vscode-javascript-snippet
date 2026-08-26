@@ -4,6 +4,10 @@ All notable changes to the "JavaScript Code Snippet" extension are documented in
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Each entry lists only the headline change per release — see git history/tags for full detail.
 
+## [1.1.1] - 2026-08-26
+
+- Fixed the Marketplace badges
+
 ## [1.1.0] - 2026-08-25
 
 - Added TypeScript-only snippets — interfaces, type aliases, generics, utility types, type narrowing/guards, mapped & conditional types, standard decorators, class modifiers, assertions, and ambient declarations — loaded only for `.ts`/`.tsx`, never `.js`/`.jsx`/`.vue`
