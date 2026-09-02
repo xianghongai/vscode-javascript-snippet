@@ -1,56 +1,64 @@
 {
-	"const awaited": {
-		"prefix": "caw",
-		"body": ["const ${1:result} = await ${2:promise};"],
-		"description": "ES2017\nconst assignment awaited\n"
-	},
-	"async function (named)": {
-		"prefix": "asfn",
-		"body": [
-			"async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
-		],
-		"description": "ES2017\nasync function named\n"
-	},
-	"async function (anonymous)": {
-		"prefix": "asfna",
-		"body": ["async function (${1:param}) {\n\t${2}\n}\n"],
-		"description": "ES2017\nasync function anonymous\n"
-	},
-	"async generator function (named)": {
-		"prefix": "asgfn",
-		"body": ["async function* ${1:name} (${2:param}) {\n\t${3}\n}\n"],
-		"description": "ES2018\nasync generator function named\n"
-	},
-	"async generator function (anonymous)": {
-		"prefix": "asgfna",
-		"body": ["async function* (${1:param}) {\n\t${2}\n}\n"],
-		"description": "ES2018\nasync generator function anonymous\n"
-	},
-	"async arrow function": {
-		"prefix": "asaf",
-		"body": ["async (${1:param}) => {\n\t${2}\n}\n"],
-		"description": "ES2017\nasync arrow function\n"
-	},
-	"await": {
-		"prefix": "aw",
-		"body": ["await ${1:promise}"],
-		"description": "ES2017\nawait\n"
-	},
-	"await Promise.all": {
-		"prefix": "awpa",
-		"body": ["await Promise.all(${1:value})\n"],
-		"description": "ES2017\nawait Promise.all\n"
-	},
-	"await Promise.all.map": {
-		"prefix": "awpam",
-		"body": [
-			"await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"
-		],
-		"description": "ES2017\nawait Promise.all.map\n"
-	},
-	"top-level await": {
-		"prefix": "tlaw",
-		"body": ["const ${1:result} = await ${2:promise};"],
-		"description": "ES2022\nTop-level await lets a module use `await` outside of an async function, at the module's top level. Only valid inside ES modules (`.mjs`, or `\"type\": \"module\"`), not in CommonJS/script files.\n"
-	}
+  "const awaited": {
+    "prefix": "caw",
+    "body": ["const ${1:result} = await ${2:promise};"],
+    "description": "ES2017\nconst assignment awaited\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "async function (named)": {
+    "prefix": "asfn",
+    "body": [
+      "async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
+    ],
+    "description": "ES2017\nasync function named\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "async function (anonymous)": {
+    "prefix": "asfna",
+    "body": ["async function (${1:param}) {\n\t${2}\n}\n"],
+    "description": "ES2017\nasync function anonymous\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "async generator function (named)": {
+    "prefix": "asgfn",
+    "body": ["async function* ${1:name} (${2:param}) {\n\t${3}\n}\n"],
+    "description": "ES2018\nasync generator function named\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "async generator function (anonymous)": {
+    "prefix": "asgfna",
+    "body": ["async function* (${1:param}) {\n\t${2}\n}\n"],
+    "description": "ES2018\nasync generator function anonymous\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "async arrow function": {
+    "prefix": "asaf",
+    "body": ["async (${1:param}) => {\n\t${2}\n}\n"],
+    "description": "ES2017\nasync arrow function\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "await": {
+    "prefix": "aw",
+    "body": ["await ${1:promise}"],
+    "description": "ES2017\nawait\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "await Promise.all": {
+    "prefix": "awpa",
+    "body": ["await Promise.all(${1:value})\n"],
+    "description": "ES2017\nawait Promise.all\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "await Promise.all.map": {
+    "prefix": "awpam",
+    "body": ["await Promise.all(${1:array}.map((${2:value}) => {\n\t${3}\n}))\n"],
+    "description": "ES2017\nawait Promise.all.map\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "top-level await": {
+    "prefix": "tlaw",
+    "body": ["const ${1:result} = await ${2:promise};"],
+    "description": "ES2022\nTop-level await lets a module use `await` outside of an async function, at the module's top level. Only valid inside ES modules (`.mjs`, or `\"type\": \"module\"`), not in CommonJS/script files.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

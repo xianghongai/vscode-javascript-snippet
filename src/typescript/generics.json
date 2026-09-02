@@ -1,52 +1,40 @@
 {
-	"generic function": {
-		"prefix": ["genf", "ts.generic.function"],
-		"body": [
-			"function ${1:name}<${2:T}>(${3:arg}: $2): $2 {",
-			"\treturn $3;",
-			"}$0"
-		],
-		"description": "TS 1.0 (generics)\nfunction name<T>(arg: T): T\nA reusable function whose parameter/return types are tied together by a type variable, resolved separately at each call site.\n"
-	},
-	"generic class": {
-		"prefix": ["genc", "ts.generic.class"],
-		"body": [
-			"class ${1:Name}<${2:T}> {",
-			"\tprivate ${3:value}: $2;",
-			"",
-			"\tconstructor($3: $2) {",
-			"\t\tthis.$3 = $3;",
-			"\t}",
-			"}$0"
-		],
-		"description": "TS 1.0 (generics)\nclass Name<T> { ... }\nParameterizes a class's members over a type variable, resolved at instantiation (`new Name<string>(...)`).\n"
-	},
-	"generic constraint": {
-		"prefix": ["genex", "ts.generic.constraint"],
-		"body": [
-			"function ${1:name}<${2:T} extends ${3:object}>(${4:arg}: $2): $2 {",
-			"\treturn $4;",
-			"}$0"
-		],
-		"description": "TS 1.8\nfunction name<T extends Constraint>(arg: T): T\nRestricts a generic's allowed types to those assignable to the constraint (`extends`), enabling access to the constraint's members inside the function.\n"
-	},
-	"generic default type parameter": {
-		"prefix": ["gend", "ts.generic.default"],
-		"body": [
-			"interface ${1:Name}<${2:T} = ${3:string}> {",
-			"\t${4:value}: $2;",
-			"\t$0",
-			"}"
-		],
-		"description": "TS 2.3\ngeneric default type parameter\nSupplies a fallback type used when the generic isn't explicitly specified at the usage site — like a default function parameter, but for types.\n"
-	},
-	"const type parameter": {
-		"prefix": ["genconst", "ts.generic.const"],
-		"body": [
-			"function ${1:name}<const ${2:T}>(${3:arg}: $2): $2 {",
-			"\treturn $3;",
-			"}$0"
-		],
-		"description": "TS 5.0\nfunction name<const T>(arg: T)\nThe `const` modifier on a type parameter infers the narrowest (literal) possible type from the argument, without the caller needing an explicit `as const`.\n"
-	}
+  "generic function": {
+    "prefix": ["genf", "ts.generic.function"],
+    "body": ["function ${1:name}<${2:T}>(${3:arg}: $2): $2 {", "\treturn $3;", "}$0"],
+    "description": "TS 1.0 (generics)\nfunction name<T>(arg: T): T\nA reusable function whose parameter/return types are tied together by a type variable, resolved separately at each call site.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "generic class": {
+    "prefix": ["genc", "ts.generic.class"],
+    "body": [
+      "class ${1:Name}<${2:T}> {",
+      "\tprivate ${3:value}: $2;",
+      "",
+      "\tconstructor($3: $2) {",
+      "\t\tthis.$3 = $3;",
+      "\t}",
+      "}$0"
+    ],
+    "description": "TS 1.0 (generics)\nclass Name<T> { ... }\nParameterizes a class's members over a type variable, resolved at instantiation (`new Name<string>(...)`).\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "generic constraint": {
+    "prefix": ["genex", "ts.generic.constraint"],
+    "body": ["function ${1:name}<${2:T} extends ${3:object}>(${4:arg}: $2): $2 {", "\treturn $4;", "}$0"],
+    "description": "TS 1.8\nfunction name<T extends Constraint>(arg: T): T\nRestricts a generic's allowed types to those assignable to the constraint (`extends`), enabling access to the constraint's members inside the function.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "generic default type parameter": {
+    "prefix": ["gend", "ts.generic.default"],
+    "body": ["interface ${1:Name}<${2:T} = ${3:string}> {", "\t${4:value}: $2;", "\t$0", "}"],
+    "description": "TS 2.3\ngeneric default type parameter\nSupplies a fallback type used when the generic isn't explicitly specified at the usage site — like a default function parameter, but for types.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "const type parameter": {
+    "prefix": ["genconst", "ts.generic.const"],
+    "body": ["function ${1:name}<const ${2:T}>(${3:arg}: $2): $2 {", "\treturn $3;", "}$0"],
+    "description": "TS 5.0\nfunction name<const T>(arg: T)\nThe `const` modifier on a type parameter infers the narrowest (literal) possible type from the argument, without the caller needing an explicit `as const`.\n",
+    "scope": "typescript,typescriptreact"
+  }
 }

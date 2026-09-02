@@ -1,32 +1,38 @@
 {
-	"Math.random": {
-		"prefix": "mr",
-		"body": ["Math.random()"],
-		"description": "The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range."
-	},
-	"Math.round": {
-		"prefix": "mro",
-		"body": ["Math.round()"],
-		"description": "The Math.round() function returns the value of a number rounded to the nearest integer."
-	},
-	"Math.floor": {
-		"prefix": "mf",
-		"body": ["Math.floor()"],
-		"description": "The Math.floor() function returns the largest integer less than or equal to a given number."
-	},
-	"Math.ceil": {
-		"prefix": "mc",
-		"body": ["Math.ceil()"],
-		"description": "The Math.ceil() function always rounds a number up to the next largest whole number or integer."
-	},
-	"Math.trunc": {
-		"prefix": "mtr",
-		"body": ["Math.trunc()"],
-		"description": "ES2015\nThe Math.trunc() function returns the integer part of a number by removing any fractional digits."
-	},
-	"Math.sumPrecise": {
-		"prefix": ["msp", "Math.sumPrecise()"],
-		"body": ["Math.sumPrecise(${1:iterable})"],
-		"description": "ES2026\nMath.sumPrecise(iterable)\nsums an iterable of numbers using an exact algorithm that avoids the rounding error naive `reduce((a, b) => a + b, 0)` accumulates — e.g. summing `[1e20, 0.1, -1e20]` correctly yields `0.1` instead of `0`. Returns `-0` for an empty iterable; throws on non-Number values (no BigInt, no coercion).\n"
-	}
+  "Math.random": {
+    "prefix": "mr",
+    "body": ["Math.random()"],
+    "description": "The Math.random() function returns a floating-point, pseudo-random number in the range 0–1 (inclusive of 0, but not 1) with approximately uniform distribution over that range.",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Math.round": {
+    "prefix": "mro",
+    "body": ["Math.round()"],
+    "description": "The Math.round() function returns the value of a number rounded to the nearest integer.",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Math.floor": {
+    "prefix": "mf",
+    "body": ["Math.floor()"],
+    "description": "The Math.floor() function returns the largest integer less than or equal to a given number.",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Math.ceil": {
+    "prefix": "mc",
+    "body": ["Math.ceil()"],
+    "description": "The Math.ceil() function always rounds a number up to the next largest whole number or integer.",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Math.trunc": {
+    "prefix": "mtr",
+    "body": ["Math.trunc()"],
+    "description": "ES2015\nThe Math.trunc() function returns the integer part of a number by removing any fractional digits.",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Math.sumPrecise": {
+    "prefix": ["msp", "Math.sumPrecise()"],
+    "body": ["Math.sumPrecise(${1:iterable})"],
+    "description": "ES2026\nMath.sumPrecise(iterable)\nsums an iterable of numbers using an exact algorithm that avoids the rounding error naive `reduce((a, b) => a + b, 0)` accumulates — e.g. summing `[1e20, 0.1, -1e20]` correctly yields `0.1` instead of `0`. Returns `-0` for an empty iterable; throws on non-Number values (no BigInt, no coercion).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

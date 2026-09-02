@@ -1,261 +1,284 @@
 {
-	"let Map": {
-		"prefix": "lm",
-		"body": ["let ${1:resource}Map = new Map();"],
-		"description": "ES2015\nlet assignment Map\n"
-	},
-	"let Set": {
-		"prefix": "lset",
-		"body": ["let ${1:resource}Set = new Set();"],
-		"description": "ES2015\nlet assignment Set\n"
-	},
-	"let WeakMap": {
-		"prefix": "lwm",
-		"body": ["let ${1:resource}WeakMap = new WeakMap();"],
-		"description": "ES2015\nlet assignment WeakMap\n"
-	},
-	"let WeakSet": {
-		"prefix": "lws",
-		"body": ["let ${1:resource}WeakSet = new WeakSet();"],
-		"description": "ES2015\nlet assignment WeakSet\n"
-	},
-
-	"const Map": {
-		"prefix": ["cm"],
-		"body": ["const ${1:resource}Map = new Map();"],
-		"description": "ES2015\nconst assignment Map\n"
-	},
-	"const Set": {
-		"prefix": ["cset"],
-		"body": ["const ${1:resource}Set = new Set();"],
-		"description": "ES2015\nconst assignment Set\n"
-	},
-	"const WeakMap": {
-		"prefix": ["cwm", "wm"],
-		"body": ["const ${1:resource}WeakMap = new WeakMap();"],
-		"description": "ES2015\nconst assignment WeakMap\n"
-	},
-	"const WeakSet": {
-		"prefix": ["cws", "ws"],
-		"body": ["const ${1:resource}WeakSet = new WeakSet();"],
-		"description": "ES2015\nconst assignment WeakSet\n"
-	},
-
-	"Map.prototype.size": {
-		"prefix": "map.size",
-		"body": ["${1:map}.size"],
-		"description": "The size accessor property returns the number of elements in a Map object.\n"
-	},
-	"Map.prototype.clear()": {
-		"prefix": "map.clear()",
-		"body": ["${1:map}.clear();"],
-		"description": "The clear() method removes all elements from a Map object.\n"
-	},
-	"Map.prototype.delete()": {
-		"prefix": "map.delete()",
-		"body": ["${1:map}.delete(${2:key});"],
-		"description": "The delete() method removes the specified element from a Map object by key.\n"
-	},
-	"Map.prototype.forEach()": {
-		"prefix": "map.forEach()",
-		"body": ["${1:map}.forEach((${2:value}, ${3:key}) => {", "\t$0", "});"],
-		"description": "The forEach() method executes a provided function once per each key/value pair in the Map object, in insertion order.\n"
-	},
-	"Map.prototype.get()": {
-		"prefix": "map.get()",
-		"body": ["${1:map}.get(${2:key});"],
-		"description": "The get() method returns a specified element from a Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map object.\n"
-	},
-	"Map.prototype.getOrInsert()": {
-		"prefix": ["mapgoi", "map.getOrInsert()"],
-		"body": ["${1:map}.getOrInsert(${2:key}, ${3:defaultValue});"],
-		"description": "ES2026 (Upsert)\nmap.getOrInsert(key, defaultValue)\nreturn the existing value for `key`, or insert `defaultValue` and return it if absent — a single lookup instead of the classic `map.has(key) ? map.get(key) : (map.set(key, defaultValue), defaultValue)` dance. Also available on WeakMap.\n"
-	},
-	"Map.prototype.getOrInsertComputed()": {
-		"prefix": ["mapgoic", "map.getOrInsertComputed()"],
-		"body": [
-			"${1:map}.getOrInsertComputed(${2:key}, (${3:key}) => ${4:computedDefault});"
-		],
-		"description": "ES2026 (Upsert)\nmap.getOrInsertComputed(key, callbackFn)\nlike `getOrInsert()`, but the default value is computed lazily by `callbackFn(key)` only when `key` is absent — useful when the default is expensive to construct (e.g. `() => []`). Also available on WeakMap.\n"
-	},
-	"Map.prototype.has()": {
-		"prefix": "map.has()",
-		"body": ["${1:map}.has(${2:key})"],
-		"description": "The has() method returns a boolean indicating whether an element with the specified key exists or not.\n"
-	},
-	"Map.prototype.set()": {
-		"prefix": "map.set()",
-		"body": ["${1:map}.set(${2:key}, ${3:value})"],
-		"description": "The set() method adds or updates an element with a specified key and a value to a Map object.\n"
-	},
-	"Map.prototype.entries()": {
-		"prefix": "map.entries()",
-		"body": ["const ${2:iterator} = ${1:map}.entries();", "$2.next().value"],
-		"description": "The entries() method returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order.\n"
-	},
-	"Map.prototype.keys()": {
-		"prefix": "map.keys()",
-		"body": ["const ${2:iterator} = ${1:map}.keys();", "$2.next().value"],
-		"description": "The keys() method returns a new Iterator object that contains the keys for each element in the Map object in insertion order.\n"
-	},
-	"Map.prototype.values()": {
-		"prefix": "map.values()",
-		"body": ["const ${2:iterator} = ${1:map}.values()", "$2.next().value"],
-		"description": "The values() method returns a new Iterator object that contains the values for each element in the Map object in insertion order.\n"
-	},
-	"Map.prototype[@@iterator]()": {
-		"prefix": "map.@@iterator()",
-		"body": [
-			"const ${2:iterator} = ${1:map}[Symbol.iterator]();",
-			"$2.next().value"
-		],
-		"description": "The initial value of the @@iterator property is the same function object as the initial value of the entries method.\n"
-	},
-	"get Map[@@species]": {
-		"prefix": ["map.@@species"],
-		"body": [
-			"class FeatureMap extends Map {",
-			"\tstatic get [@@species]() { return Map; }",
-			"}"
-		],
-		"description": "The Map[@@species] accessor property returns the Map constructor.\n"
-	},
-	"Map.groupBy()": {
-		"prefix": ["mgb", "Map.groupBy()"],
-		"body": [
-			"const ${2:grouped} = Map.groupBy(${1:items}, (${3:item}) => ${4:item.key});"
-		],
-		"description": "ES2024\nMap.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the values returned by `callbackFn`, and returns a Map. Prefer this over `Object.groupBy()` when group keys aren't strings/symbols.\n"
-	},
-
-	"WeakMap.prototype.delete()": {
-		"prefix": "weakmap.delete()",
-		"body": ["${1:weakmap}.delete(${2:key})"],
-		"description": "The delete() method removes the specified element from a WeakMap object.\n"
-	},
-	"WeakMap.prototype.get()": {
-		"prefix": "weakmap.get()",
-		"body": ["${1:weakmap}.get(${2:key})"],
-		"description": "The get() method returns a specified element from a WeakMap object.\n"
-	},
-	"WeakMap.prototype.has()": {
-		"prefix": "weakmap.has()",
-		"body": ["${1:weakmap}.has(${2:key})"],
-		"description": "The has() method returns a boolean indicating whether an element with the specified key exists in the WeakMap object or not.\n"
-	},
-	"WeakMap.prototype.set()": {
-		"prefix": "weakmap.set()",
-		"body": ["${1:weakmap}.set(${2:key}, ${3:value})"],
-		"description": "The set() method adds a new element with a specified key and value to a WeakMap object.\n"
-	},
-
-	"Set.prototype.size": {
-		"prefix": "set.size",
-		"body": ["${1:set}.size"],
-		"description": "The size accessor property returns the number of (unique) elements in a Set object.\n"
-	},
-	"Set.prototype.add()": {
-		"prefix": "set.add()",
-		"body": ["${1:set}.add(${2:value})"],
-		"description": "The add() method appends a new element with a specified value to the end of a Set object.\n"
-	},
-	"Set.prototype.clear()": {
-		"prefix": "set.clear()",
-		"body": ["${1:set}.clear()"],
-		"description": "The clear() method removes all elements from a Set object.\n"
-	},
-	"Set.prototype.delete()": {
-		"prefix": "set.delete()",
-		"body": ["${1:set}.delete(${2:value})"],
-		"description": "The delete() method removes a specified value from a Set object, if it is in the set.\n"
-	},
-	"Set.prototype.forEach()": {
-		"prefix": "set.forEach()",
-		"body": ["${1:set}.forEach((${2:value}) => {", "\t$0", "});"],
-		"description": "The forEach() method executes a provided function once for each value in the Set object, in insertion order.\n"
-	},
-	"Set.prototype.has()": {
-		"prefix": "set.has()",
-		"body": ["${1:set}.has(${2:value})"],
-		"description": "The has() method returns a boolean indicating whether an element with the specified value exists in a Set object or not.\n"
-	},
-	"Set.prototype.entries()": {
-		"prefix": "set.entries()",
-		"body": ["const ${2:iterator} = ${1:set}.entries();", "$2.next().value"],
-		"description": "The entries() method returns a new Iterator object that contains an array of [value, value] for each element in the Set object, in insertion order. For Set objects there is no key like in Map objects. However, to keep the API similar to the Map object, each entry has the same value for its key and value here, so that an array [value, value] is returned.\n"
-	},
-	"Set.prototype.values()": {
-		"prefix": "set.values()",
-		"body": ["const ${2:iterator} = ${1:set}.values()", "$2.next().value"],
-		"description": "The values() method returns a new iterator object that contains the values for each element in the Set object in insertion order.\n"
-	},
-	"Set.prototype[@@iterator]()": {
-		"prefix": "set.@@iterator()",
-		"body": [
-			"const ${2:iterator} = ${1:set}[Symbol.iterator]();",
-			"$2.next().value"
-		],
-		"description": "The initial value of the @@iterator property is the same function object as the initial value of the values property.\n"
-	},
-	"get Set[@@species]": {
-		"prefix": ["set.@@species"],
-		"body": [
-			"class FeatureSet extends Set {",
-			"\tstatic get [@@species]() { return Set; }",
-			"}"
-		],
-		"description": "The Set[Symbol.species] accessor property returns the Set constructor.\n"
-	},
-
-	"Set.prototype.union()": {
-		"prefix": "set.union()",
-		"body": ["${1:set}.union(${2:otherSet})"],
-		"description": "ES2025\nsetA.union(setB)\nreturn a new Set containing every element in either `setA` or `setB` (or both).\n"
-	},
-	"Set.prototype.intersection()": {
-		"prefix": "set.intersection()",
-		"body": ["${1:set}.intersection(${2:otherSet})"],
-		"description": "ES2025\nsetA.intersection(setB)\nreturn a new Set containing every element that is in both `setA` and `setB`.\n"
-	},
-	"Set.prototype.difference()": {
-		"prefix": "set.difference()",
-		"body": ["${1:set}.difference(${2:otherSet})"],
-		"description": "ES2025\nsetA.difference(setB)\nreturn a new Set containing every element in `setA` that is **not** in `setB`.\n"
-	},
-	"Set.prototype.symmetricDifference()": {
-		"prefix": "set.symmetricDifference()",
-		"body": ["${1:set}.symmetricDifference(${2:otherSet})"],
-		"description": "ES2025\nsetA.symmetricDifference(setB)\nreturn a new Set containing every element that is in exactly one of `setA` or `setB`, but not both.\n"
-	},
-	"Set.prototype.isSubsetOf()": {
-		"prefix": "set.isSubsetOf()",
-		"body": ["${1:set}.isSubsetOf(${2:otherSet})"],
-		"description": "ES2025\nsetA.isSubsetOf(setB)\nreturn a boolean indicating whether every element of `setA` is also in `setB`.\n"
-	},
-	"Set.prototype.isSupersetOf()": {
-		"prefix": "set.isSupersetOf()",
-		"body": ["${1:set}.isSupersetOf(${2:otherSet})"],
-		"description": "ES2025\nsetA.isSupersetOf(setB)\nreturn a boolean indicating whether every element of `setB` is also in `setA`.\n"
-	},
-	"Set.prototype.isDisjointFrom()": {
-		"prefix": "set.isDisjointFrom()",
-		"body": ["${1:set}.isDisjointFrom(${2:otherSet})"],
-		"description": "ES2025\nsetA.isDisjointFrom(setB)\nreturn a boolean indicating whether `setA` and `setB` have no elements in common.\n"
-	},
-
-	"WeakSet.prototype.add()": {
-		"prefix": "weakset.add()",
-		"body": ["${1:weakset}.add(${2:value})"],
-		"description": "The add() method appends a new object to the end of a WeakSet object.\n"
-	},
-	"WeakSet.prototype.delete()": {
-		"prefix": "weakset.delete()",
-		"body": ["${1:weakset}.delete(${2:value})"],
-		"description": "The delete() method removes the specified element from a WeakSet object.\n"
-	},
-	"WeakSet.prototype.has()": {
-		"prefix": "weakset.has()",
-		"body": ["${1:weakset}.has(${2:value})"],
-		"description": "The has() method returns a boolean indicating whether an object exists in a WeakSet or not.\n"
-	}
+  "let Map": {
+    "prefix": "lm",
+    "body": ["let ${1:resource}Map = new Map();"],
+    "description": "ES2015\nlet assignment Map\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let Set": {
+    "prefix": "lset",
+    "body": ["let ${1:resource}Set = new Set();"],
+    "description": "ES2015\nlet assignment Set\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let WeakMap": {
+    "prefix": "lwm",
+    "body": ["let ${1:resource}WeakMap = new WeakMap();"],
+    "description": "ES2015\nlet assignment WeakMap\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let WeakSet": {
+    "prefix": "lws",
+    "body": ["let ${1:resource}WeakSet = new WeakSet();"],
+    "description": "ES2015\nlet assignment WeakSet\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const Map": {
+    "prefix": ["cm"],
+    "body": ["const ${1:resource}Map = new Map();"],
+    "description": "ES2015\nconst assignment Map\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const Set": {
+    "prefix": ["cset"],
+    "body": ["const ${1:resource}Set = new Set();"],
+    "description": "ES2015\nconst assignment Set\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const WeakMap": {
+    "prefix": ["cwm", "wm"],
+    "body": ["const ${1:resource}WeakMap = new WeakMap();"],
+    "description": "ES2015\nconst assignment WeakMap\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const WeakSet": {
+    "prefix": ["cws", "ws"],
+    "body": ["const ${1:resource}WeakSet = new WeakSet();"],
+    "description": "ES2015\nconst assignment WeakSet\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.size": {
+    "prefix": "map.size",
+    "body": ["${1:map}.size"],
+    "description": "The size accessor property returns the number of elements in a Map object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.clear()": {
+    "prefix": "map.clear()",
+    "body": ["${1:map}.clear();"],
+    "description": "The clear() method removes all elements from a Map object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.delete()": {
+    "prefix": "map.delete()",
+    "body": ["${1:map}.delete(${2:key});"],
+    "description": "The delete() method removes the specified element from a Map object by key.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.forEach()": {
+    "prefix": "map.forEach()",
+    "body": ["${1:map}.forEach((${2:value}, ${3:key}) => {", "\t$0", "});"],
+    "description": "The forEach() method executes a provided function once per each key/value pair in the Map object, in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.get()": {
+    "prefix": "map.get()",
+    "body": ["${1:map}.get(${2:key});"],
+    "description": "The get() method returns a specified element from a Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.getOrInsert()": {
+    "prefix": ["mapgoi", "map.getOrInsert()"],
+    "body": ["${1:map}.getOrInsert(${2:key}, ${3:defaultValue});"],
+    "description": "ES2026 (Upsert)\nmap.getOrInsert(key, defaultValue)\nreturn the existing value for `key`, or insert `defaultValue` and return it if absent — a single lookup instead of the classic `map.has(key) ? map.get(key) : (map.set(key, defaultValue), defaultValue)` dance. Also available on WeakMap.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.getOrInsertComputed()": {
+    "prefix": ["mapgoic", "map.getOrInsertComputed()"],
+    "body": ["${1:map}.getOrInsertComputed(${2:key}, (${3:key}) => ${4:computedDefault});"],
+    "description": "ES2026 (Upsert)\nmap.getOrInsertComputed(key, callbackFn)\nlike `getOrInsert()`, but the default value is computed lazily by `callbackFn(key)` only when `key` is absent — useful when the default is expensive to construct (e.g. `() => []`). Also available on WeakMap.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.has()": {
+    "prefix": "map.has()",
+    "body": ["${1:map}.has(${2:key})"],
+    "description": "The has() method returns a boolean indicating whether an element with the specified key exists or not.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.set()": {
+    "prefix": "map.set()",
+    "body": ["${1:map}.set(${2:key}, ${3:value})"],
+    "description": "The set() method adds or updates an element with a specified key and a value to a Map object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.entries()": {
+    "prefix": "map.entries()",
+    "body": ["const ${2:iterator} = ${1:map}.entries();", "$2.next().value"],
+    "description": "The entries() method returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.keys()": {
+    "prefix": "map.keys()",
+    "body": ["const ${2:iterator} = ${1:map}.keys();", "$2.next().value"],
+    "description": "The keys() method returns a new Iterator object that contains the keys for each element in the Map object in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype.values()": {
+    "prefix": "map.values()",
+    "body": ["const ${2:iterator} = ${1:map}.values()", "$2.next().value"],
+    "description": "The values() method returns a new Iterator object that contains the values for each element in the Map object in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.prototype[@@iterator]()": {
+    "prefix": "map.@@iterator()",
+    "body": ["const ${2:iterator} = ${1:map}[Symbol.iterator]();", "$2.next().value"],
+    "description": "The initial value of the @@iterator property is the same function object as the initial value of the entries method.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "get Map[@@species]": {
+    "prefix": ["map.@@species"],
+    "body": ["class FeatureMap extends Map {", "\tstatic get [@@species]() { return Map; }", "}"],
+    "description": "The Map[@@species] accessor property returns the Map constructor.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Map.groupBy()": {
+    "prefix": ["mgb", "Map.groupBy()"],
+    "body": ["const ${2:grouped} = Map.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+    "description": "ES2024\nMap.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the values returned by `callbackFn`, and returns a Map. Prefer this over `Object.groupBy()` when group keys aren't strings/symbols.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakMap.prototype.delete()": {
+    "prefix": "weakmap.delete()",
+    "body": ["${1:weakmap}.delete(${2:key})"],
+    "description": "The delete() method removes the specified element from a WeakMap object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakMap.prototype.get()": {
+    "prefix": "weakmap.get()",
+    "body": ["${1:weakmap}.get(${2:key})"],
+    "description": "The get() method returns a specified element from a WeakMap object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakMap.prototype.has()": {
+    "prefix": "weakmap.has()",
+    "body": ["${1:weakmap}.has(${2:key})"],
+    "description": "The has() method returns a boolean indicating whether an element with the specified key exists in the WeakMap object or not.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakMap.prototype.set()": {
+    "prefix": "weakmap.set()",
+    "body": ["${1:weakmap}.set(${2:key}, ${3:value})"],
+    "description": "The set() method adds a new element with a specified key and value to a WeakMap object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.size": {
+    "prefix": "set.size",
+    "body": ["${1:set}.size"],
+    "description": "The size accessor property returns the number of (unique) elements in a Set object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.add()": {
+    "prefix": "set.add()",
+    "body": ["${1:set}.add(${2:value})"],
+    "description": "The add() method appends a new element with a specified value to the end of a Set object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.clear()": {
+    "prefix": "set.clear()",
+    "body": ["${1:set}.clear()"],
+    "description": "The clear() method removes all elements from a Set object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.delete()": {
+    "prefix": "set.delete()",
+    "body": ["${1:set}.delete(${2:value})"],
+    "description": "The delete() method removes a specified value from a Set object, if it is in the set.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.forEach()": {
+    "prefix": "set.forEach()",
+    "body": ["${1:set}.forEach((${2:value}) => {", "\t$0", "});"],
+    "description": "The forEach() method executes a provided function once for each value in the Set object, in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.has()": {
+    "prefix": "set.has()",
+    "body": ["${1:set}.has(${2:value})"],
+    "description": "The has() method returns a boolean indicating whether an element with the specified value exists in a Set object or not.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.entries()": {
+    "prefix": "set.entries()",
+    "body": ["const ${2:iterator} = ${1:set}.entries();", "$2.next().value"],
+    "description": "The entries() method returns a new Iterator object that contains an array of [value, value] for each element in the Set object, in insertion order. For Set objects there is no key like in Map objects. However, to keep the API similar to the Map object, each entry has the same value for its key and value here, so that an array [value, value] is returned.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.values()": {
+    "prefix": "set.values()",
+    "body": ["const ${2:iterator} = ${1:set}.values()", "$2.next().value"],
+    "description": "The values() method returns a new iterator object that contains the values for each element in the Set object in insertion order.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype[@@iterator]()": {
+    "prefix": "set.@@iterator()",
+    "body": ["const ${2:iterator} = ${1:set}[Symbol.iterator]();", "$2.next().value"],
+    "description": "The initial value of the @@iterator property is the same function object as the initial value of the values property.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "get Set[@@species]": {
+    "prefix": ["set.@@species"],
+    "body": ["class FeatureSet extends Set {", "\tstatic get [@@species]() { return Set; }", "}"],
+    "description": "The Set[Symbol.species] accessor property returns the Set constructor.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.union()": {
+    "prefix": "set.union()",
+    "body": ["${1:set}.union(${2:otherSet})"],
+    "description": "ES2025\nsetA.union(setB)\nreturn a new Set containing every element in either `setA` or `setB` (or both).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.intersection()": {
+    "prefix": "set.intersection()",
+    "body": ["${1:set}.intersection(${2:otherSet})"],
+    "description": "ES2025\nsetA.intersection(setB)\nreturn a new Set containing every element that is in both `setA` and `setB`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.difference()": {
+    "prefix": "set.difference()",
+    "body": ["${1:set}.difference(${2:otherSet})"],
+    "description": "ES2025\nsetA.difference(setB)\nreturn a new Set containing every element in `setA` that is **not** in `setB`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.symmetricDifference()": {
+    "prefix": "set.symmetricDifference()",
+    "body": ["${1:set}.symmetricDifference(${2:otherSet})"],
+    "description": "ES2025\nsetA.symmetricDifference(setB)\nreturn a new Set containing every element that is in exactly one of `setA` or `setB`, but not both.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.isSubsetOf()": {
+    "prefix": "set.isSubsetOf()",
+    "body": ["${1:set}.isSubsetOf(${2:otherSet})"],
+    "description": "ES2025\nsetA.isSubsetOf(setB)\nreturn a boolean indicating whether every element of `setA` is also in `setB`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.isSupersetOf()": {
+    "prefix": "set.isSupersetOf()",
+    "body": ["${1:set}.isSupersetOf(${2:otherSet})"],
+    "description": "ES2025\nsetA.isSupersetOf(setB)\nreturn a boolean indicating whether every element of `setB` is also in `setA`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Set.prototype.isDisjointFrom()": {
+    "prefix": "set.isDisjointFrom()",
+    "body": ["${1:set}.isDisjointFrom(${2:otherSet})"],
+    "description": "ES2025\nsetA.isDisjointFrom(setB)\nreturn a boolean indicating whether `setA` and `setB` have no elements in common.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakSet.prototype.add()": {
+    "prefix": "weakset.add()",
+    "body": ["${1:weakset}.add(${2:value})"],
+    "description": "The add() method appends a new object to the end of a WeakSet object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakSet.prototype.delete()": {
+    "prefix": "weakset.delete()",
+    "body": ["${1:weakset}.delete(${2:value})"],
+    "description": "The delete() method removes the specified element from a WeakSet object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "WeakSet.prototype.has()": {
+    "prefix": "weakset.has()",
+    "body": ["${1:weakset}.has(${2:value})"],
+    "description": "The has() method returns a boolean indicating whether an object exists in a WeakSet or not.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

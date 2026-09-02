@@ -1,190 +1,224 @@
 {
-	"Template literals": {
-		"prefix": "tl",
-		"body": ["$2`\\${${1:expression}\\}$3`"],
-		"description": "ES2015\nTemplate strings\n"
-	},
-	"String.prototype.length": {
-		"prefix": ["sl", "str.length"],
-		"body": ["${1:str}.length"],
-		"description": "String.prototype.length\nreturns the number of code units in the string.\n"
-	},
-	"String.fromCharCode()": {
-		"prefix": ["sfcc", "Str.fromCharCode()"],
-		"body": ["String.fromCharCode(${1:numN})"],
-		"description": "String.fromCharCode(num1[, ...[, numN]])\nreturn a string created from the specified sequence of UTF-16 code units.\n"
-	},
-	"String.fromCodePoint()": {
-		"prefix": ["sfcp", "Str.fromCodePoint()"],
-		"body": ["String.fromCodePoint(${1:numN})"],
-		"description": "ES2015\nString.fromCodePoint(num1[, ...[, numN]])\nreturn a string created by using the specified sequence of code points.\na RangeError is thrown if an invalid Unicode code point is given (e.g. 'RangeError: NaN is not a valid code point').\n"
-	},
-	"String.raw()": {
-		"prefix": ["sr", "Str.raw()"],
-		"body": ["String.raw`${1:templateString}`"],
-		"description": "ES2015\nString.raw(callSite, ...substitutions)|String.raw`templateString`\nreturn the raw string form of a given template string.\n"
-	},
-	"String.prototype.charAt()": {
-		"prefix": ["sca", "str.charAt()"],
-		"body": ["${1:str}.charAt(${2:index})"],
-		"description": "str.charAt(index)\n returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.\n"
-	},
-	"String.prototype.charCodeAt()": {
-		"prefix": ["scca", "str.charCodeAt()"],
-		"body": ["${1:str}.charCodeAt(${2:index})"],
-		"description": "str.charCodeAt(index)\nreturn an integer between 0 and 65535 representing the UTF-16 code unit at the given index.\n"
-	},
-	"String.prototype.codePointAt()": {
-		"prefix": ["scpa", "str.codePointAt()"],
-		"body": ["${1:str}.codePointAt(${2:position})"],
-		"description": "ES2015\nstr.codePointAt(pos)\nreturn a non-negative integer that is the Unicode code point value.\n"
-	},
-	"String.prototype.concat()": {
-		"prefix": ["sc", "str.concat()"],
-		"body": ["${1:str}.concat(${2:stringN})"],
-		"description": "str.concat(string2[, string3, ..., stringN])\nreturn a new string containing the combined text of the strings provided.\n"
-	},
-	"String.prototype.endsWith()": {
-		"prefix": ["sew", "str.endsWith()"],
-		"body": ["${1:str}.endsWith(${2:searchString})"],
-		"description": "ES2015\nstr.endsWith(searchString[, length])\nreturn 'true' if the given characters are found at the end of the string; otherwise, 'false'.\n"
-	},
-	"String.prototype.includes()": {
-		"prefix": ["sin", "str.includes()"],
-		"body": ["${1:str}.includes(${2:searchString})"],
-		"description": "ES2015\nstr.includes(searchString[, position])\nreturn 'true' if the search string is found anywhere within the given string; otherwise, 'false' if not.\n"
-	},
-	"String.prototype.indexOf()": {
-		"prefix": ["sio", "str.indexOf()"],
-		"body": ["${1:str}.indexOf(${2:searchValue})"],
-		"description": "str.indexOf(searchValue[, fromIndex])\nreturn the index of the first occurrence of searchValue, or '-1' if not found.\nAn empty string searchValue will match at any index between '0' and str.length\n"
-	},
-	"String.prototype.lastIndexOf()": {
-		"prefix": ["slio", "str.lastIndexOf()"],
-		"body": ["${1:str}.lastIndexOf(${2:searchValue})"],
-		"description": "str.lastIndexOf(searchValue[, fromIndex])\nreturn the index of the last occurrence of the specified value; '-1' if not found.\n"
-	},
-	"String.prototype.localeCompare()": {
-		"prefix": ["slc", "str.localeCompare()"],
-		"body": ["${1:str}.localeCompare(${2:compareString})"],
-		"description": "referenceStr.localeCompare(compareString[, locales[, options]])\nreturn a **negative** number if the reference string occurs before the compare string; **positive** if the reference string occurs after the compare string; **0** if they are equivalent.\n"
-	},
-	"String.prototype.match()": {
-		"prefix": ["sm", "str.match()"],
-		"body": ["${1:str}.match(${2:regexp})"],
-		"description": "str.match(regexp)\nreturn an **Array** whose contents depend on the presence or absence of the global (**g**) flag, or **null** if no matches are found.\n"
-	},
-	"String.prototype.matchAll()": {
-		"prefix": ["sma", "str.matchAll()"],
-		"body": ["${1:str}.matchAll(${2:regexp})"],
-		"description": "ES2019\nstr.matchAll(regexp)\nreturn an iterator of all results matching a string against a regular expression, including capturing groups.\n"
-	},
-	"String.prototype.normalize()": {
-		"prefix": ["sn", "str.normalize()"],
-		"body": ["${1:str}.normalize('${2:NFC}')"],
-		"description": "ES2015\nstr.normalize([form])\n**form**\n- NFC — Normalization Form Canonical Composition.\n- NFD — Normalization Form Canonical Decomposition.\n- NFKC — Normalization Form Compatibility Composition.\n- NFKD — Normalization Form Compatibility Decomposition.\nreturn the Unicode Normalization Form of a given string (if the value isn't a string, it will be converted to one first).\n thrown a **RangeError** is thrown if **form** isn't one of the values specified above.\n"
-	},
-	"String.prototype.padEnd()": {
-		"prefix": ["spe", "str.padEnd()"],
-		"body": ["${1:str}.padEnd(${2:targetLength}, ${3:padString})"],
-		"description": "ES2017\nstr.padEnd(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied at the end of the current string.\n"
-	},
-	"String.prototype.padStart()": {
-		"prefix": ["sps", "str.padStart()"],
-		"body": ["${1:str}.padStart(${2:targetLength}, ${3:padString})"],
-		"description": "ES2017\nstr.padStart(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied from the start.\n"
-	},
-	"String.prototype.repeat()": {
-		"prefix": ["srep", "str.repeat()"],
-		"body": ["${1:str}.repeat(${2:count})"],
-		"description": "ES2015\nstr.repeat(count)\nreturn a new string containing the specified number of copies of the given string.\n"
-	},
-	"String.prototype.replace()": {
-		"prefix": ["sre", "str.replace()"],
-		"body": ["${1:str}.replace(${2:regexp}, ${3:newSubStr})"],
-		"description": "str.replace(regexp|substr, newSubStr|function)\nreturn a new string with some or all matches of a **pattern** replaced by a **replacement**. The **pattern** can be a string or a **RegExp**, and the **replacement** can be a string or a function to be called for each match. If **pattern** is a string, only the first occurrence will be replaced.\nThe original string is left unchanged.\n"
-	},
-	"String.prototype.replaceAll()": {
-		"prefix": ["sreal", "str.replaceAll()"],
-		"body": ["${1:str}.replaceAll(${2:regexp}, ${3:newSubStr})"],
-		"description": "ES2021\nstr.replaceAll(pattern, replacement)\nreturn a new string with all matches of a **pattern** replaced by a **replacement**. The **pattern** can be a string or a **RegExp**, and the **replacement** can be a string or a function called for each match. Unlike `replace()`, a string **pattern** replaces every occurrence, not just the first.\n"
-	},
-	"String.prototype.search()": {
-		"prefix": ["ss", "str.search()"],
-		"body": ["${1:str}.search(${2:regexp})"],
-		"description": "str.search(regexp)\nreturn the index of the first match between the regular expression and the given string; if not found, **-1**.\n"
-	},
-	"String.prototype.slice()": {
-		"prefix": ["ssl", "str.slice()"],
-		"body": ["${1:str}.slice(${2:beginIndex}, ${3:endIndex})"],
-		"description": "str.slice(beginIndex[, endIndex])\nreturn a new string containing the extracted section of the string.\n"
-	},
-	"String.prototype.split()": {
-		"prefix": ["ssp", "str.split()"],
-		"body": ["${1:str}.split(${2:separator})"],
-		"description": "str.split([separator[, limit]])\nreturn an Array of strings split at each point where the separator occurs in the given string.\n"
-	},
-	"String.prototype.startsWith()": {
-		"prefix": ["ssw", "str.startsWith()"],
-		"body": ["${1:str}.startsWith(${2:searchString}, ${3:position})"],
-		"description": "ES2015\nstr.startsWith(searchString[, position])\nreturn **true** if the given characters are found at the beginning of the string; otherwise, **false**.\n"
-	},
-	"String.prototype.substring()": {
-		"prefix": ["sss", "str.substring()"],
-		"body": ["${1:str}.substring(${2:indexStart}, ${3:indexEnd})"],
-		"description": "str.substring(indexStart[, indexEnd])\nreturn the part of the string between the start and end indexes, or to the end of the string.\n"
-	},
-	"String.prototype.toLocaleLowerCase()": {
-		"prefix": ["stllc", "str.toLocaleLowerCase()"],
-		"body": ["${1:str}.toLocaleLowerCase()"],
-		"description": "str.toLocaleLowerCase([locale, locale, ...])\nreturn a new string representing the calling string converted to lower case, according to any locale-specific case mappings.\n"
-	},
-	"String.prototype.toLocaleUpperCase()": {
-		"prefix": ["stluc", "str.toLocaleUpperCase()"],
-		"body": ["${1:str}.toLocaleUpperCase()"],
-		"description": "str.toLocaleUpperCase([locale, locale, ...])\nreturn a new string representing the calling string converted to upper case, according to any locale-specific case mappings.\n"
-	},
-	"String.prototype.toLowerCase()": {
-		"prefix": ["stlc", "str.toLowerCase()"],
-		"body": ["${1:str}.toLowerCase()"],
-		"description": "str.toLowerCase()\nreturn a new string representing the calling string converted to lower case.\n"
-	},
-	"String.prototype.toUpperCase()": {
-		"prefix": ["stuc", "str.toUpperCase()"],
-		"body": ["${1:str}.toUpperCase()"],
-		"description": "str.toUpperCase()\nreturn a new string representing the calling string converted to upper case.\n"
-	},
-	"String.prototype.trim()": {
-		"prefix": ["str", "str.trim()"],
-		"body": ["${1:str}.trim()"],
-		"description": "str.trim()\nreturn a new string representing the calling string stripped of whitespace from both ends.\n"
-	},
-	"String.prototype.trimEnd()": {
-		"prefix": ["ste", "str.trimEnd()"],
-		"body": ["${1:str}.trimEnd() //trimRight()"],
-		"description": "ES2019\nstr.trimEnd()/trimRight()\nreturn a new string representing the calling string stripped of whitespace from its (right) end.\n"
-	},
-	"String.prototype.trimStart()": {
-		"prefix": ["sts", "str.trimStart()"],
-		"body": ["${1:str}.trimStart() //trimLeft()"],
-		"description": "ES2019\nstr.trimStart()/trimLeft()\nreturn a new string representing the calling string stripped of whitespace from its beginning (left end).\n"
-	},
-	"String.prototype[@@iterator]()": {
-		"prefix": "ssi",
-		"body": [
-			"const ${2:iterator} = ${1:str}[Symbol.iterator]();",
-			"$2.next().value"
-		],
-		"description": "ES2015\nstr[Symbol.iterator]\nreturn a new **Iterator** object.\n"
-	},
-	"String.prototype.isWellFormed()": {
-		"prefix": ["siwf", "str.isWellFormed()"],
-		"body": ["${1:str}.isWellFormed()"],
-		"description": "ES2024\nstr.isWellFormed()\nreturn a boolean indicating whether the string contains any lone surrogates (i.e. is well-formed Unicode). Useful before passing a string to APIs (e.g. `encodeURI()`) that throw on ill-formed strings.\n"
-	},
-	"String.prototype.toWellFormed()": {
-		"prefix": ["stwf", "str.toWellFormed()"],
-		"body": ["${1:str}.toWellFormed()"],
-		"description": "ES2024\nstr.toWellFormed()\nreturn a new string where lone surrogates are replaced with the Unicode replacement character U+FFFD, making the string well-formed.\n"
-	}
+  "Template literals": {
+    "prefix": "tl",
+    "body": ["$2`\\${${1:expression}\\}$3`"],
+    "description": "ES2015\nTemplate strings\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.length": {
+    "prefix": ["sl", "str.length"],
+    "body": ["${1:str}.length"],
+    "description": "String.prototype.length\nreturns the number of code units in the string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.fromCharCode()": {
+    "prefix": ["sfcc", "Str.fromCharCode()"],
+    "body": ["String.fromCharCode(${1:numN})"],
+    "description": "String.fromCharCode(num1[, ...[, numN]])\nreturn a string created from the specified sequence of UTF-16 code units.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.fromCodePoint()": {
+    "prefix": ["sfcp", "Str.fromCodePoint()"],
+    "body": ["String.fromCodePoint(${1:numN})"],
+    "description": "ES2015\nString.fromCodePoint(num1[, ...[, numN]])\nreturn a string created by using the specified sequence of code points.\na RangeError is thrown if an invalid Unicode code point is given (e.g. 'RangeError: NaN is not a valid code point').\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.raw()": {
+    "prefix": ["sr", "Str.raw()"],
+    "body": ["String.raw`${1:templateString}`"],
+    "description": "ES2015\nString.raw(callSite, ...substitutions)|String.raw`templateString`\nreturn the raw string form of a given template string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.charAt()": {
+    "prefix": ["sca", "str.charAt()"],
+    "body": ["${1:str}.charAt(${2:index})"],
+    "description": "str.charAt(index)\n returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.charCodeAt()": {
+    "prefix": ["scca", "str.charCodeAt()"],
+    "body": ["${1:str}.charCodeAt(${2:index})"],
+    "description": "str.charCodeAt(index)\nreturn an integer between 0 and 65535 representing the UTF-16 code unit at the given index.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.codePointAt()": {
+    "prefix": ["scpa", "str.codePointAt()"],
+    "body": ["${1:str}.codePointAt(${2:position})"],
+    "description": "ES2015\nstr.codePointAt(pos)\nreturn a non-negative integer that is the Unicode code point value.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.concat()": {
+    "prefix": ["sc", "str.concat()"],
+    "body": ["${1:str}.concat(${2:stringN})"],
+    "description": "str.concat(string2[, string3, ..., stringN])\nreturn a new string containing the combined text of the strings provided.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.endsWith()": {
+    "prefix": ["sew", "str.endsWith()"],
+    "body": ["${1:str}.endsWith(${2:searchString})"],
+    "description": "ES2015\nstr.endsWith(searchString[, length])\nreturn 'true' if the given characters are found at the end of the string; otherwise, 'false'.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.includes()": {
+    "prefix": ["sin", "str.includes()"],
+    "body": ["${1:str}.includes(${2:searchString})"],
+    "description": "ES2015\nstr.includes(searchString[, position])\nreturn 'true' if the search string is found anywhere within the given string; otherwise, 'false' if not.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.indexOf()": {
+    "prefix": ["sio", "str.indexOf()"],
+    "body": ["${1:str}.indexOf(${2:searchValue})"],
+    "description": "str.indexOf(searchValue[, fromIndex])\nreturn the index of the first occurrence of searchValue, or '-1' if not found.\nAn empty string searchValue will match at any index between '0' and str.length\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.lastIndexOf()": {
+    "prefix": ["slio", "str.lastIndexOf()"],
+    "body": ["${1:str}.lastIndexOf(${2:searchValue})"],
+    "description": "str.lastIndexOf(searchValue[, fromIndex])\nreturn the index of the last occurrence of the specified value; '-1' if not found.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.localeCompare()": {
+    "prefix": ["slc", "str.localeCompare()"],
+    "body": ["${1:str}.localeCompare(${2:compareString})"],
+    "description": "referenceStr.localeCompare(compareString[, locales[, options]])\nreturn a **negative** number if the reference string occurs before the compare string; **positive** if the reference string occurs after the compare string; **0** if they are equivalent.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.match()": {
+    "prefix": ["sm", "str.match()"],
+    "body": ["${1:str}.match(${2:regexp})"],
+    "description": "str.match(regexp)\nreturn an **Array** whose contents depend on the presence or absence of the global (**g**) flag, or **null** if no matches are found.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.matchAll()": {
+    "prefix": ["sma", "str.matchAll()"],
+    "body": ["${1:str}.matchAll(${2:regexp})"],
+    "description": "ES2019\nstr.matchAll(regexp)\nreturn an iterator of all results matching a string against a regular expression, including capturing groups.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.normalize()": {
+    "prefix": ["sn", "str.normalize()"],
+    "body": ["${1:str}.normalize('${2:NFC}')"],
+    "description": "ES2015\nstr.normalize([form])\n**form**\n- NFC — Normalization Form Canonical Composition.\n- NFD — Normalization Form Canonical Decomposition.\n- NFKC — Normalization Form Compatibility Composition.\n- NFKD — Normalization Form Compatibility Decomposition.\nreturn the Unicode Normalization Form of a given string (if the value isn't a string, it will be converted to one first).\n thrown a **RangeError** is thrown if **form** isn't one of the values specified above.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.padEnd()": {
+    "prefix": ["spe", "str.padEnd()"],
+    "body": ["${1:str}.padEnd(${2:targetLength}, ${3:padString})"],
+    "description": "ES2017\nstr.padEnd(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied at the end of the current string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.padStart()": {
+    "prefix": ["sps", "str.padStart()"],
+    "body": ["${1:str}.padStart(${2:targetLength}, ${3:padString})"],
+    "description": "ES2017\nstr.padStart(targetLength [, padString])\nreturn a **String** of the specified length with the pad string applied from the start.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.repeat()": {
+    "prefix": ["srep", "str.repeat()"],
+    "body": ["${1:str}.repeat(${2:count})"],
+    "description": "ES2015\nstr.repeat(count)\nreturn a new string containing the specified number of copies of the given string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.replace()": {
+    "prefix": ["sre", "str.replace()"],
+    "body": ["${1:str}.replace(${2:regexp}, ${3:newSubStr})"],
+    "description": "str.replace(regexp|substr, newSubStr|function)\nreturn a new string with some or all matches of a **pattern** replaced by a **replacement**. The **pattern** can be a string or a **RegExp**, and the **replacement** can be a string or a function to be called for each match. If **pattern** is a string, only the first occurrence will be replaced.\nThe original string is left unchanged.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.replaceAll()": {
+    "prefix": ["sreal", "str.replaceAll()"],
+    "body": ["${1:str}.replaceAll(${2:regexp}, ${3:newSubStr})"],
+    "description": "ES2021\nstr.replaceAll(pattern, replacement)\nreturn a new string with all matches of a **pattern** replaced by a **replacement**. The **pattern** can be a string or a **RegExp**, and the **replacement** can be a string or a function called for each match. Unlike `replace()`, a string **pattern** replaces every occurrence, not just the first.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.search()": {
+    "prefix": ["ss", "str.search()"],
+    "body": ["${1:str}.search(${2:regexp})"],
+    "description": "str.search(regexp)\nreturn the index of the first match between the regular expression and the given string; if not found, **-1**.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.slice()": {
+    "prefix": ["ssl", "str.slice()"],
+    "body": ["${1:str}.slice(${2:beginIndex}, ${3:endIndex})"],
+    "description": "str.slice(beginIndex[, endIndex])\nreturn a new string containing the extracted section of the string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.split()": {
+    "prefix": ["ssp", "str.split()"],
+    "body": ["${1:str}.split(${2:separator})"],
+    "description": "str.split([separator[, limit]])\nreturn an Array of strings split at each point where the separator occurs in the given string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.startsWith()": {
+    "prefix": ["ssw", "str.startsWith()"],
+    "body": ["${1:str}.startsWith(${2:searchString}, ${3:position})"],
+    "description": "ES2015\nstr.startsWith(searchString[, position])\nreturn **true** if the given characters are found at the beginning of the string; otherwise, **false**.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.substring()": {
+    "prefix": ["sss", "str.substring()"],
+    "body": ["${1:str}.substring(${2:indexStart}, ${3:indexEnd})"],
+    "description": "str.substring(indexStart[, indexEnd])\nreturn the part of the string between the start and end indexes, or to the end of the string.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.toLocaleLowerCase()": {
+    "prefix": ["stllc", "str.toLocaleLowerCase()"],
+    "body": ["${1:str}.toLocaleLowerCase()"],
+    "description": "str.toLocaleLowerCase([locale, locale, ...])\nreturn a new string representing the calling string converted to lower case, according to any locale-specific case mappings.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.toLocaleUpperCase()": {
+    "prefix": ["stluc", "str.toLocaleUpperCase()"],
+    "body": ["${1:str}.toLocaleUpperCase()"],
+    "description": "str.toLocaleUpperCase([locale, locale, ...])\nreturn a new string representing the calling string converted to upper case, according to any locale-specific case mappings.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.toLowerCase()": {
+    "prefix": ["stlc", "str.toLowerCase()"],
+    "body": ["${1:str}.toLowerCase()"],
+    "description": "str.toLowerCase()\nreturn a new string representing the calling string converted to lower case.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.toUpperCase()": {
+    "prefix": ["stuc", "str.toUpperCase()"],
+    "body": ["${1:str}.toUpperCase()"],
+    "description": "str.toUpperCase()\nreturn a new string representing the calling string converted to upper case.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.trim()": {
+    "prefix": ["str", "str.trim()"],
+    "body": ["${1:str}.trim()"],
+    "description": "str.trim()\nreturn a new string representing the calling string stripped of whitespace from both ends.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.trimEnd()": {
+    "prefix": ["ste", "str.trimEnd()"],
+    "body": ["${1:str}.trimEnd() //trimRight()"],
+    "description": "ES2019\nstr.trimEnd()/trimRight()\nreturn a new string representing the calling string stripped of whitespace from its (right) end.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.trimStart()": {
+    "prefix": ["sts", "str.trimStart()"],
+    "body": ["${1:str}.trimStart() //trimLeft()"],
+    "description": "ES2019\nstr.trimStart()/trimLeft()\nreturn a new string representing the calling string stripped of whitespace from its beginning (left end).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype[@@iterator]()": {
+    "prefix": "ssi",
+    "body": ["const ${2:iterator} = ${1:str}[Symbol.iterator]();", "$2.next().value"],
+    "description": "ES2015\nstr[Symbol.iterator]\nreturn a new **Iterator** object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.isWellFormed()": {
+    "prefix": ["siwf", "str.isWellFormed()"],
+    "body": ["${1:str}.isWellFormed()"],
+    "description": "ES2024\nstr.isWellFormed()\nreturn a boolean indicating whether the string contains any lone surrogates (i.e. is well-formed Unicode). Useful before passing a string to APIs (e.g. `encodeURI()`) that throw on ill-formed strings.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "String.prototype.toWellFormed()": {
+    "prefix": ["stwf", "str.toWellFormed()"],
+    "body": ["${1:str}.toWellFormed()"],
+    "description": "ES2024\nstr.toWellFormed()\nreturn a new string where lone surrogates are replaced with the Unicode replacement character U+FFFD, making the string well-formed.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

@@ -1,127 +1,152 @@
 {
-	"use strict": {
-		"prefix": "usm",
-		"body": ["'use strict';"],
-		"description": "ES5\nuse strict mode\n"
-	},
-	"const": {
-		"prefix": "c",
-		"body": ["const ${1:name} = ${2:value};"],
-		"description": "ES2015\nconst assignment\n"
-	},
-	"const object": {
-		"prefix": "co",
-		"body": ["const ${1:feature} = {\n\t$2\n};"],
-		"description": "const object\n"
-	},
-	"const array": {
-		"prefix": "ca",
-		"body": ["const ${1:feature} = [$2];"],
-		"description": "const object\n"
-	},
-	"const string": {
-		"prefix": "cs",
-		"body": ["const ${1:feature} = '$2';"],
-		"description": "const string\n"
-	},
-	"const destructing object": {
-		"prefix": "cdo",
-		"body": ["const {${2}} = ${1};"],
-		"description": "ES2015\nconst assignment destructuring\n"
-	},
-	"const destructing array": {
-		"prefix": "cda",
-		"body": ["const [${2}] = ${1};"],
-		"description": "ES2015\nconst assignment destructuring\n"
-	},
-	"let": {
-		"prefix": "l",
-		"body": ["let ${1:name} = ${2:value};"],
-		"description": "ES2015\nlet assignment\n"
-	},
-	"let object": {
-		"prefix": "lo",
-		"body": ["let ${1:feature} = {\n\t$2\n};"],
-		"description": "let object\n"
-	},
-	"let array": {
-		"prefix": "la",
-		"body": ["let ${1:feature} = [$2];"],
-		"description": "let object\n"
-	},
-	"let string": {
-		"prefix": "ls",
-		"body": ["let ${1:feature} = '$2';"],
-		"description": "let string\n"
-	},
-	"let destructing object": {
-		"prefix": "ldo",
-		"body": ["let {${2}} = ${1};"],
-		"description": "ES2015\nlet assignment destructuring\n"
-	},
-	"let destructing array": {
-		"prefix": "lda",
-		"body": ["let [${2}] = ${1};"],
-		"description": "ES2015\nlet assignment destructuring\n"
-	},
-	"var": {
-		"prefix": "v",
-		"body": ["var ${1:name} = ${2:value};"],
-		"description": "var assignment\n"
-	},
-	"var object": {
-		"prefix": "vo",
-		"body": ["var ${1:feature} = {\n\t$2\n};"],
-		"description": "var object\n"
-	},
-	"var array": {
-		"prefix": "va",
-		"body": ["var ${1:feature} = [$2];"],
-		"description": "var object\n"
-	},
-	"var string": {
-		"prefix": "vs",
-		"body": ["var ${1:feature} = '$2';"],
-		"description": "var string\n"
-	},
-	"var destructing object": {
-		"prefix": "vdo",
-		"body": ["var {${2}} = ${1};"],
-		"description": "var destructuring assignment\n"
-	},
-	"var destructing array": {
-		"prefix": "vda",
-		"body": ["var [${2}] = ${1};"],
-		"description": "var destructuring assignment\n"
-	},
-	"BigInt literal": {
-		"prefix": "bign",
-		"body": ["${1:10}n"],
-		"description": "ES2020\nan integer literal suffixed with `n` (or `BigInt(value)`) creates a BigInt — an arbitrary-precision integer that can safely exceed `Number.MAX_SAFE_INTEGER`. BigInts cannot be mixed with regular Numbers in arithmetic without explicit conversion.\n"
-	},
-	"globalThis": {
-		"prefix": "globth",
-		"body": ["globalThis"],
-		"description": "ES2020\nglobalThis provides a standard way to access the global object (`window` in browsers, `self` in workers, `global` in Node.js) across all environments.\n"
-	},
-	"destructuring parameter": {
-		"prefix": "dp",
-		"body": ["{${0}}: ${1:parameter}"],
-		"description": "ES2015\ndestructuring parameter\n"
-	},
-	"property object": {
-		"prefix": "po",
-		"body": ["${1:property}: {\n\t${2:property},\n},$0"],
-		"description": "object property\n"
-	},
-	"property array": {
-		"prefix": "parr",
-		"body": ["${1:property}: [${2:item}],$0"],
-		"description": "array property\n"
-	},
-	"property string": {
-		"prefix": "pstr",
-		"body": ["${1:property}: '${2:value}',$0"],
-		"description": "string property\n"
-	}
+  "use strict": {
+    "prefix": "usm",
+    "body": ["'use strict';"],
+    "description": "ES5\nuse strict mode\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const": {
+    "prefix": "c",
+    "body": ["const ${1:name} = ${2:value};"],
+    "description": "ES2015\nconst assignment\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const object": {
+    "prefix": "co",
+    "body": ["const ${1:feature} = {\n\t$2\n};"],
+    "description": "const object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const array": {
+    "prefix": "ca",
+    "body": ["const ${1:feature} = [$2];"],
+    "description": "const object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const string": {
+    "prefix": "cs",
+    "body": ["const ${1:feature} = '$2';"],
+    "description": "const string\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const destructing object": {
+    "prefix": "cdo",
+    "body": ["const {${2}} = ${1};"],
+    "description": "ES2015\nconst assignment destructuring\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "const destructing array": {
+    "prefix": "cda",
+    "body": ["const [${2}] = ${1};"],
+    "description": "ES2015\nconst assignment destructuring\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let": {
+    "prefix": "l",
+    "body": ["let ${1:name} = ${2:value};"],
+    "description": "ES2015\nlet assignment\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let object": {
+    "prefix": "lo",
+    "body": ["let ${1:feature} = {\n\t$2\n};"],
+    "description": "let object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let array": {
+    "prefix": "la",
+    "body": ["let ${1:feature} = [$2];"],
+    "description": "let object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let string": {
+    "prefix": "ls",
+    "body": ["let ${1:feature} = '$2';"],
+    "description": "let string\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let destructing object": {
+    "prefix": "ldo",
+    "body": ["let {${2}} = ${1};"],
+    "description": "ES2015\nlet assignment destructuring\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "let destructing array": {
+    "prefix": "lda",
+    "body": ["let [${2}] = ${1};"],
+    "description": "ES2015\nlet assignment destructuring\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var": {
+    "prefix": "v",
+    "body": ["var ${1:name} = ${2:value};"],
+    "description": "var assignment\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var object": {
+    "prefix": "vo",
+    "body": ["var ${1:feature} = {\n\t$2\n};"],
+    "description": "var object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var array": {
+    "prefix": "va",
+    "body": ["var ${1:feature} = [$2];"],
+    "description": "var object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var string": {
+    "prefix": "vs",
+    "body": ["var ${1:feature} = '$2';"],
+    "description": "var string\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var destructing object": {
+    "prefix": "vdo",
+    "body": ["var {${2}} = ${1};"],
+    "description": "var destructuring assignment\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "var destructing array": {
+    "prefix": "vda",
+    "body": ["var [${2}] = ${1};"],
+    "description": "var destructuring assignment\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "BigInt literal": {
+    "prefix": "bign",
+    "body": ["${1:10}n"],
+    "description": "ES2020\nan integer literal suffixed with `n` (or `BigInt(value)`) creates a BigInt — an arbitrary-precision integer that can safely exceed `Number.MAX_SAFE_INTEGER`. BigInts cannot be mixed with regular Numbers in arithmetic without explicit conversion.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "globalThis": {
+    "prefix": "globth",
+    "body": ["globalThis"],
+    "description": "ES2020\nglobalThis provides a standard way to access the global object (`window` in browsers, `self` in workers, `global` in Node.js) across all environments.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "destructuring parameter": {
+    "prefix": "dp",
+    "body": ["{${0}}: ${1:parameter}"],
+    "description": "ES2015\ndestructuring parameter\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "property object": {
+    "prefix": "po",
+    "body": ["${1:property}: {\n\t${2:property},\n},$0"],
+    "description": "object property\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "property array": {
+    "prefix": "parr",
+    "body": ["${1:property}: [${2:item}],$0"],
+    "description": "array property\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "property string": {
+    "prefix": "pstr",
+    "body": ["${1:property}: '${2:value}',$0"],
+    "description": "string property\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

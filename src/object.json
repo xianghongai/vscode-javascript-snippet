@@ -1,241 +1,279 @@
 {
-	"object literal": {
-		"prefix": "ol",
-		"body": ["{", "\t${1:key}: ${2:value},$0", "}"],
-		"description": "object literal\n"
-	},
-	"key/value pair": {
-		"prefix": "kv",
-		"body": ["${1:key}: ${2:value},"],
-		"description": "key/value pair\n"
-	},
-	"object method()": {
-		"prefix": "om",
-		"body": ["${1:method}(${2:param}) {", "\t${3}", "},"],
-		"description": "ES2015\nmethod\n"
-	},
-	"object set": {
-		"prefix": "oset",
-		"body": ["set ${1:property}(${2:value}) {\n\t$3\n},"],
-		"description": "setter"
-	},
-	"object get": {
-		"prefix": "oget",
-		"body": ["get ${1:property}() {\n\t$2\n},"],
-		"description": "getter"
-	},
-	"object set with computed keys": {
-		"prefix": "osete",
-		"body": ["set [${1:property}](${2:value}) {\n\t$3\n},"],
-		"description": "ES2015\nsetter (computed property names)"
-	},
-	"object get with computed keys": {
-		"prefix": "ogete",
-		"body": ["get [${1:property}]() {\n\t$2\n},"],
-		"description": "ES2015\ngetter (computed property names)"
-	},
-	"object arrow method statements": {
-		"prefix": "oam",
-		"body": ["${1:method}: (${2:param}) => {", "\t${3}", "},"],
-		"description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n"
-	},
-	"object arrow method expression": {
-		"prefix": "oame",
-		"body": ["${1:method}: (${2:param}) => ${3},"],
-		"description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n"
-	},
-	"object async method()": {
-		"prefix": "oasm",
-		"body": ["async ${1:method}(${2:param}) {", "\t${3}", "},"],
-		"description": "ES2017\nasync method\n"
-	},
-	"Object.assign()": {
-		"prefix": ["oa", "Obj.assign()"],
-		"body": ["Object.assign(${1:target}, ${2:source});"],
-		"description": "ES2015\nObject.assign(target, ...sources);\nreturn the target object.\n"
-	},
-	"Object.create()": {
-		"prefix": ["oc", "Obj.create()"],
-		"body": ["Object.create(${1:obj});"],
-		"description": "ES5\nObject.create(proto, [propertiesObject]);\nreturn a new object with the specified prototype object and properties.\nA TypeError exception if the propertiesObject parameter is 'null' or a non-primitive-wrapper object.\n"
-	},
-	"Object.defineProperty(data descriptors)": {
-		"prefix": ["odp", "Obj.defineProperty()"],
-		"body": [
-			"Object.defineProperty(${1:dest}, '${2:propertyName}', {",
-			"\t${3:value}: ${4:undefined},",
-			"\t${5:configurable}: ${6:false},",
-			"\t${7:enumerable}: ${8:false},",
-			"\t${9:writable}: ${10:false}",
-			"})"
-		],
-		"description": "ES5\nObject.defineProperty(data descriptors)\ndata descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
-	},
-	"Object.defineProperty(accessor descriptors)": {
-		"prefix": ["odpa", "Obj.defineProperty().accessor"],
-		"body": [
-			"Object.defineProperty(${1:dest}, '${2:propertyName}', {",
-			"\tget() {",
-			"\t\treturn ${3:value};",
-			"\t},",
-			"\tset(${4:newValue}) {",
-			"\t\t${5:value} = ${4:newValue};",
-			"\t},",
-			"\tenumerable: ${6:false},",
-			"\tconfigurable: ${7:false}",
-			"})"
-		],
-		"description": "ES5\nObject.defineProperty(accessor descriptors)\naccessor descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
-	},
-	"Object.defineProperties()": {
-		"prefix": ["odps", "Obj.defineProperties()"],
-		"body": [
-			"Object.defineProperties(${1:dest}, {",
-			"\t${2:propertyName}: {",
-			"\t\tconfigurable: ${3:false},",
-			"\t\tenumerable: ${4:false},",
-			"\t\tvalue: ${5:undefined},",
-			"\t\twritable: ${6:false}",
-			"\t},",
-			"\t${7:propertyName}: {",
-			"\t\tget() {",
-			"\t\t\treturn ${8:value};",
-			"\t\t},",
-			"\t\tset(${9:newValue}) {",
-			"\t\t\t${10:value} = ${9:newValue};",
-			"\t\t},",
-			"\t\tenumerable: ${11:false},",
-			"\t\tconfigurable: ${12:false}",
-			"\t}",
-			"});"
-		],
-		"description": "ES5\nObject.defineProperties(obj, props)\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n"
-	},
-	"Object.freeze()": {
-		"prefix": ["of", "Obj.freeze()"],
-		"body": ["Object.freeze(${1:obj});"],
-		"description": "ES5\nObject.freeze(obj);\nreturn the same object that was passed in.\n"
-	},
-	"Object.fromEntries()": {
-		"prefix": ["ofe", "Obj.fromEntries()"],
-		"body": ["Object.fromEntries(${1:iterable});"],
-		"description": "ES2019\nObject.fromEntries(iterable);\ntransforms a list of key-value pairs into an object.\n"
-	},
-	"Object.getOwnPropertyDescriptor()": {
-		"prefix": ["ogopd", "Obj.getOwnPropertyDescriptor()"],
-		"body": ["Object.getOwnPropertyDescriptor(${1:obj}, '${2:propertyName}');"],
-		"description": "ES5\nObject.getOwnPropertyDescriptor(obj, propertyName);\nreturn a property descriptor of the given property if it exists on the object, 'undefined' otherwise.\n"
-	},
-	"Object.getOwnPropertyDescriptors()": {
-		"prefix": ["ogopds", "Obj.getOwnPropertyDescriptors()"],
-		"body": ["Object.getOwnPropertyDescriptors(${1:obj});"],
-		"description": "ES2017\nObject.getOwnPropertyDescriptors(obj);\nreturn an object containing all own property descriptors of an object. Might be an empty object, if there are no properties.\n"
-	},
-	"Object.getOwnPropertyNames()": {
-		"prefix": ["ogopn", "Obj.getOwnPropertyNames()"],
-		"body": ["Object.getOwnPropertyNames(${1:obj});"],
-		"description": "ES5\nObject.getOwnPropertyNames(obj);\nreturn an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.\n"
-	},
-	"Object.getOwnPropertySymbols()": {
-		"prefix": ["ogops", "Obj.getOwnPropertySymbols()"],
-		"body": ["Object.getOwnPropertySymbols(${1:obj});"],
-		"description": "ES2015\nObject.getOwnPropertySymbols(obj);\nreturn an array of all symbol properties found directly upon a given object.\n"
-	},
-	"Object.getPrototypeOf()": {
-		"prefix": ["ogpo", "Obj.getPrototypeOf()"],
-		"body": ["Object.getPrototypeOf(${1:obj});"],
-		"description": "ES5\nObject.getPrototypeOf(obj);\nreturn the prototype of the given object. If there are no inherited properties, 'null' is returned.\n"
-	},
-	"Object.is()": {
-		"prefix": ["oi", "Obj.is()"],
-		"body": ["Object.is(${1:value1}, ${2:value2});"],
-		"description": "ES2015\nObject.is(value1, value2);\ndetermines whether two values are the same value\n"
-	},
-	"Object.isExtensible()": {
-		"prefix": ["oie", "Obj.isExtensible()"],
-		"body": ["Object.isExtensible(${1:obj})"],
-		"description": "ES5\nObject.isExtensible(obj);\ndetermines if an object is extensible (whether it can have new properties added to it).\n"
-	},
-	"Object.isFrozen()": {
-		"prefix": ["oif", "Obj.isFrozen()"],
-		"body": ["Object.isFrozen(${1:obj})"],
-		"description": "ES5\nObject.isFrozen(obj);\ndetermines if an object is frozen.\n"
-	},
-	"Object.isSealed()": {
-		"prefix": ["ois", "Obj.isSealed()"],
-		"body": ["Object.isSealed(${1:obj})"],
-		"description": "ES5\nObject.isSealed(obj);\ndetermines if an object is sealed.\n"
-	},
-	"Object.preventExtensions()": {
-		"prefix": ["ope", "Obj.preventExtensions()"],
-		"body": ["Object.preventExtensions(${1:obj});"],
-		"description": "ES5\nObject.preventExtensions(obj);\nreturn the object being made non-extensible.\n"
-	},
-	"Object.seal()": {
-		"prefix": ["os", "Obj.seal()"],
-		"body": ["Object.seal(${1:obj});"],
-		"description": "ES5\nObject.seal(obj);\nseals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.\nreturn the object being sealed.\n"
-	},
-	"Object.setPrototypeOf()": {
-		"prefix": ["ospo", "Obj.setPrototypeOf()"],
-		"body": ["Object.setPrototypeOf(${1:obj}, ${2:prototype});"],
-		"description": "ES2015\nObject.setPrototypeOf(obj, prototype);\nreturn the specified object.\n"
-	},
-	"Object.entries()": {
-		"prefix": ["oe", "Obj.entries()"],
-		"body": ["Object.entries(${1:obj})"],
-		"description": "ES2017\nObject.entries(obj);\nreturn an array of a given object's own enumerable string-keyed property [key, value] pairs.\n"
-	},
-	"Object.keys()": {
-		"prefix": ["ok", "Obj.keys()"],
-		"body": ["Object.keys(${1:obj})"],
-		"description": "ES5\nObject.keys(obj);\nreturn an array of a given object's own property names, in the same order as we get with a normal loop.\n"
-	},
-	"Object.values()": {
-		"prefix": ["ov", "Obj.values()"],
-		"body": ["Object.values(${1:obj})"],
-		"description": "ES2017\nObject.values(obj);\nreturn an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).\n"
-	},
-	"*obj.hasOwnProperty()": {
-		"prefix": ["hop", "obj.hasOwnProperty()"],
-		"body": ["${1:obj}.hasOwnProperty(${2:propertyName})"],
-		"description": "Object.prototype.hasOwnProperty(propertyName);\nreturn a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).\n"
-	},
-	"Object.hasOwn()": {
-		"prefix": ["ohso", "Obj.hasOwn()"],
-		"body": ["Object.hasOwn(${1:obj}, '${2:propertyName}')"],
-		"description": "ES2022\nObject.hasOwn(obj, propertyName);\nreturn a boolean indicating whether `obj` has `propertyName` as its own property. Preferred over `obj.hasOwnProperty(propertyName)` since it also works for objects created with `Object.create(null)`.\n"
-	},
-	"Object.groupBy()": {
-		"prefix": ["ogb", "Obj.groupBy()"],
-		"body": [
-			"const ${2:grouped} = Object.groupBy(${1:items}, (${3:item}) => ${4:item.key});"
-		],
-		"description": "ES2024\nObject.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the string/symbol values returned by `callbackFn`, and returns a null-prototype object with those keys.\n"
-	},
-	"*prototypeObj.isPrototypeOf()": {
-		"prefix": ["ipo", "obj.isPrototypeOf()"],
-		"body": ["${1:prototypeObj}.isPrototypeOf(${2:object})"],
-		"description": "Object.prototype.isPrototypeOf(object);\nreturn a Boolean indicating whether the calling object lies in the prototype chain of the specified object.\nthrown a TypeError is thrown if 'prototypeObj' is 'undefined' or 'null'.\n"
-	},
-	"*obj.propertyIsEnumerable()": {
-		"prefix": ["pie", "obj.propertyIsEnumerable()"],
-		"body": ["${1:obj}.propertyIsEnumerable(${2:propertyName})"],
-		"description": "Object.prototype.propertyIsEnumerable(propertyName);\nreturn a Boolean indicating whether the specified property is enumerable.\n"
-	},
-	"*obj.toLocaleString()": {
-		"prefix": ["tls", "obj.toLocaleString()"],
-		"body": ["${1:obj}.toLocaleString();"],
-		"description": "Object.prototype.toLocaleString();\n"
-	},
-	"*obj.toString()": {
-		"prefix": ["ts", "obj.toString()"],
-		"body": ["${1:obj}.toString();"],
-		"description": "Object.prototype.toString();\n"
-	},
-	"*obj.valueOf()": {
-		"prefix": ["ovof", "obj.valueOf()"],
-		"body": ["${1:obj}.valueOf()"],
-		"description": "Object.prototype.valueOf();\n returns the primitive value of a **Objects** object\n"
-	}
+  "object literal": {
+    "prefix": "ol",
+    "body": ["{", "\t${1:key}: ${2:value},$0", "}"],
+    "description": "object literal\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "key/value pair": {
+    "prefix": "kv",
+    "body": ["${1:key}: ${2:value},"],
+    "description": "key/value pair\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object method()": {
+    "prefix": "om",
+    "body": ["${1:method}(${2:param}) {", "\t${3}", "},"],
+    "description": "ES2015\nmethod\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object set": {
+    "prefix": "oset",
+    "body": ["set ${1:property}(${2:value}) {\n\t$3\n},"],
+    "description": "setter",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object get": {
+    "prefix": "oget",
+    "body": ["get ${1:property}() {\n\t$2\n},"],
+    "description": "getter",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object set with computed keys": {
+    "prefix": "osete",
+    "body": ["set [${1:property}](${2:value}) {\n\t$3\n},"],
+    "description": "ES2015\nsetter (computed property names)",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object get with computed keys": {
+    "prefix": "ogete",
+    "body": ["get [${1:property}]() {\n\t$2\n},"],
+    "description": "ES2015\ngetter (computed property names)",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object arrow method statements": {
+    "prefix": "oam",
+    "body": ["${1:method}: (${2:param}) => {", "\t${3}", "},"],
+    "description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object arrow method expression": {
+    "prefix": "oame",
+    "body": ["${1:method}: (${2:param}) => ${3},"],
+    "description": "ES2015\nnote we can't use an arrow function if we want to use `this`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "object async method()": {
+    "prefix": "oasm",
+    "body": ["async ${1:method}(${2:param}) {", "\t${3}", "},"],
+    "description": "ES2017\nasync method\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.assign()": {
+    "prefix": ["oa", "Obj.assign()"],
+    "body": ["Object.assign(${1:target}, ${2:source});"],
+    "description": "ES2015\nObject.assign(target, ...sources);\nreturn the target object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.create()": {
+    "prefix": ["oc", "Obj.create()"],
+    "body": ["Object.create(${1:obj});"],
+    "description": "ES5\nObject.create(proto, [propertiesObject]);\nreturn a new object with the specified prototype object and properties.\nA TypeError exception if the propertiesObject parameter is 'null' or a non-primitive-wrapper object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.defineProperty(data descriptors)": {
+    "prefix": ["odp", "Obj.defineProperty()"],
+    "body": [
+      "Object.defineProperty(${1:dest}, '${2:propertyName}', {",
+      "\t${3:value}: ${4:undefined},",
+      "\t${5:configurable}: ${6:false},",
+      "\t${7:enumerable}: ${8:false},",
+      "\t${9:writable}: ${10:false}",
+      "})"
+    ],
+    "description": "ES5\nObject.defineProperty(data descriptors)\ndata descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.defineProperty(accessor descriptors)": {
+    "prefix": ["odpa", "Obj.defineProperty().accessor"],
+    "body": [
+      "Object.defineProperty(${1:dest}, '${2:propertyName}', {",
+      "\tget() {",
+      "\t\treturn ${3:value};",
+      "\t},",
+      "\tset(${4:newValue}) {",
+      "\t\t${5:value} = ${4:newValue};",
+      "\t},",
+      "\tenumerable: ${6:false},",
+      "\tconfigurable: ${7:false}",
+      "})"
+    ],
+    "description": "ES5\nObject.defineProperty(accessor descriptors)\naccessor descriptors\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.defineProperties()": {
+    "prefix": ["odps", "Obj.defineProperties()"],
+    "body": [
+      "Object.defineProperties(${1:dest}, {",
+      "\t${2:propertyName}: {",
+      "\t\tconfigurable: ${3:false},",
+      "\t\tenumerable: ${4:false},",
+      "\t\tvalue: ${5:undefined},",
+      "\t\twritable: ${6:false}",
+      "\t},",
+      "\t${7:propertyName}: {",
+      "\t\tget() {",
+      "\t\t\treturn ${8:value};",
+      "\t\t},",
+      "\t\tset(${9:newValue}) {",
+      "\t\t\t${10:value} = ${9:newValue};",
+      "\t\t},",
+      "\t\tenumerable: ${11:false},",
+      "\t\tconfigurable: ${12:false}",
+      "\t}",
+      "});"
+    ],
+    "description": "ES5\nObject.defineProperties(obj, props)\ndefines new or modifies existing properties directly on an object, \nreturning the object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.freeze()": {
+    "prefix": ["of", "Obj.freeze()"],
+    "body": ["Object.freeze(${1:obj});"],
+    "description": "ES5\nObject.freeze(obj);\nreturn the same object that was passed in.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.fromEntries()": {
+    "prefix": ["ofe", "Obj.fromEntries()"],
+    "body": ["Object.fromEntries(${1:iterable});"],
+    "description": "ES2019\nObject.fromEntries(iterable);\ntransforms a list of key-value pairs into an object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.getOwnPropertyDescriptor()": {
+    "prefix": ["ogopd", "Obj.getOwnPropertyDescriptor()"],
+    "body": ["Object.getOwnPropertyDescriptor(${1:obj}, '${2:propertyName}');"],
+    "description": "ES5\nObject.getOwnPropertyDescriptor(obj, propertyName);\nreturn a property descriptor of the given property if it exists on the object, 'undefined' otherwise.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.getOwnPropertyDescriptors()": {
+    "prefix": ["ogopds", "Obj.getOwnPropertyDescriptors()"],
+    "body": ["Object.getOwnPropertyDescriptors(${1:obj});"],
+    "description": "ES2017\nObject.getOwnPropertyDescriptors(obj);\nreturn an object containing all own property descriptors of an object. Might be an empty object, if there are no properties.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.getOwnPropertyNames()": {
+    "prefix": ["ogopn", "Obj.getOwnPropertyNames()"],
+    "body": ["Object.getOwnPropertyNames(${1:obj});"],
+    "description": "ES5\nObject.getOwnPropertyNames(obj);\nreturn an array of all properties (including non-enumerable properties except for those which use Symbol) found directly in a given object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.getOwnPropertySymbols()": {
+    "prefix": ["ogops", "Obj.getOwnPropertySymbols()"],
+    "body": ["Object.getOwnPropertySymbols(${1:obj});"],
+    "description": "ES2015\nObject.getOwnPropertySymbols(obj);\nreturn an array of all symbol properties found directly upon a given object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.getPrototypeOf()": {
+    "prefix": ["ogpo", "Obj.getPrototypeOf()"],
+    "body": ["Object.getPrototypeOf(${1:obj});"],
+    "description": "ES5\nObject.getPrototypeOf(obj);\nreturn the prototype of the given object. If there are no inherited properties, 'null' is returned.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.is()": {
+    "prefix": ["oi", "Obj.is()"],
+    "body": ["Object.is(${1:value1}, ${2:value2});"],
+    "description": "ES2015\nObject.is(value1, value2);\ndetermines whether two values are the same value\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.isExtensible()": {
+    "prefix": ["oie", "Obj.isExtensible()"],
+    "body": ["Object.isExtensible(${1:obj})"],
+    "description": "ES5\nObject.isExtensible(obj);\ndetermines if an object is extensible (whether it can have new properties added to it).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.isFrozen()": {
+    "prefix": ["oif", "Obj.isFrozen()"],
+    "body": ["Object.isFrozen(${1:obj})"],
+    "description": "ES5\nObject.isFrozen(obj);\ndetermines if an object is frozen.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.isSealed()": {
+    "prefix": ["ois", "Obj.isSealed()"],
+    "body": ["Object.isSealed(${1:obj})"],
+    "description": "ES5\nObject.isSealed(obj);\ndetermines if an object is sealed.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.preventExtensions()": {
+    "prefix": ["ope", "Obj.preventExtensions()"],
+    "body": ["Object.preventExtensions(${1:obj});"],
+    "description": "ES5\nObject.preventExtensions(obj);\nreturn the object being made non-extensible.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.seal()": {
+    "prefix": ["os", "Obj.seal()"],
+    "body": ["Object.seal(${1:obj});"],
+    "description": "ES5\nObject.seal(obj);\nseals an object, preventing new properties from being added to it and marking all existing properties as non-configurable. Values of present properties can still be changed as long as they are writable.\nreturn the object being sealed.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.setPrototypeOf()": {
+    "prefix": ["ospo", "Obj.setPrototypeOf()"],
+    "body": ["Object.setPrototypeOf(${1:obj}, ${2:prototype});"],
+    "description": "ES2015\nObject.setPrototypeOf(obj, prototype);\nreturn the specified object.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.entries()": {
+    "prefix": ["oe", "Obj.entries()"],
+    "body": ["Object.entries(${1:obj})"],
+    "description": "ES2017\nObject.entries(obj);\nreturn an array of a given object's own enumerable string-keyed property [key, value] pairs.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.keys()": {
+    "prefix": ["ok", "Obj.keys()"],
+    "body": ["Object.keys(${1:obj})"],
+    "description": "ES5\nObject.keys(obj);\nreturn an array of a given object's own property names, in the same order as we get with a normal loop.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.values()": {
+    "prefix": ["ov", "Obj.values()"],
+    "body": ["Object.values(${1:obj})"],
+    "description": "ES2017\nObject.values(obj);\nreturn an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*obj.hasOwnProperty()": {
+    "prefix": ["hop", "obj.hasOwnProperty()"],
+    "body": ["${1:obj}.hasOwnProperty(${2:propertyName})"],
+    "description": "Object.prototype.hasOwnProperty(propertyName);\nreturn a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.hasOwn()": {
+    "prefix": ["ohso", "Obj.hasOwn()"],
+    "body": ["Object.hasOwn(${1:obj}, '${2:propertyName}')"],
+    "description": "ES2022\nObject.hasOwn(obj, propertyName);\nreturn a boolean indicating whether `obj` has `propertyName` as its own property. Preferred over `obj.hasOwnProperty(propertyName)` since it also works for objects created with `Object.create(null)`.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "Object.groupBy()": {
+    "prefix": ["ogb", "Obj.groupBy()"],
+    "body": ["const ${2:grouped} = Object.groupBy(${1:items}, (${3:item}) => ${4:item.key});"],
+    "description": "ES2024\nObject.groupBy(items, callbackFn)\ngroups the elements of an iterable according to the string/symbol values returned by `callbackFn`, and returns a null-prototype object with those keys.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*prototypeObj.isPrototypeOf()": {
+    "prefix": ["ipo", "obj.isPrototypeOf()"],
+    "body": ["${1:prototypeObj}.isPrototypeOf(${2:object})"],
+    "description": "Object.prototype.isPrototypeOf(object);\nreturn a Boolean indicating whether the calling object lies in the prototype chain of the specified object.\nthrown a TypeError is thrown if 'prototypeObj' is 'undefined' or 'null'.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*obj.propertyIsEnumerable()": {
+    "prefix": ["pie", "obj.propertyIsEnumerable()"],
+    "body": ["${1:obj}.propertyIsEnumerable(${2:propertyName})"],
+    "description": "Object.prototype.propertyIsEnumerable(propertyName);\nreturn a Boolean indicating whether the specified property is enumerable.\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*obj.toLocaleString()": {
+    "prefix": ["tls", "obj.toLocaleString()"],
+    "body": ["${1:obj}.toLocaleString();"],
+    "description": "Object.prototype.toLocaleString();\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*obj.toString()": {
+    "prefix": ["ts", "obj.toString()"],
+    "body": ["${1:obj}.toString();"],
+    "description": "Object.prototype.toString();\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  },
+  "*obj.valueOf()": {
+    "prefix": ["ovof", "obj.valueOf()"],
+    "body": ["${1:obj}.valueOf()"],
+    "description": "Object.prototype.valueOf();\n returns the primitive value of a **Objects** object\n",
+    "scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
+  }
 }

@@ -1,22 +1,26 @@
 {
-	"type assertion (as)": {
-		"prefix": ["ass", "ts.assert.as"],
-		"body": ["(${1:value} as ${2:Type})$0"],
-		"description": "TS 1.0 (`as` syntax: TS 1.6)\nvalue as Type\nTells the compiler to treat `value` as `Type` without a runtime check — use only when you know more than the type checker does; `<Type>value` is the older, JSX-incompatible syntax this replaced.\n"
-	},
-	"satisfies operator": {
-		"prefix": ["sat", "ts.assert.satisfies"],
-		"body": ["const ${1:value} = ${2:{}} satisfies ${3:Type};$0"],
-		"description": "TS 4.9\nvalue satisfies Type\nValidates that `value` is assignable to `Type` *without* widening its inferred type to `Type` — keeps literal/narrow inference (unlike `: Type` or `as Type`) while still catching typos/excess-property errors.\n"
-	},
-	"non-null assertion": {
-		"prefix": ["nna", "ts.assert.nonNull"],
-		"body": ["${1:value}!"],
-		"description": "TS 2.0\nvalue!\nAsserts to the compiler that `value` is not `null`/`undefined` at this point, without a runtime check — use sparingly, prefer real narrowing where possible.\n"
-	},
-	"type-only import": {
-		"prefix": ["timp", "ts.assert.typeOnly"],
-		"body": ["import type { ${1:TypeName} } from '${2:module}';$0"],
-		"description": "TS 3.8 (export type: TS 3.8)\nimport type { X } from 'module'\nImports guaranteed to be erased at compile time — makes the type-only intent explicit and plays well with `isolatedModules`/bundler transpilation.\n"
-	}
+  "type assertion (as)": {
+    "prefix": ["ass", "ts.assert.as"],
+    "body": ["(${1:value} as ${2:Type})$0"],
+    "description": "TS 1.0 (`as` syntax: TS 1.6)\nvalue as Type\nTells the compiler to treat `value` as `Type` without a runtime check — use only when you know more than the type checker does; `<Type>value` is the older, JSX-incompatible syntax this replaced.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "satisfies operator": {
+    "prefix": ["sat", "ts.assert.satisfies"],
+    "body": ["const ${1:value} = ${2:{}} satisfies ${3:Type};$0"],
+    "description": "TS 4.9\nvalue satisfies Type\nValidates that `value` is assignable to `Type` *without* widening its inferred type to `Type` — keeps literal/narrow inference (unlike `: Type` or `as Type`) while still catching typos/excess-property errors.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "non-null assertion": {
+    "prefix": ["nna", "ts.assert.nonNull"],
+    "body": ["${1:value}!"],
+    "description": "TS 2.0\nvalue!\nAsserts to the compiler that `value` is not `null`/`undefined` at this point, without a runtime check — use sparingly, prefer real narrowing where possible.\n",
+    "scope": "typescript,typescriptreact"
+  },
+  "type-only import": {
+    "prefix": ["timp", "ts.assert.typeOnly"],
+    "body": ["import type { ${1:TypeName} } from '${2:module}';$0"],
+    "description": "TS 3.8 (export type: TS 3.8)\nimport type { X } from 'module'\nImports guaranteed to be erased at compile time — makes the type-only intent explicit and plays well with `isolatedModules`/bundler transpilation.\n",
+    "scope": "typescript,typescriptreact"
+  }
 }
