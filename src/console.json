@@ -2,81 +2,97 @@
 	"console.dir": {
 		"prefix": "cd",
 		"body": ["console.dir($1);"],
-		"description": "console.dir\n"
+		"description": "console.dir\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.error": {
 		"prefix": "ce",
 		"body": ["console.error($1);"],
-		"description": "console.error\n"
+		"description": "console.error\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.error labeled": {
 		"prefix": "celb",
 		"body": ["console.error('${1}: %o', ${1});"],
-		"description": "console.error labeled\n"
+		"description": "console.error labeled\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.info": {
 		"prefix": "ci",
 		"body": ["console.info($1);"],
-		"description": "console.info\n"
+		"description": "console.info\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.log": {
 		"prefix": "clg",
 		"body": ["console.log($1);"],
-		"description": "console.log\n"
+		"description": "console.log\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.log labeled": {
 		"prefix": "clgl",
 		"body": ["console.log('${1}: %o', ${1});"],
-		"description": "console.log labeled\n"
+		"description": "console.log labeled\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.warn": {
 		"prefix": "cw",
 		"body": ["console.warn($1);"],
-		"description": "console.warn\n"
+		"description": "console.warn\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.warn labeled": {
 		"prefix": "cwl",
 		"body": ["console.warn('${1}: %o', ${1});"],
-		"description": "console.warn labeled\n"
+		"description": "console.warn labeled\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.assert": {
 		"prefix": "consa",
 		"body": ["console.assert(${1:assertion}, ${2:object});"],
-		"description": "console.assert\n"
+		"description": "console.assert\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.clear": {
 		"prefix": "cc",
 		"body": ["console.clear();"],
-		"description": "The `console.clear()` method clears the console if the environment allows it. \n"
+		"description": "The `console.clear()` method clears the console if the environment allows it. \n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.count": {
 		"prefix": "cco",
 		"body": ["console.count('${1:label}');"],
-		"description": "The `console.count()` method logs the number of times that this particular call to count() has been called. \n"
+		"description": "The `console.count()` method logs the number of times that this particular call to count() has been called. \n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.group": {
 		"prefix": "cg",
 		"body": ["console.group('${1:label}');"],
-		"description": "console.group\n"
+		"description": "console.group\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.groupEnd": {
 		"prefix": "cge",
 		"body": ["console.groupEnd();"],
-		"description": "console.groupEnd\n"
+		"description": "console.groupEnd\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.table": {
 		"prefix": "cta",
 		"body": ["console.table(${1:object});"],
-		"description": "console.table\n"
+		"description": "console.table\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.time": {
 		"prefix": "ct",
 		"body": ["console.time('${1:label}');", "console.timeEnd('${1}');"],
-		"description": "The `console.time()` & `console.timeEnd()` method starts/stops a timer you can use to track how long an operation takes.\n"
+		"description": "The `console.time()` & `console.timeEnd()` method starts/stops a timer you can use to track how long an operation takes.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"console.trace": {
 		"prefix": "ctr",
 		"body": ["console.trace(${1:object});"],
-		"description": "The `console.trace()` method outputs a stack trace to the Web console.\n"
+		"description": "The `console.trace()` method outputs a stack trace to the Web console.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

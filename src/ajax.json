@@ -55,7 +55,8 @@
 			"// xhr.overrideMimeType('text/xml'); // 'text/plain'",
 			"// request.open(method, url[, async=true[, user=null[, password=null]]])"
 		],
-		"description": "XMLHttpRequest"
+		"description": "XMLHttpRequest",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"fetch full": {
 		"prefix": "fetch",
@@ -89,7 +90,8 @@
 			"\t\treturn null;",
 			"\t});"
 		],
-		"description": "Working with the Fetch API"
+		"description": "Working with the Fetch API",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"fetch get": {
 		"prefix": ["fetchget", "fg"],
@@ -112,7 +114,8 @@
 			"\t\treturn null;",
 			"\t});"
 		],
-		"description": "Make a GET request"
+		"description": "Make a GET request",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"fetch with AbortController": {
 		"prefix": ["fetchabort", "fa"],
@@ -134,7 +137,8 @@
 			"",
 			"// ${1}.abort(); // call to cancel the request early"
 		],
-		"description": "AbortController lets you cancel one or more fetch() requests, or time them out, via its linked AbortSignal.\n"
+		"description": "AbortController lets you cancel one or more fetch() requests, or time them out, via its linked AbortSignal.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"fetch post": {
 		"prefix": ["fetchpost", "fp"],
@@ -162,6 +166,7 @@
 			"\t\treturn null;",
 			"\t});"
 		],
-		"description": "Make a POST request"
+		"description": "Make a POST request",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

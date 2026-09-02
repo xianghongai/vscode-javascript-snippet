@@ -2,7 +2,8 @@
 	"interface declaration": {
 		"prefix": ["int", "ts.interface"],
 		"body": ["interface ${1:Name} {", "\t${2:prop}: ${3:type};", "\t$0", "}"],
-		"description": "TS 1.0\ninterface Name { ... }\nDeclares a named object shape used for structural typing; erased at compile time, no runtime representation.\n"
+		"description": "TS 1.0\ninterface Name { ... }\nDeclares a named object shape used for structural typing; erased at compile time, no runtime representation.\n",
+		"scope": "typescript,typescriptreact"
 	},
 	"interface optional & readonly members": {
 		"prefix": ["intm", "ts.interface.member"],
@@ -13,36 +14,31 @@
 			"\t$0",
 			"}"
 		],
-		"description": "TS 1.0 (readonly member: TS 2.0)\ninterface member modifiers\n`readonly` prevents reassignment after initialization; `?` marks a property optional. Both are structural, compile-time only.\n"
+		"description": "TS 1.0 (readonly member: TS 2.0)\ninterface member modifiers\n`readonly` prevents reassignment after initialization; `?` marks a property optional. Both are structural, compile-time only.\n",
+		"scope": "typescript,typescriptreact"
 	},
 	"interface extends": {
 		"prefix": ["intex", "ts.interface.extends"],
 		"body": ["interface ${1:Name} extends ${2:Base} {", "\t$0", "}"],
-		"description": "TS 1.0\ninterface Name extends Base[, Base2] { ... }\nAn interface can extend one or more other interfaces (comma-separated), merging their members.\n"
+		"description": "TS 1.0\ninterface Name extends Base[, Base2] { ... }\nAn interface can extend one or more other interfaces (comma-separated), merging their members.\n",
+		"scope": "typescript,typescriptreact"
 	},
 	"generic interface": {
 		"prefix": ["intg", "ts.interface.generic"],
 		"body": ["interface ${1:Name}<${2:T}> {", "\t${3:value}: $2;", "\t$0", "}"],
-		"description": "TS 1.0 (generics)\ninterface Name<T> { ... }\nParameterizes the interface's shape over a type variable, resolved at each usage site.\n"
+		"description": "TS 1.0 (generics)\ninterface Name<T> { ... }\nParameterizes the interface's shape over a type variable, resolved at each usage site.\n",
+		"scope": "typescript,typescriptreact"
 	},
 	"interface method signature": {
 		"prefix": ["intme", "ts.interface.method"],
-		"body": [
-			"interface ${1:Name} {",
-			"\t${2:methodName}(${3:arg}: ${4:type}): ${5:ReturnType};",
-			"\t$0",
-			"}"
-		],
-		"description": "TS 1.0\ninterface method signature\nDeclares a method's shape without an implementation.\n"
+		"body": ["interface ${1:Name} {", "\t${2:methodName}(${3:arg}: ${4:type}): ${5:ReturnType};", "\t$0", "}"],
+		"description": "TS 1.0\ninterface method signature\nDeclares a method's shape without an implementation.\n",
+		"scope": "typescript,typescriptreact"
 	},
 	"callable (hybrid) interface": {
 		"prefix": ["intcall", "ts.interface.callable"],
-		"body": [
-			"interface ${1:Name} {",
-			"\t(${2:arg}: ${3:type}): ${4:ReturnType};",
-			"\t$0",
-			"}"
-		],
-		"description": "TS 1.0\ncallable (hybrid) interface\nDescribes a value that can itself be called as a function while also carrying properties — common for typing callable objects/functions-with-statics.\n"
+		"body": ["interface ${1:Name} {", "\t(${2:arg}: ${3:type}): ${4:ReturnType};", "\t$0", "}"],
+		"description": "TS 1.0\ncallable (hybrid) interface\nDescribes a value that can itself be called as a function while also carrying properties — common for typing callable objects/functions-with-statics.\n",
+		"scope": "typescript,typescriptreact"
 	}
 }

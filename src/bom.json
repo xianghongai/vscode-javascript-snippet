@@ -2,22 +2,26 @@
 	"alert": {
 		"prefix": "wa",
 		"body": ["window.alert('${1:msg}');"],
-		"description": "window.alert\n"
+		"description": "window.alert\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"confirm": {
 		"prefix": "wc",
 		"body": ["window.confirm('${1:msg}');"],
-		"description": "window.confirm\n"
+		"description": "window.confirm\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"prompt": {
 		"prefix": "wp",
 		"body": ["window.prompt('${1:title}', '${2:defaultText}');"],
-		"description": "window.prompt\n"
+		"description": "window.prompt\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setTimeOut(), arrow function": {
 		"prefix": "st",
 		"body": ["setTimeout(() => {", "\t${0}", "}${2:, ${3:delay}});", ""],
-		"description": "setTimeOut\n"
+		"description": "setTimeOut\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setTimeOut(), clearTimeout(), arrow function, ": {
 		"prefix": "stctaf",
@@ -28,12 +32,14 @@
 			"",
 			"window.clearTimeout(${1:timeout});"
 		],
-		"description": "setTimeOut/clearTimeout\n"
+		"description": "setTimeOut/clearTimeout\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setTimeout()": {
 		"prefix": "stfn",
 		"body": ["setTimeout(function() {", "\t${0}", "}${2:, ${3:delay}});", ""],
-		"description": "setTimeout\n"
+		"description": "setTimeout\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setTimeout(), clearTimeout()": {
 		"prefix": "stctfn",
@@ -44,12 +50,14 @@
 			"",
 			"window.clearTimeout(${1});"
 		],
-		"description": "setTimeout/clearTimeout\n"
+		"description": "setTimeout/clearTimeout\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setInterval(), arrow function": {
 		"prefix": "si",
 		"body": ["setInterval(() => {", "\t${0}", "}${2:, ${3:interval}});", ""],
-		"description": "setInterval\n"
+		"description": "setInterval\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setInterval(), clearInterval(), arrow function": {
 		"prefix": "sici",
@@ -60,113 +68,129 @@
 			"",
 			"window.clearInterval(${1});"
 		],
-		"description": "setInterval/clearInterval\n"
+		"description": "setInterval/clearInterval\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setInterval()": {
 		"prefix": "sifn",
-		"body": [
-			"setInterval(function() {",
-			"\t${0}",
-			"}${2:, ${3:interval}});",
-			""
-		],
-		"description": "setInterval\n"
+		"body": ["setInterval(function() {", "\t${0}", "}${2:, ${3:interval}});", ""],
+		"description": "setInterval\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"setInterval(), clearInterval()": {
 		"prefix": "sicifn",
 		"body": [
 			"const ${1:timer} = window.setInterval(function() {\n\t${3}\n}, ${2:interval});\n\nwindow.clearInterval(${1:timer});"
 		],
-		"description": "setInterval/clearInterval\n"
+		"description": "setInterval/clearInterval\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"localStorage.setItem('key', 'value');": {
 		"prefix": "lss",
 		"body": ["localStorage.setItem('${1:key}', ${2:value});"],
-		"description": "localStorage.setItem('key', 'value');\n"
+		"description": "localStorage.setItem('key', 'value');\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"localStorage.getItem('key');": {
 		"prefix": "lsg",
 		"body": ["localStorage.getItem('${1:key}');"],
-		"description": "localStorage.getItem('key');\n"
+		"description": "localStorage.getItem('key');\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"localStorage.removeItem('key');": {
 		"prefix": "lsr",
 		"body": ["localStorage.removeItem('${1:key}');"],
-		"description": "localStorage.removeItem('key');\n"
+		"description": "localStorage.removeItem('key');\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"localStorage.clear();": {
 		"prefix": "lsc",
 		"body": ["localStorage.clear();"],
-		"description": "localStorage.clear();\n"
+		"description": "localStorage.clear();\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.screen.availWidth": {
 		"prefix": "wsaw",
 		"body": ["window.screen.availWidth"],
-		"description": "window.screen.availWidth;\n"
+		"description": "window.screen.availWidth;\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.screen.availHeight": {
 		"prefix": "wsah",
 		"body": ["window.screen.availHeight"],
-		"description": "window.screen.availHeight;\n"
+		"description": "window.screen.availHeight;\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.screen.width": {
 		"prefix": "wsw",
 		"body": ["window.screen.width"],
-		"description": "window.screen.width;\n"
+		"description": "window.screen.width;\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.screen.height": {
 		"prefix": "wsh",
 		"body": ["window.screen.height"],
-		"description": "window.screen.height;\n"
+		"description": "window.screen.height;\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.location.href": {
 		"prefix": "wlh",
 		"body": ["window.location.href"],
-		"description": "window.location.href\n"
+		"description": "window.location.href\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.location.hostname": {
 		"prefix": "wlhn",
 		"body": ["window.location.hostname"],
-		"description": "window.location.hostname\n"
+		"description": "window.location.hostname\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.location.pathname": {
 		"prefix": "wlp",
 		"body": ["window.location.pathname"],
-		"description": "window.location.pathname\n"
+		"description": "window.location.pathname\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.location.protocol": {
 		"prefix": "wlpr",
 		"body": ["window.location.protocol"],
-		"description": "window.location.protocol\n"
+		"description": "window.location.protocol\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.location.assign()": {
 		"prefix": "wls",
 		"body": ["window.location.assign(${1:url})"],
-		"description": "window.location.assign()\n"
+		"description": "window.location.assign()\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.history.back()": {
 		"prefix": "whb",
 		"body": ["window.history.back();"],
-		"description": "window.history.back()\n"
+		"description": "window.history.back()\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.history.forward()": {
 		"prefix": "whf",
 		"body": ["window.history.forward();"],
-		"description": "window.history.forward()\n"
+		"description": "window.history.forward()\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.navigator.language": {
 		"prefix": "wnl",
 		"body": ["window.navigator.language"],
-		"description": "window.navigator.language\n"
+		"description": "window.navigator.language\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.navigator.languages": {
 		"prefix": "wnls",
 		"body": ["window.navigator.languages"],
-		"description": "window.navigator.languages\n"
+		"description": "window.navigator.languages\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"window.navigator.userAgent": {
 		"prefix": "wnu",
 		"body": ["window.navigator.userAgent"],
-		"description": "window.navigator.userAgent\n"
+		"description": "window.navigator.userAgent\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

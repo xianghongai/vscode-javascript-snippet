@@ -1,15 +1,9 @@
 {
 	"class": {
 		"prefix": "cl",
-		"body": [
-			"class ${1:ClassName} {",
-			"\tconstructor(${2:param}) {",
-			"\t\t${3}",
-			"\t}",
-			"",
-			"}"
-		],
-		"description": "ES2015\nclass\n"
+		"body": ["class ${1:ClassName} {", "\tconstructor(${2:param}) {", "\t\t${3}", "\t}", "", "}"],
+		"description": "ES2015\nclass\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class extends": {
 		"prefix": "cle",
@@ -22,76 +16,86 @@
 			"",
 			"}"
 		],
-		"description": "ES2015\nclass extends\n"
+		"description": "ES2015\nclass extends\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class property": {
 		"prefix": ["p", "clp"],
 		"body": ["${1:property} = ${2:value};"],
-		"description": "ES2022\nclass property\n"
+		"description": "ES2022\nclass property\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class method()": {
 		"prefix": ["m", "clm"],
 		"body": ["${1:method} (${2:param}) {", "\t${3}", "}"],
-		"description": "ES2015\nmethod statements\n"
+		"description": "ES2015\nmethod statements\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class static method()": {
 		"prefix": ["clsm", "staticMethod"],
 		"body": ["static ${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
-		"description": "ES2015\nclass static method\n"
+		"description": "ES2015\nclass static method\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class static property": {
 		"prefix": ["clsp", "staticProperty"],
 		"body": ["static ${1:property} = ${2:value};"],
-		"description": "ES2022\nclass static property\n"
+		"description": "ES2022\nclass static property\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class private method()": {
 		"prefix": ["clpm", "privateMethod"],
 		"body": ["#${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
-		"description": "ES2022\nclass private method\n"
+		"description": "ES2022\nclass private method\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class private property": {
 		"prefix": ["clpp", "privateProperty"],
 		"body": ["#${1:property} = ${2:value};"],
-		"description": "ES2022\nclass private property\n"
+		"description": "ES2022\nclass private property\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class static private method()": {
 		"prefix": ["clspm", "staticPrivateMethod"],
 		"body": ["static #${1:methodName}(${2:param}) {", "\treturn ${3};", "}"],
-		"description": "ES2022\nclass static private method\n"
+		"description": "ES2022\nclass static private method\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class static private property": {
 		"prefix": ["clspp", "staticPrivateProperty"],
 		"body": ["static #${1:property} = ${2:value};"],
-		"description": "ES2022\nclass static private property\n"
+		"description": "ES2022\nclass static private property\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class static initialization block": {
 		"prefix": ["clsb", "staticBlock"],
 		"body": ["static {", "\t${1}", "}"],
-		"description": "ES2022\nstatic { ... }\nruns once when the class is initialized, with access to private fields — useful for complex static property setup (e.g. wrapped in try/catch) that a single static property initializer can't express.\n"
+		"description": "ES2022\nstatic { ... }\nruns once when the class is initialized, with access to private fields — useful for complex static property setup (e.g. wrapped in try/catch) that a single static property initializer can't express.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class generator method()": {
 		"prefix": ["clgm", "generatorMethod"],
 		"body": ["*${1:methodName}(${2:param}) {", "\tyield ${3};", "}"],
-		"description": "ES2015\nclass static\n"
+		"description": "ES2015\nclass static\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"class constructor()": {
 		"prefix": ["clc", "cons"],
 		"body": ["constructor(${1:param}) {\n\t${2}\n}"],
-		"description": "ES2015\nclass constructor\n"
+		"description": "ES2015\nclass constructor\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"get property()": {
 		"prefix": "get",
 		"body": ["get ${1:propertyName} () {", "\treturn this.${2:element};", "}"],
-		"description": "ES2015\ngetter\n"
+		"description": "ES2015\ngetter\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"set property()": {
 		"prefix": "set",
-		"body": [
-			"set ${1:propertyName} (${2:value}) {",
-			"\tthis.${3:element} = ${2};",
-			"}"
-		],
-		"description": "ES2015\nsetter\n"
+		"body": ["set ${1:propertyName} (${2:value}) {", "\tthis.${3:element} = ${2};", "}"],
+		"description": "ES2015\nsetter\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"getter() and setter()": {
 		"prefix": "gs",
@@ -104,25 +108,25 @@
 			"\tthis.${2:element} = ${3};",
 			"}"
 		],
-		"description": "ES2015\ngetter and setter\n"
+		"description": "ES2015\ngetter and setter\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"async method()": {
 		"prefix": "asm",
 		"body": ["async ${1:method}(${2:param}) {", "\t${3}", "}"],
-		"description": "ES2017\nasync method\n"
+		"description": "ES2017\nasync method\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"prototype constructor()": {
 		"prefix": ["protoc"],
 		"body": ["const ${1:Constructor} = function(${2:param}) {", "\t${3}", "};"],
-		"description": "prototypal constructor\n"
+		"description": "prototypal constructor\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"prototype method()": {
 		"prefix": ["pm", "protom"],
-		"body": [
-			"${1:Constructor}.prototype.${2:method} = function (${3:param}) {",
-			"\t${4}",
-			"};"
-		],
-		"description": "prototype method\n"
+		"body": ["${1:Constructor}.prototype.${2:method} = function (${3:param}) {", "\t${4}", "};"],
+		"description": "prototype method\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

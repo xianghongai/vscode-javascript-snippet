@@ -2,262 +2,289 @@
 	"Array literal": {
 		"prefix": "ar",
 		"body": ["const ${1:arr} = [];"],
-		"description": "Create an Array\n"
+		"description": "Create an Array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.length": {
 		"prefix": ["arl", "arr.length"],
 		"body": ["${1:items}.length;"],
-		"description": "Array.length\n"
+		"description": "Array.length\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.isArray()": {
 		"prefix": ["isa", "Arr.isArray()"],
 		"body": ["Array.isArray(${1:value})"],
-		"description": "ES5\nArray.isArray(value);\nreturn 'true' if the value is an Array; otherwise, 'false'.\n"
+		"description": "ES5\nArray.isArray(value);\nreturn 'true' if the value is an Array; otherwise, 'false'.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.from()": {
 		"prefix": ["arfr", "Arr.from()"],
 		"body": ["Array.from(${1:arrayLike}${2:, (${3:item}) => {\n\t$4\n\\}});"],
-		"description": "ES2015\nArray.from(arrayLike[, mapFn[, thisArg]]);\nreturn a new Array instance, shallow-copied from an array-like or iterable object, optionally mapping each element through mapFn.\nThe mapFn part is optional — select and delete it for the plain `Array.from(arrayLike)` form.\n"
+		"description": "ES2015\nArray.from(arrayLike[, mapFn[, thisArg]]);\nreturn a new Array instance, shallow-copied from an array-like or iterable object, optionally mapping each element through mapFn.\nThe mapFn part is optional — select and delete it for the plain `Array.from(arrayLike)` form.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.fromAsync()": {
 		"prefix": ["arfra", "Arr.fromAsync()"],
 		"body": ["Array.fromAsync(${1:asyncIterable});"],
-		"description": "ES2026\nArray.fromAsync(asyncIterableOrLike[, mapFn[, thisArg]]);\nreturn a Promise for a new Array instance, awaiting each value from an async iterable, an iterable of promises, or an array-like of promises.\n"
+		"description": "ES2026\nArray.fromAsync(asyncIterableOrLike[, mapFn[, thisArg]]);\nreturn a Promise for a new Array instance, awaiting each value from an async iterable, an iterable of promises, or an array-like of promises.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.of(elementN)": {
 		"prefix": ["arof", "Arr.of()"],
 		"body": ["Array.of(${1:elementN});"],
-		"description": "ES2015\nArray.of(elementN);\nreturn a new Array instance.\n"
+		"description": "ES2015\nArray.of(elementN);\nreturn a new Array instance.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
-
 	"Array.prototype.at()": {
 		"prefix": ["ara", "arr.at()"],
 		"body": ["${1:items}.at(${2:index});"],
-		"description": "ES2022\nconst item = items.at(index);\nThe `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.\nReturns `undefined` if the given index can not be found.\n"
+		"description": "ES2022\nconst item = items.at(index);\nThe `at()` method takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the array.\nReturns `undefined` if the given index can not be found.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.concat()": {
 		"prefix": ["arc", "arr.concat()"],
 		"body": ["${1:items}.concat(${2:valueN});"],
-		"description": "let newArray = oldArray.concat([value1[, value2[, ...[, valueN]]]]);\nreturn a new array\n"
+		"description": "let newArray = oldArray.concat([value1[, value2[, ...[, valueN]]]]);\nreturn a new array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.copyWithin()": {
 		"prefix": ["arcw", "arr.copyWithin()"],
 		"body": ["${1:items}.copyWithin(${2:target}, ${3:start}, ${4:end});"],
-		"description": "ES2015\narray.copyWithin(target[, start[, end]]);\nreturn the modified array\n"
+		"description": "ES2015\narray.copyWithin(target[, start[, end]]);\nreturn the modified array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
-
 	"Array.prototype.every()": {
 		"prefix": ["arev", "arr.every()"],
 		"body": ["${1:items}.every((${2:item}) => $3);"],
-		"description": "ES5\narray.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n"
+		"description": "ES5\narray.every(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for every array element. Otherwise, 'false'.\nreturns 'true' for any condition put on an empty array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.fill()": {
 		"prefix": ["arfill", "arr.fill()"],
 		"body": ["${1:items}.fill(${2:value}, ${3:start}, ${4:end});"],
-		"description": "ES2015\narray.fill(value[, start[, end]]);\nreturn the modified array\n"
+		"description": "ES2015\narray.fill(value[, start[, end]]);\nreturn the modified array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.filter()": {
 		"prefix": ["arf", "filter", "arr.filter()"],
 		"body": ["${1:items}.filter((${2:item}) => $3);"],
-		"description": "ES5\nlet newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n"
+		"description": "ES5\nlet newArray = array.filter(callbackFn(element[, index[, array]])[, thisArg]);\nreturn a new array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.find()": {
 		"prefix": ["arfi", "find", "arr.find()"],
 		"body": ["${1:items}.find((${2:item}) => $3);"],
-		"description": "ES2015\narray.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n"
+		"description": "ES2015\narray.find(callbackFn[, thisArg]);\nreturn the value of the first element in the array that satisfies the provided testing function. Otherwise 'undefined' is returned.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.findIndex()": {
 		"prefix": ["arfin", "findIndex", "arr.findIndex()"],
 		"body": ["${1:items}.findIndex((${2:item}) => $3)"],
-		"description": "ES2015\narray.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n"
+		"description": "ES2015\narray.findIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns '-1'.\n6th edition\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.findLast()": {
 		"prefix": ["arfl", "findLast", "arr.findLast()"],
 		"body": ["${1:items}.findLast((${2:item}) => $3);"],
-		"description": "ES2023\narray.findLast(callbackFn[, thisArg]);\nreturn the value of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise 'undefined' is returned.\n"
+		"description": "ES2023\narray.findLast(callbackFn[, thisArg]);\nreturn the value of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise 'undefined' is returned.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.findLastIndex()": {
 		"prefix": ["arflin", "findLastIndex", "arr.findLastIndex()"],
 		"body": ["${1:items}.findLastIndex((${2:item}) => $3)"],
-		"description": "ES2023\narray.findLastIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise, it returns '-1'.\n"
+		"description": "ES2023\narray.findLastIndex(callbackFn(element[, index[, array]])[, thisArg]);\nreturn the index of the last element in the array that satisfies the provided testing function, iterating from the end. Otherwise, it returns '-1'.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.flat()": {
 		"prefix": ["arflat", "arr.flat()"],
 		"body": ["${1:items}.flat();"],
-		"description": "ES2019\nlet newArray = array.flat([depth]);\nreturn a new array\n"
+		"description": "ES2019\nlet newArray = array.flat([depth]);\nreturn a new array\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.flatMap()": {
 		"prefix": ["arflatMap", "arr.flatMap()"],
 		"body": ["${1:items}.flatMap((${2:value}) => ${3:value});"],
-		"description": "ES2019\nlet newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n"
+		"description": "ES2019\nlet newArray = array.flatMap(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function and flattened to a depth of '1'.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.forEach(), arrow function": {
 		"prefix": ["fe", "arr.forEach()"],
 		"body": ["${1:items}.forEach((${2:item}) => {\n\t${3}\n});"],
-		"description": "ES5\narray.forEach(arrow function(currentValue));\n"
+		"description": "ES5\narray.forEach(arrow function(currentValue));\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.forEach(), index": {
 		"prefix": ["fei", "arr.forEach().index"],
 		"body": ["${1:items}.forEach((${2:item}, ${3:index}) => {\n\t${4}\n});"],
-		"description": "ES5\narray.forEach(arrow function(currentValue, index));\n"
+		"description": "ES5\narray.forEach(arrow function(currentValue, index));\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.forEach()": {
 		"prefix": ["fefn", "arr.forEach().function"],
 		"body": ["${1:items}.forEach(function(${2:item}) {\n\t${3}\n});"],
-		"description": "ES5\narray.forEach(function(currentValue);\n"
+		"description": "ES5\narray.forEach(function(currentValue);\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.forEach(function(currentValue, index)": {
 		"prefix": ["feifn", "arr.forEach().function.index"],
-		"body": [
-			"${1:items}.forEach(function(${2:item}, ${3:index}) {\n\t${4}\n});"
-		],
-		"description": "ES5\narray.forEach(function callbackFn(currentValue [, index [, array]]) { }[, thisArg]);\n"
+		"body": ["${1:items}.forEach(function(${2:item}, ${3:index}) {\n\t${4}\n});"],
+		"description": "ES5\narray.forEach(function callbackFn(currentValue [, index [, array]]) { }[, thisArg]);\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.includes()": {
 		"prefix": ["ari", "arr.includes()"],
 		"body": ["${1:items}.includes(${2:value})"],
-		"description": "ES2016\narray.includes(valueToFind[, fromIndex]);\nreturn a Boolean value\n"
+		"description": "ES2016\narray.includes(valueToFind[, fromIndex]);\nreturn a Boolean value\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.indexOf()": {
 		"prefix": ["ario", "arr.indexOf()"],
 		"body": ["${1:items}.indexOf(${2:item})"],
-		"description": "ES5\narray.indexOf(searchElement[, fromIndex]);\nreturn the first index of the element in the array; '-1' if not found.\n"
+		"description": "ES5\narray.indexOf(searchElement[, fromIndex]);\nreturn the first index of the element in the array; '-1' if not found.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.join()": {
 		"prefix": ["arj", "arr.join()"],
 		"body": ["${1:items}.join(${2:separator});"],
-		"description": "array.join([separator]);\nreturn a string with all array elements joined. If array.length is 0, the empty string is returned.\n"
+		"description": "array.join([separator]);\nreturn a string with all array elements joined. If array.length is 0, the empty string is returned.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.lastIndexOf()": {
 		"prefix": ["arlio", "arr.lastIndexOf()"],
 		"body": ["${1:items}.lastIndexOf(${2:item})"],
-		"description": "ES5\narray.lastIndexOf(searchElement[, fromIndex]);\nreturn the last index of the element in the array; '-1' if not found.\n"
+		"description": "ES5\narray.lastIndexOf(searchElement[, fromIndex]);\nreturn the last index of the element in the array; '-1' if not found.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.map()": {
 		"prefix": ["map", "arr.map()"],
 		"body": ["${1:items}.map((${2:currentValue}) => {\n\t${3}\n});"],
-		"description": "ES5\nlet newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n"
+		"description": "ES5\nlet newArray = array.map(function callbackFn(currentValue[, index[, array]]) { }[, thisArg]);\nreturn a new array with each element being the result of the callback function.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.pop()": {
 		"prefix": ["arp", "arr.pop()"],
 		"body": ["${1:items}.pop();"],
-		"description": "array.pop();\nreturn the removed element from the array; 'undefined' if the array is empty.\n"
+		"description": "array.pop();\nreturn the removed element from the array; 'undefined' if the array is empty.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.push()": {
 		"prefix": ["arpu", "arr.push()"],
 		"body": ["${1:items}.push(${2:item});"],
-		"description": "arr.push(element1[, ...[, elementN]]);\nreturn the new length of the array.\n"
+		"description": "arr.push(element1[, ...[, elementN]]);\nreturn the new length of the array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.reduce()": {
 		"prefix": ["arr", "arr.reduce()"],
-		"body": [
-			"${1:items}.reduce((${2:previousValue}, ${3:currentValue}) => {\n\treturn ${3}\n});"
-		],
-		"description": "ES5\narray.reduce(callbackFn(previousValue, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n"
+		"body": ["${1:items}.reduce((${2:previousValue}, ${3:currentValue}) => {\n\treturn ${3}\n});"],
+		"description": "ES5\narray.reduce(callbackFn(previousValue, currentValue[, index[, array]]), [, initialValue]);\nreturn The single value that results from the reduction.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.reduceRight()": {
 		"prefix": ["arrr", "arr.reduceRight()"],
-		"body": [
-			"${1:items}.reduceRight((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${4}\n});"
-		],
-		"description": "ES5\narray.reduceRight(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n"
+		"body": ["${1:items}.reduceRight((${2:accumulator}, ${3:currentValue}) => {\n\treturn ${4}\n});"],
+		"description": "ES5\narray.reduceRight(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue]);\nreturn the value that results from the reduction.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.reverse()": {
 		"prefix": ["arre", "arr.reverse()"],
 		"body": ["${1:items}.reverse();"],
-		"description": "array.reverse();\nreturn the reversed array.\n"
+		"description": "array.reverse();\nreturn the reversed array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.toReversed()": {
 		"prefix": ["artre", "arr.toReversed()"],
 		"body": ["${1:items}.toReversed();"],
-		"description": "ES2023\narray.toReversed();\nthe copying counterpart of `reverse()` — return a new reversed array, leaving the original array unchanged.\n"
+		"description": "ES2023\narray.toReversed();\nthe copying counterpart of `reverse()` — return a new reversed array, leaving the original array unchanged.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.with()": {
 		"prefix": ["arw", "arr.with()"],
 		"body": ["${1:items}.with(${2:index}, ${3:value});"],
-		"description": "ES2023\narray.with(index, value);\nthe copying counterpart of index assignment (`arr[index] = value`) — return a new array with the element at `index` replaced by `value`, leaving the original array unchanged.\n"
+		"description": "ES2023\narray.with(index, value);\nthe copying counterpart of index assignment (`arr[index] = value`) — return a new array with the element at `index` replaced by `value`, leaving the original array unchanged.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.shift()": {
 		"prefix": ["ars", "arr.shift()"],
 		"body": ["${1:items}.shift();"],
-		"description": "array.shift();\nreturn the removed element from the array; 'undefined' if the array is empty.\n"
+		"description": "array.shift();\nreturn the removed element from the array; 'undefined' if the array is empty.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.slice()": {
 		"prefix": ["arsl", "arr.slice()"],
 		"body": ["${1:items}.slice(${2:beginIndex}, ${3:endIndex});"],
-		"description": "array.slice([begin[, end]]);\n return a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.\n"
+		"description": "array.slice([begin[, end]]);\n return a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.some()": {
 		"prefix": ["arso", "arr.some()"],
 		"body": ["${1:items}.some((${2:item}) => $3);"],
-		"description": "ES5\narray.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n"
+		"description": "ES5\narray.some(callbackFn(element[, index[, array]])[, thisArg]);\nreturn 'true' if the callback function returns a truthy value for at least one element in the array. Otherwise, 'false'.\nreturns false for any condition put on an empty array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.sort()": {
 		"prefix": ["arsor", "arr.sort()"],
 		"body": ["${1:items}.sort((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
-		"description": "array.sort([compareFunction(firstEl, secondEl)]);\nreturn the sorted array. Note that the array is sorted in-place, and no copy is made.\n"
+		"description": "array.sort([compareFunction(firstEl, secondEl)]);\nreturn the sorted array. Note that the array is sorted in-place, and no copy is made.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.toSorted()": {
 		"prefix": ["artso", "arr.toSorted()"],
-		"body": [
-			"${1:items}.toSorted((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"
-		],
-		"description": "ES2023\narray.toSorted([compareFunction(firstEl, secondEl)]);\nthe copying counterpart of `sort()` — return a new sorted array, leaving the original array unchanged.\n"
+		"body": ["${1:items}.toSorted((${2:firstEl}, ${3:secondEl}) => {\n\t${4}\n});"],
+		"description": "ES2023\narray.toSorted([compareFunction(firstEl, secondEl)]);\nthe copying counterpart of `sort()` — return a new sorted array, leaving the original array unchanged.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.splice()": {
 		"prefix": ["arsp", "arr.splice()"],
-		"body": [
-			"${1:items}.splice(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"
-		],
-		"description": "let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]]);\nchanges the contents of an array by removing or replacing existing elements and/or adding new elements in-place.\nreturn an array containing the deleted elements,\nIf no elements are removed, an empty array is returned.\n"
+		"body": ["${1:items}.splice(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"],
+		"description": "let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]]);\nchanges the contents of an array by removing or replacing existing elements and/or adding new elements in-place.\nreturn an array containing the deleted elements,\nIf no elements are removed, an empty array is returned.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.toSpliced()": {
 		"prefix": ["artsp", "arr.toSpliced()"],
-		"body": [
-			"${1:items}.toSpliced(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"
-		],
-		"description": "ES2023\nlet newArray = array.toSpliced(start[, deleteCount[, item1[, item2[, ...]]]]);\nthe copying counterpart of `splice()` — return a new array with the changes applied, leaving the original array unchanged.\n"
+		"body": ["${1:items}.toSpliced(${2:startIndex}, ${3:deleteCount}${4:, ${5:item}});"],
+		"description": "ES2023\nlet newArray = array.toSpliced(start[, deleteCount[, item1[, item2[, ...]]]]);\nthe copying counterpart of `splice()` — return a new array with the changes applied, leaving the original array unchanged.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.unshift()": {
 		"prefix": ["aru", "arr.unshift()"],
 		"body": ["${1:items}.unshift(${2:item});"],
-		"description": "array.unshift(element1[, ...[, elementN]])();\nreturn the new length of the array.\n"
+		"description": "array.unshift(element1[, ...[, elementN]])();\nreturn the new length of the array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.entries()": {
 		"prefix": ["are", "arr.entries()"],
 		"body": ["${1:items}.entries();"],
-		"description": "ES2015\narray.entries();\nreturn a new Array Iterator object that contains the key/value pairs for each index in the array.\n"
+		"description": "ES2015\narray.entries();\nreturn a new Array Iterator object that contains the key/value pairs for each index in the array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.keys()": {
 		"prefix": ["ark", "arr.keys()"],
 		"body": ["${1:items}.keys();"],
-		"description": "ES2015\narray.keys();\nreturns a new Array Iterator object that contains the keys for each index in the array.\n"
+		"description": "ES2015\narray.keys();\nreturns a new Array Iterator object that contains the keys for each index in the array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype.values()": {
 		"prefix": ["arv", "arr.values()"],
 		"body": ["${1:items}.values();"],
-		"description": "ES2015\narray.values();\nreturn a new Array Iterator object that contains the values for each index in the array.\n"
+		"description": "ES2015\narray.values();\nreturn a new Array Iterator object that contains the values for each index in the array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Array.prototype[@@iterator]()": {
 		"prefix": ["arr.@@iterator"],
-		"body": [
-			"const ${2:iterator} = ${1:items}[Symbol.iterator]();",
-			"$2.next().value"
-		],
-		"description": "ES2015\narray[Symbol.iterator]();\nThe initial value of the @@iterator property is the same function object as the initial value of the values() property.\n"
+		"body": ["const ${2:iterator} = ${1:items}[Symbol.iterator]();", "$2.next().value"],
+		"description": "ES2015\narray[Symbol.iterator]();\nThe initial value of the @@iterator property is the same function object as the initial value of the values() property.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"get Array[@@species]": {
 		"prefix": ["arr.@@species"],
-		"body": [
-			"class FeatureArray extends Array {",
-			"\tstatic get [Symbol.species]() { return Array; }",
-			"}"
-		],
-		"description": "ES2015\nArray[Symbol.species]\nThe Array[@@species] accessor property returns the Array constructor.\n"
+		"body": ["class FeatureArray extends Array {", "\tstatic get [Symbol.species]() { return Array; }", "}"],
+		"description": "ES2015\nArray[Symbol.species]\nThe Array[@@species] accessor property returns the Array constructor.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"sequence of 0..n": {
 		"prefix": "seq",
 		"body": ["[...Array(${1:length}).keys()]${2}"],
-		"description": "sequence of 0..n\n"
+		"description": "sequence of 0..n\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

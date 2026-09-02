@@ -2,103 +2,121 @@
 	"function named": {
 		"prefix": "fn",
 		"body": ["function ${1:name}(${2:param}) {\n\t${3}\n}\n"],
-		"description": "function named\n"
+		"description": "function named\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function anonymous": {
 		"prefix": "fna",
 		"body": ["function(${1:param}) {\n\t${2}\n}"],
-		"description": "function anonymous\n"
+		"description": "function anonymous\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function statements(var)": {
 		"prefix": "vfn",
 		"body": ["var ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function statements(var)\n"
+		"description": "function statements(var)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function statements(let)": {
 		"prefix": "lfn",
 		"body": ["let ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function statements(let)\n"
+		"description": "function statements(let)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function statements(const)": {
 		"prefix": "cfn",
 		"body": ["const ${1:name} = function (${2:param}) {\n\t${3}\n}\n"],
-		"description": "function statements(const)\n"
+		"description": "function statements(const)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function statements(let)": {
 		"prefix": ["laf"],
 		"body": ["let ${1:name} = (${2:param}) => {\n\t${3}\n}\n"],
-		"description": "arrow function statements(let)\n"
+		"description": "arrow function statements(let)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function expression(let)": {
 		"prefix": "lafe",
 		"body": ["let ${1:name} = (${2:param}) => ${3};\n"],
-		"description": "arrow function expression(let)\n"
+		"description": "arrow function expression(let)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function statements(const)": {
 		"prefix": ["caf"],
 		"body": ["const ${1:name} = (${2:param}) => {\n\t${3}\n}\n"],
-		"description": "arrow function statements(const)\n"
+		"description": "arrow function statements(const)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function expression(const)": {
 		"prefix": "cafe",
 		"body": ["const ${1:name} = (${2:param}) => ${3};\n"],
-		"description": "arrow function expression(const)\n"
+		"description": "arrow function expression(const)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function property": {
 		"prefix": "pfn",
 		"body": ["${1:name}: function(${2:param}) {\n\t${3}\n}"],
-		"description": "function as a property of an object\n"
+		"description": "function as a property of an object\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function apply": {
 		"prefix": "fnapply",
 		"body": ["${1:method}.apply(${2:context}, [${3:param}]);"],
-		"description": "function.apply(thisArg, [argsArray])\n"
+		"description": "function.apply(thisArg, [argsArray])\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function call": {
 		"prefix": "fncall",
 		"body": ["${1:method}.call(${2:context}, ${3:param});"],
-		"description": "function.call(thisArg, arg1, arg2, ...)\n"
+		"description": "function.call(thisArg, arg1, arg2, ...)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"function bind": {
 		"prefix": "fnbind",
 		"body": ["${1:method}.bind(${2:this});"],
-		"description": "ES5\nfunction.bind(thisArg[, arg1[, arg2[, ...]]])\n"
+		"description": "ES5\nfunction.bind(thisArg[, arg1[, arg2[, ...]]])\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function statements": {
 		"prefix": ["af", "afs"],
 		"body": ["(${1:param}) => {\n\t${2}\n}\n"],
-		"description": "ES2015\narrow function statements\n"
+		"description": "ES2015\narrow function statements\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function expression": {
 		"prefix": "afe",
 		"body": ["(${1:param}) => ${2}"],
-		"description": "ES2015\narrow function expression\n"
+		"description": "ES2015\narrow function expression\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function with return": {
 		"prefix": "afr",
 		"body": ["(${1:param}) => {\n\treturn ${2};\n}\n"],
-		"description": "ES2015\narrow function with return\n"
+		"description": "ES2015\narrow function with return\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"arrow function with destructuring": {
 		"prefix": "afd",
 		"body": ["({${1:param}}) => ${2:statement}\n"],
-		"description": "ES2015\narrow function with destructuring\n"
+		"description": "ES2015\narrow function with destructuring\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"iife, arrow function": {
 		"prefix": "iif",
 		"body": [";((${1:param}) => {\n\t${3}\n})(${2})\n"],
-		"description": "ES2015\nimmediately-invoked function expression (IIFE)\n"
+		"description": "ES2015\nimmediately-invoked function expression (IIFE)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"iife": {
 		"prefix": "iife",
 		"body": [";(function (${1:param}) {\n\t${3}\n})(${2})\n"],
-		"description": "immediately-invoked function expression (IIFE)\n"
+		"description": "immediately-invoked function expression (IIFE)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"new.target": {
 		"prefix": "nt",
-		"body": [
-			"if (typeof new.target === 'undefined') {\n\tthrow new Error('Fn() must be called with new');\n}"
-		],
-		"description": "ES2015\n"
+		"body": ["if (typeof new.target === 'undefined') {\n\tthrow new Error('Fn() must be called with new');\n}"],
+		"description": "ES2015\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

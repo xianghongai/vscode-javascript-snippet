@@ -2,46 +2,49 @@
 	"test suite: describe": {
 		"prefix": ["desc", "test.describe"],
 		"body": ["describe('${1:description}', () => {", "\t${2}", "})"],
-		"description": "test suite: describe\n"
+		"description": "test suite: describe\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: context": {
 		"prefix": ["cont", "test.context"],
 		"body": ["context('${1:description}', ${2:callback});${0}"],
-		"description": "test suite: context\n"
+		"description": "test suite: context\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: it synchronous": {
 		"prefix": ["it", "test.it"],
 		"body": ["it('${1:description}', () => {", "\t${2}", "})"],
-		"description": "test suite: it synchronous\n"
+		"description": "test suite: it synchronous\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: it asynchronous": {
 		"prefix": ["itas", "test.itas"],
-		"body": [
-			"it('${1:description}', async (done) => {",
-			"\t${2}",
-			"\tdone();",
-			"});${0}"
-		],
-		"description": "test suite: it asynchronous\n"
+		"body": ["it('${1:description}', async (done) => {", "\t${2}", "\tdone();", "});${0}"],
+		"description": "test suite: it asynchronous\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: afterEach": {
 		"prefix": ["afte", "test.afterEach"],
 		"body": ["afterEach(() => {", "\t${1}", "})"],
-		"description": "test suite: afterEach\n"
+		"description": "test suite: afterEach\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: beforeEach": {
 		"prefix": ["bfe", "test.beforeEach"],
 		"body": ["beforeEach(() => {", "\t${1}", "})"],
-		"description": "test suite: beforeEach\n"
+		"description": "test suite: beforeEach\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: after": {
 		"prefix": ["aft", "test.after"],
 		"body": ["after(() => {", "\t${1}", "})"],
-		"description": "test suite: after\n"
+		"description": "test suite: after\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"test suite: before": {
 		"prefix": ["bf", "test.before"],
 		"body": ["before(() => {", "\t${1}", "})"],
-		"description": "test suite: before\n"
+		"description": "test suite: before\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

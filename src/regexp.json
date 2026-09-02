@@ -2,25 +2,26 @@
 	"RegExp(pattern[, flags])": {
 		"prefix": "re",
 		"body": ["const ${1:regexp} = RegExp('${2:pattern}');"],
-		"description": "RegExp(pattern[, flags])"
+		"description": "RegExp(pattern[, flags])",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"/pattern/flags": {
 		"prefix": "rep",
 		"body": ["const ${1:regexp} = /${2:pattern}/;"],
-		"description": "/pattern/flags\nliteral notation's"
+		"description": "/pattern/flags\nliteral notation's",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"named capture group": {
 		"prefix": ["rencg", "re.namedGroup"],
-		"body": [
-			"const ${1:regexp} = /(?<${2:name}>${3:pattern})/;",
-			"const { ${2:name} } = ${1}.exec(${4:str}).groups;"
-		],
-		"description": "(?<name>pattern)\nnamed capture groups let you reference a match by a name instead of an index, via `match.groups.name`.\n"
+		"body": ["const ${1:regexp} = /(?<${2:name}>${3:pattern})/;", "const { ${2:name} } = ${1}.exec(${4:str}).groups;"],
+		"description": "(?<name>pattern)\nnamed capture groups let you reference a match by a name instead of an index, via `match.groups.name`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"lookbehind assertion": {
 		"prefix": ["relb", "re.lookbehind"],
 		"body": ["const ${1:regexp} = /(?<=${2:lookbehind})${3:pattern}/;"],
-		"description": "(?<=pattern) positive lookbehind, (?<!pattern) negative lookbehind\nasserts what precedes the match without including it in the result.\n"
+		"description": "(?<=pattern) positive lookbehind, (?<!pattern) negative lookbehind\nasserts what precedes the match without including it in the result.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"/pattern/d (match indices)": {
 		"prefix": ["red", "re.dFlag"],
@@ -29,33 +30,32 @@
 			"const ${3:result} = ${1}.exec(${4:str});",
 			"// ${3}.indices[0] -> [start, end] of the whole match"
 		],
-		"description": "ES2022\nthe `d` flag makes `exec()`/`matchAll()` results include an `indices` property with `[start, end]` positions for the whole match and each capture group.\n"
+		"description": "ES2022\nthe `d` flag makes `exec()`/`matchAll()` results include an `indices` property with `[start, end]` positions for the whole match and each capture group.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"/pattern/v (unicode sets)": {
 		"prefix": ["rev", "re.vFlag"],
 		"body": ["const ${1:regexp} = /${2:pattern}/v;"],
-		"description": "ES2024\nthe `v` flag is an upgrade to `u` (unicode) mode, adding set notation and string properties inside character classes — e.g. `[\\\\p{RGI_Emoji}]` or `[[a-z]--[aeiou]]`. Mutually exclusive with the `u` flag.\n"
+		"description": "ES2024\nthe `v` flag is an upgrade to `u` (unicode) mode, adding set notation and string properties inside character classes — e.g. `[\\\\p{RGI_Emoji}]` or `[[a-z]--[aeiou]]`. Mutually exclusive with the `u` flag.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.escape()": {
 		"prefix": ["ree2", "RegExp.escape()"],
 		"body": ["RegExp.escape(${1:string})"],
-		"description": "ES2025\nRegExp.escape(string)\nreturn a new string with all regex-syntax characters escaped, safe to interpolate into a `RegExp` pattern. Prefer this over hand-rolled escaping when building a dynamic pattern from user input.\n"
+		"description": "ES2025\nRegExp.escape(string)\nreturn a new string with all regex-syntax characters escaped, safe to interpolate into a `RegExp` pattern. Prefer this over hand-rolled escaping when building a dynamic pattern from user input.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype.exec()": {
 		"prefix": ["ree", "re.exec()"],
-		"body": [
-			"const ${1:regexp} = RegExp('${2:pattern}');",
-			"const ${3:result} = ${1}.exec(${4:str});"
-		],
-		"description": "Syntax: regexp.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**."
+		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.exec(${4:str});"],
+		"description": "Syntax: regexp.exec(str)\nexecutes a search for a match in a specified string.\nreturn a result array, or **null**.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype.test()": {
 		"prefix": ["ret", "re.test()"],
-		"body": [
-			"const ${1:regexp} = RegExp('${2:pattern}');",
-			"const ${3:result} = ${1}.test(${4:str});"
-		],
-		"description": "Syntax: regexp.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**."
+		"body": ["const ${1:regexp} = RegExp('${2:pattern}');", "const ${3:result} = ${1}.test(${4:str});"],
+		"description": "Syntax: regexp.test(str)\nexecutes a search for a match between a regular expression and a specified string. \nreturn **true** or **false**.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"get RegExp[@@species]": {
 		"prefix": "re.@@species",
@@ -66,7 +66,8 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: RegExp[Symbol.species]\nThe RegExp[@@species] accessor property returns the RegExp constructor."
+		"description": "ES2015\nSyntax: RegExp[Symbol.species]\nThe RegExp[@@species] accessor property returns the RegExp constructor.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype[@@match]()": {
 		"prefix": "re.@@match",
@@ -81,7 +82,8 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: regexp[Symbol.match](str)\nThe [@@match]() method retrieves the matches when matching a string against a regular expression."
+		"description": "ES2015\nSyntax: regexp[Symbol.match](str)\nThe [@@match]() method retrieves the matches when matching a string against a regular expression.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype[@@matchAll]()": {
 		"prefix": "re.@@matchAll",
@@ -96,7 +98,8 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: regexp[Symbol.matchAll](str)\nThe [@@matchAll] method returns all matches of the regular expression against a string."
+		"description": "ES2015\nSyntax: regexp[Symbol.matchAll](str)\nThe [@@matchAll] method returns all matches of the regular expression against a string.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype[@@replace]()": {
 		"prefix": "re.@@replace",
@@ -107,7 +110,8 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: regexp[Symbol.replace](str, newSubStr|function)\nThe [@@replace]() method replaces some or all matches of a this pattern in a string by a replacement, and returns the result of the replacement as a new string. The replacement can be a string or a function to be called for each match."
+		"description": "ES2015\nSyntax: regexp[Symbol.replace](str, newSubStr|function)\nThe [@@replace]() method replaces some or all matches of a this pattern in a string by a replacement, and returns the result of the replacement as a new string. The replacement can be a string or a function to be called for each match.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype[@@search]()": {
 		"prefix": "re.@@search",
@@ -122,7 +126,8 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: regexp[Symbol.search](str)\nThe [@@search]() method executes a search for a match between a this regular expression and a string."
+		"description": "ES2015\nSyntax: regexp[Symbol.search](str)\nThe [@@search]() method executes a search for a match between a this regular expression and a string.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"RegExp.prototype[@@split]()": {
 		"prefix": "re.@@split",
@@ -134,6 +139,7 @@
 			"\t}",
 			"}"
 		],
-		"description": "ES2015\nSyntax: regexp[Symbol.split](str[, limit])\nThe [@@split]() method splits a String object into an array of strings by separating the string into substrings."
+		"description": "ES2015\nSyntax: regexp[Symbol.split](str[, limit])\nThe [@@split]() method splits a String object into an array of strings by separating the string into substrings.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

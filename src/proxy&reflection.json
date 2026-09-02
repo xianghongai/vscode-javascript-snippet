@@ -12,7 +12,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nValidating Properties Using the set Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#validating-properties-using-the-set-trap"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nValidating Properties Using the set Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#validating-properties-using-the-set-trap",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy get": {
 		"prefix": "proxy.get",
@@ -26,7 +27,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nObject Shape Validation Using the get Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-shape-validation-using-the-get-trap"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nObject Shape Validation Using the get Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-shape-validation-using-the-get-trap",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy has": {
 		"prefix": "proxy.has",
@@ -40,7 +42,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nHiding Property Existence Using the has Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#hiding-property-existence-using-the-has-trap"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nHiding Property Existence Using the has Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#hiding-property-existence-using-the-has-trap",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy delete": {
 		"prefix": "proxy.delete",
@@ -54,7 +57,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nPreventing Property Deletion with the deleteProperty Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#preventing-property-deletion-with-the-deleteproperty-trap"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nPreventing Property Deletion with the deleteProperty Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#preventing-property-deletion-with-the-deleteproperty-trap",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy prototype": {
 		"prefix": "proxy.prototype",
@@ -74,7 +78,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nPrototype Proxy Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#prototype-proxy-traps"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nPrototype Proxy Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#prototype-proxy-traps",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy object extensibility": {
 		"prefix": "proxy.extensibility",
@@ -94,7 +99,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nObject Extensibility Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-extensibility-traps"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nObject Extensibility Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#object-extensibility-traps",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy object property descriptor ": {
 		"prefix": "proxy.property",
@@ -114,7 +120,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nProperty Descriptor Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#property-descriptor-traps"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nProperty Descriptor Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#property-descriptor-traps",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy ownKeys": {
 		"prefix": "proxy.ownKeys",
@@ -131,7 +138,8 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nThe ownKeys Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#the-ownkeys-trap"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nThe ownKeys Trap\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#the-ownkeys-trap",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"proxy function": {
 		"prefix": "proxy.function",
@@ -151,11 +159,13 @@
 			"\t}",
 			"});"
 		],
-		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nFunction Proxies with the apply and construct Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#function-proxies-with-the-apply-and-construct-traps"
+		"description": "ES2015\nconst proxy = new Proxy(target, handler);\nFunction Proxies with the apply and construct Traps\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#function-proxies-with-the-apply-and-construct-traps",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Revocable Proxies": {
 		"prefix": "proxy.revocable",
 		"body": ["const { proxy, revoke } = Proxy.revocable(${1:target}, {})"],
-		"description": "ES2015\nProxy.revocable(target, handler);\nRevocable Proxies\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#revocable-proxies"
+		"description": "ES2015\nProxy.revocable(target, handler);\nRevocable Proxies\nNicholas C. Zakas\nhttps://github.com/nzakas/understandinges6/blob/master/manuscript/12-Proxies-and-Reflection.md#revocable-proxies",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

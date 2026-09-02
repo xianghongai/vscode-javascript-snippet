@@ -2,12 +2,14 @@
 	"using declaration": {
 		"prefix": "using",
 		"body": ["using ${1:resource} = ${2:getResource()};"],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nusing x = expression;\ndeclares a block-scoped resource that is automatically disposed (its `[Symbol.dispose]()` is called) when control leaves the enclosing block — even via an exception. Similar to a synchronous `try { } finally { resource.dispose(); }`, but composable and can't be forgotten.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nusing x = expression;\ndeclares a block-scoped resource that is automatically disposed (its `[Symbol.dispose]()` is called) when control leaves the enclosing block — even via an exception. Similar to a synchronous `try { } finally { resource.dispose(); }`, but composable and can't be forgotten.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"await using declaration": {
 		"prefix": "awusing",
 		"body": ["await using ${1:resource} = ${2:getResourceAsync()};"],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nawait using x = expression;\nlike `using`, but disposal calls the resource's `[Symbol.asyncDispose]()` and is awaited. Only valid inside an async function/module, same restriction as top-level `await`.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nawait using x = expression;\nlike `using`, but disposal calls the resource's `[Symbol.asyncDispose]()` and is awaited. Only valid inside an async function/module, same restriction as top-level `await`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"disposable object (Symbol.dispose)": {
 		"prefix": ["symdispose", "Symbol.dispose"],
@@ -19,7 +21,8 @@
 			"\t}",
 			"};"
 		],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.dispose]()` can be declared with `using` and will be cleaned up automatically.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.dispose]()` can be declared with `using` and will be cleaned up automatically.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"async disposable object (Symbol.asyncDispose)": {
 		"prefix": ["symasyncdispose", "Symbol.asyncDispose"],
@@ -31,7 +34,8 @@
 			"\t}",
 			"};"
 		],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.asyncDispose]()` can be declared with `await using` and will be cleaned up (awaited) automatically.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nany object implementing `[Symbol.asyncDispose]()` can be declared with `await using` and will be cleaned up (awaited) automatically.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"DisposableStack": {
 		"prefix": ["dstack", "DisposableStack"],
@@ -42,7 +46,8 @@
 			"\t${4:/* extra cleanup, runs LIFO on stack disposal */}",
 			"});"
 		],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nDisposableStack collects multiple disposable resources (via `.use()`) and ad-hoc cleanup callbacks (via `.defer()`), then disposes them all, in reverse order, when the stack itself is disposed.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nDisposableStack collects multiple disposable resources (via `.use()`) and ad-hoc cleanup callbacks (via `.defer()`), then disposes them all, in reverse order, when the stack itself is disposed.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"AsyncDisposableStack": {
 		"prefix": ["adstack", "AsyncDisposableStack"],
@@ -53,6 +58,7 @@
 			"\t${4:/* extra async cleanup, runs LIFO on stack disposal */}",
 			"});"
 		],
-		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nthe async counterpart of DisposableStack — collects disposable/async-disposable resources and cleanup callbacks, disposing (and awaiting) them all in reverse order.\n"
+		"description": "ES2027 (Explicit Resource Management — reached Stage 4 in 2026-05, targeted at edition 17+1; already shipping in V8/Node/TypeScript ahead of the formal spec date)\nthe async counterpart of DisposableStack — collects disposable/async-disposable resources and cleanup callbacks, disposing (and awaiting) them all in reverse order.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

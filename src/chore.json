@@ -2,166 +2,193 @@
 	"typeof": {
 		"prefix": "to",
 		"body": ["typeof ${1:operand} === '${2:undefined}'"],
-		"description": "typeof\n"
+		"description": "typeof\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is undefined": {
 		"prefix": "tou",
 		"body": ["typeof ${1:operand} === 'undefined'"],
-		"description": "Type is Undefined\n"
+		"description": "Type is Undefined\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is function": {
 		"prefix": "tof",
 		"body": ["typeof ${1:operand} === 'function'"],
-		"description": "Type is Function\n"
+		"description": "Type is Function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is symbol": {
 		"prefix": "tosy",
 		"body": ["typeof ${1:operand} === 'symbol'"],
-		"description": "ES2015 (Symbol)\nType is Symbol\n"
+		"description": "ES2015 (Symbol)\nType is Symbol\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is string": {
 		"prefix": "tos",
 		"body": ["typeof ${1:operand} === 'string'"],
-		"description": "Type is String\n"
+		"description": "Type is String\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is number": {
 		"prefix": "ton",
 		"body": ["typeof ${1:operand} === 'number'"],
-		"description": "Type is Number\n"
+		"description": "Type is Number\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is boolean": {
 		"prefix": "tob",
 		"body": ["typeof ${1:operand} === 'boolean'"],
-		"description": "Type is Boolean\n"
+		"description": "Type is Boolean\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"typeof is bigint": {
 		"prefix": "tobi",
 		"body": ["typeof ${1:operand} === 'bigint'"],
-		"description": "ES2020 (BigInt)\nType is Bigint\n"
+		"description": "ES2020 (BigInt)\nType is Bigint\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"optional chaining": {
 		"prefix": "optch",
 		"body": ["${1:object}?.${2:property}"],
-		"description": "ES2020\nobj?.prop, obj?.[expr], obj?.method?.(args)\nshort-circuits to `undefined` instead of throwing when a reference in the chain is `null`/`undefined`.\n"
+		"description": "ES2020\nobj?.prop, obj?.[expr], obj?.method?.(args)\nshort-circuits to `undefined` instead of throwing when a reference in the chain is `null`/`undefined`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"nullish coalescing": {
 		"prefix": "ncoal",
 		"body": ["${1:leftExpr} ?? ${2:rightExpr}"],
-		"description": "ES2020\nleftExpr ?? rightExpr\nreturns the right-hand operand only when the left-hand operand is `null` or `undefined` — unlike `||`, it doesn't fall through for other falsy values like `0`, `''`, or `false`.\n"
+		"description": "ES2020\nleftExpr ?? rightExpr\nreturns the right-hand operand only when the left-hand operand is `null` or `undefined` — unlike `||`, it doesn't fall through for other falsy values like `0`, `''`, or `false`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"logical OR assignment": {
 		"prefix": "lora",
 		"body": ["${1:variable} ||= ${2:value};"],
-		"description": "ES2021\nx ||= y is shorthand for x || (x = y)\nassigns `value` only if the current value is falsy.\n"
+		"description": "ES2021\nx ||= y is shorthand for x || (x = y)\nassigns `value` only if the current value is falsy.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"logical AND assignment": {
 		"prefix": "landa",
 		"body": ["${1:variable} &&= ${2:value};"],
-		"description": "ES2021\nx &&= y is shorthand for x && (x = y)\nassigns `value` only if the current value is truthy.\n"
+		"description": "ES2021\nx &&= y is shorthand for x && (x = y)\nassigns `value` only if the current value is truthy.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"logical nullish assignment": {
 		"prefix": "lnula",
 		"body": ["${1:variable} ??= ${2:value};"],
-		"description": "ES2021\nx ??= y is shorthand for x ?? (x = y)\nassigns `value` only if the current value is `null` or `undefined`.\n"
+		"description": "ES2021\nx ??= y is shorthand for x ?? (x = y)\nassigns `value` only if the current value is `null` or `undefined`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"instanceof": {
 		"prefix": "io",
 		"body": ["${1:object} instanceof ${2:Constructor}"],
-		"description": "instanceof\nThe `instanceof` operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. \nthe `prototype` actually defines the type, not the constructor function."
+		"description": "instanceof\nThe `instanceof` operator tests to see if the `prototype` property of a constructor appears anywhere in the prototype chain of an object. \nthe `prototype` actually defines the type, not the constructor function.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"JSON.parse()": {
 		"prefix": "jp",
 		"body": ["JSON.parse(${1:obj});"],
-		"description": "ES5\nJSON.parse()\n"
+		"description": "ES5\nJSON.parse()\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"JSON.stringify()": {
 		"prefix": "js",
 		"body": ["JSON.stringify(${1:obj});"],
-		"description": "ES5\nJSON.stringify()\n"
+		"description": "ES5\nJSON.stringify()\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"JSON.parse() with source access": {
 		"prefix": ["jpsrc", "JSON.parse().source"],
-		"body": [
-			"JSON.parse(${1:text}, (${2:key}, ${3:value}, { source }) => {",
-			"\t${4}",
-			"\treturn ${3:value};",
-			"});"
-		],
-		"description": "ES2026 (JSON.parse source text access)\nthe reviver function's 3rd argument is a context object whose `source` property holds the exact input substring a value was parsed from — lets you recover precision JSON.parse would otherwise lose (e.g. big integers as BigInt instead of a rounded Number).\n"
+		"body": ["JSON.parse(${1:text}, (${2:key}, ${3:value}, { source }) => {", "\t${4}", "\treturn ${3:value};", "});"],
+		"description": "ES2026 (JSON.parse source text access)\nthe reviver function's 3rd argument is a context object whose `source` property holds the exact input substring a value was parsed from — lets you recover precision JSON.parse would otherwise lose (e.g. big integers as BigInt instead of a rounded Number).\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"JSON.rawJSON()": {
 		"prefix": ["jrj", "JSON.rawJSON()"],
 		"body": ["JSON.rawJSON(${1:rawJsonText})"],
-		"description": "ES2026 (JSON.parse source text access)\nJSON.rawJSON(text)\nwraps a raw JSON text fragment so `JSON.stringify()` emits it verbatim, unparsed — pairs with the reviver's `source` to round-trip values (like large integers) without losing precision.\n"
+		"description": "ES2026 (JSON.parse source text access)\nJSON.rawJSON(text)\nwraps a raw JSON text fragment so `JSON.stringify()` emits it verbatim, unparsed — pairs with the reviver's `source` to round-trip values (like large integers) without losing precision.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"structuredClone()": {
 		"prefix": "sclone",
 		"body": ["structuredClone(${1:value});"],
-		"description": "ES2021 (Web/Node API standardized alongside)\nstructuredClone(value)\nreturn a deep copy of `value` using the structured clone algorithm — handles Dates, Maps, Sets, TypedArrays, circular references, etc. Throws on functions, DOM nodes, and a few other non-cloneable types.\n"
+		"description": "ES2021 (Web/Node API standardized alongside)\nstructuredClone(value)\nreturn a deep copy of `value` using the structured clone algorithm — handles Dates, Maps, Sets, TypedArrays, circular references, etc. Throws on functions, DOM nodes, and a few other non-cloneable types.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"try/catch": {
 		"prefix": "tc",
 		"body": ["try {\n\t${1}\n} catch (${2:error}) {\n\t\n}"],
-		"description": "try/catch\n"
+		"description": "try/catch\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"try/catch/finally": {
 		"prefix": "tcf",
 		"body": ["try {\n\t${1}\n} catch (${2:error}) {\n\t\n} finally {\n\t\n}"],
-		"description": "try/catch/finally\n"
+		"description": "try/catch/finally\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"try/finally": {
 		"prefix": "tf",
 		"body": ["try {\n\t${1}\n} finally {\n\t\n}"],
-		"description": "try/finally\n"
+		"description": "try/finally\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"return": {
 		"prefix": "r",
 		"body": ["return ${1};"],
-		"description": "return\n"
+		"description": "return\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"return null": {
 		"prefix": "rn",
 		"body": ["return null;"],
-		"description": "return null\n"
+		"description": "return null\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"return this": {
 		"prefix": "rt",
 		"body": ["return this;"],
-		"description": "return this\n"
+		"description": "return this\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"return new object": {
 		"prefix": "ro",
 		"body": ["return {\n\t${0}\n};"],
-		"description": "return new object\n"
+		"description": "return new object\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"ternary operator": {
 		"prefix": "ternary",
 		"body": ["${1} ? ${2} : ${3};"],
-		"description": "ternary operator\n"
+		"description": "ternary operator\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"debugger": {
 		"prefix": ["de", "bug"],
 		"body": ["debugger;"],
-		"description": "debugger\n"
+		"description": "debugger\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"encodeURI(URI)": {
 		"prefix": "eu",
 		"body": ["encodeURI(${1:URI})"],
-		"description": "encodeURI(URI)\nencodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two 'surrogate' characters).\nnew string representing the provided string encoded as a Uniform Resource Identifier (URI).\n"
+		"description": "encodeURI(URI)\nencodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two 'surrogate' characters).\nnew string representing the provided string encoded as a Uniform Resource Identifier (URI).\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"decodeURI(encodedURI)": {
 		"prefix": "du",
 		"body": ["decodeURI(${1:encodedURI})"],
-		"description": "decodeURI(encodedURI)\ndecodes a Uniform Resource Identifier (URI) previously created by encodeURI() or by a similar routine.\nreturn a new string representing the unencoded version of the given encoded Uniform Resource Identifier (URI).\nthrows an URIError ('malformed URI sequence') exception when encodedURI contains invalid character sequences."
+		"description": "decodeURI(encodedURI)\ndecodes a Uniform Resource Identifier (URI) previously created by encodeURI() or by a similar routine.\nreturn a new string representing the unencoded version of the given encoded Uniform Resource Identifier (URI).\nthrows an URIError ('malformed URI sequence') exception when encodedURI contains invalid character sequences.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"encodeURIComponent(str)": {
 		"prefix": "euc",
 		"body": ["encodeURIComponent(${1:str})"],
-		"description": "encodeURIComponent(str)\nencodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two 'surrogate' characters).\nreturn a new string representing the provided string encoded as a Uniform Resource Identifier (URI) component."
+		"description": "encodeURIComponent(str)\nencodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two 'surrogate' characters).\nreturn a new string representing the provided string encoded as a Uniform Resource Identifier (URI) component.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"decodeURIComponent(encodedURI)": {
 		"prefix": "duc",
 		"body": ["decodeURIComponent(${1:encodedURI})"],
-		"description": "decodeURIComponent(encodedURI)\ndecodes a Uniform Resource Identifier (URI) component previously created by encodeURIComponent or by a similar routine.\nthrows an URIError ('malformed URI sequence') exception when used wrongly.\n"
+		"description": "decodeURIComponent(encodedURI)\ndecodes a Uniform Resource Identifier (URI) component previously created by encodeURIComponent or by a similar routine.\nthrows an URIError ('malformed URI sequence') exception when used wrongly.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

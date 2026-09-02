@@ -2,26 +2,31 @@
 	"Document.getElementById": {
 		"prefix": ["gi", "dom.getElementById"],
 		"body": ["${1:document}.getElementById('${2:id}');"],
-		"description": "Finding HTML elements by id.\n"
+		"description": "Finding HTML elements by id.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Document.getElementsByClassName": {
 		"prefix": ["gc", "dom.getElementsByClassName"],
 		"body": ["${1:document}.getElementsByClassName('${2:className}');"],
-		"description": "Finding HTML elements by class name.\n"
+		"description": "Finding HTML elements by class name.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Document.getElementsByTagName": {
 		"prefix": ["gt", "dom.getElementsByTagName"],
 		"body": ["${1:document}.getElementsByTagName('${2:tagName}');"],
-		"description": "Finding HTML elements by tag name.\n"
+		"description": "Finding HTML elements by tag name.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Document.querySelector": {
 		"prefix": ["qs", "dom.querySelector"],
 		"body": ["${1:document}.querySelector('${2:selector}');"],
-		"description": "querySelector\n"
+		"description": "querySelector\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Document.querySelectorAll": {
 		"prefix": ["qsa", "dom.querySelectorAll"],
 		"body": ["${1:document}.querySelectorAll('${2:selector}');"],
-		"description": "querySelectorAll\n"
+		"description": "querySelectorAll\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

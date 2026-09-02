@@ -2,57 +2,68 @@
 	"import individual features": {
 		"prefix": ["im", "import.named"],
 		"body": ["import { ${2:moduleName} } from '${1:module}';"],
-		"description": "ES2015\nImport individual features\n"
+		"description": "ES2015\nImport individual features\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"import default export": {
 		"prefix": ["imd", "import.default"],
 		"body": ["import ${2:moduleName} from '${1:module}';"],
-		"description": "ES2015\nImport default export\n"
+		"description": "ES2015\nImport default export\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"import renamed exports": {
 		"prefix": ["imas", "import.renamed"],
 		"body": ["import { ${2:originalName} as ${3:alias} } from '${1:module}';"],
-		"description": "Import renamed exports\n"
+		"description": "Import renamed exports\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"import all module as alias": {
 		"prefix": ["imall", "import.namespace"],
 		"body": ["import * as ${2:alias} from '${1:module}';"],
-		"description": "Import all of a module's exports as a module object\n"
+		"description": "Import all of a module's exports as a module object\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"import without module name": {
 		"prefix": ["imn", "import.sideEffect"],
 		"body": ["import '${1:module}';"],
-		"description": "Import a module for side effects only\n"
+		"description": "Import a module for side effects only\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"dynamic import()": {
 		"prefix": ["imdyn", "import.dynamic"],
 		"body": ["const ${2:moduleName} = await import('${1:module}');"],
-		"description": "ES2020\nimport(module)\nreturns a Promise that resolves to the module namespace object. Unlike static `import`, it can be called from anywhere (conditionally, lazily) and takes a dynamic expression rather than a string literal.\n"
+		"description": "ES2020\nimport(module)\nreturns a Promise that resolves to the module namespace object. Unlike static `import`, it can be called from anywhere (conditionally, lazily) and takes a dynamic expression rather than a string literal.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export": {
 		"prefix": ["ex", "export.named"],
 		"body": ["export { ${1:feature} };"],
-		"description": "ES2015\n*export list\n"
+		"description": "ES2015\n*export list\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export renaming": {
 		"prefix": ["exas", "export.renamed"],
 		"body": ["export { ${1:variable} as ${2:feature} };"],
-		"description": "*renaming exports as\n"
+		"description": "*renaming exports as\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export const": {
 		"prefix": ["exc", "export.const"],
 		"body": ["export const ${1:name} = ${2:value};"],
-		"description": "exporting individual features(const)\n"
+		"description": "exporting individual features(const)\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export arrow function statements": {
 		"prefix": ["exaf", "export.arrow"],
 		"body": ["export const ${1:name} = (${2:param}) => {", "\t$3", "};"],
-		"description": "export named arrow function statements\n"
+		"description": "export named arrow function statements\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export arrow function expression": {
 		"prefix": ["exafe", "export.arrow.expression"],
 		"body": ["export const ${1:name} = (${2:param}) => $3;"],
-		"description": "export named arrow function expression\n"
+		"description": "export named arrow function expression\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export async arrow function (named)": {
 		"prefix": ["exasafn", "export.async.arrow"],
@@ -63,66 +74,70 @@
 			"};",
 			""
 		],
-		"description": "export named async arrow function\n"
+		"description": "export named async arrow function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default arrow function statements": {
 		"prefix": ["exdaf", "export.default.arrow"],
 		"body": ["export default (${1:param}) => {", "\t${2}", "}", ""],
-		"description": "export default arrow function statements\n"
+		"description": "export default arrow function statements\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default arrow function expression": {
 		"prefix": ["exdafe", "export.default.arrow.expression"],
 		"body": ["export default (${1:param}) => ${2}", ""],
-		"description": "export default arrow function expression\n"
+		"description": "export default arrow function expression\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default async arrow function": {
 		"prefix": ["exdasaf", "export.default.async.arrow"],
 		"body": ["export default async (${1:param}) => {", "\t${2}", "}", ""],
-		"description": "export default async arrow function\n"
+		"description": "export default async arrow function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export function (named)": {
 		"prefix": ["exfn", "export.function"],
 		"body": ["export function ${1:name}(${2:param}) {", "\t${3}", "}"],
-		"description": "export named function\n"
+		"description": "export named function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export async function (named)": {
 		"prefix": ["exasfn", "export.async.function"],
 		"body": [
 			"export async function ${1:name}(${2:param}) {\n\tconst ${3:result} = await ${4:promise};\n\treturn ${3:result};\n}\n"
 		],
-		"description": "export named async function\n"
+		"description": "export named async function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default function": {
 		"prefix": ["exdfn", "export.default.function"],
 		"body": ["export default function (${1:param}) {", "\t${2}", "}", ""],
-		"description": "export default function\n"
+		"description": "export default function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default async function": {
 		"prefix": ["exdasfn", "export.default.async.function"],
 		"body": ["export default async function (${1:param}) {", "\t${2}", "}", ""],
-		"description": "export default async function\n"
+		"description": "export default async function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export default": {
 		"prefix": ["exd", "export.default"],
 		"body": ["export default ${1:expression};"],
-		"description": "ES2015\n*export default\n"
+		"description": "ES2015\n*export default\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export as default": {
 		"prefix": ["exdas", "export.as.default"],
 		"body": ["export { ${1:name} as default };"],
-		"description": "export as default\n"
+		"description": "export as default\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export class": {
 		"prefix": ["exdc", "export.class"],
-		"body": [
-			"export default class ${1:className} {",
-			"\tconstructor (${2:param}) {",
-			"\t\t${3}",
-			"\t}",
-			"}",
-			""
-		],
-		"description": "export class\n"
+		"body": ["export default class ${1:className} {", "\tconstructor (${2:param}) {", "\t\t${3}", "\t}", "}", ""],
+		"description": "export class\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export class extends": {
 		"prefix": ["exdce", "export.class.extends"],
@@ -134,16 +149,19 @@
 			"\t}",
 			"}"
 		],
-		"description": "export class extends\n"
+		"description": "export class extends\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export from": {
 		"prefix": ["exfr", "export.from"],
 		"body": ["export {${1:default}} from ${2:otherModule};"],
-		"description": "*aggregating modules, export from\n"
+		"description": "*aggregating modules, export from\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"export all from other module": {
 		"prefix": ["exallo", "export.all.from"],
 		"body": ["export * from ${1:otherModule};"],
-		"description": "export all from other module\n"
+		"description": "export all from other module\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }

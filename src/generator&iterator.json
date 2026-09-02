@@ -2,129 +2,121 @@
 	"const yielded": {
 		"prefix": "cy",
 		"body": ["const ${1:name} = yield ${2:value};"],
-		"description": "ES2015\nconst assignment yielded\n"
+		"description": "ES2015\nconst assignment yielded\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"let yielded": {
 		"prefix": "ly",
 		"body": ["let ${1:name} = yield ${2:value};"],
-		"description": "ES2015\nlet assignment yielded\n"
+		"description": "ES2015\nlet assignment yielded\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"generator function": {
 		"prefix": "gf",
-		"body": [
-			"function* ${1:name}(${2:param}) {",
-			"\tyield* ${3:expression}();",
-			"\tyield ${4:expression};",
-			"}"
-		],
-		"description": "ES2015\nCreates generator function\n"
+		"body": ["function* ${1:name}(${2:param}) {", "\tyield* ${3:expression}();", "\tyield ${4:expression};", "}"],
+		"description": "ES2015\nCreates generator function\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"generator method": {
 		"prefix": "gm",
-		"body": [
-			"*generator(${1:param}) {",
-			"\tyield* ${3:expression}();",
-			"\tyield ${4:expression};",
-			"},"
-		],
-		"description": "ES2015\ngenerator method"
+		"body": ["*generator(${1:param}) {", "\tyield* ${3:expression}();", "\tyield ${4:expression};", "},"],
+		"description": "ES2015\ngenerator method",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"async generator method": {
 		"prefix": "asgm",
-		"body": [
-			"async *generator(${1:param}) {",
-			"\tyield* ${3:expression}();",
-			"\tyield ${4:expression};",
-			"},"
-		],
-		"description": "ES2018\nasync generator method"
+		"body": ["async *generator(${1:param}) {", "\tyield* ${3:expression}();", "\tyield ${4:expression};", "},"],
+		"description": "ES2018\nasync generator method",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"generator method expression": {
 		"prefix": "gme",
-		"body": [
-			"*[generator](${1:param}) {",
-			"\tyield* ${3:expression}();",
-			"\tyield ${4:expression};",
-			"},"
-		],
-		"description": "ES2015\ngenerator method with computed keys"
+		"body": ["*[generator](${1:param}) {", "\tyield* ${3:expression}();", "\tyield ${4:expression};", "},"],
+		"description": "ES2015\ngenerator method with computed keys",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"async generator method expression": {
 		"prefix": "asgme",
-		"body": [
-			"async *[generator](${1:param}) {",
-			"\tyield* ${3:expression}();",
-			"\tyield ${4:expression};",
-			"},"
-		],
-		"description": "ES2018\nasync generator method with computed keys"
+		"body": ["async *[generator](${1:param}) {", "\tyield* ${3:expression}();", "\tyield ${4:expression};", "},"],
+		"description": "ES2018\nasync generator method with computed keys",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"yield": {
 		"prefix": "y",
 		"body": ["yield ${1:expression};"],
-		"description": "ES2015\nThe yield keyword is used to pause and resume a generator function (function* or legacy generator function).\n"
+		"description": "ES2015\nThe yield keyword is used to pause and resume a generator function (function* or legacy generator function).\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"yield*": {
 		"prefix": "yg",
 		"body": ["yield* ${1:expression}();"],
-		"description": "ES2015\nThe yield* expression is used to delegate to another generator or iterable object."
+		"description": "ES2015\nThe yield* expression is used to delegate to another generator or iterable object.",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
-
 	"Iterator Helpers: .map()": {
 		"prefix": ["itmap", "iterator.map()"],
 		"body": ["${1:iterator}.map((${2:item}) => ${3:item});"],
-		"description": "ES2025\niterator.map(mapperFn)\nreturn a new lazy Iterator Helper yielding each element transformed by `mapperFn`. Available directly on any Iterator/generator — no need to materialize an Array first.\n"
+		"description": "ES2025\niterator.map(mapperFn)\nreturn a new lazy Iterator Helper yielding each element transformed by `mapperFn`. Available directly on any Iterator/generator — no need to materialize an Array first.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .filter()": {
 		"prefix": ["itfilter", "iterator.filter()"],
 		"body": ["${1:iterator}.filter((${2:item}) => ${3});"],
-		"description": "ES2025\niterator.filter(filtererFn)\nreturn a new lazy Iterator Helper yielding only the elements for which `filtererFn` returns truthy.\n"
+		"description": "ES2025\niterator.filter(filtererFn)\nreturn a new lazy Iterator Helper yielding only the elements for which `filtererFn` returns truthy.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .take()": {
 		"prefix": ["ittake", "iterator.take()"],
 		"body": ["${1:iterator}.take(${2:limit});"],
-		"description": "ES2025\niterator.take(limit)\nreturn a new lazy Iterator Helper yielding at most the first `limit` elements, then stopping (short-circuits the underlying iterator).\n"
+		"description": "ES2025\niterator.take(limit)\nreturn a new lazy Iterator Helper yielding at most the first `limit` elements, then stopping (short-circuits the underlying iterator).\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .drop()": {
 		"prefix": ["itdrop", "iterator.drop()"],
 		"body": ["${1:iterator}.drop(${2:limit});"],
-		"description": "ES2025\niterator.drop(limit)\nreturn a new lazy Iterator Helper that skips the first `limit` elements, then yields the rest.\n"
+		"description": "ES2025\niterator.drop(limit)\nreturn a new lazy Iterator Helper that skips the first `limit` elements, then yields the rest.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .flatMap()": {
 		"prefix": ["itflatmap", "iterator.flatMap()"],
 		"body": ["${1:iterator}.flatMap((${2:item}) => ${3:item});"],
-		"description": "ES2025\niterator.flatMap(mapperFn)\nlike `.map()`, but `mapperFn` may return an iterable whose elements are flattened one level into the resulting Iterator Helper.\n"
+		"description": "ES2025\niterator.flatMap(mapperFn)\nlike `.map()`, but `mapperFn` may return an iterable whose elements are flattened one level into the resulting Iterator Helper.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .reduce()": {
 		"prefix": ["itreduce", "iterator.reduce()"],
-		"body": [
-			"${1:iterator}.reduce((${2:accumulator}, ${3:item}) => {\n\treturn ${4}\n});"
-		],
-		"description": "ES2025\niterator.reduce(reducerFn[, initialValue])\nconsumes the iterator eagerly and returns the accumulated result, like `Array.prototype.reduce()`.\n"
+		"body": ["${1:iterator}.reduce((${2:accumulator}, ${3:item}) => {\n\treturn ${4}\n});"],
+		"description": "ES2025\niterator.reduce(reducerFn[, initialValue])\nconsumes the iterator eagerly and returns the accumulated result, like `Array.prototype.reduce()`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .some()": {
 		"prefix": ["itsome", "iterator.some()"],
 		"body": ["${1:iterator}.some((${2:item}) => $3);"],
-		"description": "ES2025\niterator.some(fn)\nconsumes the iterator (stopping early on the first match) and returns a boolean, like `Array.prototype.some()`.\n"
+		"description": "ES2025\niterator.some(fn)\nconsumes the iterator (stopping early on the first match) and returns a boolean, like `Array.prototype.some()`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .every()": {
 		"prefix": ["itevery", "iterator.every()"],
 		"body": ["${1:iterator}.every((${2:item}) => $3);"],
-		"description": "ES2025\niterator.every(fn)\nconsumes the iterator (stopping early on the first non-match) and returns a boolean, like `Array.prototype.every()`.\n"
+		"description": "ES2025\niterator.every(fn)\nconsumes the iterator (stopping early on the first non-match) and returns a boolean, like `Array.prototype.every()`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .find()": {
 		"prefix": ["itfind", "iterator.find()"],
 		"body": ["${1:iterator}.find((${2:item}) => $3);"],
-		"description": "ES2025\niterator.find(fn)\nconsumes the iterator (stopping early on the first match) and returns the matching element, or `undefined`, like `Array.prototype.find()`.\n"
+		"description": "ES2025\niterator.find(fn)\nconsumes the iterator (stopping early on the first match) and returns the matching element, or `undefined`, like `Array.prototype.find()`.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator.concat()": {
 		"prefix": ["itconcat", "Iterator.concat()"],
 		"body": ["const ${1:combined} = Iterator.concat(${2:iterables});"],
-		"description": "ES2026 (Iterator Sequencing)\nIterator.concat(...iterablesOrIterators)\nreturn a new lazy Iterator that yields every value from each argument in order, one argument's iterator exhausted before the next begins. Accepts a mix of iterators and plain iterables (arrays, Sets, etc.).\n"
+		"description": "ES2026 (Iterator Sequencing)\nIterator.concat(...iterablesOrIterators)\nreturn a new lazy Iterator that yields every value from each argument in order, one argument's iterator exhausted before the next begins. Accepts a mix of iterators and plain iterables (arrays, Sets, etc.).\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	},
 	"Iterator Helpers: .toArray()": {
 		"prefix": ["ittoarr", "iterator.toArray()"],
 		"body": ["${1:iterator}.toArray();"],
-		"description": "ES2025\niterator.toArray()\nmaterializes the (possibly infinite-looking, lazily-chained) iterator into a real Array.\n"
+		"description": "ES2025\niterator.toArray()\nmaterializes the (possibly infinite-looking, lazily-chained) iterator into a real Array.\n",
+		"scope": "vue,javascript,javascriptreact,typescript,typescriptreact"
 	}
 }
