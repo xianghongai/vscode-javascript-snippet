@@ -83,10 +83,10 @@ The goal either way is to minimize what you have to memorize before a prefix "ju
 
 前缀遵循两种刻意区分的模式：
 
-1. **众所周知的高频场景 → 硬缩写**——例如 `tc` 对应 try/catch，`qsa` 对应 `querySelectorAll`。这类不需要额外的点号形式；一旦记住了这个写法，短代码比翻找补全列表更快。
-2. **API 面很大或不常被记住的场景 → 命名空间触发**——例如 `dom.*`、`map.*`、`set.*`、`import.*`/`export.*`、`ts.*` 这几个系列。先输入命名空间（如 `dom.`）触发一份过滤后的列表，再继续输入做模糊匹配定位到具体成员（如 `domnes` → `dom.nextElementSibling`）。这条路径是给"上手阶段"用的，不是终态：一旦某个成员本身也变得足够出名，它会在点号形式之外再拥有一个独立的短前缀——`nextElementSibling` 既能通过 `dom.nextElementSibling` 触发，也能直接靠 `nes` 触发。TypeScript 专属片段遵循同样的划分：`interface`/`type` 这类常见构造有短前缀（`int`/`tal`），而 utility types、decorators 这类体量较大的系列则放在 `ts.utility.*`/`ts.decorator.*` 命名空间下。
+1. **众所周知的高频场景 → 硬缩写**：例如 `tc` 对应 try/catch，`qsa` 对应 `querySelectorAll`。这类不需要额外的点号形式；一旦记住了这个写法，短代码比翻找补全列表更快。
+2. **API 面很大或不常被记住的场景 → 命名空间触发**：例如 `dom.*`、`map.*`、`set.*`、`import.*`/`export.*`、`ts.*` 这几个系列。先输入命名空间（如 `dom.`）触发一份过滤后的列表，再继续输入做模糊匹配定位到具体成员（如 `domnes` → `dom.nextElementSibling`）。这条路径是给"上手阶段"用的，不是终态：一旦某个成员本身也变得足够出名，它会在点号形式之外再拥有一个独立的短前缀，`nextElementSibling` 既能通过 `dom.nextElementSibling` 触发，也能直接靠 `nes` 触发。TypeScript 专属片段遵循同样的划分：`interface`/`type` 这类常见构造有短前缀（`int`/`tal`），而 utility types、decorators 这类体量较大的系列则放在 `ts.utility.*`/`ts.decorator.*` 命名空间下。
 
-两种方式的目标是一致的：让"打出前缀就能触发"这件事尽量不依赖死记硬背——要么因为足够常见所以缩写本身就很短，要么可以直接打出真实 API 名字来触发发现。
+两种方式的目标是一致的：让"打出前缀就能触发"这件事尽量不依赖死记硬背，要么因为足够常见所以缩写本身就很短，要么可以直接打出真实 API 名字来触发发现。
 
 ## Snippets
 
