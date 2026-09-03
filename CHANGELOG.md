@@ -4,6 +4,11 @@ All notable changes to the "JavaScript Code Snippet" extension are documented in
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Each entry lists only the headline change per release — see git history/tags for full detail.
 
+## [1.2.0] - 2026-09-03
+
+- Unify packaging and publishing scripts to `vsce:package` and `vsce:publish`
+- Update GitHub Actions CI workflow to use `pnpm run vsce:publish`
+
 ## [1.1.2] - 2026-09-02
 
 - No snippet changes.
