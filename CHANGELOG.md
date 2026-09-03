@@ -4,6 +4,11 @@ All notable changes to the "JavaScript Code Snippet" extension are documented in
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Each entry lists only the headline change per release — see git history/tags for full detail.
 
+## [1.2.1] - 2026-09-03
+
+- Publish extension to Open VSX Registry alongside the VS Code Marketplace
+- Update CI workflow to build the VSIX package once and reuse it across both marketplaces
+
 ## [1.2.0] - 2026-09-03
 
 - Unify packaging and publishing scripts to `vsce:package` and `vsce:publish`
